@@ -29,6 +29,12 @@ const guides: { title: string; description: string; href: string; category: stri
     href: '/guides/halvaah-miyedit',
     category: 'הלוואות',
   },
+  {
+    title: 'הלוואה לכל מטרה - מתי כדאי, מתי לא, וכמה זה עולה ב-2026',
+    description: 'הלוואה לכל מטרה היא הכלי הפיננסי הנפוץ ביותר בישראל. אבל היא יכולה להיות גם הטעות היקרה ביותר. המדריך המלא.',
+    href: '/guides/halvaah-lchol-matara',
+    category: 'הלוואות',
+  },
 ];
 
 export default function GuidesHub() {
