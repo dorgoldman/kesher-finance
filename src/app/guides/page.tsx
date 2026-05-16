@@ -47,6 +47,12 @@ const guides: { title: string; description: string; href: string; category: stri
     href: '/guides/halvaah-lmesoravim',
     category: 'הלוואות',
   },
+  {
+    title: 'גמ"חים, עוגן, ו-P2P: המדריך להלוואה ללא ריבית בישראל',
+    description: 'יש עולם שלם של הלוואות ללא ריבית בישראל שרוב האנשים לא מכירים. גמ"חים, קרן עוגן, SparkIL ו-P2P, כל מה שצריך לדעת.',
+    href: '/guides/gmachim-p2p',
+    category: 'הלוואות',
+  },
 ];
 
 export default function GuidesHub() {
