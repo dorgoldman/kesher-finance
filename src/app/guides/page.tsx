@@ -10,7 +10,14 @@ export const metadata: Metadata = generateSEOMetadata({
   canonical: '/guides',
 });
 
-const guides: { title: string; description: string; href: string; category: string }[] = [];
+const guides: { title: string; description: string; href: string; category: string }[] = [
+  {
+    title: 'הלוואה חוץ בנקאית — המדריך המלא',
+    description: 'כל מה שצריך לדעת על הלוואה חוץ בנקאית: מי נותן, כמה עולה, מתי כדאי ומתי לא. מדריך ישיר בלי שטויות.',
+    href: '/guides/halvaah-hutz-bankait',
+    category: 'הלוואות',
+  },
+];
 
 export default function GuidesHub() {
   return (
