@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AdSlot from '@/components/AdSlot';
-import ComingSoonCard from '@/components/ComingSoonCard';
 import { generateSEOMetadata } from '@/components/SEO';
 
 export const metadata: Metadata = generateSEOMetadata({
@@ -65,18 +64,25 @@ export default function ToolsHub() {
           </p>
         </Link>
 
-        {/* ── Coming soon: מחשבון שכר נטו ── */}
-        <ComingSoonCard
-          variant="hub"
-          title="מחשבון שכר נטו"
-          description="חשבו שכר נטו לאחר ניכויי מס הכנסה, ביטוח לאומי ומס בריאות"
-          icon={
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-                d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-            </svg>
-          }
-        />
+        {/* ── Live: מחשבון שכר נטו ── */}
+        <Link href="/tools/salary-calculator" className="card-interactive group">
+          <div className="flex items-start justify-between mb-4">
+            <div className="w-10 h-10 bg-primary-50 rounded-xl flex items-center justify-center
+                            text-primary-600 group-hover:bg-primary-100 transition-colors duration-200">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
+                  d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+              </svg>
+            </div>
+            <span className="badge-primary">שכר נטו</span>
+          </div>
+          <h2 className="text-lg font-bold text-accent-900 mb-2 group-hover:text-primary-600 transition-colors duration-200">
+            מחשבון שכר נטו
+          </h2>
+          <p className="text-accent-500 text-sm leading-relaxed">
+            חשבו שכר נטו לאחר מס הכנסה, ביטוח לאומי, בריאות ופנסיה — מדרגות 2026
+          </p>
+        </Link>
 
       </div>
     </div>
