@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+﻿import { ReactNode } from 'react';
 
 interface ComingSoonCardProps {
   title: string;
@@ -19,9 +19,9 @@ export default function ComingSoonCard({
       className="card relative opacity-60 cursor-not-allowed select-none pointer-events-none"
       aria-disabled="true"
       role="article"
-      aria-label={`${title} — בקרוב`}
+      aria-label={`${title} - בקרוב`}
     >
-      {/* "בקרוב" pill — top-right corner, green outline style */}
+      {/* "בקרוב" pill - top-right corner, green outline style */}
       <span
         className="absolute top-3 right-3 inline-flex items-center px-2.5 py-1 rounded-full
                    text-[11px] font-semibold border border-primary-500/70 text-primary-600

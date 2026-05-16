@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useMemo, useEffect, useRef } from 'react';
 
@@ -216,7 +216,7 @@ export default function LoanCalculator() {
 
   return (
     <>
-      {/* ── Input card — navy gradient, matching mortgage track style ── */}
+      {/* ── Input card - navy gradient, matching mortgage track style ── */}
       <div className="bg-gradient-to-br from-[#1a2f5e] to-[#0a1530] rounded-2xl p-6 mb-6 shadow-card-depth">
 
         {/* Card header */}
@@ -279,13 +279,13 @@ export default function LoanCalculator() {
         </div>
       </div>
 
-      {/* ── Results hero — dark #0F1117, Revolut-style ── */}
+      {/* ── Results hero - dark #0F1117, Revolut-style ── */}
       <div className="bg-[#0F1117] rounded-2xl p-8 mb-4 shadow-hero">
         <p className="text-white/30 text-[11px] font-semibold uppercase tracking-[0.18em] mb-4 text-center">
           החזר חודשי
         </p>
 
-        {/* Split ₪ symbol — smaller + lighter than number, LTR direction */}
+        {/* Split ₪ symbol - smaller + lighter than number, LTR direction */}
         <div
           className="flex items-end justify-center gap-1 tabular-nums font-extrabold leading-none tracking-tight mb-3"
           style={{ direction: 'ltr' }}

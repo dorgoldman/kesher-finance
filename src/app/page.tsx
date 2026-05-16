@@ -1,4 +1,4 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 import { SITE_NAME, SITE_URL } from '@/lib/constants';
 import JsonLd from '@/components/SEO';
 import HeroCalculator from '@/components/HeroCalculator';
@@ -37,7 +37,7 @@ const tools = [
   },
   {
     title: 'מחשבון שכר נטו',
-    description: 'חשבו כמה תקבלו הביתה אחרי מס הכנסה, ביטוח לאומי ופנסיה — מדרגות 2026',
+    description: 'חשבו כמה תקבלו הביתה אחרי מס הכנסה, ביטוח לאומי ופנסיה - מדרגות 2026',
     href: '/tools/salary-calculator',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -64,14 +64,14 @@ export default function HomePage() {
       <JsonLd data={jsonLd} />
 
       {/* ══════════════════════════════════════════════════════════════════
-          HERO — dark, split layout
+          HERO - dark, split layout
           Column order: LEFT = headline, RIGHT = calculator
           Direction: ltr on the grid so col-1 is visually left, col-2 right
           (Wise / Revolut / Ramp reference layout)
       ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-[#0F1117] relative overflow-hidden">
 
-        {/* Background glows — make glassmorphism visible in HeroCalculator */}
+        {/* Background glows - make glassmorphism visible in HeroCalculator */}
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
           <div className="absolute top-[-80px] right-[-60px] w-[700px] h-[700px]
                           bg-primary-600/12 rounded-full blur-[140px]" />
@@ -103,7 +103,7 @@ export default function HomePage() {
 
               {/*
                 Skill: font-weight 900, 64-72px headline.
-                Body: font-weight 300 (light) — creates typographic contrast.
+                Body: font-weight 300 (light) - creates typographic contrast.
               */}
               <h1
                 className="text-white font-black leading-[1.05] mb-6 tracking-tight"
@@ -116,7 +116,7 @@ export default function HomePage() {
 
               <p className="text-white/45 text-lg font-light leading-relaxed mb-8 max-w-md">
                 הרכיבו תמהיל מסלולים, חשבו החזר חודשי כולל ולוח סילוקין
-                מפורט — הכלי החינמי המתקדם ביותר לתכנון משכנתא בישראל.
+                מפורט - הכלי החינמי המתקדם ביותר לתכנון משכנתא בישראל.
               </p>
 
               <div className="flex flex-wrap gap-3">
@@ -188,7 +188,7 @@ export default function HomePage() {
       </section>
 
       {/* ══════════════════════════════════════════════════════════════════
-          TOOLS — light section
+          TOOLS - light section
       ══════════════════════════════════════════════════════════════════ */}
       <section className="container-wide py-16 sm:py-20">
         <div className="text-center mb-12">

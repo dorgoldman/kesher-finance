@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AdSlot from '@/components/AdSlot';
@@ -10,14 +10,14 @@ const BASE = 'https://calc.mgh-ltd.com';
 const CANONICAL = `${BASE}/guides/halvaot-madrich`;
 
 export const metadata: Metadata = {
-  title: 'הלוואות — המדריך המלא לבחירה נכונה ב-2026 | Maxit.מקסיט',
+  title: 'הלוואות - המדריך המלא לבחירה נכונה ב-2026 | Maxit.מקסיט',
   description:
-    'לפני שלוקחים הלוואה — קראו את זה. מה לבדוק, מה לא לפספס, ואיך לא לשלם יותר ממה שצריך.',
+    'לפני שלוקחים הלוואה - קראו את זה. מה לבדוק, מה לא לפספס, ואיך לא לשלם יותר ממה שצריך.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'הלוואות — המדריך המלא לבחירה נכונה ב-2026',
+    title: 'הלוואות - המדריך המלא לבחירה נכונה ב-2026',
     description:
-      'לפני שלוקחים הלוואה — קראו את זה. מה לבדוק, מה לא לפספס, ואיך לא לשלם יותר ממה שצריך.',
+      'לפני שלוקחים הלוואה - קראו את זה. מה לבדוק, מה לא לפספס, ואיך לא לשלם יותר ממה שצריך.',
     url: CANONICAL,
     siteName: SITE_NAME,
     locale: 'he_IL',
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'הלוואות — המדריך המלא לבחירה נכונה ב-2026',
+    title: 'הלוואות - המדריך המלא לבחירה נכונה ב-2026',
     description:
-      'לפני שלוקחים הלוואה — קראו את זה. מה לבדוק, מה לא לפספס, ואיך לא לשלם יותר ממה שצריך.',
+      'לפני שלוקחים הלוואה - קראו את זה. מה לבדוק, מה לא לפספס, ואיך לא לשלם יותר ממה שצריך.',
   },
 };
 
@@ -37,9 +37,9 @@ const jsonLd = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'הלוואות — המדריך המלא לבחירה נכונה ב-2026',
+    headline: 'הלוואות - המדריך המלא לבחירה נכונה ב-2026',
     description:
-      'לפני שלוקחים הלוואה — קראו את זה. מה לבדוק, מה לא לפספס, ואיך לא לשלם יותר ממה שצריך.',
+      'לפני שלוקחים הלוואה - קראו את זה. מה לבדוק, מה לא לפספס, ואיך לא לשלם יותר ממה שצריך.',
     url: CANONICAL,
     inLanguage: 'he',
     datePublished: '2026-01-01',
@@ -54,7 +54,7 @@ const jsonLd = [
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'ראשי',                      item: BASE },
       { '@type': 'ListItem', position: 2, name: 'מדריכים',                   item: `${BASE}/guides` },
-      { '@type': 'ListItem', position: 3, name: 'הלוואות — איך בוחרים נכון', item: CANONICAL },
+      { '@type': 'ListItem', position: 3, name: 'הלוואות - איך בוחרים נכון', item: CANONICAL },
     ],
   },
   /* 3. FAQPage */
@@ -83,7 +83,7 @@ const jsonLd = [
         name: 'אם הבנק סרב לי, מה זה אומר?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'זה אומר שהאלגוריתם של הבנק לא אהב את הפרופיל שלך ברגע זה. לא בהכרח שאין לך פתרון. חברות חוץ בנקאיות עובדות עם קריטריונים שונים. אם גם הן סירבו לך — כנראה יש בעיה שצריך לטפל בה לפני שלוקחים הלוואה.',
+          text: 'זה אומר שהאלגוריתם של הבנק לא אהב את הפרופיל שלך ברגע זה. לא בהכרח שאין לך פתרון. חברות חוץ בנקאיות עובדות עם קריטריונים שונים. אם גם הן סירבו לך - כנראה יש בעיה שצריך לטפל בה לפני שלוקחים הלוואה.',
         },
       },
       {
@@ -104,7 +104,7 @@ const TOC = [
   { id: 'kama-lehahzir', label: 'כמה אתה יכול להחזיר' },
   { id: 'sugei-halvaa',  label: 'סוגי ההלוואות' },
   { id: 'lifnei-hatima', label: 'מה לבדוק לפני שחותמים' },
-  { id: 'seker-shuk',    label: 'סקר שוק — איך עושים נכון' },
+  { id: 'seker-shuk',    label: 'סקר שוק - איך עושים נכון' },
   { id: 'faq',           label: 'שאלות נפוצות' },
 ];
 
@@ -121,11 +121,11 @@ export default function HalvaotMadrichPage() {
       <Breadcrumbs
         items={[
           { label: 'מדריכים', href: '/guides' },
-          { label: 'הלוואות — איך בוחרים נכון' },
+          { label: 'הלוואות - איך בוחרים נכון' },
         ]}
       />
 
-      {/* Ad slot — above article */}
+      {/* Ad slot - above article */}
       <AdSlot variant="header" className="mb-10" />
 
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-10">
@@ -140,7 +140,7 @@ export default function HalvaotMadrichPage() {
               הלוואות
             </div>
             <h1 className="text-3xl sm:text-4xl font-black text-accent-900 leading-tight mb-4 tracking-tight">
-              הלוואות — איך בוחרים נכון ולא מתחרטים אחר כך
+              הלוואות - איך בוחרים נכון ולא מתחרטים אחר כך
             </h1>
             <p className="text-accent-400 text-sm">
               עודכן לאחרונה: מאי 2026 · קריאה: כ-5 דקות
@@ -159,11 +159,11 @@ export default function HalvaotMadrichPage() {
 
           {/* ── Section 1 ── */}
           <h2 id="ribbit-eff" className={h2}>
-            ריבית נומינלית, ריבית אפקטיבית — למה זה משנה
+            ריבית נומינלית, ריבית אפקטיבית - למה זה משנה
           </h2>
           <p className={p}>
             כל מלווה בישראל חייב לגלות לך שני מספרים: הריבית הנומינלית והריבית
-            האפקטיבית (EFF). בפרסומות תמיד תראה את הנומינלית — היא נמוכה יותר
+            האפקטיבית (EFF). בפרסומות תמיד תראה את הנומינלית - היא נמוכה יותר
             ונראית טוב יותר.
           </p>
           <p className={p}>
@@ -179,11 +179,11 @@ export default function HalvaotMadrichPage() {
 
           {/* ── Section 2 ── */}
           <h2 id="kama-lehahzir" className={h2}>
-            כמה אתה יכול להחזיר — חישוב פשוט
+            כמה אתה יכול להחזיר - חישוב פשוט
           </h2>
           <p className={p}>
             יש כלל אצבע שהבנקים משתמשים בו: לא יותר מ-40% מההכנסה החודשית נטו
-            מוקדש לכל ההחזרים ביחד. משכנתא, הלוואות, כרטיסי אשראי בתשלומים —
+            מוקדש לכל ההחזרים ביחד. משכנתא, הלוואות, כרטיסי אשראי בתשלומים -
             הכל נספר.
           </p>
           <p className={p}>
@@ -220,23 +220,23 @@ export default function HalvaotMadrichPage() {
           <p className={p}>לא כל הלוואה נוצרה שווה. יש כמה קטגוריות שכדאי להכיר:</p>
 
           <p className={p}>
-            <span className={strong}>הלוואה בנקאית רגילה</span> — הזולה ביותר בדרך
+            <span className={strong}>הלוואה בנקאית רגילה</span> - הזולה ביותר בדרך
             כלל, אבל גם הכי קשה לקבל. דורשת היסטוריה פיננסית נקייה, הכנסה מוכחת,
             ולפעמים ביטחונות. זמן אישור: שבוע ויותר.
           </p>
           <p className={p}>
-            <span className={strong}>הלוואה חוץ בנקאית</span> — מהירה יותר, נגישה
-            יותר, ריבית גבוהה יותר. כאל, מקס, ישראכרט — כל אלה. לא נספרת
+            <span className={strong}>הלוואה חוץ בנקאית</span> - מהירה יותר, נגישה
+            יותר, ריבית גבוהה יותר. כאל, מקס, ישראכרט - כל אלה. לא נספרת
             באובליגו הבנקאי שלך. מתאימה כשהבנק אמר לא, או כשאתה צריך את הכסף
             מהר.
           </p>
           <p className={p}>
-            <span className={strong}>הלוואה מקרן השתלמות או פנסיה</span> — האופציה
+            <span className={strong}>הלוואה מקרן השתלמות או פנסיה</span> - האופציה
             הזולה ביותר שקיימת אם יש לך חיסכון. ריבית פריים מינוס עד אפס ריבית.
             רוב האנשים לא יודעים שיש להם את הזכות הזאת. בדוק עם הגוף המנהל שלך.
           </p>
           <p className={p}>
-            <span className={strong}>הלוואה חברתית (P2P)</span> — פלטפורמות כמו
+            <span className={strong}>הלוואה חברתית (P2P)</span> - פלטפורמות כמו
             בלנדר וטריא מחברות בין לווים למלווים פרטיים. לפעמים בתנאים תחרותיים,
             לפעמים לא. שווה לבדוק כחלק מסקר השוק שלך.
           </p>
@@ -246,26 +246,26 @@ export default function HalvaotMadrichPage() {
           <p className={p}>ארבעה דברים שאי אפשר לדלג עליהם:</p>
 
           <p className={p}>
-            <span className={strong}>גרייס — הוא לא חינם.</span>{' '}
+            <span className={strong}>גרייס - הוא לא חינם.</span>{' '}
             חברות רבות מציעות &quot;דחיית תשלום ראשון עד 6 חודשים.&quot; נשמע
             נהדר. אבל הריבית ממשיכה לרוץ על כל הסכום בתקופה הזאת. על הלוואה של
             ₪100,000 ב-10% ריבית, 6 חודשי גרייס אומרים ₪5,000 נוספים לפני
             שהתחלת לשלם.
           </p>
           <p className={p}>
-            <span className={strong}>פירעון מוקדם — כמה זה עולה?</span>{' '}
+            <span className={strong}>פירעון מוקדם - כמה זה עולה?</span>{' '}
             אם אתה עשוי לסגור את ההלוואה לפני הזמן, בדוק את עמלת הפירעון המוקדם.
             רוב החברות גובות 1% עד 3% מהיתרה. זה כסף שצריך לחשב.
           </p>
           <p className={p}>
-            <span className={strong}>ריבית הפיגורים — מה קורה אם תפגר?</span>{' '}
+            <span className={strong}>ריבית הפיגורים - מה קורה אם תפגר?</span>{' '}
             הריבית הזאת יכולה להיות גבוהה משמעותית מריבית ההלוואה הרגילה. קרא
             את הסעיף הזה בחוזה לפני הכל.
           </p>
           <p className={p}>
             <span className={strong}>הגבול החוקי לריבית.</span>{' '}
             בישראל קיים חוק אשראי הוגן. הריבית המקסימלית המותרת היא 15% בתוספת
-            ריבית בנק ישראל. כרגע זה כ-19%. אם מישהו מציע לך יותר — הוא עובר
+            ריבית בנק ישראל. כרגע זה כ-19%. אם מישהו מציע לך יותר - הוא עובר
             על החוק.
           </p>
 
@@ -314,7 +314,7 @@ export default function HalvaotMadrichPage() {
               <p className="text-sm text-accent-500 leading-relaxed">
                 זה אומר שהאלגוריתם של הבנק לא אהב את הפרופיל שלך ברגע זה. לא
                 בהכרח שאין לך פתרון. חברות חוץ בנקאיות עובדות עם קריטריונים
-                שונים. אם גם הן סירבו לך — כנראה יש בעיה שצריך לטפל בה לפני
+                שונים. אם גם הן סירבו לך - כנראה יש בעיה שצריך לטפל בה לפני
                 שלוקחים הלוואה.
               </p>
             </div>
@@ -344,7 +344,7 @@ export default function HalvaotMadrichPage() {
                 className="font-semibold text-primary-600 hover:text-primary-700
                            underline underline-offset-2 transition-colors duration-150"
               >
-                הלוואה חוץ בנקאית — המדריך המלא
+                הלוואה חוץ בנקאית - המדריך המלא
               </Link>
             </p>
           </div>
@@ -417,7 +417,7 @@ export default function HalvaotMadrichPage() {
 
       </div>
 
-      {/* Ad slot — below article */}
+      {/* Ad slot - below article */}
       <AdSlot variant="bottom" className="mt-10" />
 
     </div>

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AdSlot from '@/components/AdSlot';
@@ -10,12 +10,12 @@ const BASE = 'https://calc.mgh-ltd.com';
 const CANONICAL = `${BASE}/guides/halvaah-hutz-bankait`;
 
 export const metadata: Metadata = {
-  title: 'הלוואה חוץ בנקאית — המדריך המלא לשנת 2026 | Maxit.מקסיט',
+  title: 'הלוואה חוץ בנקאית - המדריך המלא לשנת 2026 | Maxit.מקסיט',
   description:
     'כל מה שצריך לדעת על הלוואה חוץ בנקאית: מי נותן, כמה עולה, מתי כדאי ומתי לא. מדריך ישיר בלי שטויות.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'הלוואה חוץ בנקאית — המדריך המלא לשנת 2026',
+    title: 'הלוואה חוץ בנקאית - המדריך המלא לשנת 2026',
     description:
       'כל מה שצריך לדעת על הלוואה חוץ בנקאית: מי נותן, כמה עולה, מתי כדאי ומתי לא. מדריך ישיר בלי שטויות.',
     url: CANONICAL,
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'הלוואה חוץ בנקאית — המדריך המלא לשנת 2026',
+    title: 'הלוואה חוץ בנקאית - המדריך המלא לשנת 2026',
     description:
       'כל מה שצריך לדעת על הלוואה חוץ בנקאית: מי נותן, כמה עולה, מתי כדאי ומתי לא.',
   },
@@ -37,7 +37,7 @@ const jsonLd = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'הלוואה חוץ בנקאית — המדריך המלא לשנת 2026',
+    headline: 'הלוואה חוץ בנקאית - המדריך המלא לשנת 2026',
     description:
       'כל מה שצריך לדעת על הלוואה חוץ בנקאית: מי נותן, כמה עולה, מתי כדאי ומתי לא.',
     url: CANONICAL,
@@ -126,7 +126,7 @@ export default function HalvaahHutzBankaitPage() {
         ]}
       />
 
-      {/* Ad slot — above article */}
+      {/* Ad slot - above article */}
       <AdSlot variant="header" className="mb-10" />
 
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-10">
@@ -407,7 +407,7 @@ export default function HalvaahHutzBankaitPage() {
 
       </div>
 
-      {/* Ad slot — below article */}
+      {/* Ad slot - below article */}
       <AdSlot variant="bottom" className="mt-10" />
 
     </div>

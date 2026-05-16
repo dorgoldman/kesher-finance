@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AdSlot from '@/components/AdSlot';
 import LoanCalculator from '@/components/LoanCalculator';
@@ -8,7 +8,7 @@ import { SITE_URL, SITE_NAME } from '@/lib/constants';
 export const metadata: Metadata = generateSEOMetadata({
   title: 'מחשבון הלוואה - חישוב החזר חודשי | Maxit.מקסיט',
   description:
-    'מחשבון הלוואה חינמי בעברית — חשבו החזר חודשי, סך ריבית ולוח סילוקין לכל הלוואה צרכנית. שיטת שפיצר, תוצאות מיידיות.',
+    'מחשבון הלוואה חינמי בעברית - חשבו החזר חודשי, סך ריבית ולוח סילוקין לכל הלוואה צרכנית. שיטת שפיצר, תוצאות מיידיות.',
   canonical: '/tools/loan-calculator',
 });
 
@@ -18,10 +18,10 @@ const jsonLd = [
   {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
-    name: 'מחשבון הלוואה — מקסיט',
+    name: 'מחשבון הלוואה - מקסיט',
     url: `${SITE_URL}/tools/loan-calculator`,
     description:
-      'מחשבון הלוואה חינמי בעברית — חשבו החזר חודשי, סך ריבית ולוח סילוקין לכל הלוואה צרכנית. שיטת שפיצר.',
+      'מחשבון הלוואה חינמי בעברית - חשבו החזר חודשי, סך ריבית ולוח סילוקין לכל הלוואה צרכנית. שיטת שפיצר.',
     applicationCategory: 'FinanceApplication',
     operatingSystem: 'All',
     offers: {
@@ -55,7 +55,7 @@ const jsonLd = [
         name: 'מה זו שיטת שפיצר?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'שיטת שפיצר (Spitzer) היא שיטת ההחזר הנפוצה ביותר לאשראי צרכני. בשיטה זו ההחזר החודשי קבוע לאורך כל התקופה — מדי חודש משלמים ריבית על יתרת הקרן ואת ההפרש ממחזירים כקרן. עם הזמן חלק הריבית פוחת וחלק הקרן גדל.',
+          text: 'שיטת שפיצר (Spitzer) היא שיטת ההחזר הנפוצה ביותר לאשראי צרכני. בשיטה זו ההחזר החודשי קבוע לאורך כל התקופה - מדי חודש משלמים ריבית על יתרת הקרן ואת ההפרש ממחזירים כקרן. עם הזמן חלק הריבית פוחת וחלק הקרן גדל.',
         },
       },
       {
@@ -79,7 +79,7 @@ const jsonLd = [
         name: 'כמה ריבית אשלם לאורך חיי ההלוואה?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'סכום הריבית הכולל תלוי בשלושה גורמים: סכום ההלוואה, שיעור הריבית ותקופת ההחזר. ככל שהתקופה ארוכה יותר — ההחזר החודשי נמוך יותר, אך סך הריבית גבוה יותר. המחשבון מציג את כל הנתונים בשקיפות מלאה.',
+          text: 'סכום הריבית הכולל תלוי בשלושה גורמים: סכום ההלוואה, שיעור הריבית ותקופת ההחזר. ככל שהתקופה ארוכה יותר - ההחזר החודשי נמוך יותר, אך סך הריבית גבוה יותר. המחשבון מציג את כל הנתונים בשקיפות מלאה.',
         },
       },
       {
@@ -110,7 +110,7 @@ export default function LoanCalculatorPage() {
         <h1 className="section-title mb-3">מחשבון הלוואה</h1>
         <p className="text-accent-500 leading-relaxed">
           חשבו את ההחזר החודשי, סך הריבית ולוח הסילוקין המלא לכל הלוואה
-          צרכנית — אשראי אישי, הלוואת רכב, שיפוצים ועוד. החישוב מבוסס
+          צרכנית - אשראי אישי, הלוואת רכב, שיפוצים ועוד. החישוב מבוסס
           שיטת שפיצר (תשלומים קבועים) והתוצאות מתעדכנות בזמן אמת.
         </p>
       </div>
@@ -125,10 +125,10 @@ export default function LoanCalculatorPage() {
         <div>
           <h2 className="text-xl font-bold text-accent-900 mb-3">איך עובד מחשבון ההלוואה?</h2>
           <p className="text-accent-500 leading-relaxed">
-            המחשבון משתמש בשיטת שפיצר — הנפוצה ביותר בהלוואות צרכניות בישראל.
+            המחשבון משתמש בשיטת שפיצר - הנפוצה ביותר בהלוואות צרכניות בישראל.
             בשיטה זו ההחזר החודשי קבוע לאורך כל תקופת ההלוואה. בתחילת הדרך
             רוב התשלום מורכב מריבית; ככל שהזמן עובר, חלק הקרן גדל וחלק הריבית
-            פוחת — כפי שמראה לוח הסילוקין המפורט.
+            פוחת - כפי שמראה לוח הסילוקין המפורט.
           </p>
         </div>
 
@@ -140,7 +140,7 @@ export default function LoanCalculatorPage() {
               <h3 className="font-bold text-accent-800 mb-2">מה זו שיטת שפיצר?</h3>
               <p className="text-sm text-accent-500 leading-relaxed">
                 שיטת שפיצר היא שיטת ההחזר הנפוצה ביותר לאשראי צרכני. ההחזר החודשי
-                קבוע לאורך כל התקופה — מדי חודש משלמים ריבית על יתרת הקרן ואת ההפרש
+                קבוע לאורך כל התקופה - מדי חודש משלמים ריבית על יתרת הקרן ואת ההפרש
                 ממחזירים כקרן. עם הזמן חלק הריבית פוחת וחלק הקרן גדל.
               </p>
             </div>
@@ -155,7 +155,7 @@ export default function LoanCalculatorPage() {
             </div>
 
             <div className="card">
-              <h3 className="font-bold text-accent-800 mb-2">תקופה קצרה או ארוכה — מה עדיף?</h3>
+              <h3 className="font-bold text-accent-800 mb-2">תקופה קצרה או ארוכה - מה עדיף?</h3>
               <p className="text-sm text-accent-500 leading-relaxed">
                 תקופה קצרה = החזר חודשי גבוה יותר, אך סך ריבית נמוך משמעותית.
                 תקופה ארוכה = החזר חודשי נוח יותר, אך עלות כוללת גבוהה יותר.
@@ -180,7 +180,7 @@ export default function LoanCalculatorPage() {
           <ul className="space-y-3 text-accent-500">
             <li className="flex gap-2">
               <span className="text-primary-500 font-bold shrink-0">01</span>
-              <span>השוו ריביות בין לפחות 3 גופים מלווים — בנקים, חברות אשראי וגמ&quot;חים</span>
+              <span>השוו ריביות בין לפחות 3 גופים מלווים - בנקים, חברות אשראי וגמ&quot;חים</span>
             </li>
             <li className="flex gap-2">
               <span className="text-primary-500 font-bold shrink-0">02</span>
@@ -188,11 +188,11 @@ export default function LoanCalculatorPage() {
             </li>
             <li className="flex gap-2">
               <span className="text-primary-500 font-bold shrink-0">03</span>
-              <span>בדקו את ריבית ה-APR (ריבית שנתית אפקטיבית) — היא כוללת עמלות ועלויות נוספות</span>
+              <span>בדקו את ריבית ה-APR (ריבית שנתית אפקטיבית) - היא כוללת עמלות ועלויות נוספות</span>
             </li>
             <li className="flex gap-2">
               <span className="text-primary-500 font-bold shrink-0">04</span>
-              <span>שמרו על קרן חירום לפני נטילת הלוואה — לפחות 3 חודשי הוצאות</span>
+              <span>שמרו על קרן חירום לפני נטילת הלוואה - לפחות 3 חודשי הוצאות</span>
             </li>
           </ul>
         </div>

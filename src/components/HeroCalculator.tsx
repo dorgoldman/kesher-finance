@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
@@ -85,7 +85,7 @@ export default function HeroCalculator() {
   const animatedMonthly = useCountUp(monthly);
 
   return (
-    /* Glassmorphism card — skill: backdrop-blur 16px, rgba(255,255,255,0.06), 1px white/10 border */
+    /* Glassmorphism card - skill: backdrop-blur 16px, rgba(255,255,255,0.06), 1px white/10 border */
     <div className="glass-card rounded-3xl p-6 sm:p-8 shadow-hero">
 
       {/* ── Monthly payment display ── */}
@@ -94,7 +94,7 @@ export default function HeroCalculator() {
           החזר חודשי משוער
         </p>
 
-        {/* ₪ symbol styled smaller + lighter than the number — per design spec */}
+        {/* ₪ symbol styled smaller + lighter than the number - per design spec */}
         <div
           className="flex items-end justify-center gap-1 tabular-nums font-extrabold leading-none tracking-tight"
           style={{ direction: 'ltr' }}
@@ -194,7 +194,7 @@ export default function HeroCalculator() {
         </div>
       </div>
 
-      {/* ── CTA — press-effect (active:scale-[0.97]) per skill micro-interaction rule ── */}
+      {/* ── CTA - press-effect (active:scale-[0.97]) per skill micro-interaction rule ── */}
       <Link
         href="/tools/mortgage-calculator"
         className="btn-primary press-effect w-full flex items-center justify-center gap-2 text-sm"

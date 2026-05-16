@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AdSlot from '@/components/AdSlot';
@@ -80,7 +80,7 @@ export default function ToolsHub() {
             מחשבון שכר נטו
           </h2>
           <p className="text-accent-500 text-sm leading-relaxed">
-            חשבו שכר נטו לאחר מס הכנסה, ביטוח לאומי, בריאות ופנסיה — מדרגות 2026
+            חשבו שכר נטו לאחר מס הכנסה, ביטוח לאומי, בריאות ופנסיה - מדרגות 2026
           </p>
         </Link>
 

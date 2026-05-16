@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AdSlot from '@/components/AdSlot';
@@ -9,12 +9,12 @@ const BASE = 'https://calc.mgh-ltd.com';
 const CANONICAL = `${BASE}/guides/halvaah-miyedit`;
 
 export const metadata: Metadata = {
-  title: 'הלוואה מיידית — מה באמת קורה מרגע הבקשה עד קבלת הכסף | Maxit.מקסיט',
+  title: 'הלוואה מיידית - מה באמת קורה מרגע הבקשה עד קבלת הכסף | Maxit.מקסיט',
   description:
     'כמה זמן לוקחת הלוואה מיידית באמת? מה צריך להכין, מה יכול לעצור את האישור, ואיפה כדאי לפנות ב-2026.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'הלוואה מיידית — מה באמת קורה מרגע הבקשה עד קבלת הכסף',
+    title: 'הלוואה מיידית - מה באמת קורה מרגע הבקשה עד קבלת הכסף',
     description:
       'כמה זמן לוקחת הלוואה מיידית באמת? מה צריך להכין, מה יכול לעצור את האישור, ואיפה כדאי לפנות ב-2026.',
     url: CANONICAL,
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'הלוואה מיידית — מה באמת קורה מרגע הבקשה עד קבלת הכסף',
+    title: 'הלוואה מיידית - מה באמת קורה מרגע הבקשה עד קבלת הכסף',
     description:
       'כמה זמן לוקחת הלוואה מיידית באמת? מה צריך להכין, מה יכול לעצור את האישור, ואיפה כדאי לפנות ב-2026.',
   },
@@ -62,7 +62,7 @@ const jsonLd = [
         name: 'האם אפשר לקבל הלוואה מיידית עם חוב קיים?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'תלוי בסכום החוב הקיים ובגוף שפונים אליו. אם יחס ההחזר שלך (כל ההחזרים מול ההכנסה) עדיין מתחת ל-40%, סביר שתאושר. אם עברת את הסף — קשה יותר.',
+          text: 'תלוי בסכום החוב הקיים ובגוף שפונים אליו. אם יחס ההחזר שלך (כל ההחזרים מול ההכנסה) עדיין מתחת ל-40%, סביר שתאושר. אם עברת את הסף - קשה יותר.',
         },
       },
       {
@@ -150,7 +150,7 @@ export default function HalvaahMiyeditPage() {
           </p>
 
           {/* ── Section 1 ── */}
-          <h2 id="step-1" className={h2}>שלב 1: הגשת הבקשה — כמה זמן?</h2>
+          <h2 id="step-1" className={h2}>שלב 1: הגשת הבקשה - כמה זמן?</h2>
           <p className={p}>
             הגשת בקשה אונליין לוקחת 5 עד 15 דקות. זה החלק המהיר. מה שמאט
             אנשים הוא איתור המסמכים.
@@ -158,31 +158,31 @@ export default function HalvaahMiyeditPage() {
           <p className={p}>
             מה שתצטרך ברוב המקרים: תעודת זהות, תלוש משכורת אחרון (לפעמים
             שניים-שלושה), תדפיס חשבון בנק ל-3 חודשים אחרונים. גוף שדורש יותר
-            מזה מוסיף זמן — גוף שדורש פחות כנראה בודק פחות, מה שלפעמים
+            מזה מוסיף זמן - גוף שדורש פחות כנראה בודק פחות, מה שלפעמים
             משמעותו ריבית גבוהה יותר.
           </p>
 
           {/* ── Section 2 ── */}
-          <h2 id="step-2" className={h2}>שלב 2: האישור — כמה זמן באמת?</h2>
+          <h2 id="step-2" className={h2}>שלב 2: האישור - כמה זמן באמת?</h2>
           <p className={p}>כאן נפרדות הדרכים בין הגופים השונים:</p>
 
           <p className={p}>
-            <span className={strong}>חברות אשראי (כאל, מקס, ישראכרט)</span> —
+            <span className={strong}>חברות אשראי (כאל, מקס, ישראכרט)</span> -
             אישור עקרוני תוך דקות לרוב הלקוחות. הכסף מועבר תוך יום עסקים אחד
             מרגע החתימה הסופית. זה המסלול המהיר ביותר שקיים.
           </p>
           <p className={p}>
-            <span className={strong}>בנקים דיגיטליים</span> — אישור תוך כמה שעות
+            <span className={strong}>בנקים דיגיטליים</span> - אישור תוך כמה שעות
             עד יום עסקים. הכסף מגיע תוך 2 עד 3 ימי עסקים. מהיר יותר מהבנק שלך,
             איטי יותר מחברת אשראי.
           </p>
           <p className={p}>
-            <span className={strong}>הבנק שלך</span> — בין יום לשבוע, תלוי
+            <span className={strong}>הבנק שלך</span> - בין יום לשבוע, תלוי
             בהיסטוריה שלך איתם ובסכום. אם אתה לקוח ותיק עם היסטוריה נקייה,
             לפעמים זה יום עסקים אחד. אם לא, יותר.
           </p>
           <p className={p}>
-            <span className={strong}>P2P (בלנדר, טריא)</span> — בין יום לשלושה
+            <span className={strong}>P2P (בלנדר, טריא)</span> - בין יום לשלושה
             ימים בממוצע. תלוי כמה מהר מלווים מממנים את ההלוואה שלך.
           </p>
 
@@ -243,7 +243,7 @@ export default function HalvaahMiyeditPage() {
           <p className={p}>זה הדבר שהכי חשוב להבין.</p>
           <p className={p}>
             מהירות עולה כסף. חברת אשראי שנותנת כסף תוך יום עסקים גובה ריבית
-            גבוהה יותר מבנק שלוקח שבוע. זה לא בהכרח רע — אם אתה צריך את הכסף
+            גבוהה יותר מבנק שלוקח שבוע. זה לא בהכרח רע - אם אתה צריך את הכסף
             עכשיו, אתה משלם על המהירות, ולפעמים זה שווה.
           </p>
           <p className={p}>
@@ -289,7 +289,7 @@ export default function HalvaahMiyeditPage() {
               <p className="text-sm text-accent-500 leading-relaxed">
                 תלוי בסכום החוב הקיים ובגוף שפונים אליו. אם יחס ההחזר שלך (כל
                 ההחזרים מול ההכנסה) עדיין מתחת ל-40%, סביר שתאושר. אם עברת את
-                הסף — קשה יותר.
+                הסף - קשה יותר.
               </p>
             </div>
 
@@ -340,7 +340,7 @@ export default function HalvaahMiyeditPage() {
                 className="text-sm font-semibold text-primary-600 hover:text-primary-700
                            underline underline-offset-2 transition-colors duration-150"
               >
-                הלוואה חוץ בנקאית — המדריך המלא
+                הלוואה חוץ בנקאית - המדריך המלא
               </Link>
               <span className="hidden sm:inline text-accent-300">|</span>
               <Link
@@ -348,7 +348,7 @@ export default function HalvaahMiyeditPage() {
                 className="text-sm font-semibold text-primary-600 hover:text-primary-700
                            underline underline-offset-2 transition-colors duration-150"
               >
-                הלוואות — איך בוחרים נכון
+                הלוואות - איך בוחרים נכון
               </Link>
             </div>
           </div>

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useMemo, useCallback, useEffect, useRef } from 'react';
 
@@ -90,7 +90,7 @@ const TRACK_TYPES: { value: TrackType; label: string; description: string }[] = 
   { value: 'eligibility', label: 'זכאות',                  description: 'הלוואת זכאות מסובסדת' },
 ];
 
-/* Gradient backgrounds — credit card aesthetic per design spec */
+/* Gradient backgrounds - credit card aesthetic per design spec */
 const TRACK_GRADIENT: Record<TrackType, string> = {
   fixed:       'bg-gradient-to-br from-[#1a2f5e] to-[#0a1530]',
   variable:    'bg-gradient-to-br from-[#4a2200] to-[#1c0d00]',
@@ -114,7 +114,7 @@ const TRACK_PILL: Record<TrackType, string> = {
   eligibility: 'bg-emerald-500',
 };
 
-/* SVG icons — no emoji, per skill pre-delivery checklist */
+/* SVG icons - no emoji, per skill pre-delivery checklist */
 function TrackIcon({ type, className }: { type: TrackType; className?: string }) {
   const cls = `w-4 h-4 ${TRACK_ICON_COLOR[type]} ${className ?? ''}`;
   if (type === 'fixed') return (
@@ -135,7 +135,7 @@ function TrackIcon({ type, className }: { type: TrackType; className?: string })
         d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
     </svg>
   );
-  // eligibility — bank / institution icon
+  // eligibility - bank / institution icon
   return (
     <svg className={cls} fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
@@ -239,7 +239,7 @@ const INPUT_HINTS: Record<TrackType, { amount: string; years: string; rate: stri
 };
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   TrackCard — credit card style, hover lift, per-track focus glow
+   TrackCard - credit card style, hover lift, per-track focus glow
 ═══════════════════════════════════════════════════════════════════════════ */
 function TrackCard({
   track, result, onUpdate, onRemove, canRemove,
@@ -350,7 +350,7 @@ function TrackCard({
           )}
         </div>
 
-        {/* 3. Rate — or prime section */}
+        {/* 3. Rate - or prime section */}
         {track.type === 'prime' ? (
           <div className="col-span-full">
             {primeExpanded ? (
@@ -454,7 +454,7 @@ function TrackCard({
         )}
       </div>
 
-      {/* ── Payment — pinned to card bottom ── */}
+      {/* ── Payment - pinned to card bottom ── */}
       <div className="mt-auto flex items-end justify-between pt-4 border-t border-white/10">
         <div>
           <p className="text-[11px] text-white/30 mb-1">החזר חודשי</p>
@@ -610,7 +610,7 @@ export default function MortgageCalculator() {
           );
         })}
 
-        {/* Add track — press-effect per spec */}
+        {/* Add track - press-effect per spec */}
         <button
           onClick={() => setAddMenuOpen(!addMenuOpen)}
           className="rounded-2xl bg-primary-600 hover:bg-primary-700 active:bg-primary-800
@@ -648,13 +648,13 @@ export default function MortgageCalculator() {
         </div>
       )}
 
-      {/* ── Results hero — dark, Revolut-style ── */}
+      {/* ── Results hero - dark, Revolut-style ── */}
       <div className="bg-[#0F1117] rounded-2xl p-8 mb-4 shadow-hero">
         <p className="text-white/30 text-[11px] font-semibold uppercase tracking-[0.18em] mb-4 text-center">
           החזר חודשי כולל
         </p>
 
-        {/* Split ₪ symbol — smaller + lighter than the number */}
+        {/* Split ₪ symbol - smaller + lighter than the number */}
         <div
           className="flex items-end justify-center gap-1 tabular-nums font-extrabold leading-none tracking-tight mb-3"
           style={{ direction: 'ltr' }}
@@ -794,7 +794,7 @@ export default function MortgageCalculator() {
         </div>
       )}
 
-      {/* ── Sticky mobile bottom bar — live monthly payment ── */}
+      {/* ── Sticky mobile bottom bar - live monthly payment ── */}
       <div className="fixed bottom-0 inset-x-0 z-30 sm:hidden bg-[#0F1117]/95 backdrop-blur-sm
                       border-t border-white/10 px-5 py-3 flex items-center justify-between">
         <div>

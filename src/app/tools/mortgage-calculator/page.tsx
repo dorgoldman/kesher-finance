@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AdSlot from '@/components/AdSlot';
 import MortgageCalculator from '@/components/MortgageCalculator';
@@ -8,14 +8,14 @@ import { SITE_URL, SITE_NAME } from '@/lib/constants';
 export const metadata: Metadata = generateSEOMetadata({
   title: 'מחשבון משכנתא',
   description:
-    'מחשבון משכנתא חינמי בעברית — הרכיבו תמהיל מסלולים (קבועה, משתנה, פריים, זכאות), חשבו החזר חודשי כולל ולוח סילוקין מפורט.',
+    'מחשבון משכנתא חינמי בעברית - הרכיבו תמהיל מסלולים (קבועה, משתנה, פריים, זכאות), חשבו החזר חודשי כולל ולוח סילוקין מפורט.',
   canonical: '/tools/mortgage-calculator',
 });
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebApplication',
-  name: 'מחשבון משכנתא — מקסיט',
+  name: 'מחשבון משכנתא - מקסיט',
   url: `${SITE_URL}/tools/mortgage-calculator`,
   description: 'מחשבון משכנתא חינמי בעברית עם תמהיל מסלולים ולוח סילוקין מפורט',
   applicationCategory: 'FinanceApplication',
@@ -48,7 +48,7 @@ export default function MortgageCalculatorPage() {
           <div className="mb-8">
             <h1 className="section-title mb-3">מחשבון משכנתא</h1>
             <p className="text-accent-500 leading-relaxed">
-              הרכיבו את תמהיל המשכנתא שלכם ממספר מסלולים — ריבית קבועה, משתנה,
+              הרכיבו את תמהיל המשכנתא שלכם ממספר מסלולים - ריבית קבועה, משתנה,
               פריים וזכאות. המחשבון מחשב את ההחזר החודשי הכולל ומציג לוח סילוקין
               משולב לכל המסלולים.
             </p>
@@ -119,7 +119,7 @@ export default function MortgageCalculatorPage() {
                 </li>
                 <li className="flex gap-2">
                   <span className="text-primary-500 font-bold">04</span>
-                  <span>קחו בחשבון עלויות נלוות — שמאי, עורך דין, ביטוח משכנתא</span>
+                  <span>קחו בחשבון עלויות נלוות - שמאי, עורך דין, ביטוח משכנתא</span>
                 </li>
               </ul>
             </div>

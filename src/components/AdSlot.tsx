@@ -1,7 +1,7 @@
-'use client';
+﻿'use client';
 
 /*
-  AdSlot — Google AdSense placement wrapper.
+  AdSlot - Google AdSense placement wrapper.
 
   Renders NOTHING (returns null) when NEXT_PUBLIC_ADSENSE_PUBLISHER_ID is
   absent or empty, so no div, no wrapper, no placeholder reaches the DOM.
@@ -10,11 +10,11 @@
   appropriate size for each variant.
 
   Variants:
-    header           — 728×90 desktop / 320×50 mobile (inline, below page title)
-    sidebar          — 300×250 desktop only (inline aside)
-    post-results-mobile — 320×50 mobile only (inline, after calculator results)
-    bottom           — 970×90 desktop / 320×50 mobile (inline, page footer)
-    sticky-mobile    — 320×50 fixed bottom bar, mobile only (z-40)
+    header           - 728×90 desktop / 320×50 mobile (inline, below page title)
+    sidebar          - 300×250 desktop only (inline aside)
+    post-results-mobile - 320×50 mobile only (inline, after calculator results)
+    bottom           - 970×90 desktop / 320×50 mobile (inline, page footer)
+    sticky-mobile    - 320×50 fixed bottom bar, mobile only (z-40)
 */
 
 export type AdVariant =

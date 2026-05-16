@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState } from 'react';
 import Link from 'next/link';
@@ -11,7 +11,7 @@ export default function Header() {
     <header className="glass sticky top-0 z-40 border-b border-accent-100">
       <div className="container-wide py-3.5 flex items-center justify-between">
 
-        {/* RTL: first child → RIGHT side (reading start) — Logo + primary CTA */}
+        {/* RTL: first child → RIGHT side (reading start) - Logo + primary CTA */}
         <div className="flex items-center gap-3">
           <Logo />
           <Link
@@ -25,7 +25,7 @@ export default function Header() {
           </Link>
         </div>
 
-        {/* RTL: last child → LEFT side — secondary nav or hamburger */}
+        {/* RTL: last child → LEFT side - secondary nav or hamburger */}
         <div className="flex items-center">
           {/* Desktop secondary nav */}
           <nav className="hidden md:flex items-center gap-0.5" aria-label="ניווט ראשי">
@@ -45,7 +45,7 @@ export default function Header() {
             </Link>
           </nav>
 
-          {/* Mobile hamburger — 48px touch target */}
+          {/* Mobile hamburger - 48px touch target */}
           <button
             className="md:hidden min-h-[48px] min-w-[48px] flex items-center justify-center
                        rounded-xl hover:bg-accent-100 text-accent-600

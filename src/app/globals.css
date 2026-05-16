@@ -1,4 +1,4 @@
-@tailwind base;
+﻿@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -131,7 +131,7 @@
     @apply text-xs text-red-300 mt-1.5 flex items-center gap-1;
   }
 
-  /* ─── Display number — huge tabular figures for financial data ─── */
+  /* ─── Display number - huge tabular figures for financial data ─── */
   .display-number {
     @apply font-extrabold tabular-nums leading-none tracking-tight;
   }
