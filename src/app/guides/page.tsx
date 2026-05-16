@@ -23,6 +23,12 @@ const guides: { title: string; description: string; href: string; category: stri
     href: '/guides/halvaah-hutz-bankait',
     category: 'הלוואות',
   },
+  {
+    title: 'הלוואה מיידית — מה באמת קורה מרגע הבקשה עד קבלת הכסף',
+    description: 'כמה זמן לוקחת הלוואה מיידית באמת? מה צריך להכין, מה יכול לעצור את האישור, ואיפה כדאי לפנות ב-2026.',
+    href: '/guides/halvaah-miyedit',
+    category: 'הלוואות',
+  },
 ];
 
 export default function GuidesHub() {
