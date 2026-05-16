@@ -21,15 +21,15 @@ const TAX_YEAR = 2026;
 const INCOME_TAX_BRACKETS: ReadonlyArray<{ readonly upTo: number; readonly rate: number }> = [
   { upTo:  7_270,   rate: 0.10 }, // 10%
   { upTo: 10_420,   rate: 0.14 }, // 14%
-  { upTo: 16_720,   rate: 0.20 }, // 20%
-  { upTo: 23_150,   rate: 0.31 }, // 31%
+  { upTo: 19_000,   rate: 0.20 }, // 20% — raised from ₪16,720 per amendment 288 (Jan 2026)
+  { upTo: 25_100,   rate: 0.31 }, // 31% — raised from ₪23,150 per amendment 288 (Jan 2026)
   { upTo: 48_130,   rate: 0.35 }, // 35%
   { upTo: 61_990,   rate: 0.47 }, // 47%
   { upTo: Infinity, rate: 0.50 }, // 50%
 ];
 
 /** Monthly value of one credit point — נקודת זיכוי (ILS/month) */
-const CREDIT_POINT_VALUE = 249; // ILS
+const CREDIT_POINT_VALUE = 242; // ILS — frozen for 2026 (was ₪249 pre-amendment)
 
 /** Reference average wage used by NII for bracket thresholds (ILS/month) */
 const NI_AVERAGE_WAGE = 13_600; // ILS/month
