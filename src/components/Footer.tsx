@@ -32,6 +32,22 @@ export default function Footer() {
                   מחשבון משכנתא
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/tools/loan-calculator"
+                  className="text-sm text-white/35 hover:text-white transition-colors duration-200 cursor-pointer"
+                >
+                  מחשבון הלוואה
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/tools/salary-calculator"
+                  className="text-sm text-white/35 hover:text-white transition-colors duration-200 cursor-pointer"
+                >
+                  מחשבון שכר נטו
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -62,6 +78,30 @@ export default function Footer() {
                   כל הכלים
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/about"
+                  className="text-sm text-white/35 hover:text-white transition-colors duration-200 cursor-pointer"
+                >
+                  אודות
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="text-sm text-white/35 hover:text-white transition-colors duration-200 cursor-pointer"
+                >
+                  צור קשר
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/privacy"
+                  className="text-sm text-white/35 hover:text-white transition-colors duration-200 cursor-pointer"
+                >
+                  מדיניות פרטיות
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -76,7 +116,17 @@ export default function Footer() {
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/15">
           <p>&copy; {new Date().getFullYear()} מקסיט. Maxit. כל הזכויות שמורות.</p>
-          <p>עודכן לאחרונה: מאי 2026</p>
+          <div className="flex items-center gap-4">
+            <Link href="/privacy" className="hover:text-white/40 transition-colors duration-200 cursor-pointer">
+              מדיניות פרטיות
+            </Link>
+            <Link href="/about" className="hover:text-white/40 transition-colors duration-200 cursor-pointer">
+              אודות
+            </Link>
+            <Link href="/contact" className="hover:text-white/40 transition-colors duration-200 cursor-pointer">
+              צור קשר
+            </Link>
+          </div>
         </div>
       </div>
 
