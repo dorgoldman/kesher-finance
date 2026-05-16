@@ -41,6 +41,12 @@ const guides: { title: string; description: string; href: string; category: stri
     href: '/guides/halvaah-lerechev',
     category: 'הלוואות',
   },
+  {
+    title: 'הלוואה למסורבים: מה האפשרויות האמיתיות ב-2026',
+    description: 'הבנק סרב לך? זה לא סוף הדרך. המדריך המלא לאפשרויות מימון עם BDI שלילי, כולל טיפ אחד שרוב האנשים מפספסים.',
+    href: '/guides/halvaah-lmesoravim',
+    category: 'הלוואות',
+  },
 ];
 
 export default function GuidesHub() {
