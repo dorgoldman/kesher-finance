@@ -23,6 +23,9 @@ export const metadata: Metadata = {
     locale: 'he_IL',
     siteName: SITE_NAME,
   },
+  verification: {
+    google: 'ab6BHqCxOEcCGkiDVN7Gjc5cIg5nwT7C31sHWvjffpg',
+  },
 };
 
 export default function RootLayout({
