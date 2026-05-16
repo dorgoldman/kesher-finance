@@ -12,6 +12,12 @@ export const metadata: Metadata = generateSEOMetadata({
 
 const guides: { title: string; description: string; href: string; category: string }[] = [
   {
+    title: 'הלוואות — המדריך המלא לבחירה נכונה',
+    description: 'לפני שלוקחים הלוואה — קראו את זה. מה לבדוק, מה לא לפספס, ואיך לא לשלם יותר ממה שצריך.',
+    href: '/guides/halvaot-madrich',
+    category: 'הלוואות',
+  },
+  {
     title: 'הלוואה חוץ בנקאית — המדריך המלא',
     description: 'כל מה שצריך לדעת על הלוואה חוץ בנקאית: מי נותן, כמה עולה, מתי כדאי ומתי לא. מדריך ישיר בלי שטויות.',
     href: '/guides/halvaah-hutz-bankait',
