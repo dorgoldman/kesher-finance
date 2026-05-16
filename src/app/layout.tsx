@@ -4,6 +4,7 @@ import './globals.css';
 import { SITE_NAME, SITE_DESCRIPTION, SITE_URL } from '@/lib/constants';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const heebo = Heebo({
   subsets: ['hebrew', 'latin'],
@@ -39,6 +40,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <GoogleAnalytics gaId="G-5D8RS8626V" />
       </body>
     </html>
   );
