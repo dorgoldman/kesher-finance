@@ -35,6 +35,12 @@ const guides: { title: string; description: string; href: string; category: stri
     href: '/guides/halvaah-lchol-matara',
     category: 'הלוואות',
   },
+  {
+    title: 'הלוואה לרכב: בנק, יבואן, או ליסינג? המדריך ב-2026',
+    description: 'לפני שחותמים על מימון הרכב, קראו את זה. ההבדל בין בנק ליבואן יכול לעלות לכם אלפי שקלים על אותו רכב.',
+    href: '/guides/halvaah-lerechev',
+    category: 'הלוואות',
+  },
 ];
 
 export default function GuidesHub() {
