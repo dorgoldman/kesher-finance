@@ -1,7 +1,14 @@
-﻿import Link from 'next/link';
+﻿import type { Metadata } from 'next';
+import Link from 'next/link';
 import { SITE_NAME, SITE_URL } from '@/lib/constants';
 import JsonLd from '@/components/SEO';
 import HeroCalculator from '@/components/HeroCalculator';
+
+export const metadata: Metadata = {
+  title: 'Maxit.מקסיט - מחשבונים ומדריכים פיננסיים בעברית',
+  description: 'מחשבוני משכנתא, הלוואה ושכר נטו בעברית. מדריכים פיננסיים ברורים. הכלים חינמיים, התוצאות מיידיות.',
+  alternates: { canonical: SITE_URL },
+};
 
 const jsonLd = {
   '@context': 'https://schema.org',
