@@ -87,6 +87,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${BASE}/guides/משכנתא-ראשונה`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
       url: `${BASE}/guides/ריבית-פריים`,
       lastModified: now,
       changeFrequency: 'monthly' as const,
