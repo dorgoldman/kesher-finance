@@ -59,6 +59,12 @@ const guides: { title: string; description: string; href: string; category: stri
     href: '/guides/ריבית-פריים',
     category: 'משכנתאות',
   },
+  {
+    title: 'לוח שפיצר מול קרן שווה: ההשוואה האמיתית',
+    description: 'שפיצר או קרן שווה? רוב האנשים לא שואלים את השאלה הנכונה. כך תדעו מה מתאים לכם, עם מספרים אמיתיים.',
+    href: '/guides/שפיצר-מול-קרן-שווה',
+    category: 'משכנתאות',
+  },
 ];
 
 export default function GuidesHub() {
