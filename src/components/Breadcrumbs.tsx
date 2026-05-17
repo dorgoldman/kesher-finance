@@ -13,7 +13,7 @@ interface BreadcrumbsProps {
 
 export default function Breadcrumbs({ items }: BreadcrumbsProps) {
   const allItems: BreadcrumbItem[] = [
-    { label: 'מקסיט', href: '/' },
+    { label: 'דף הבית', href: '/' },
     ...items,
   ];
 

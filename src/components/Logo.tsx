@@ -14,15 +14,7 @@ const sizes = {
 export default function Logo({ size = 'md', className = '' }: LogoProps) {
   return (
     <Link href="/" className={`group inline-flex items-center gap-0 ${className}`}>
-      <span className={`font-bold text-accent-900 ${sizes[size]}`} dir="rtl">
-        מקסיט
-      </span>
-      <span className={`font-bold text-primary-500 mx-0.5 ${sizes[size]}`}>
-        .
-      </span>
-      <span className={`font-bold text-accent-400 ${sizes[size]}`} dir="ltr">
-        Maxit
-      </span>
+      <span className={`font-bold text-accent-900 ${sizes[size]}`}>מקסיט</span><span className={`font-bold text-primary-500 ${sizes[size]}`}>.</span><span className={`font-bold text-accent-400 ${sizes[size]}`}>Maxit</span>
     </Link>
   );
 }
