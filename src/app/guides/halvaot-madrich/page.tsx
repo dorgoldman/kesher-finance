@@ -6,7 +6,7 @@ import JsonLd from '@/components/SEO';
 import { SITE_NAME } from '@/lib/constants';
 
 /* ── Canonical domain for this article ── */
-const BASE = 'https://calc.mgh-ltd.com';
+const BASE = 'https://getmaxit.co.il';
 const CANONICAL = `${BASE}/guides/halvaot-madrich`;
 
 export const metadata: Metadata = {

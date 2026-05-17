@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AdSlot from '@/components/AdSlot';
@@ -6,7 +6,7 @@ import JsonLd from '@/components/SEO';
 import { SITE_NAME } from '@/lib/constants';
 
 /* -- Canonical domain for this article -- */
-const BASE = 'https://calc.mgh-ltd.com';
+const BASE = 'https://getmaxit.co.il';
 const CANONICAL = `${BASE}/guides/halvaah-lchol-matara`;
 
 export const metadata: Metadata = {

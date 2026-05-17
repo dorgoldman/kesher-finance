@@ -5,7 +5,7 @@ import AdSlot from '@/components/AdSlot';
 import JsonLd from '@/components/SEO';
 import { SITE_NAME } from '@/lib/constants';
 
-const BASE = 'https://calc.mgh-ltd.com';
+const BASE = 'https://getmaxit.co.il';
 const CANONICAL = `${BASE}/guides/halvaah-miyedit`;
 
 export const metadata: Metadata = {

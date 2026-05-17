@@ -1,9 +1,9 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import JsonLd from '@/components/SEO';
 import { SITE_NAME } from '@/lib/constants';
 
-const BASE = 'https://calc.mgh-ltd.com';
+const BASE = 'https://getmaxit.co.il';
 const CANONICAL = `${BASE}/privacy`;
 
 export const metadata: Metadata = {
