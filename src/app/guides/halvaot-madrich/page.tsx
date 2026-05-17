@@ -4,6 +4,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import AdSlot from '@/components/AdSlot';
 import JsonLd from '@/components/SEO';
 import { SITE_NAME } from '@/lib/constants';
+import { CalculatorCTA } from '@/templates/article-page';
 
 /* ── Canonical domain for this article ── */
 const BASE = 'https://getmaxit.co.il';
@@ -279,6 +280,13 @@ export default function HalvaotMadrichPage() {
           <p className={p}>
             זה עובד כי הם יודעים שאתה משווה. המשא ומתן הוא חלק לגיטימי מהתהליך.
           </p>
+
+          {/* ── Calculator CTA ── */}
+          <CalculatorCTA
+            calculatorName="מחשבון ההלוואה"
+            calculatorUrl="/tools/loan-calculator"
+            teaser="חשב את ההחזר החודשי לפי הסכום, הריבית והתקופה שמתאימים לך."
+          />
 
           {/* ── Section 6: FAQ ── */}
           <h2 id="faq" className={h2}>שאלות נפוצות</h2>

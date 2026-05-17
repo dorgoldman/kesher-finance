@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AdSlot from '@/components/AdSlot';
+import { CalculatorCTA } from '@/templates/article-page';
 
 /* -- Canonical -- */
 const CANONICAL = 'https://getmaxit.co.il/guides/הלוואה-מקרן-השתלמות';
@@ -287,6 +288,13 @@ export default function HalvaahMikrenHashtalmuutPage() {
             חברות שמחייבות פירעון מלא של ההלוואה לפני שמאפשרות משיכה מהקרן. תוודא את
             התנאים מראש.
           </p>
+
+          {/* Calculator CTA */}
+          <CalculatorCTA
+            calculatorName="מחשבון ההלוואה"
+            calculatorUrl="/tools/loan-calculator"
+            teaser="כמה ייצא החזר חודשי על הסכום שאתה שוקל ללוות מהקרן שלך?"
+          />
 
           {/* Section 7: FAQ */}
           <h2 id="faq" className={h2}>שאלות נפוצות</h2>

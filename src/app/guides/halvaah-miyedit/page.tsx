@@ -4,6 +4,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import AdSlot from '@/components/AdSlot';
 import JsonLd from '@/components/SEO';
 import { SITE_NAME } from '@/lib/constants';
+import { CalculatorCTA } from '@/templates/article-page';
 
 const BASE = 'https://getmaxit.co.il';
 const CANONICAL = `${BASE}/guides/halvaah-miyedit`;
@@ -277,6 +278,13 @@ export default function HalvaahMiyeditPage() {
             גופים שונים דורשים מסמכים שונים. עדיף להכין את הכל מראש ולהגיש
             בשלמות, כי מסמך חסר יכול לדחות את האישור ביום שלם.
           </p>
+
+          {/* ── Calculator CTA ── */}
+          <CalculatorCTA
+            calculatorName="מחשבון ההלוואה"
+            calculatorUrl="/tools/loan-calculator"
+            teaser="בדוק כמה יהיה ההחזר החודשי לפני שמגישים, כדי לבקש סכום ריאלי."
+          />
 
           {/* ── Section 6: FAQ ── */}
           <h2 id="faq" className={h2}>שאלות נפוצות</h2>

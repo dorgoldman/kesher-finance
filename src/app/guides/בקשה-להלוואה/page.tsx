@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AdSlot from '@/components/AdSlot';
+import { CalculatorCTA } from '@/templates/article-page';
 
 /* -- Canonical -- */
 const CANONICAL = 'https://getmaxit.co.il/guides/בקשה-להלוואה';
@@ -310,6 +311,13 @@ export default function BakashaLeHalvaahPage() {
             OneZero עשויות להציע תנאים לאנשים שהבנק לא אישר. הריבית תהיה גבוהה יותר,
             אבל זה אופציה לגיטימית.
           </p>
+
+          {/* Calculator CTA */}
+          <CalculatorCTA
+            calculatorName="מחשבון ההלוואה"
+            calculatorUrl="/tools/loan-calculator"
+            teaser="לפני שמגישים, דע בדיוק מה ההחזר החודשי שאתה מסוגל לעמוד בו."
+          />
 
           {/* Section 7: FAQ */}
           <h2 id="faq" className={h2}>שאלות נפוצות</h2>

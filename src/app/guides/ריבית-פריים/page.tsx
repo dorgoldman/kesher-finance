@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AdSlot from '@/components/AdSlot';
+import { CalculatorCTA } from '@/templates/article-page';
 
 /* -- Canonical -- */
 const CANONICAL = 'https://getmaxit.co.il/guides/ריבית-פריים';
@@ -265,6 +266,13 @@ export default function RibitPrimePage() {
             מי שהיה עם משכנתא בפריים ראה את ההחזר החודשי שלו עולה בכמה מאות שקלים תוך
             חודשים בודדים. מי שבנה נכון את התמהיל ספג את הזעזוע בצורה מבוקרת.
           </p>
+
+          {/* Calculator CTA */}
+          <CalculatorCTA
+            calculatorName="מחשבון המשכנתא"
+            calculatorUrl="/tools/mortgage-calculator"
+            teaser="שנה את ריבית הפריים במחשבון ותראה מיד איך ההחזר החודשי מגיב."
+          />
 
           {/* Section 6: FAQ */}
           <h2 id="faq" className={h2}>שאלות נפוצות</h2>

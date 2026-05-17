@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AdSlot from '@/components/AdSlot';
+import { CalculatorCTA } from '@/templates/article-page';
 
 /* -- Canonical -- */
 const CANONICAL = 'https://getmaxit.co.il/guides/מחזור-משכנתא';
@@ -304,6 +305,13 @@ export default function MachzorMashkantaPage() {
             יועץ עצמאי גובה כסף מראש, אבל לא מרוויח מהעסקה עצמה, כך שהאינטרס שלו זהה
             לשלך.
           </p>
+
+          {/* Calculator CTA */}
+          <CalculatorCTA
+            calculatorName="מחשבון המשכנתא"
+            calculatorUrl="/tools/mortgage-calculator"
+            teaser="הכנס ריבית חדשה ותראה כמה זה חוסך בחודש לפני שמחליטים."
+          />
 
           {/* Section 7: FAQ */}
           <h2 id="faq" className={h2}>שאלות נפוצות</h2>

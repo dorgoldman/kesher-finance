@@ -4,6 +4,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import AdSlot from '@/components/AdSlot';
 import JsonLd from '@/components/SEO';
 import { SITE_NAME } from '@/lib/constants';
+import { CalculatorCTA } from '@/templates/article-page';
 
 /* -- Canonical domain for this article -- */
 const BASE = 'https://getmaxit.co.il';
@@ -261,6 +262,13 @@ export default function GmachimP2PPage() {
             בית הכנסת המקומי. מוקד 118 מפנה לגמ&quot;חים באזורך. עובד סוציאלי ברשות
             המקומית. לעוגן ספציפית: האתר הרשמי ogen.org, או התקשרות ל-3309*.
           </p>
+
+          {/* Calculator CTA */}
+          <CalculatorCTA
+            calculatorName="מחשבון ההלוואה"
+            calculatorUrl="/tools/loan-calculator"
+            teaser="לא בטוח כמה לבקש? בדוק כמה ייצא ההחזר החודשי."
+          />
 
           {/* Section 6: FAQ */}
           <h2 id="faq" className={h2}>שאלות נפוצות</h2>

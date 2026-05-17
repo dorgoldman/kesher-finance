@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AdSlot from '@/components/AdSlot';
+import { CalculatorCTA } from '@/templates/article-page';
 
 /* -- Canonical -- */
 const CANONICAL = 'https://getmaxit.co.il/guides/משכנתא-ראשונה';
@@ -330,6 +331,13 @@ export default function MashkantaRishonePage() {
             להשוות.</span> ראו את הסעיף על ביטוח משכנתא. זה המקום שבו הרוב מפסיד
             הכי הרבה כסף מבלי לשים לב.
           </p>
+
+          {/* Calculator CTA */}
+          <CalculatorCTA
+            calculatorName="מחשבון המשכנתא"
+            calculatorUrl="/tools/mortgage-calculator"
+            teaser="הרכב תמהיל ותראה כמה יוצא החזר חודשי לפני שנפגשים עם הבנק."
+          />
 
           {/* Section 8: FAQ */}
           <h2 id="faq" className={h2}>שאלות נפוצות</h2>

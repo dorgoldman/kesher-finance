@@ -4,6 +4,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import AdSlot from '@/components/AdSlot';
 import JsonLd from '@/components/SEO';
 import { SITE_NAME } from '@/lib/constants';
+import { CalculatorCTA } from '@/templates/article-page';
 
 /* ── Canonical domain for this article ── */
 const BASE = 'https://getmaxit.co.il';
@@ -292,6 +293,13 @@ export default function HalvaahHutzBankaitPage() {
           <p className="text-accent-400 text-sm leading-relaxed mb-5 italic">
             המדריך המלא לגמ&quot;חים, עוגן, ו-P2P בישראל יגיע בקרוב.
           </p>
+
+          {/* ── Calculator CTA ── */}
+          <CalculatorCTA
+            calculatorName="מחשבון ההלוואה"
+            calculatorUrl="/tools/loan-calculator"
+            teaser="הכנס את הריבית שקיבלת ותראה בדיוק כמה יוצא בסוף."
+          />
 
           {/* ── Section 7: FAQ ── */}
           <h2 id="faq" className={h2}>שאלות נפוצות</h2>

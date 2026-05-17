@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AdSlot from '@/components/AdSlot';
+import { CalculatorCTA } from '@/templates/article-page';
 
 const CANONICAL = 'https://getmaxit.co.il/guides/שפיצר-מול-קרן-שווה';
 
@@ -300,6 +301,13 @@ export default function ShpitzerMolKerenShavaPage() {
             בקרן שווה. הרעיון פשוט: בחלק הצמוד, אתה רוצה להוריד קרן מהר לפני שהמדד או
             הריבית יאכלו אותך. בחלק הקבוע, שפיצר נותן יציבות ויכול להתקצר בקלות.
           </p>
+
+          {/* Calculator CTA */}
+          <CalculatorCTA
+            calculatorName="מחשבון המשכנתא"
+            calculatorUrl="/tools/mortgage-calculator"
+            teaser="הכנס את נתוני המשכנתא שלך ובדוק כמה כל שיטה עולה בפועל."
+          />
 
           {/* Section 8: FAQ */}
           <h2 id="faq" className={h2}>שאלות נפוצות</h2>
