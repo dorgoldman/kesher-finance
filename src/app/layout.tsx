@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Heebo } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 import { SITE_NAME, SITE_DESCRIPTION, SITE_URL } from '@/lib/constants';
 import Header from '@/components/Header';
@@ -41,6 +42,12 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <GoogleAnalytics gaId="G-5D8RS8626V" />
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4485608003839489"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
