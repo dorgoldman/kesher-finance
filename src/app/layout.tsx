@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
   },
   verification: {
-    google: 'ab6BHqCxOEcCGkiDVN7Gjc5cIg5nwT7C31sHWvjffpg',
+    google: 'a2oR7FNyG2Bn8wvrR0MxQH24bH0KGd9uNbhU1XGLcbY',
   },
 };
 
