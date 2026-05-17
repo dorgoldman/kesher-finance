@@ -349,6 +349,25 @@ export default function RibitEfektivitPage() {
             </div>
           </div>
 
+          {/* ── Cross-links ── */}
+          <div className="my-8 p-5 bg-accent-50 border border-accent-100 rounded-2xl">
+            <p className="text-sm font-semibold text-accent-700 mb-3">קראו גם:</p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link href="/guides/halvaah-hutz-bankait" className="flex items-center gap-2 text-sm text-primary-600 hover:text-primary-700 underline underline-offset-2 transition-colors duration-150">
+                <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                הלוואה חוץ בנקאית: המדריך המלא
+              </Link>
+              <Link href="/guides/halvaah-lchol-matara" className="flex items-center gap-2 text-sm text-primary-600 hover:text-primary-700 underline underline-offset-2 transition-colors duration-150">
+                <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                הלוואה לכל מטרה: מתי כדאי, מתי לא, וכמה זה עולה
+              </Link>
+            </div>
+          </div>
+
           {/* Disclaimer */}
           <div className="border-t border-accent-100 pt-6">
             <p className="text-xs text-accent-400 leading-relaxed">
