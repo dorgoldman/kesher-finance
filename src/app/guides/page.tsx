@@ -65,6 +65,12 @@ const guides: { title: string; description: string; href: string; category: stri
     href: '/guides/שפיצר-מול-קרן-שווה',
     category: 'משכנתאות',
   },
+  {
+    title: 'מחזור משכנתא 2026: מתי כדאי ומה עולה לך לדעת',
+    description: 'מחזור משכנתא יכול לחסוך לך עשרות אלפי שקלים. או לעלות לך ביוקר אם לא בדקת את עמלת הפירעון. המדריך המלא.',
+    href: '/guides/מחזור-משכנתא',
+    category: 'משכנתאות',
+  },
 ];
 
 export default function GuidesHub() {
