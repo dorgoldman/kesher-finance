@@ -2,6 +2,7 @@
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AdSlot from '@/components/AdSlot';
 import MortgageCalculator from '@/components/MortgageCalculator';
+import CalcMethodology from '@/components/CalcMethodology';
 import JsonLd, { generateSEOMetadata } from '@/components/SEO';
 import { SITE_URL, SITE_NAME } from '@/lib/constants';
 
@@ -55,6 +56,17 @@ export default function MortgageCalculatorPage() {
           </div>
 
           <MortgageCalculator />
+
+          <CalcMethodology
+            formula="לכל מסלול: החזר חודשי = קרן × (ריבית חודשית × (1 + ריבית חודשית)^מספר תשלומים) ÷ ((1 + ריבית חודשית)^מספר תשלומים − 1). ההחזר החודשי הכולל הוא סכום ההחזרים מכל המסלולים."
+            assumptions={[
+              'ריבית הפריים הבסיסית: 6.5% (בנק ישראל, 2026)',
+              'חישוב לפי שיטת שפיצר (תשלומים קבועים)',
+              'ריבית חודשית = ריבית שנתית ÷ 12',
+              'ללא התחשבות בעמלות פירעון מוקדם',
+            ]}
+            source="נתוני ריבית פריים: בנק ישראל"
+          />
 
           <AdSlot variant="post-results-mobile" className="mt-6" />
 

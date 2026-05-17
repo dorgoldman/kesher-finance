@@ -2,6 +2,7 @@
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AdSlot from '@/components/AdSlot';
 import SalaryCalculator from '@/components/SalaryCalculator';
+import CalcMethodology from '@/components/CalcMethodology';
 import JsonLd, { generateSEOMetadata } from '@/components/SEO';
 import { SITE_URL, SITE_NAME } from '@/lib/constants';
 
@@ -116,6 +117,18 @@ export default function SalaryCalculatorPage() {
       </div>
 
       <SalaryCalculator />
+
+      <CalcMethodology
+        formula="מס הכנסה: חישוב פרוגרסיבי לפי מדרגות על ההכנסה החייבת (ברוטו פחות הפקדות פנסיה). ביטוח לאומי ובריאות: אחוז קבוע מהברוטו לפי שתי מדרגות. פנסיה: אחוז מהברוטו שמנוכה מההכנסה החייבת במס."
+        assumptions={[
+          'מדרגות מס הכנסה 2026',
+          'נקודת זיכוי = ₪249 לחודש',
+          'שיעורי ביטוח לאומי ובריאות 2026',
+          'חישוב לעובד שכיר בלבד',
+          'ניכוי פנסיה לפי האחוז שהוזן',
+        ]}
+        source="מדרגות מס: רשות המסים | שיעורי ביטוח לאומי: המוסד לביטוח לאומי"
+      />
 
       <AdSlot variant="post-results-mobile" className="mt-6" />
 

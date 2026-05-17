@@ -2,6 +2,7 @@
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AdSlot from '@/components/AdSlot';
 import LoanCalculator from '@/components/LoanCalculator';
+import CalcMethodology from '@/components/CalcMethodology';
 import JsonLd, { generateSEOMetadata } from '@/components/SEO';
 import { SITE_URL, SITE_NAME } from '@/lib/constants';
 
@@ -116,6 +117,16 @@ export default function LoanCalculatorPage() {
       </div>
 
       <LoanCalculator />
+
+      <CalcMethodology
+        formula="החזר חודשי = קרן × (ריבית חודשית × (1 + ריבית חודשית)^מספר תשלומים) ÷ ((1 + ריבית חודשית)^מספר תשלומים − 1). ריבית חודשית = ריבית שנתית ÷ 12."
+        assumptions={[
+          'שיטת שפיצר (תשלומים קבועים לאורך כל התקופה)',
+          'ריבית קבועה לאורך כל חיי ההלוואה',
+          'ללא עמלות פתיחת תיק',
+        ]}
+        source="נוסחת שפיצר: תקן בנקאי מקובל בישראל"
+      />
 
       <AdSlot variant="post-results-mobile" className="mt-6" />
 
