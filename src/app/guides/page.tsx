@@ -53,6 +53,12 @@ const guides: { title: string; description: string; href: string; category: stri
     href: '/guides/gmachim-p2p',
     category: 'הלוואות',
   },
+  {
+    title: 'ריבית פריים 2026: מה זה ואיך זה משפיע עליך',
+    description: 'ריבית הפריים עלתה? ירדה? כך זה משפיע על המשכנתא וההלוואות שלך. מה זה פריים מינוס, כמה לשים בתמהיל, ומה קרה בשנים האחרונות.',
+    href: '/guides/ריבית-פריים',
+    category: 'משכנתאות',
+  },
 ];
 
 export default function GuidesHub() {
