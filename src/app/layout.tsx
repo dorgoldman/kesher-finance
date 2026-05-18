@@ -16,8 +16,8 @@ const heebo = Heebo({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Maxit',
-    template: '%s | Maxit',
+    default: 'Maxit.מקסיט',
+    template: '%s | Maxit.מקסיט',
   },
   description: SITE_DESCRIPTION,
   openGraph: {
@@ -28,9 +28,9 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: '/favicon.svg', type: 'image/svg+xml' },
-      { url: '/favicon.ico', sizes: '32x32', type: 'image/x-icon' },
+      { url: '/favicon.ico', sizes: '32x32' },
     ],
-    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
+    apple: '/favicon.svg',
   },
   verification: {
     google: 'a2oR7FNyG2Bn8wvrR0MxQH24bH0KGd9uNbhU1XGLcbY',
@@ -45,6 +45,17 @@ export default function RootLayout({
   return (
     <html lang="he" dir="rtl" className={heebo.variable}>
       <body className="font-heebo min-h-screen flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: SITE_NAME,
+              url: SITE_URL,
+            }),
+          }}
+        />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
