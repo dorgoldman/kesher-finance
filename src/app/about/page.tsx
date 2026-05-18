@@ -7,12 +7,12 @@ const BASE = 'https://getmaxit.co.il';
 const CANONICAL = `${BASE}/about`;
 
 export const metadata: Metadata = {
-  title: 'אודות Maxit.מקסיט | כלים פיננסיים בעברית',
+  title: 'אודות מקסיט',
   description:
-    'Maxit.מקסיט היא פלטפורמת כלים ומדריכים פיננסיים בעברית. מחשבונים מדויקים, מדריכים ברורים, בלי שטויות.',
+    'מקסיט היא פלטפורמת מחשבונים ומדריכים פיננסיים בעברית. מחשבוני משכנתא, הלוואה ושכר נטו — חינמי, בלי הרשמה.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'אודות Maxit.מקסיט | כלים פיננסיים בעברית',
+    title: 'אודות מקסיט',
     description:
       'Maxit.מקסיט היא פלטפורמת כלים ומדריכים פיננסיים בעברית. מחשבונים מדויקים, מדריכים ברורים, בלי שטויות.',
     url: CANONICAL,

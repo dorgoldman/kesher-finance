@@ -11,7 +11,7 @@ const BASE = 'https://getmaxit.co.il';
 const CANONICAL = `${BASE}/guides/halvaah-lerechev`;
 
 export const metadata: Metadata = {
-  title: 'הלוואה לרכב: בנק, יבואן, או ליסינג? המדריך ב-2026 | Maxit.מקסיט',
+  title: 'הלוואה לרכב: בנק, יבואן, ליסינג',
   description:
     'לפני שחותמים על מימון הרכב, קראו את זה. ההבדל בין בנק ליבואן יכול לעלות לכם אלפי שקלים על אותו רכב.',
   alternates: { canonical: CANONICAL },

@@ -11,7 +11,7 @@ const BASE = 'https://getmaxit.co.il';
 const CANONICAL = `${BASE}/guides/halvaah-lchol-matara`;
 
 export const metadata: Metadata = {
-  title: 'הלוואה לכל מטרה - מתי כדאי, מתי לא, וכמה זה עולה ב-2026 | Maxit.מקסיט',
+  title: 'הלוואה לכל מטרה',
   description:
     'הלוואה לכל מטרה היא הכלי הפיננסי הנפוץ ביותר בישראל. אבל היא יכולה להיות גם הטעות היקרה ביותר. המדריך המלא.',
   alternates: { canonical: CANONICAL },

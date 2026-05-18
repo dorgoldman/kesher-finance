@@ -11,7 +11,7 @@ const BASE = 'https://getmaxit.co.il';
 const CANONICAL = `${BASE}/guides/halvaot-madrich`;
 
 export const metadata: Metadata = {
-  title: 'הלוואות - המדריך המלא לבחירה נכונה ב-2026 | Maxit.מקסיט',
+  title: 'הלוואות: איך בוחרים נכון',
   description:
     'לפני שלוקחים הלוואה - קראו את זה. מה לבדוק, מה לא לפספס, ואיך לא לשלם יותר ממה שצריך.',
   alternates: { canonical: CANONICAL },

@@ -7,12 +7,12 @@ const BASE = 'https://getmaxit.co.il';
 const CANONICAL = `${BASE}/privacy`;
 
 export const metadata: Metadata = {
-  title: 'מדיניות פרטיות | Maxit.מקסיט',
+  title: 'מדיניות פרטיות',
   description:
     'מדיניות הפרטיות של Maxit.מקסיט. מה אנחנו אוספים, למה, ואיך אנחנו מגנים על המידע שלך.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'מדיניות פרטיות | Maxit.מקסיט',
+    title: 'מדיניות פרטיות',
     description:
       'מדיניות הפרטיות של Maxit.מקסיט. מה אנחנו אוספים, למה, ואיך אנחנו מגנים על המידע שלך.',
     url: CANONICAL,
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'מדיניות פרטיות | Maxit.מקסיט',
+  name: 'מדיניות פרטיות',
   description:
     'מדיניות הפרטיות של Maxit.מקסיט. מה אנחנו אוספים, למה, ואיך אנחנו מגנים על המידע שלך.',
   url: CANONICAL,

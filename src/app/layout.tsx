@@ -16,14 +16,21 @@ const heebo = Heebo({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: SITE_NAME,
-    template: `%s | ${SITE_NAME}`,
+    default: 'Maxit',
+    template: '%s | Maxit',
   },
   description: SITE_DESCRIPTION,
   openGraph: {
     type: 'website',
     locale: 'he_IL',
     siteName: SITE_NAME,
+  },
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: '32x32', type: 'image/x-icon' },
+    ],
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
   },
   verification: {
     google: 'a2oR7FNyG2Bn8wvrR0MxQH24bH0KGd9uNbhU1XGLcbY',

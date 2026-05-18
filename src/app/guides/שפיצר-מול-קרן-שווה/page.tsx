@@ -1,12 +1,18 @@
-'use client';
-
-import { useState } from 'react';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AdSlot from '@/components/AdSlot';
 import { CalculatorCTA } from '@/templates/article-page';
+import MobileArticleTOC from '@/components/MobileArticleTOC';
 
 const CANONICAL = 'https://getmaxit.co.il/guides/שפיצר-מול-קרן-שווה';
+
+export const metadata: Metadata = {
+  title: 'שפיצר מול קרן שווה',
+  description:
+    'שפיצר או קרן שווה? רוב האנשים לא שואלים את השאלה הנכונה. כך תדעו מה מתאים לכם, עם מספרים אמיתיים.',
+  alternates: { canonical: CANONICAL },
+};
 
 const jsonLd = [
   {
@@ -87,7 +93,6 @@ const p  = 'text-accent-600 leading-relaxed mb-5';
 const strong = 'font-semibold text-accent-800';
 
 export default function ShpitzerMolKerenShavaPage() {
-  const [tocOpen, setTocOpen] = useState(false);
 
   return (
     <div className="container-page py-10">
@@ -109,45 +114,7 @@ export default function ShpitzerMolKerenShavaPage() {
       {/* Ad slot - above article */}
       <AdSlot variant="header" className="mb-10" />
 
-      {/* Mobile TOC dropdown */}
-      <div className="lg:hidden mb-8">
-        <button
-          onClick={() => setTocOpen((o) => !o)}
-          className="w-full flex items-center justify-between px-4 py-3 bg-white border
-                     border-accent-200 rounded-xl text-sm font-semibold text-accent-800
-                     hover:border-primary-300 transition-colors duration-150 cursor-pointer"
-          aria-expanded={tocOpen}
-        >
-          <span>תוכן עניינים</span>
-          <svg
-            className={`w-4 h-4 text-accent-400 transition-transform duration-200 ${tocOpen ? 'rotate-180' : ''}`}
-            fill="none" stroke="currentColor" viewBox="0 0 24 24"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
-        {tocOpen && (
-          <div className="mt-1 border border-accent-200 rounded-xl bg-white overflow-hidden">
-            <nav aria-label="תוכן עניינים">
-              <ul>
-                {TOC.map((item) => (
-                  <li key={item.id}>
-                    <a
-                      href={`#${item.id}`}
-                      onClick={() => setTocOpen(false)}
-                      className="flex items-center gap-2 px-4 py-2.5 text-sm text-accent-600
-                                 hover:text-primary-600 hover:bg-primary-50 transition-colors duration-150"
-                    >
-                      <span className="w-1 h-1 rounded-full bg-accent-300 shrink-0" />
-                      {item.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          </div>
-        )}
-      </div>
+      <MobileArticleTOC items={TOC} />
 
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-10">
 

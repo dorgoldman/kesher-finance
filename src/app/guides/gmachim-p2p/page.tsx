@@ -11,7 +11,7 @@ const BASE = 'https://getmaxit.co.il';
 const CANONICAL = `${BASE}/guides/gmachim-p2p`;
 
 export const metadata: Metadata = {
-  title: 'גמ"חים, עוגן, ו-P2P: המדריך להלוואה ללא ריבית בישראל | Maxit.מקסיט',
+  title: 'גמ"חים ו-P2P: הלוואה ללא ריבית',
   description:
     'יש עולם שלם של הלוואות ללא ריבית בישראל שרוב האנשים לא מכירים. גמ"חים, קרן עוגן, SparkIL ו-P2P, כל מה שצריך לדעת.',
   alternates: { canonical: CANONICAL },

@@ -11,7 +11,7 @@ const BASE = 'https://getmaxit.co.il';
 const CANONICAL = `${BASE}/guides/halvaah-lmesoravim`;
 
 export const metadata: Metadata = {
-  title: 'הלוואה למסורבים: מה האפשרויות האמיתיות ב-2026 | Maxit.מקסיט',
+  title: 'הלוואה למסורבים',
   description:
     'הבנק סרב לך? זה לא סוף הדרך. המדריך המלא לאפשרויות מימון עם BDI שלילי, כולל טיפ אחד שרוב האנשים מפספסים.',
   alternates: { canonical: CANONICAL },

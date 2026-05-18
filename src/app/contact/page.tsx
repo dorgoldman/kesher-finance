@@ -7,11 +7,11 @@ const BASE = 'https://getmaxit.co.il';
 const CANONICAL = `${BASE}/contact`;
 
 export const metadata: Metadata = {
-  title: 'צור קשר | Maxit.מקסיט',
+  title: 'צור קשר',
   description: 'שאלות, הערות, או הצעות לשיתוף פעולה. נשמח לשמוע.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'צור קשר | Maxit.מקסיט',
+    title: 'צור קשר',
     description: 'שאלות, הערות, או הצעות לשיתוף פעולה. נשמח לשמוע.',
     url: CANONICAL,
     siteName: SITE_NAME,
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'צור קשר | Maxit.מקסיט',
+  name: 'צור קשר',
   description: 'שאלות, הערות, או הצעות לשיתוף פעולה. נשמח לשמוע.',
   url: CANONICAL,
   inLanguage: 'he',

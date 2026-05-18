@@ -7,7 +7,7 @@ import JsonLd, { generateSEOMetadata } from '@/components/SEO';
 import { SITE_URL, SITE_NAME } from '@/lib/constants';
 
 export const metadata: Metadata = generateSEOMetadata({
-  title: 'מחשבון הלוואה - חישוב החזר חודשי | Maxit.מקסיט',
+  title: 'מחשבון הלוואה',
   description:
     'מחשבון הלוואה חינמי בעברית - חשבו החזר חודשי, סך ריבית ולוח סילוקין לכל הלוואה צרכנית. שיטת שפיצר, תוצאות מיידיות.',
   canonical: '/tools/loan-calculator',

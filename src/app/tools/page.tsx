@@ -5,8 +5,8 @@ import AdSlot from '@/components/AdSlot';
 import { generateSEOMetadata } from '@/components/SEO';
 
 export const metadata: Metadata = generateSEOMetadata({
-  title: 'מחשבונים פיננסיים',
-  description: 'מחשבונים פיננסיים חינמיים בעברית: משכנתא, הלוואות, חיסכון, פנסיה ועוד',
+  title: 'מחשבונות פיננסיים',
+  description: 'מחשבונות פיננסיים חינמיים בעברית: משכנתא, הלוואות ושכר נטו. חשבו בדיוק מה תשלמו ומה תקבלו, בלי להירשם.',
   canonical: '/tools',
 });
 

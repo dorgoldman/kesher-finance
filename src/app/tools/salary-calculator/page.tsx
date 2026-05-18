@@ -7,7 +7,7 @@ import JsonLd, { generateSEOMetadata } from '@/components/SEO';
 import { SITE_URL, SITE_NAME } from '@/lib/constants';
 
 export const metadata: Metadata = generateSEOMetadata({
-  title: 'מחשבון שכר נטו - כמה תקבל הביתה? | Maxit.מקסיט',
+  title: 'מחשבון שכר נטו',
   description:
     'מחשבון שכר נטו חינמי לשנת 2026 - חשבו כמה תקבלו הביתה אחרי מס הכנסה, ביטוח לאומי, ביטוח בריאות ופנסיה. עדכני למדרגות המס 2026.',
   canonical: '/tools/salary-calculator',

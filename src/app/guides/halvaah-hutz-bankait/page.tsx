@@ -11,7 +11,7 @@ const BASE = 'https://getmaxit.co.il';
 const CANONICAL = `${BASE}/guides/halvaah-hutz-bankait`;
 
 export const metadata: Metadata = {
-  title: 'הלוואה חוץ בנקאית - המדריך המלא לשנת 2026 | Maxit.מקסיט',
+  title: 'הלוואה חוץ בנקאית',
   description:
     'כל מה שצריך לדעת על הלוואה חוץ בנקאית: מי נותן, כמה עולה, מתי כדאי ומתי לא. מדריך ישיר בלי שטויות.',
   alternates: { canonical: CANONICAL },

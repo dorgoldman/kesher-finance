@@ -10,7 +10,7 @@ const BASE = 'https://getmaxit.co.il';
 const CANONICAL = `${BASE}/guides/halvaah-miyedit`;
 
 export const metadata: Metadata = {
-  title: 'הלוואה מיידית - מה באמת קורה מרגע הבקשה עד קבלת הכסף | Maxit.מקסיט',
+  title: 'הלוואה מיידית',
   description:
     'כמה זמן לוקחת הלוואה מיידית באמת? מה צריך להכין, מה יכול לעצור את האישור, ואיפה כדאי לפנות ב-2026.',
   alternates: { canonical: CANONICAL },
