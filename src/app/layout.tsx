@@ -16,8 +16,8 @@ const heebo = Heebo({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'מקסיט.Maxit',
-    template: '%s | מקסיט.Maxit',
+    default: 'Maxit',
+    template: '%s | Maxit',
   },
   description: SITE_DESCRIPTION,
   openGraph: {

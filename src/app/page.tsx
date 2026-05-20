@@ -5,7 +5,7 @@ import JsonLd from '@/components/SEO';
 import HeroCalculator from '@/components/HeroCalculator';
 
 export const metadata: Metadata = {
-  title: { absolute: 'מחשבונות פיננסיים בעברית | מקסיט.Maxit' },
+  title: { absolute: 'מחשבונים פיננסיים בעברית | Maxit' },
   description: 'מחשבוני משכנתא, הלוואה ושכר נטו בעברית. מדריכים פיננסיים ברורים. הכלים חינמיים, התוצאות מיידיות.',
   alternates: { canonical: SITE_URL },
 };

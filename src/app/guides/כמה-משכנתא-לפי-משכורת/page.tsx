@@ -26,8 +26,8 @@ const jsonLd = [
     inLanguage: 'he',
     datePublished: '2026-05-18',
     dateModified: '2026-05-18',
-    author: { '@type': 'Organization', name: 'מקסיט.Maxit' },
-    publisher: { '@type': 'Organization', name: 'מקסיט.Maxit' },
+    author: { '@type': 'Organization', name: 'Maxit' },
+    publisher: { '@type': 'Organization', name: 'Maxit' },
   },
   {
     '@context': 'https://schema.org',
