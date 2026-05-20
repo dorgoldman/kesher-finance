@@ -9,12 +9,12 @@ const CANONICAL = `${BASE}/privacy`;
 export const metadata: Metadata = {
   title: 'מדיניות פרטיות',
   description:
-    'מדיניות הפרטיות של Maxit.מקסיט. מה אנחנו אוספים, למה, ואיך אנחנו מגנים על המידע שלך.',
+    'מדיניות הפרטיות של מקסיט.Maxit. מה אנחנו אוספים, למה, ואיך אנחנו מגנים על המידע שלך.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     title: 'מדיניות פרטיות',
     description:
-      'מדיניות הפרטיות של Maxit.מקסיט. מה אנחנו אוספים, למה, ואיך אנחנו מגנים על המידע שלך.',
+      'מדיניות הפרטיות של מקסיט.Maxit. מה אנחנו אוספים, למה, ואיך אנחנו מגנים על המידע שלך.',
     url: CANONICAL,
     siteName: SITE_NAME,
     locale: 'he_IL',
@@ -27,7 +27,7 @@ const jsonLd = {
   '@type': 'WebPage',
   name: 'מדיניות פרטיות',
   description:
-    'מדיניות הפרטיות של Maxit.מקסיט. מה אנחנו אוספים, למה, ואיך אנחנו מגנים על המידע שלך.',
+    'מדיניות הפרטיות של מקסיט.Maxit. מה אנחנו אוספים, למה, ואיך אנחנו מגנים על המידע שלך.',
   url: CANONICAL,
   inLanguage: 'he',
   publisher: { '@type': 'Organization', name: SITE_NAME },

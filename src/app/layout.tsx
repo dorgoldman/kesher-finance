@@ -16,8 +16,8 @@ const heebo = Heebo({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Maxit.מקסיט',
-    template: '%s | Maxit.מקסיט',
+    default: 'מקסיט.Maxit',
+    template: '%s | מקסיט.Maxit',
   },
   description: SITE_DESCRIPTION,
   openGraph: {
@@ -27,10 +27,12 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
+      { url: '/favicon-48.png', sizes: '48x48', type: 'image/png' },
+      { url: '/favicon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/favicon-512.png', sizes: '512x512', type: 'image/png' },
       { url: '/favicon.svg', type: 'image/svg+xml' },
-      { url: '/favicon.ico', sizes: '32x32' },
     ],
-    apple: '/favicon.svg',
+    apple: '/favicon-192.png',
   },
   verification: {
     google: 'a2oR7FNyG2Bn8wvrR0MxQH24bH0KGd9uNbhU1XGLcbY',
