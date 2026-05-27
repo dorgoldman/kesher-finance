@@ -413,6 +413,124 @@ export default function HomePage() {
         </div>
 
       </section>
+
+      {/* ══════════════════════════════════════════════════════════════════
+          RECENT GUIDES
+      ══════════════════════════════════════════════════════════════════ */}
+      <section className="bg-accent-50/60 border-t border-accent-100">
+        <div className="container-wide py-14 sm:py-16">
+
+          <div className="flex items-center justify-between mb-8">
+            <div>
+              <h2 className="section-title mb-1">מדריכים אחרונים</h2>
+              <p className="text-accent-500 text-sm">פורסמו לאחרונה באתר</p>
+            </div>
+            <Link
+              href="/guides"
+              className="hidden sm:inline-flex items-center gap-1.5 text-sm font-semibold
+                         text-primary-600 hover:text-primary-700 transition-colors duration-150 cursor-pointer"
+            >
+              כל המדריכים
+              <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+
+          <div className="flex flex-col gap-4">
+
+            {/* 1 — משכנתא ראשונה */}
+            <Link href="/guides/משכנתא-ראשונה" className="card group hover:border-primary-200 transition-colors duration-200 cursor-pointer">
+              <div className="flex flex-col sm:flex-row sm:items-start gap-4">
+                <div className="flex-1 min-w-0">
+                  <div className="flex flex-wrap items-center gap-2 mb-2">
+                    <span className="badge-primary">משכנתאות</span>
+                    <span className="text-xs text-accent-400">מאי 2026</span>
+                  </div>
+                  <h3 className="text-base font-bold text-accent-900 mb-1.5 group-hover:text-primary-600 transition-colors duration-200">
+                    משכנתא ראשונה: המדריך המלא לזוגות ורוכשים
+                  </h3>
+                  <p className="text-accent-500 text-sm leading-relaxed">
+                    לוקחים משכנתא לראשונה? הון עצמי, תמהיל, זכאות, ביטוח ואיך לא להיות טרף קל לבנק.
+                  </p>
+                </div>
+                <div className="shrink-0 flex items-center gap-1 text-sm font-semibold text-primary-600 sm:pt-1">
+                  <span>קרא עוד</span>
+                  <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
+            </Link>
+
+            {/* 2 — כמה משכנתא לפי משכורת */}
+            <Link href="/guides/כמה-משכנתא-לפי-משכורת" className="card group hover:border-primary-200 transition-colors duration-200 cursor-pointer">
+              <div className="flex flex-col sm:flex-row sm:items-start gap-4">
+                <div className="flex-1 min-w-0">
+                  <div className="flex flex-wrap items-center gap-2 mb-2">
+                    <span className="badge-primary">משכנתאות</span>
+                    <span className="text-xs text-accent-400">מאי 2026</span>
+                  </div>
+                  <h3 className="text-base font-bold text-accent-900 mb-1.5 group-hover:text-primary-600 transition-colors duration-200">
+                    כמה משכנתא אפשר לקחת לפי משכורת?
+                  </h3>
+                  <p className="text-accent-500 text-sm leading-relaxed">
+                    הבנק מאשר לפי ההכנסה שלך. כך מחשבים כמה תקבל — עם טבלאות מספרים אמיתיות לשנת 2026.
+                  </p>
+                </div>
+                <div className="shrink-0 flex items-center gap-1 text-sm font-semibold text-primary-600 sm:pt-1">
+                  <span>קרא עוד</span>
+                  <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
+            </Link>
+
+            {/* 3 — הלוואה מקרן השתלמות */}
+            <Link href="/guides/הלוואה-מקרן-השתלמות" className="card group hover:border-primary-200 transition-colors duration-200 cursor-pointer">
+              <div className="flex flex-col sm:flex-row sm:items-start gap-4">
+                <div className="flex-1 min-w-0">
+                  <div className="flex flex-wrap items-center gap-2 mb-2">
+                    <span className="badge-primary">הלוואות</span>
+                    <span className="text-xs text-accent-400">מאי 2026</span>
+                  </div>
+                  <h3 className="text-base font-bold text-accent-900 mb-1.5 group-hover:text-primary-600 transition-colors duration-200">
+                    הלוואה מקרן השתלמות: הריבית הזולה שרוב האנשים שוכחים
+                  </h3>
+                  <p className="text-accent-500 text-sm leading-relaxed">
+                    אחת ההלוואות הזולות בשוק מחכה לך בקרן. יש כמה דברים שחייבים להבין לפני שלוחצים אישור.
+                  </p>
+                </div>
+                <div className="shrink-0 flex items-center gap-1 text-sm font-semibold text-primary-600 sm:pt-1">
+                  <span>קרא עוד</span>
+                  <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
+            </Link>
+
+          </div>
+
+          {/* Mobile CTA */}
+          <div className="sm:hidden text-center mt-8">
+            <Link
+              href="/guides"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold
+                         border border-accent-200 text-accent-700 hover:border-primary-300
+                         hover:text-primary-700 hover:bg-primary-50
+                         transition-all duration-200 cursor-pointer text-sm"
+            >
+              כל המדריכים
+              <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+
+        </div>
+      </section>
     </>
   );
 }

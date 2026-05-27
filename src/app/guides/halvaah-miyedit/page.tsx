@@ -134,9 +134,11 @@ export default function HalvaahMiyeditPage() {
             <h1 className="text-3xl sm:text-4xl font-black text-accent-900 leading-tight mb-4 tracking-tight">
               הלוואה מיידית: כמה זמן זה באמת לוקח ומה צריך להכין
             </h1>
-            <p className="text-accent-400 text-sm">
-              עודכן לאחרונה: מאי 2026 · קריאה: כ-4 דקות
-            </p>
+            <div className="flex flex-wrap items-center gap-1.5 text-sm text-accent-400">
+              <span>נכתב על ידי צוות מקסיט</span>
+              <span aria-hidden="true">·</span>
+              <span>עודכן: מאי 2026</span>
+            </div>
           </header>
 
           {/* ── Intro ── */}
