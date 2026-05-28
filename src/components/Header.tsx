@@ -2,10 +2,20 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import Logo from './Logo';
+
+const NAV_LINKS = [
+  { href: '/tools',  label: 'מחשבונים' },
+  { href: '/guides', label: 'מדריכים'  },
+];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href: string) =>
+    pathname === href || pathname.startsWith(href + '/');
 
   return (
     <header className="glass sticky top-0 z-40 border-b border-accent-100">
@@ -27,22 +37,28 @@ export default function Header() {
 
         {/* RTL: last child → LEFT side - secondary nav or hamburger */}
         <div className="flex items-center">
+
           {/* Desktop secondary nav */}
           <nav className="hidden md:flex items-center gap-0.5" aria-label="ניווט ראשי">
-            <Link
-              href="/tools"
-              className="px-4 py-2 rounded-lg text-accent-600 hover:text-accent-900 hover:bg-accent-100
-                         transition-all duration-200 text-sm font-medium cursor-pointer"
-            >
-              מחשבונים
-            </Link>
-            <Link
-              href="/guides"
-              className="px-4 py-2 rounded-lg text-accent-600 hover:text-accent-900 hover:bg-accent-100
-                         transition-all duration-200 text-sm font-medium cursor-pointer"
-            >
-              מדריכים
-            </Link>
+            {NAV_LINKS.map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                className={`relative px-4 py-2 rounded-lg text-sm font-medium
+                            transition-all duration-200 cursor-pointer
+                            ${isActive(href)
+                              ? 'text-primary-600 bg-primary-50'
+                              : 'text-accent-600 hover:text-accent-900 hover:bg-accent-100'}`}
+              >
+                {label}
+                {isActive(href) && (
+                  <span
+                    className="absolute bottom-0.5 inset-x-3 h-0.5 bg-primary-500 rounded-full"
+                    aria-hidden="true"
+                  />
+                )}
+              </Link>
+            ))}
           </nav>
 
           {/* Mobile hamburger - 48px touch target */}
@@ -75,22 +91,20 @@ export default function Header() {
           aria-label="תפריט נייד"
         >
           <nav className="container-wide py-3 flex flex-col gap-1">
-            <Link
-              href="/tools"
-              className="min-h-[48px] ps-4 pe-4 flex items-center rounded-xl text-accent-700
-                         hover:bg-accent-50 font-medium transition-colors cursor-pointer"
-              onClick={() => setMenuOpen(false)}
-            >
-              מחשבונים
-            </Link>
-            <Link
-              href="/guides"
-              className="min-h-[48px] ps-4 pe-4 flex items-center rounded-xl text-accent-700
-                         hover:bg-accent-50 font-medium transition-colors cursor-pointer"
-              onClick={() => setMenuOpen(false)}
-            >
-              מדריכים
-            </Link>
+            {NAV_LINKS.map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                className={`min-h-[48px] ps-4 pe-4 flex items-center rounded-xl font-medium
+                            transition-colors cursor-pointer
+                            ${isActive(href)
+                              ? 'bg-primary-50 text-primary-700'
+                              : 'text-accent-700 hover:bg-accent-50'}`}
+                onClick={() => setMenuOpen(false)}
+              >
+                {label}
+              </Link>
+            ))}
             <div className="h-px bg-accent-100 my-1" />
             <Link
               href="/tools/mortgage-calculator"

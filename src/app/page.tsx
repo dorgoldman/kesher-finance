@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { SITE_NAME, SITE_URL } from '@/lib/constants';
 import JsonLd from '@/components/SEO';
 import HeroCalculator from '@/components/HeroCalculator';
+import ScrollReveal from '@/components/ScrollReveal';
+import AnimatedCounter from '@/components/AnimatedCounter';
 
 export const metadata: Metadata = {
   title: { absolute: 'מחשבונים פיננסיים בעברית | Maxit' },
@@ -81,11 +83,11 @@ export default function HomePage() {
         {/* Background glows - make glassmorphism visible in HeroCalculator */}
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
           <div className="absolute top-[-80px] right-[-60px] w-[700px] h-[700px]
-                          bg-primary-600/12 rounded-full blur-[140px]" />
+                          bg-primary-600/12 rounded-full blur-[140px] animate-float-1" />
           <div className="absolute bottom-[-40px] left-[-80px] w-[500px] h-[500px]
-                          bg-primary-500/8 rounded-full blur-[100px]" />
+                          bg-primary-500/8 rounded-full blur-[100px] animate-float-2" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-                          w-[300px] h-[300px] bg-emerald-500/5 rounded-full blur-[80px]" />
+                          w-[300px] h-[300px] bg-emerald-500/5 rounded-full blur-[80px] animate-float-3" />
         </div>
 
         <div className="container-wide relative py-16 sm:py-20 lg:py-28">
@@ -117,7 +119,7 @@ export default function HomePage() {
                 style={{ fontSize: 'clamp(40px, 5.5vw, 72px)' }}
               >
                 תכננו את<br />
-                <span className="text-primary-400">המשכנתא שלכם</span><br />
+                <span className="gradient-text">המשכנתא שלכם</span><br />
                 בביטחון מלא
               </h1>
 
@@ -127,7 +129,7 @@ export default function HomePage() {
               </p>
 
               <div className="flex flex-wrap gap-3">
-                <Link href="/tools/mortgage-calculator" className="btn-primary press-effect text-base px-7">
+                <Link href="/tools/mortgage-calculator" className="btn-primary btn-shimmer press-effect text-base px-7">
                   מחשבון משכנתא מלא
                 </Link>
                 <Link
@@ -160,7 +162,7 @@ export default function HomePage() {
                   <svg className="w-4 h-4 text-primary-500/60 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
                   </svg>
-                  <span>מחושב ע&quot;י <strong className="text-white/50 font-bold">10,000+</strong> משתמשים החודש</span>
+                  <span>מחושב ע&quot;י <AnimatedCounter target={10000} suffix="+" className="text-white/50 font-bold" /> משתמשים החודש</span>
                 </div>
 
                 <div className="hidden sm:flex items-center gap-2 text-white/30 text-sm">
@@ -198,17 +200,21 @@ export default function HomePage() {
           TOOLS - light section
       ══════════════════════════════════════════════════════════════════ */}
       <section className="container-wide py-16 sm:py-20">
-        <div className="text-center mb-12">
-          <h2 className="section-title mb-3">הכלים שלנו</h2>
-          <p className="section-subtitle mx-auto">מחשבונים מקצועיים, חינמיים ובעברית</p>
-        </div>
+        <ScrollReveal>
+          <div className="text-center mb-12">
+            <h2 className="section-title mb-1">הכלים שלנו</h2>
+            <span className="section-accent-bar" aria-hidden="true" />
+            <p className="section-subtitle mx-auto mt-3">מחשבונים מקצועיים, חינמיים ובעברית</p>
+          </div>
+        </ScrollReveal>
 
+        <ScrollReveal delay={80}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {/* Live calculator cards */}
           {tools.map((tool) => (
             <Link key={tool.href} href={tool.href} className="card-interactive group">
               <div className="w-11 h-11 bg-primary-50 rounded-xl flex items-center justify-center
-                              text-primary-600 mb-4 group-hover:bg-primary-100 transition-colors duration-200">
+                              text-primary-600 mb-4 group-hover:bg-primary-100 transition-colors duration-200 tool-icon-glow">
                 {tool.icon}
               </div>
               <h3 className="text-lg font-bold text-accent-900 mb-2 group-hover:text-primary-600 transition-colors duration-200">
@@ -225,17 +231,22 @@ export default function HomePage() {
           ))}
 
         </div>
+        </ScrollReveal>
       </section>
 
       {/* ══════════════════════════════════════════════════════════════════
           GUIDES
       ══════════════════════════════════════════════════════════════════ */}
       <section className="container-wide pb-20">
-        <div className="text-center mb-10">
-          <h2 className="section-title mb-3">מדריכים</h2>
-          <p className="section-subtitle mx-auto">מדריכים מקיפים בעברית שיעזרו לכם להבין נושאים פיננסיים</p>
-        </div>
+        <ScrollReveal>
+          <div className="text-center mb-10">
+            <h2 className="section-title mb-1">מדריכים</h2>
+            <span className="section-accent-bar" aria-hidden="true" />
+            <p className="section-subtitle mx-auto mt-3">מדריכים מקיפים בעברית שיעזרו לכם להבין נושאים פיננסיים</p>
+          </div>
+        </ScrollReveal>
 
+        <ScrollReveal delay={80}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
 
           {/* 1 — הלוואות */}
@@ -411,6 +422,7 @@ export default function HomePage() {
             </svg>
           </Link>
         </div>
+        </ScrollReveal>
 
       </section>
 
@@ -420,6 +432,7 @@ export default function HomePage() {
       <section className="bg-accent-50/60 border-t border-accent-100">
         <div className="container-wide py-14 sm:py-16">
 
+          <ScrollReveal>
           <div className="flex items-center justify-between mb-8">
             <div>
               <h2 className="section-title mb-1">מדריכים אחרונים</h2>
@@ -528,6 +541,7 @@ export default function HomePage() {
               </svg>
             </Link>
           </div>
+          </ScrollReveal>
 
         </div>
       </section>

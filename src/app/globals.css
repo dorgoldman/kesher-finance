@@ -159,4 +159,76 @@
   .press-effect {
     @apply transition-transform duration-150 active:scale-[0.97];
   }
+
+  /* ─── CTA shimmer sweep ─── */
+  .btn-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-shimmer::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.18) 50%, transparent 100%);
+    animation: shimmer-pass 3.5s ease-in-out infinite 2s;
+    pointer-events: none;
+  }
+
+  /* ─── Tool icon glow on hover ─── */
+  .tool-icon-glow {
+    @apply transition-all duration-300;
+  }
+  .tool-icon-glow:hover {
+    box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.12), 0 0 20px rgba(22, 163, 74, 0.18);
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   Keyframes — defined outside @layer so they are always available
+════════════════════════════════════════════════════════════════ */
+
+@keyframes float-blob {
+  0%, 100% { transform: translateY(0px) scale(1);    }
+  50%       { transform: translateY(-28px) scale(1.05); }
+}
+
+@keyframes shimmer-pass {
+  0%   { transform: translateX(100%) skewX(-12deg);  }
+  100% { transform: translateX(-220%) skewX(-12deg); }
+}
+
+@layer utilities {
+  /* ─── Floating hero blobs (staggered) ─── */
+  .animate-float-1 { animation: float-blob 11s ease-in-out infinite; }
+  .animate-float-2 { animation: float-blob 15s ease-in-out infinite 4s; }
+  .animate-float-3 { animation: float-blob 13s ease-in-out infinite 8s; }
+
+  /* ─── Gradient headline text ─── */
+  .gradient-text {
+    background: linear-gradient(135deg, #4ade80 0%, #22c55e 40%, #059669 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ─── Scroll-reveal: start hidden, transition to visible ─── */
+  .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+  }
+  .reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ─── Green accent bar under section headings ─── */
+  .section-accent-bar {
+    display: block;
+    width: 2.5rem;
+    height: 3px;
+    background: linear-gradient(90deg, #16a34a, #4ade80);
+    border-radius: 9999px;
+    margin: 0.6rem auto 0;
+  }
 }
