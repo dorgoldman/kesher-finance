@@ -81,6 +81,7 @@ const jsonLd = [
 const TOC = [
   { id: 'hafnaah-penuyah', label: 'מה זה "הכנסה פנויה" בעיני הבנק?' },
   { id: 'tavlah',          label: 'טבלת משכנתא לפי משכורת 2026' },
+  { id: 'tkufa-tavlah',    label: 'טבלת תקופה: 20 / 25 / 30 שנה' },
   { id: 'mechir-dirah',    label: 'מהמשכנתא למחיר הדירה' },
   { id: 'halvaot-kayamot', label: 'מה קורה כשיש הלוואות קיימות?' },
   { id: 'gvul-40',         label: 'האם 40% הוא גבול קשיח?' },
@@ -222,6 +223,45 @@ export default function KamaMashnektaPage() {
 
           <p className={p}>
             זה ה&quot;כמה&quot;. עכשיו השאלה האמיתית: כמה דירה אפשר לקנות?
+          </p>
+
+          {/* Section 2b: term comparison table */}
+          <h2 id="tkufa-tavlah" className={h2}>איך תקופת ההלוואה משנה את הסכום שתקבל</h2>
+          <p className={p}>
+            אותה תקרת החזר, תקופות שונות — משכנתא שונה לגמרי. הטבלה מבוססת על ריבית
+            5.5% וגוף יחיד עם שכר נטו ₪20,000.
+          </p>
+
+          <div className="overflow-x-auto mb-8 rounded-2xl border border-accent-100 shadow-sm">
+            <table className="w-full text-sm text-right border-collapse">
+              <thead>
+                <tr className="bg-primary-600 text-white">
+                  <th className="px-4 py-3 font-semibold text-right">תקופה</th>
+                  <th className="px-4 py-3 font-semibold text-right">החזר חודשי (40% מ-₪20k)</th>
+                  <th className="px-4 py-3 font-semibold text-right">משכנתא מקסימלית</th>
+                  <th className="px-4 py-3 font-semibold text-right">סך ריבית</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['20 שנה', '₪8,000', '₪1,180,000', '₪741,600'],
+                  ['25 שנה', '₪8,000', '₪1,360,000', '₪1,040,000'],
+                  ['30 שנה', '₪8,000', '₪1,495,000', '₪1,387,200'],
+                ].map(([period, payment, mortgage, interest], idx) => (
+                  <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-accent-50/60'}>
+                    <td className="px-4 py-3 font-medium text-accent-800 border border-accent-100">{period}</td>
+                    <td className="px-4 py-3 text-accent-600 border border-accent-100">{payment}</td>
+                    <td className="px-4 py-3 font-semibold text-primary-700 border border-accent-100">{mortgage}</td>
+                    <td className="px-4 py-3 text-accent-600 border border-accent-100">{interest}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className={p}>
+            תקופה ארוכה יותר מאפשרת לקחת ₪315,000 יותר — אבל עולה ₪645,600 נוספים בריבית
+            לאורך חיי ההלוואה. זה החליפין שצריך לשקול. לרוב הזוגות, 25 שנה הוא שיווי
+            משקל סביר — לא לחוץ מדי, לא יקר מדי.
           </p>
 
           {/* Section 3 */}

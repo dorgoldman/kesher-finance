@@ -83,6 +83,7 @@ const TOC = [
   { id: 'lama-zeh-hashuv',  label: 'למה זה חשוב?' },
   { id: 'mah-nichlas',      label: 'מה נכלל בריבית האפקטיבית?' },
   { id: 'lefi-sug',         label: 'ריבית טובה לפי סוג הלוואה' },
+  { id: 'dugma',            label: 'דוגמה: ₪80,000 בשתי הצעות' },
   { id: 'eich-meshavim',    label: 'איך משווים הצעות נכון?' },
   { id: 'taaut-nefutza',    label: 'טעות נפוצה שעולה כסף' },
   { id: 'faq',              label: 'שאלות נפוצות' },
@@ -238,6 +239,51 @@ export default function RibitEfektivitPage() {
           <p className={p}>
             אם מישהו מציע לך הלוואה בריבית נמוכה משמעותית מהטווח הרלוונטי, בדוק מה
             מסתתר בתנאים.
+          </p>
+
+          {/* Section 4b: Worked example */}
+          <h2 id="dugma" className={h2}>דוגמה: ₪80,000 בשתי הצעות — מה ההפרש האמיתי</h2>
+          <p className={p}>
+            דני מרמת גן קיבל שתי הצעות על הלוואה של ₪80,000 ל-4 שנים.
+          </p>
+
+          <div className="overflow-x-auto mb-8 rounded-2xl border border-accent-100 shadow-sm">
+            <table className="w-full text-sm text-right border-collapse">
+              <thead>
+                <tr className="bg-primary-600 text-white">
+                  <th className="px-4 py-3 font-semibold text-right">פרמטר</th>
+                  <th className="px-4 py-3 font-semibold text-right">הצעה א׳ — בנק לאומי</th>
+                  <th className="px-4 py-3 font-semibold text-right">הצעה ב׳ — כאל</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['ריבית נומינלית', '8%', '9.5%'],
+                  ['עמלת פתיחת תיק', '₪400', '₪0'],
+                  ['דמי ניהול חודשיים', '₪15', '₪0'],
+                  ['ריבית אפקטיבית', '9.4%', '9.5%'],
+                  ['החזר חודשי', '₪1,983', '₪2,005'],
+                  ['סך כל תשלומים', '₪96,184', '₪96,240'],
+                  ['סך ריבית + עמלות', '₪16,184', '₪16,240'],
+                ].map(([param, a, b], idx) => (
+                  <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-accent-50/60'}>
+                    <td className="px-4 py-3 font-medium text-accent-800 border border-accent-100">{param}</td>
+                    <td className="px-4 py-3 text-accent-600 border border-accent-100">{a}</td>
+                    <td className="px-4 py-3 text-accent-600 border border-accent-100">{b}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className={p}>
+            בנק לאומי הציג ריבית נומינלית נמוכה יותר — 8% מול 9.5%. מי שמסתכל רק על
+            הנומינלית היה בוחר בלאומי בצורה ברורה. אבל אחרי חישוב הריבית האפקטיבית,
+            שכוללת עמלת פתיחה ודמי ניהול חודשיים, ההפרש בין שתי ההצעות הצטמצם לכ-₪56
+            לאורך ארבע שנים.
+          </p>
+          <p className={p}>
+            דני בחר בכאל — לא בגלל שזה זול יותר, אלא כי הייתה לו אפשרות פירעון מוקדם
+            ללא עמלה, וציפה לסגור מוקדם. בלאומי הייתה עמלת פירעון של 2%.
           </p>
 
           {/* Section 5 */}

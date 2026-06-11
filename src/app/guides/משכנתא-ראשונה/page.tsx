@@ -86,6 +86,7 @@ const TOC = [
   { id: 'bituah',          label: 'ביטוח משכנתא' },
   { id: 'shlahim',         label: 'שלבי התהליך' },
   { id: 'tauyot',          label: 'שלוש טעויות נפוצות' },
+  { id: 'dugma',           label: 'דוגמה: כמה צריך ביום החתימה' },
   { id: 'faq',             label: 'שאלות נפוצות' },
 ];
 
@@ -298,6 +299,51 @@ export default function MashkantaRishonePage() {
             <span className="font-semibold text-accent-800">לחתום על ביטוח הבנק מבלי
             להשוות.</span> ראו את הסעיף על ביטוח משכנתא. זה המקום שבו הרוב מפסיד
             הכי הרבה כסף מבלי לשים לב.
+          </p>
+
+          {/* Section: worked example — total costs */}
+          <h2 id="dugma" className={h2}>דוגמה: כמה צריך להביא ביום חתימת המשכנתא</h2>
+          <p className={p}>
+            יובל ושירן מבאר שבע רכשו דירה ב-₪1,800,000. הנה הפירוט המלא של מה שהוצאו
+            בתהליך:
+          </p>
+
+          <div className="overflow-x-auto mb-8 rounded-2xl border border-accent-100 shadow-sm">
+            <table className="w-full text-sm text-right border-collapse">
+              <thead>
+                <tr className="bg-primary-600 text-white">
+                  <th className="px-4 py-3 font-semibold text-right">הוצאה</th>
+                  <th className="px-4 py-3 font-semibold text-right">סכום</th>
+                  <th className="px-4 py-3 font-semibold text-right">הערות</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['הון עצמי (25%)', '₪450,000', 'מינימום לפי בנק ישראל'],
+                  ['מס רכישה (דירה ראשונה)', '₪14,500', 'על הסכום שמעל פטור'],
+                  ['שכר טרחת עו"ד', '₪12,000', 'עו"ד רוכש + רישום'],
+                  ['שמאות', '₪2,500', 'מטעם הבנק'],
+                  ['ביטוח מבנה + חיים (שנה ראשונה)', '₪4,200', 'אם לא קונים מחוץ לבנק'],
+                  ['הובלה ושיפוץ קל', '₪15,000', 'אומדן ממוצע'],
+                  ['סך הכל נדרש מחוץ למשכנתא', '₪498,200', ''],
+                ].map(([item, amount, note], idx) => (
+                  <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-accent-50/60'}>
+                    <td className="px-4 py-3 font-medium text-accent-800 border border-accent-100">{item}</td>
+                    <td className="px-4 py-3 font-semibold text-primary-700 border border-accent-100">{amount}</td>
+                    <td className="px-4 py-3 text-accent-500 border border-accent-100">{note}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className={p}>
+            כלומר, על דירה של ₪1,800,000 צריך בפועל כמעט ₪500,000 ביום החתימה — לא
+            ₪450,000. יובל ושירן תכננו על ₪450,000 בלבד, וגילו את הפער כשבוע לפני
+            החתימה. הם נאלצו לבקש הלוואה קטנה מהורים כדי לגשר.
+          </p>
+          <p className={p}>
+            הכלל הפשוט: תכנן הון עצמי של 28%-30% ממחיר הדירה, לא 25% בלבד. ה-3-5%
+            הנוספים הם ההוצאות הנלוות שרוב הזוגות לא מחשבים מראש.
           </p>
 
           {/* Calculator CTA */}

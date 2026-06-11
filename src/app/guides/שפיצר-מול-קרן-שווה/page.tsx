@@ -81,6 +81,7 @@ const TOC = [
   { id: 'mah-ze',        label: 'מה זה לוח סילוקין?' },
   { id: 'shpitzer',      label: 'לוח שפיצר' },
   { id: 'keren-shava',   label: 'לוח קרן שווה' },
+  { id: 'hashvaah',      label: 'טבלת השוואה מספרית' },
   { id: 'mah-zol',       label: 'מה זול יותר?' },
   { id: 'lemi-keren',    label: 'למי קרן שווה מתאימה?' },
   { id: 'bank-metzuyav', label: 'האם הבנק חייב להציע?' },
@@ -184,6 +185,46 @@ export default function ShpitzerMolKerenShavaPage() {
           <p className={p}>
             דוגמה: ₪1,000,000 ל-25 שנה בריבית 5%. ההחזר הראשון בקרן שווה יהיה כ-₪7,500.
             אחרי 10 שנים הוא יירד לכ-₪5,800. בסוף ההלוואה, פחות מ-₪4,000.
+          </p>
+
+          {/* Section 3b: Side-by-side comparison table */}
+          <h2 id="hashvaah" className={h2}>טבלת השוואה מספרית: ₪1,000,000, 25 שנה, ריבית 5%</h2>
+          <p className={p}>
+            כדי להבין את ההבדל, הכי טוב לראות מספרים על אותה הלוואה בדיוק:
+          </p>
+
+          <div className="overflow-x-auto mb-8 rounded-2xl border border-accent-100 shadow-sm">
+            <table className="w-full text-sm text-right border-collapse">
+              <thead>
+                <tr className="bg-primary-600 text-white">
+                  <th className="px-4 py-3 font-semibold text-right">פרמטר</th>
+                  <th className="px-4 py-3 font-semibold text-right">לוח שפיצר</th>
+                  <th className="px-4 py-3 font-semibold text-right">לוח קרן שווה</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['החזר חודשי ראשון', '₪5,846', '₪7,500'],
+                  ['החזר חודשי אחרי 10 שנים', '₪5,846', '₪5,833'],
+                  ['החזר חודשי אחרי 20 שנים', '₪5,846', '₪4,167'],
+                  ['יתרת חוב אחרי 5 שנים', '₪879,000', '₪800,000'],
+                  ['יתרת חוב אחרי 10 שנים', '₪737,000', '₪600,000'],
+                  ['סך ריבית כוללת', '₪753,800', '₪627,100'],
+                  ['הפרש ריבית', '—', 'חיסכון ₪126,700'],
+                ].map(([param, shpitzer, keren], idx) => (
+                  <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-accent-50/60'}>
+                    <td className="px-4 py-3 font-medium text-accent-800 border border-accent-100">{param}</td>
+                    <td className="px-4 py-3 text-accent-600 border border-accent-100">{shpitzer}</td>
+                    <td className="px-4 py-3 font-semibold text-primary-700 border border-accent-100">{keren}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className={p}>
+            קרן שווה חוסכת ₪126,700 לאורך 25 שנה. אבל שימו לב ליתרת החוב אחרי 5 שנים:
+            בקרן שווה היא ₪800,000 — בשפיצר ₪879,000. זה ההבדל המשמעותי אם מוכרים
+            את הדירה או מחזרים את המשכנתא.
           </p>
 
           {/* Section 4 */}

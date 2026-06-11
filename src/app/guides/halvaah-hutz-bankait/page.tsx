@@ -104,6 +104,8 @@ const TOC = [
   { id: 'ma-ze',       label: 'מה זה "חוץ בנקאי"' },
   { id: 'matai',       label: 'מתי הגיוני לשקול' },
   { id: 'kama-oleh',   label: 'כמה זה באמת עולה' },
+  { id: 'hashvaah',    label: 'השוואת ספקים 2026' },
+  { id: 'dugma',       label: 'דוגמה מספרית' },
   { id: 'ma-livdok',   label: 'מה לבדוק לפני שחותמים' },
   { id: 'kaal-max',    label: 'כאל, מקס, ישראכרט' },
   { id: 'gmachim',     label: 'גמ"חים ועמותות' },
@@ -232,6 +234,62 @@ export default function HalvaahHutzBankaitPage() {
               </svg>
             </Link>
           </div>
+
+          {/* ── Section 3b: Provider comparison table ── */}
+          <h2 id="hashvaah" className={h2}>השוואת ספקים חוץ בנקאיים — 2026</h2>
+          <p className={p}>
+            לא כל גוף חוץ בנקאי עולה אותו דבר. הנה תמונה של השוק הישראלי כיום:
+          </p>
+
+          <div className="overflow-x-auto mb-8 rounded-2xl border border-accent-100 shadow-sm">
+            <table className="w-full text-sm text-right border-collapse">
+              <thead>
+                <tr className="bg-primary-600 text-white">
+                  <th className="px-4 py-3 font-semibold text-right">גוף</th>
+                  <th className="px-4 py-3 font-semibold text-right">ריבית אפקטיבית</th>
+                  <th className="px-4 py-3 font-semibold text-right">סכום מקסימלי</th>
+                  <th className="px-4 py-3 font-semibold text-right">מהירות</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['כאל (CAL)', '11%–17%', '₪150,000', 'יום עסקים'],
+                  ['מקס (Max)', '10%–16%', '₪150,000', 'יום עסקים'],
+                  ['ישראכרט', '11%–18%', '₪120,000', 'יום–יומיים'],
+                  ['ורד מימון', '12%–20%', '₪200,000', '2–3 ימים'],
+                  ['פנינסולה', '10%–18%', '₪300,000', '2–4 ימים'],
+                  ['גמ"ח / עוגן', '0%', '₪20,000–60,000', '1–4 שבועות'],
+                ].map(([guf, rate, max, speed], idx) => (
+                  <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-accent-50/60'}>
+                    <td className="px-4 py-3 font-medium text-accent-800 border border-accent-100">{guf}</td>
+                    <td className="px-4 py-3 text-accent-600 border border-accent-100">{rate}</td>
+                    <td className="px-4 py-3 text-accent-600 border border-accent-100">{max}</td>
+                    <td className="px-4 py-3 text-accent-600 border border-accent-100">{speed}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          {/* ── Section 3c: Worked example ── */}
+          <h2 id="dugma" className={h2}>דוגמה מספרית: בנק מסרב, חוץ בנקאי מאשר</h2>
+          <p className={p}>
+            שירה מירושלים רצתה הלוואה של ₪40,000 לשיפוץ המטבח. בנק דיסקונט — שם יש לה
+            חשבון — סרב. הסיבה לא הוסברה, אבל היה לה BDI של 570 מחריגה ישנה שכבר
+            תוקנה.
+          </p>
+          <p className={p}>
+            היא פנתה לכאל. קיבלה אישור תוך יום עסקים ב-13.5% אפקטיבי ל-3 שנים.
+            ההחזר החודשי: ₪1,356. סך הריבית לאורך שלוש השנים: ₪8,816.
+          </p>
+          <p className={p}>
+            לשם השוואה: אם הבנק היה מאשר באותה תקופה ב-9%, ההחזר היה ₪1,272 וסך הריבית
+            ₪5,792. ההפרש: ₪3,024 — המחיר שמשלמים על המהירות ועל היסטוריית האשראי.
+          </p>
+          <p className={p}>
+            שירה לקחה את ההלוואה כי הייתה לה עבודה חתומה ומועד אספקת המטבח לא זז. ב-
+            תשלומים עמדה כסדרה, ואחרי שנה דירוג האשראי שלה עלה ל-640.
+          </p>
 
           {/* ── Section 4 ── */}
           <h2 id="ma-livdok" className={h2}>מה לבדוק לפני שחותמים</h2>

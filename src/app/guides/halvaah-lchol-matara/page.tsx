@@ -104,6 +104,8 @@ const TOC = [
   { id: 'matai-ken',    label: 'מתי זו בחירה נכונה' },
   { id: 'matai-lo',     label: 'מתי זו טעות' },
   { id: 'kama-oleh',    label: 'כמה זה עולה ב-2026' },
+  { id: 'gufim-table',  label: 'השוואת גופים מלווים' },
+  { id: 'dugma',        label: 'דוגמה: חיסכון באיחוד' },
   { id: 'hidush-2026',  label: 'חידוש מיולי 2026' },
   { id: 'hashvaah',     label: 'איך משווים נכון' },
   { id: 'faq',          label: 'שאלות נפוצות' },
@@ -252,6 +254,67 @@ export default function HalvaahLcholMataraPage() {
               </svg>
             </Link>
           </div>
+
+          {/* Section 3b: Lender comparison table */}
+          <h2 id="gufim-table" className={h2}>השוואת גופים מלווים — הלוואה לכל מטרה ב-2026</h2>
+          <p className={p}>
+            לפני שמבקשים הצעה, שווה להבין מה כל גוף מציע ולמי הוא מתאים.
+          </p>
+
+          <div className="overflow-x-auto mb-8 rounded-2xl border border-accent-100 shadow-sm">
+            <table className="w-full text-sm text-right border-collapse">
+              <thead>
+                <tr className="bg-primary-600 text-white">
+                  <th className="px-4 py-3 font-semibold text-right">גוף מלווה</th>
+                  <th className="px-4 py-3 font-semibold text-right">ריבית אפקטיבית (אומדן)</th>
+                  <th className="px-4 py-3 font-semibold text-right">סכום מקסימלי</th>
+                  <th className="px-4 py-3 font-semibold text-right">זמן אישור</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['בנק לאומי / הפועלים', '7%–10%', '₪400,000', '5–10 ימים'],
+                  ['מזרחי טפחות / דיסקונט', '8%–11%', '₪350,000', '5–10 ימים'],
+                  ['בנקים דיגיטליים (One Zero)', '7%–9.5%', '₪200,000', '1–3 ימים'],
+                  ['כאל / מקס / ישראכרט', '10%–18%', '₪150,000–200,000', '1–2 ימים'],
+                  ['קרן השתלמות (אם קיימת)', 'פריים–0.5% עד 0%', 'עד 80% מהצבירה', '3–7 ימים'],
+                ].map(([lender, rate, max, time], idx) => (
+                  <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-accent-50/60'}>
+                    <td className="px-4 py-3 font-medium text-accent-800 border border-accent-100">{lender}</td>
+                    <td className="px-4 py-3 text-accent-600 border border-accent-100">{rate}</td>
+                    <td className="px-4 py-3 text-accent-600 border border-accent-100">{max}</td>
+                    <td className="px-4 py-3 text-accent-600 border border-accent-100">{time}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className={p}>
+            שים לב: ריביות אלו הן אומדנים לפרופיל ממוצע. הריבית שתקבל תלויה בדירוג
+            האשראי שלך, בהכנסה, ובמשא ומתן. לקוח ותיק של הבנק יקבל תמיד הצעה טובה
+            יותר מלקוח חדש.
+          </p>
+
+          {/* Section 3c: Worked example */}
+          <h2 id="dugma" className={h2}>דוגמה מספרית: כמה חוסכים באיחוד הלוואות</h2>
+          <p className={p}>
+            נועה מתל אביב הייתה עם שלוש הלוואות פעילות: הלוואת רכב ב-11% (₪900 בחודש),
+            הלוואת כרטיס אשראי ב-16% (₪600 בחודש), ומינוס קבוע שעלה לה בפועל 18%
+            (₪500 בחודש). בסך הכל ₪2,000 בחודש לשלוש הלוואות שונות.
+          </p>
+          <p className={p}>
+            היא לקחה הלוואה לכל מטרה מבנק לאומי ב-9% לחמש שנים, ואיחדה את הכל לסכום
+            של ₪60,000. ההחזר החודשי החדש: ₪1,245. חיסכון מיידי: ₪755 בחודש.
+          </p>
+          <p className={p}>
+            לאורך חמש השנים חסכה נועה כ-₪12,300 בריבית בלבד, בהשוואה להמשך עם שלוש
+            ההלוואות הישנות. לא הסכום הגדול בעולם, אבל ₪755 פנויים בכל חודש זה שינוי
+            משמעותי בתזרים.
+          </p>
+          <p className={p}>
+            הלקח: איחוד הלוואות משתלם כשהריבית על ההלוואה החדשה נמוכה משמעותית מהממוצע
+            המשוקלל של ההלוואות הקיימות. כדאי לחשב לפני שפועלים.
+          </p>
 
           {/* Section 4 */}
           <h2 id="hidush-2026" className={h2}>חידוש חשוב מיולי 2026</h2>

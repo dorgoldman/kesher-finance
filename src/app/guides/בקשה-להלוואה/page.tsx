@@ -85,6 +85,7 @@ const TOC = [
   { id: 'eich-lehagish',  label: 'איך להגיש נכון?' },
   { id: 'lama-nidche',    label: 'למה בקשות נדחות?' },
   { id: 'achar-dichia',   label: 'מה עושים אחרי דחייה?' },
+  { id: 'dugma',          label: 'דוגמה: בקשה שהתקבלה' },
   { id: 'faq',            label: 'שאלות נפוצות' },
 ];
 
@@ -280,12 +281,59 @@ export default function BakashaLeHalvaahPage() {
             אבל זה אופציה לגיטימית.
           </p>
 
+          {/* Section: documents by borrower type */}
+          <div className="overflow-x-auto mb-8 rounded-2xl border border-accent-100 shadow-sm">
+            <table className="w-full text-sm text-right border-collapse">
+              <thead>
+                <tr className="bg-primary-600 text-white">
+                  <th className="px-4 py-3 font-semibold text-right">סוג לווה</th>
+                  <th className="px-4 py-3 font-semibold text-right">מסמכי הכנסה</th>
+                  <th className="px-4 py-3 font-semibold text-right">מסמכים נוספים</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['שכיר', 'תלושי שכר 3 חודשים', 'תעודת זהות, תדפיס בנק'],
+                  ['עצמאי', 'שומות מס 2 שנים', 'תעודת זהות, תדפיס בנק, רישום עסק'],
+                  ['פנסיונר', 'אישור קצבה', 'תעודת זהות, תדפיס בנק'],
+                  ['שכיר + הכנסה נוספת', 'תלושי שכר + שומה', 'תעודת זהות, תדפיס בנק'],
+                  ['לסכומים גדולים (>₪200k)', 'כל האמור לעיל', 'בטוחה: נכס, ערב, או קרן'],
+                ].map(([type, income, extra], idx) => (
+                  <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-accent-50/60'}>
+                    <td className="px-4 py-3 font-medium text-accent-800 border border-accent-100">{type}</td>
+                    <td className="px-4 py-3 text-accent-600 border border-accent-100">{income}</td>
+                    <td className="px-4 py-3 text-accent-600 border border-accent-100">{extra}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
           {/* Calculator CTA */}
           <CalculatorCTA
             calculatorName="מחשבון ההלוואה"
             calculatorUrl="/tools/loan-calculator"
             teaser="לפני שמגישים, דע בדיוק מה ההחזר החודשי שאתה מסוגל לעמוד בו."
           />
+
+          {/* Section: worked example */}
+          <h2 id="dugma" className={h2}>דוגמה אמיתית: בקשה שנדחתה ואז התקבלה</h2>
+          <p className={p}>
+            יוסי מחיפה הגיש בקשה להלוואה של ₪80,000 בבנק הפועלים. נדחה. הסיבה: יחס
+            החזר גבוה מדי — הייתה לו הלוואת רכב פעילה של ₪1,800 בחודש, שהורידה את
+            ההכנסה הפנויה שלו מ-₪16,000 ל-₪14,200. ה-40% אפשרו רק ₪5,680 להחזר — ולא
+            הספיק.
+          </p>
+          <p className={p}>
+            שני חודשים אחרי הדחייה סגר יוסי את הלוואת הרכב עם החסכונות שלו. הגיש מחדש
+            — הפעם בבנק לאומי, לא בהפועלים. ההכנסה הפנויה עלתה בחזרה ל-₪16,000, תקרת
+            ההחזר עלתה ל-₪6,400, ובלאומי אישרו ₪80,000 ב-9% ל-5 שנים — ₪1,660 בחודש.
+          </p>
+          <p className={p}>
+            שלושה דברים שעזרו ליוסי: הוא לא הגיש לחמישה בנקים ברצף (שפוגע בדוח האשראי),
+            הוא המתין שני חודשים בין ניסיונות, ובניסיון השני הוא פנה לבנק אחר שלא ראה
+            את הדחייה הראשונה.
+          </p>
 
           {/* Section 7: FAQ */}
           <h2 id="faq" className={h2}>שאלות נפוצות</h2>

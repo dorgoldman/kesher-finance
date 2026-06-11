@@ -104,6 +104,8 @@ const TOC = [
   { id: 'ribbit-eff',    label: 'ריבית נומינלית vs אפקטיבית' },
   { id: 'kama-lehahzir', label: 'כמה אתה יכול להחזיר' },
   { id: 'sugei-halvaa',  label: 'סוגי ההלוואות' },
+  { id: 'hashvaah',      label: 'השוואת מסלולים בטבלה' },
+  { id: 'dugma',         label: 'דוגמה: אותו סכום, שלושה מחירים' },
   { id: 'lifnei-hatima', label: 'מה לבדוק לפני שחותמים' },
   { id: 'seker-shuk',    label: 'סקר שוק - איך עושים נכון' },
   { id: 'faq',           label: 'שאלות נפוצות' },
@@ -242,6 +244,65 @@ export default function HalvaotMadrichPage() {
             <span className={strong}>הלוואה חברתית (P2P)</span> - פלטפורמות כמו
             בלנדר וטריא מחברות בין לווים למלווים פרטיים. לפעמים בתנאים תחרותיים,
             לפעמים לא. שווה לבדוק כחלק מסקר השוק שלך.
+          </p>
+
+          {/* ── Section 3b: lender comparison table ── */}
+          <h2 id="hashvaah" className={h2}>השוואת מסלולי הלוואה — טבלה מהירה</h2>
+          <p className={p}>
+            לפני שבוחרים לאן לפנות, כדאי להבין את ההבדלים העיקריים בין המסלולים:
+          </p>
+
+          <div className="overflow-x-auto mb-8 rounded-2xl border border-accent-100 shadow-sm">
+            <table className="w-full text-sm text-right border-collapse">
+              <thead>
+                <tr className="bg-primary-600 text-white">
+                  <th className="px-4 py-3 font-semibold text-right">מסלול</th>
+                  <th className="px-4 py-3 font-semibold text-right">ריבית אפקטיבית</th>
+                  <th className="px-4 py-3 font-semibold text-right">קריטריוני כניסה</th>
+                  <th className="px-4 py-3 font-semibold text-right">מהירות</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['קרן השתלמות / פנסיה', '0%–5%', 'צבירה קיימת', '3–7 ימים'],
+                  ['הלוואה בנקאית', '7%–11%', 'היסטוריה נקייה + הכנסה', '5–10 ימים'],
+                  ['בנק דיגיטלי (One Zero)', '7%–10%', 'דירוג אשראי בסיסי', '1–3 ימים'],
+                  ['חברת אשראי (כאל, מקס)', '10%–18%', 'נמוכים יחסית', 'יום עסקים'],
+                  ['P2P (בלנדר, טריא)', '8%–15%', 'בדיקת אשראי', '2–5 ימים'],
+                  ['גמ"ח / עוגן', '0%', 'קריטריונים חברתיים', '1–4 שבועות'],
+                ].map(([track, rate, criteria, speed], idx) => (
+                  <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-accent-50/60'}>
+                    <td className="px-4 py-3 font-medium text-accent-800 border border-accent-100">{track}</td>
+                    <td className="px-4 py-3 text-accent-600 border border-accent-100">{rate}</td>
+                    <td className="px-4 py-3 text-accent-600 border border-accent-100">{criteria}</td>
+                    <td className="px-4 py-3 text-accent-600 border border-accent-100">{speed}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          {/* ── Section 3c: worked example ── */}
+          <h2 id="dugma" className={h2}>דוגמה: אותו סכום, שלושה מחירים שונים לגמרי</h2>
+          <p className={p}>
+            ₪60,000 לשלוש שנים. שלושה אנשים, שלושה מסלולים שונים — כמה משלם כל אחד?
+          </p>
+          <p className={p}>
+            <span className={strong}>רינת מחיפה</span> — יש לה קרן השתלמות עם ₪80,000
+            צבירה. לקחה הלוואה כנגד הקרן ב-4.5% (פריים מינוס 1%). החזר חודשי: ₪1,787.
+            סך ריבית לאורך 3 שנים: ₪4,332.
+          </p>
+          <p className={p}>
+            <span className={strong}>מוטי מנתניה</span> — אין לו קרן, דירוג BDI 650.
+            פנה לבנק הפועלים וקיבל 9.5% ל-3 שנים. החזר חודשי: ₪1,923. סך ריבית: ₪9,228.
+          </p>
+          <p className={p}>
+            <span className={strong}>שרה מאשדוד</span> — BDI 530, אין קרן השתלמות.
+            הבנק סרב. לקחה מכאל ב-16%. החזר חודשי: ₪2,109. סך ריבית: ₪15,924.
+          </p>
+          <p className={p}>
+            אותם ₪60,000. הפרש בריבית בין רינת לשרה: ₪11,592. לכן כדאי לבדוק תחילה
+            אם יש קרן השתלמות, ולפנות לבנק לפני שפונים לחברת אשראי.
           </p>
 
           {/* ── Section 4 ── */}
