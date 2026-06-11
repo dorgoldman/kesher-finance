@@ -26,7 +26,7 @@ const jsonLd = [
     inLanguage: 'he',
     datePublished: '2026-05-17',
     dateModified: '2026-05-17',
-    author: { '@type': 'Organization', name: 'מקסיט. Maxit' },
+    author: { '@type': 'Person', name: 'דור גולדמן', url: 'https://getmaxit.co.il/about' },
     publisher: { '@type': 'Organization', name: 'מקסיט. Maxit' },
   },
   {
@@ -130,7 +130,8 @@ export default function BakashaLeHalvaahPage() {
               איך מגישים בקשה להלוואה: ומה הבנק באמת בודק
             </h1>
             <div className="flex flex-wrap items-center gap-1.5 text-sm text-accent-400">
-              <span>נכתב על ידי צוות מקסיט</span>
+              <span>נכתב ונערך על ידי{' '}
+                <Link href="/about" className="underline underline-offset-2 hover:text-primary-600">דור גולדמן</Link></span>
               <span aria-hidden="true">·</span>
               <span>עודכן: מאי 2026</span>
             </div>
@@ -397,6 +398,12 @@ export default function BakashaLeHalvaahPage() {
           </div>
 
           {/* Disclaimer */}
+          {/* Sources */}
+          <div className="mb-6 text-xs text-accent-400 leading-relaxed">
+            <span className="font-semibold text-accent-500">מקורות:</span>{' '}
+            <a href="https://www.boi.org.il/financial-markets/credit-data/" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">מאגר נתוני אשראי, בנק ישראל</a>
+          </div>
+
           <div className="border-t border-accent-100 pt-6">
             <p className="text-xs text-accent-400 leading-relaxed">
               <span className="font-semibold">אין באמור ייעוץ פיננסי.</span>{' '}

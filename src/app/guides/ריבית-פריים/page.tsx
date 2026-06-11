@@ -26,7 +26,7 @@ const jsonLd = [
     inLanguage: 'he',
     datePublished: '2026-05-17',
     dateModified: '2026-05-17',
-    author: { '@type': 'Organization', name: 'מקסיט. Maxit' },
+    author: { '@type': 'Person', name: 'דור גולדמן', url: 'https://getmaxit.co.il/about' },
     publisher: { '@type': 'Organization', name: 'מקסיט. Maxit' },
   },
   {
@@ -131,7 +131,8 @@ export default function RibitPrimePage() {
               ריבית פריים: מה זה ואיך זה משפיע עליך
             </h1>
             <div className="flex flex-wrap items-center gap-1.5 text-sm text-accent-400">
-              <span>נכתב על ידי צוות מקסיט</span>
+              <span>נכתב ונערך על ידי{' '}
+                <Link href="/about" className="underline underline-offset-2 hover:text-primary-600">דור גולדמן</Link></span>
               <span aria-hidden="true">·</span>
               <span>עודכן: מאי 2026</span>
             </div>

@@ -45,7 +45,7 @@ const jsonLd = [
     inLanguage: 'he',
     datePublished: '2026-05-16',
     dateModified: '2026-05-16',
-    author: { '@type': 'Organization', name: SITE_NAME },
+    author: { '@type': 'Person', name: 'דור גולדמן', url: 'https://getmaxit.co.il/about' },
     publisher: { '@type': 'Organization', name: SITE_NAME },
   },
   /* 2. BreadcrumbList */
@@ -146,7 +146,8 @@ export default function HalvaahLmesoravimPage() {
               הלוואה למסורבים: מה האפשרויות האמיתיות
             </h1>
             <div className="flex flex-wrap items-center gap-1.5 text-sm text-accent-400">
-              <span>נכתב על ידי צוות מקסיט</span>
+              <span>נכתב ונערך על ידי{' '}
+                <Link href="/about" className="underline underline-offset-2 hover:text-primary-600">דור גולדמן</Link></span>
               <span aria-hidden="true">·</span>
               <span>עודכן: מאי 2026</span>
             </div>

@@ -45,7 +45,7 @@ const jsonLd = [
     inLanguage: 'he',
     datePublished: '2026-01-01',
     dateModified: '2026-05-16',
-    author: { '@type': 'Organization', name: SITE_NAME },
+    author: { '@type': 'Person', name: 'דור גולדמן', url: 'https://getmaxit.co.il/about' },
     publisher: { '@type': 'Organization', name: SITE_NAME },
   },
   /* 2. BreadcrumbList */
@@ -146,7 +146,8 @@ export default function HalvaotMadrichPage() {
               הלוואות - איך בוחרים נכון ולא מתחרטים אחר כך
             </h1>
             <div className="flex flex-wrap items-center gap-1.5 text-sm text-accent-400">
-              <span>נכתב על ידי צוות מקסיט</span>
+              <span>נכתב ונערך על ידי{' '}
+                <Link href="/about" className="underline underline-offset-2 hover:text-primary-600">דור גולדמן</Link></span>
               <span aria-hidden="true">·</span>
               <span>עודכן: מאי 2026</span>
             </div>
@@ -427,6 +428,13 @@ export default function HalvaotMadrichPage() {
           </div>
 
           {/* ── Disclaimer ── */}
+          {/* Sources */}
+          <div className="mb-6 text-xs text-accent-400 leading-relaxed">
+            <span className="font-semibold text-accent-500">מקורות:</span>{' '}
+            <a href="https://www.boi.org.il/financial-markets/credit-data/" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">מאגר נתוני אשראי, בנק ישראל</a>{' '}·{' '}
+            <a href="https://www.gov.il/he/departments/capital_market_insurance_and_savings_authority" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">רשות שוק ההון — נותני אשראי</a>
+          </div>
+
           <div className="border-t border-accent-100 pt-6">
             <p className="text-xs text-accent-400 leading-relaxed">
               <span className="font-semibold">אין באמור ייעוץ פיננסי.</span>{' '}
