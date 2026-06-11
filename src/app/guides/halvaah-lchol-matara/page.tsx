@@ -257,7 +257,7 @@ export default function HalvaahLcholMataraPage() {
           </div>
 
           {/* Section 3b: Lender comparison table */}
-          <h2 id="gufim-table" className={h2}>השוואת גופים מלווים — הלוואה לכל מטרה ב-2026</h2>
+          <h2 id="gufim-table" className={h2}>השוואת גופים מלווים, הלוואה לכל מטרה ב-2026</h2>
           <p className={p}>
             לפני שמבקשים הצעה, שווה להבין מה כל גוף מציע ולמי הוא מתאים.
           </p>
@@ -423,7 +423,7 @@ export default function HalvaahLcholMataraPage() {
           {/* Sources */}
           <div className="mb-6 text-xs text-accent-400 leading-relaxed">
             <span className="font-semibold text-accent-500">מקורות:</span>{' '}
-            <a href="https://www.boi.org.il/monetary-policy/interest-rate-decisions/" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">בנק ישראל — החלטות ריבית</a>{' '}·{' '}
+            <a href="https://www.boi.org.il/monetary-policy/interest-rate-decisions/" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">בנק ישראל, החלטות ריבית</a>{' '}·{' '}
             <a href="https://www.boi.org.il/financial-markets/credit-data/" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">מאגר נתוני אשראי, בנק ישראל</a>
           </div>
 

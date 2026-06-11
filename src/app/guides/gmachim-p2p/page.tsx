@@ -221,7 +221,7 @@ export default function GmachimP2PPage() {
           </div>
 
           {/* Section 2b: comparison table */}
-          <h2 id="hashvaah" className={h2}>השוואה: גמ&quot;ח, P2P, ובנק — אותה הלוואה</h2>
+          <h2 id="hashvaah" className={h2}>השוואה: גמ&quot;ח, P2P, ובנק, אותה הלוואה</h2>
           <p className={p}>
             הלוואה של ₪40,000 ל-3 שנים. ריבית שונה לחלוטין לפי מאיפה תביא אותה.
           </p>
@@ -254,7 +254,7 @@ export default function GmachimP2PPage() {
             </table>
           </div>
           <p className={p}>
-            הפרש של ₪8,560 על אותה הלוואה. אם יש לך את הזמן לחכות לגמ&quot;ח — זה שווה.
+            הפרש של ₪8,560 על אותה הלוואה. אם יש לך את הזמן לחכות לגמ&quot;ח, זה שווה.
           </p>
 
           {/* Section 3 */}
@@ -311,12 +311,12 @@ export default function GmachimP2PPage() {
             עמית, עצמאי מבאר שבע, צריך ₪30,000 לשיפוץ. אין לו קרן השתלמות נזילה ואין נכס לשעבד.
           </p>
           <p className={p}>
-            ניגש לבנק — מאשרים ₪20,000 בלבד בריבית 10%. ניגש לחברת אשראי — מאשרים ₪30,000 ב-14%.
+            ניגש לבנק, מאשרים ₪20,000 בלבד בריבית 10%. ניגש לחברת אשראי, מאשרים ₪30,000 ב-14%.
             לשניהם ל-4 שנים.
           </p>
           <p className={p}>
             גילה שיש גמ&quot;ח עירוני בבאר שבע שמלווה עד ₪30,000. תהליך לקח שלושה שבועות.
-            קיבל את הסכום המלא. ריבית: אפס. החזר חודשי: ₪625. לאורך 4 שנים — שילם בדיוק ₪30,000.
+            קיבל את הסכום המלא. ריבית: אפס. החזר חודשי: ₪625. לאורך 4 שנים, שילם בדיוק ₪30,000.
           </p>
           <p className={p}>
             אם היה לוקח מחברת האשראי: שילם ₪30,000 קרן ועוד כ-₪9,200 ריבית. שלושה שבועות של
@@ -408,8 +408,8 @@ export default function GmachimP2PPage() {
           {/* Sources */}
           <div className="mb-6 text-xs text-accent-400 leading-relaxed">
             <span className="font-semibold text-accent-500">מקורות:</span>{' '}
-            <a href="https://www.gov.il/he/departments/capital_market_insurance_and_savings_authority" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">רשות שוק ההון — פלטפורמות P2P</a>{' '}·{' '}
-            <a href="https://www.kolzchut.org.il/" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">כל-זכות — זכויות פיננסיות</a>
+            <a href="https://www.gov.il/he/departments/capital_market_insurance_and_savings_authority" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">רשות שוק ההון, פלטפורמות P2P</a>{' '}·{' '}
+            <a href="https://www.kolzchut.org.il/" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">כל-זכות, זכויות פיננסיות</a>
           </div>
 
           <div className="border-t border-accent-100 pt-6">

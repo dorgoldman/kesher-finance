@@ -231,13 +231,13 @@ export default function MachzorMashkantaPage() {
             23 שנים נותרו.
           </p>
           <p className={p}>
-            <span className="font-semibold text-accent-800">תרחיש א׳ — נשאר בתנאים הקיימים:</span>{' '}
+            <span className="font-semibold text-accent-800">תרחיש א׳, נשאר בתנאים הקיימים:</span>{' '}
             החזר חודשי: כ-₪5,540. סך ריבית שנותרת: כ-₪658,000.
           </p>
           <p className={p}>
-            <span className="font-semibold text-accent-800">תרחיש ב׳ — מחזור לריבית 4.6%:</span>{' '}
+            <span className="font-semibold text-accent-800">תרחיש ב׳, מחזור לריבית 4.6%:</span>{' '}
             החזר חודשי: כ-₪4,940. חיסכון חודשי: ₪600. עלות מחזור חיצוני: כ-₪8,000 (שמאי + רישום + תפעולית).
-            נקודת איזון: 13 חודשים. לאחר מכן — כל חודש חוסך ₪600.
+            נקודת איזון: 13 חודשים. לאחר מכן, כל חודש חוסך ₪600.
           </p>
           <p className={p}>
             לאורך 23 שנה, החיסכון הכולל (בניכוי עלות המחזור): כ-₪157,000.
@@ -256,9 +256,9 @@ export default function MachzorMashkantaPage() {
                 {[
                   ['ריבית', '5.5%', '4.6%'],
                   ['החזר חודשי', '₪5,540', '₪4,940'],
-                  ['עלות מחזור', '—', '₪8,000'],
-                  ['נקודת איזון', '—', '13 חודש'],
-                  ['חיסכון כולל', '—', 'כ-₪157,000'],
+                  ['עלות מחזור', '-', '₪8,000'],
+                  ['נקודת איזון', '-', '13 חודש'],
+                  ['חיסכון כולל', '-', 'כ-₪157,000'],
                 ].map(([param, before, after], i) => (
                   <tr key={param} className={i % 2 === 0 ? '' : 'bg-accent-50/60'}>
                     <td className="border border-accent-100 px-4 py-2 font-medium text-accent-800">{param}</td>
@@ -394,7 +394,7 @@ export default function MachzorMashkantaPage() {
           <div className="mb-6 text-xs text-accent-400 leading-relaxed">
             <span className="font-semibold text-accent-500">מקורות:</span>{' '}
             <a href="https://www.boi.org.il/monetary-policy/interest-rate-decisions/" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">ריבית בנק ישראל</a>{' '}·{' '}
-            <a href="https://www.kolzchut.org.il/he/משכנתה" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">משכנתא — כל-זכות</a>
+            <a href="https://www.kolzchut.org.il/he/משכנתה" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">משכנתא, כל-זכות</a>
           </div>
 
           <div className="border-t border-accent-100 pt-6">

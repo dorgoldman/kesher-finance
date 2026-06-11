@@ -195,7 +195,7 @@ export default function HalvaahMiyeditPage() {
           {/* ── Section 2b: speed vs cost table ── */}
           <h2 id="hashvaah" className={h2}>מהירות מול מחיר: ההשוואה הפרקטית</h2>
           <p className={p}>
-            ככל שהכסף מגיע מהר יותר, הריבית גבוהה יותר. זה לא מקרה — זו מדיניות.
+            ככל שהכסף מגיע מהר יותר, הריבית גבוהה יותר. זה לא מקרה, זו מדיניות.
           </p>
 
           <div className="overflow-x-auto my-6">
@@ -214,7 +214,7 @@ export default function HalvaahMiyeditPage() {
                   ['בנק דיגיטלי', '1–3 ימים', '7%–11%', 'מהיר, תחרותי'],
                   ['הבנק שלך', '1–7 ימים', '7%–10%', 'תלוי היסטוריה'],
                   ['P2P (טריא)', '1–3 ימים', '4%–17.5%', 'תלוי פרופיל אשראי'],
-                  ['עוגן / גמ"ח', '2–4 שבועות', '0%', 'הזול ביותר — אם מגיע'],
+                  ['עוגן / גמ"ח', '2–4 שבועות', '0%', 'הזול ביותר, אם מגיע'],
                 ].map(([lender, time, rate, note], i) => (
                   <tr key={lender} className={i % 2 === 0 ? '' : 'bg-accent-50/60'}>
                     <td className="border border-accent-100 px-4 py-2 font-medium text-accent-800">{lender}</td>
@@ -299,15 +299,15 @@ export default function HalvaahMiyeditPage() {
             הלוואה של ₪50,000 ל-3 שנים. ניקח שני תרחישים: חברת אשראי (מהירה) מול הבנק שלך (איטי יותר).
           </p>
           <p className={p}>
-            <span className="font-semibold text-accent-800">חברת אשראי — 13% ריבית:</span>{' '}
+            <span className="font-semibold text-accent-800">חברת אשראי, 13% ריבית:</span>{' '}
             החזר חודשי ₪1,686. סך ריבית לאורך 3 שנים: כ-₪10,696.
           </p>
           <p className={p}>
-            <span className="font-semibold text-accent-800">הבנק שלך — 8% ריבית:</span>{' '}
+            <span className="font-semibold text-accent-800">הבנק שלך, 8% ריבית:</span>{' '}
             החזר חודשי ₪1,567. סך ריבית: כ-₪6,412.
           </p>
           <p className={p}>
-            ההפרש: כ-₪4,284 על אותה הלוואה. חיכית 5 ימים נוספים — חסכת ₪4,284. לפעמים
+            ההפרש: כ-₪4,284 על אותה הלוואה. חיכית 5 ימים נוספים, חסכת ₪4,284. לפעמים
             שווה. לפעמים צריך את הכסף עכשיו ואין ברירה. חשוב לדעת מה ההחלטה עולה.
           </p>
 
@@ -424,7 +424,7 @@ export default function HalvaahMiyeditPage() {
           <div className="mb-6 text-xs text-accent-400 leading-relaxed">
             <span className="font-semibold text-accent-500">מקורות:</span>{' '}
             <a href="https://www.boi.org.il/financial-markets/credit-data/" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">מאגר נתוני אשראי, בנק ישראל</a>{' '}·{' '}
-            <a href="https://www.gov.il/he/departments/capital_market_insurance_and_savings_authority" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">רשות שוק ההון — נותני אשראי</a>
+            <a href="https://www.gov.il/he/departments/capital_market_insurance_and_savings_authority" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">רשות שוק ההון, נותני אשראי</a>
           </div>
 
           <div className="border-t border-accent-100 pt-6">

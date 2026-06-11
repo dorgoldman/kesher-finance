@@ -25,7 +25,7 @@ interface CalculatorCTAProps {
   calculatorName: string;
   /** Path, e.g. "/tools/loan-calculator" */
   calculatorUrl: string;
-  /** One sentence — direct, no exclamation marks */
+  /** One sentence, direct, no exclamation marks */
   teaser: string;
 }
 

@@ -11,7 +11,7 @@ interface ScrollRevealProps {
 
 /**
  * Wraps children in a div that fades + slides up when it enters the viewport.
- * Respects prefers-reduced-motion — if reduced, shows immediately at full opacity.
+ * Respects prefers-reduced-motion, if reduced, shows immediately at full opacity.
  */
 export default function ScrollReveal({ children, className = '', delay = 0 }: ScrollRevealProps) {
   const ref = useRef<HTMLDivElement>(null);

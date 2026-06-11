@@ -216,8 +216,8 @@ export default function HalvaahLerechevPage() {
             </table>
           </div>
           <p className={p}>
-            מימון היבואן נראה הכי זול בחודש — אבל הבלון מסתתר בסוף. הלוואת בנק יקרה יותר בחודש,
-            אבל אתה יודע בדיוק כמה שילמת בסיום. חברה חוץ בנקאית — רק כשאין ברירה.
+            מימון היבואן נראה הכי זול בחודש, אבל הבלון מסתתר בסוף. הלוואת בנק יקרה יותר בחודש,
+            אבל אתה יודע בדיוק כמה שילמת בסיום. חברה חוץ בנקאית, רק כשאין ברירה.
           </p>
 
           {/* Section 2 */}
@@ -305,12 +305,12 @@ export default function HalvaahLerechevPage() {
           <p className={p}>
             <span className={strong}>1. לחתום על מימון בסוכנות לפני שיש הצעת בנק.</span>{' '}
             ברגע שחתמת בסוכנות, אין לך כוח מיקוח. הגיע עם אישור עקרוני מבנק לאומי, בנק הפועלים
-            או מזרחי טפחות — והסוכנות תתחרה עליך.
+            או מזרחי טפחות, והסוכנות תתחרה עליך.
           </p>
           <p className={p}>
             <span className={strong}>2. לא לחשב את הבלון לתוך המחיר הכולל.</span>{' '}
-            בלון של ₪45,000 לא "נעלם". הוא צץ בסוף התקופה. אם אין לך תכנית ברורה — מכירת הרכב,
-            חיסכון ייעודי, מימון חוזר — זה יכול לסגור אותך.
+            בלון של ₪45,000 לא "נעלם". הוא צץ בסוף התקופה. אם אין לך תכנית ברורה, מכירת הרכב,
+            חיסכון ייעודי, מימון חוזר, זה יכול לסגור אותך.
           </p>
           <p className={p}>
             <span className={strong}>3. לא לבדוק עמלת פירעון מוקדם.</span>{' '}
@@ -402,7 +402,7 @@ export default function HalvaahLerechevPage() {
           <div className="mb-6 text-xs text-accent-400 leading-relaxed">
             <span className="font-semibold text-accent-500">מקורות:</span>{' '}
             <a href="https://www.boi.org.il/monetary-policy/interest-rate-decisions/" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">ריבית בנק ישראל</a>{' '}·{' '}
-            <a href="https://www.gov.il/he/departments/capital_market_insurance_and_savings_authority" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">רשות שוק ההון — נותני אשראי</a>
+            <a href="https://www.gov.il/he/departments/capital_market_insurance_and_savings_authority" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">רשות שוק ההון, נותני אשראי</a>
           </div>
 
           <div className="border-t border-accent-100 pt-6">

@@ -237,7 +237,7 @@ export default function HalvaahHutzBankaitPage() {
           </div>
 
           {/* ── Section 3b: Provider comparison table ── */}
-          <h2 id="hashvaah" className={h2}>השוואת ספקים חוץ בנקאיים — 2026</h2>
+          <h2 id="hashvaah" className={h2}>השוואת ספקים חוץ בנקאיים, 2026</h2>
           <p className={p}>
             לא כל גוף חוץ בנקאי עולה אותו דבר. הנה תמונה של השוק הישראלי כיום:
           </p>
@@ -275,8 +275,8 @@ export default function HalvaahHutzBankaitPage() {
           {/* ── Section 3c: Worked example ── */}
           <h2 id="dugma" className={h2}>דוגמה מספרית: בנק מסרב, חוץ בנקאי מאשר</h2>
           <p className={p}>
-            שירה מירושלים רצתה הלוואה של ₪40,000 לשיפוץ המטבח. בנק דיסקונט — שם יש לה
-            חשבון — סרב. הסיבה לא הוסברה, אבל היה לה BDI של 570 מחריגה ישנה שכבר
+            שירה מירושלים רצתה הלוואה של ₪40,000 לשיפוץ המטבח. בנק דיסקונט, שם יש לה
+            חשבון, סרב. הסיבה לא הוסברה, אבל היה לה BDI של 570 מחריגה ישנה שכבר
             תוקנה.
           </p>
           <p className={p}>
@@ -285,7 +285,7 @@ export default function HalvaahHutzBankaitPage() {
           </p>
           <p className={p}>
             לשם השוואה: אם הבנק היה מאשר באותה תקופה ב-9%, ההחזר היה ₪1,272 וסך הריבית
-            ₪5,792. ההפרש: ₪3,024 — המחיר שמשלמים על המהירות ועל היסטוריית האשראי.
+            ₪5,792. ההפרש: ₪3,024, המחיר שמשלמים על המהירות ועל היסטוריית האשראי.
           </p>
           <p className={p}>
             שירה לקחה את ההלוואה כי הייתה לה עבודה חתומה ומועד אספקת המטבח לא זז. ב-
@@ -431,7 +431,7 @@ export default function HalvaahHutzBankaitPage() {
           {/* Sources */}
           <div className="mb-6 text-xs text-accent-400 leading-relaxed">
             <span className="font-semibold text-accent-500">מקורות:</span>{' '}
-            <a href="https://www.gov.il/he/departments/capital_market_insurance_and_savings_authority" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">רשות שוק ההון, ביטוח וחיסכון — רישוי נותני אשראי</a>{' '}·{' '}
+            <a href="https://www.gov.il/he/departments/capital_market_insurance_and_savings_authority" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">רשות שוק ההון, ביטוח וחיסכון, רישוי נותני אשראי</a>{' '}·{' '}
             <a href="https://www.boi.org.il/financial-markets/credit-data/" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">מאגר נתוני אשראי, בנק ישראל</a>
           </div>
 

@@ -70,8 +70,8 @@ export default function AboutPage() {
         </header>
 
         <p className={p}>
-          רוב הישראלים מקבלים את ההחלטות הפיננסיות הגדולות בחייהם — משכנתא, הלוואה,
-          מחזור — מול מישהו שמרוויח מההחלטה שלהם. מקסיט נבנתה כדי לתת לך את הצד השני:
+          רוב הישראלים מקבלים את ההחלטות הפיננסיות הגדולות בחייהם, משכנתא, הלוואה,
+          מחזור, מול מישהו שמרוויח מההחלטה שלהם. מקסיט נבנתה כדי לתת לך את הצד השני:
           כלים ומדריכים בעברית שמסבירים את המספרים, בלי שאף אחד מנסה למכור לך משהו.
         </p>
 
@@ -80,13 +80,13 @@ export default function AboutPage() {
           אנחנו בונים מחשבונים פיננסיים מדויקים ומדריכים ברורים בעברית: מחשבון משכנתא
           רב-מסלולי, מחשבון הלוואה, ומחשבון שכר נטו לפי מדרגות המס של 2026. לצד הכלים,
           אנחנו כותבים מדריכים על הלוואות, ריביות, דירוג אשראי, תמהיל משכנתא וגמ&quot;חים.
-          הכל חינמי, בלי הרשמה, ובשפה שאנשים מדברים — לא בשפה של חוזים.
+          הכל חינמי, בלי הרשמה, ובשפה שאנשים מדברים, לא בשפה של חוזים.
         </p>
 
         <h2 className={h2}>מי כותב את התוכן</h2>
         <p className={p}>
           <span className={strong}>דור גולדמן</span> הוא המייסד והעורך הראשי של מקסיט.
-          המדריכים נכתבים ונערכים על ידו, ומבוססים על מקורות רשמיים בלבד — פרסומי בנק
+          המדריכים נכתבים ונערכים על ידו, ומבוססים על מקורות רשמיים בלבד, פרסומי בנק
           ישראל, רשות שוק ההון, רשות המסים והמוסד לביטוח לאומי. מקסיט היא מיזם של{' '}
           <span className={strong}>MGH Venture Studio</span>, סטודיו לפיתוח ותפעול
           מוצרים דיגיטליים.
@@ -97,11 +97,11 @@ export default function AboutPage() {
           רישיון. אנחנו אומרים את זה בפירוש כי בתחום הזה שקיפות חשובה יותר מרושם.
         </p>
 
-        <h2 className={h2}>איך אנחנו כותבים ובודקים — כללי המערכת שלנו</h2>
+        <h2 className={h2}>איך אנחנו כותבים ובודקים, כללי המערכת שלנו</h2>
         <ul className="list-disc pr-5 space-y-2 text-accent-600 leading-relaxed mb-5">
           <li>
-            <span className={strong}>מקורות רשמיים בלבד.</span> כל נתון מספרי — ריביות,
-            מדרגות מס, יחסי החזר, תקרות מימון — מגיע מפרסום רשמי, ולא מהערכה.
+            <span className={strong}>מקורות רשמיים בלבד.</span> כל נתון מספרי, ריביות,
+            מדרגות מס, יחסי החזר, תקרות מימון, מגיע מפרסום רשמי, ולא מהערכה.
           </li>
           <li>
             <span className={strong}>עדכון שוטף.</span> נתונים שמשתנים (ריבית בנק ישראל,
@@ -137,33 +137,33 @@ export default function AboutPage() {
             <a href="https://www.boi.org.il/" target="_blank" rel="noopener noreferrer"
               className="text-primary-600 underline underline-offset-2 hover:text-primary-700">
               בנק ישראל
-            </a>{' '}— ריבית בנק ישראל, מגבלות מימון משכנתא, מאגר נתוני אשראי
+            </a>, ריבית בנק ישראל, מגבלות מימון משכנתא, מאגר נתוני אשראי
           </li>
           <li>
             <a href="https://www.gov.il/he/departments/capital_market_insurance_and_savings_authority"
               target="_blank" rel="noopener noreferrer"
               className="text-primary-600 underline underline-offset-2 hover:text-primary-700">
               רשות שוק ההון, ביטוח וחיסכון
-            </a>{' '}— רישוי ופיקוח על נותני אשראי חוץ-בנקאיים
+            </a>, רישוי ופיקוח על נותני אשראי חוץ-בנקאיים
           </li>
           <li>
             <a href="https://www.gov.il/he/departments/israel_tax_authority"
               target="_blank" rel="noopener noreferrer"
               className="text-primary-600 underline underline-offset-2 hover:text-primary-700">
               רשות המסים
-            </a>{' '}— מדרגות מס הכנסה, נקודות זיכוי, מס רכישה
+            </a>, מדרגות מס הכנסה, נקודות זיכוי, מס רכישה
           </li>
           <li>
             <a href="https://www.btl.gov.il/" target="_blank" rel="noopener noreferrer"
               className="text-primary-600 underline underline-offset-2 hover:text-primary-700">
               המוסד לביטוח לאומי
-            </a>{' '}— דמי ביטוח לאומי ומס בריאות
+            </a>, דמי ביטוח לאומי ומס בריאות
           </li>
           <li>
             <a href="https://www.kolzchut.org.il/" target="_blank" rel="noopener noreferrer"
               className="text-primary-600 underline underline-offset-2 hover:text-primary-700">
               כל-זכות
-            </a>{' '}— זכויות פיננסיות, סיוע בדיור והלוואות זכאות
+            </a>, זכויות פיננסיות, סיוע בדיור והלוואות זכאות
           </li>
         </ul>
 
@@ -175,7 +175,7 @@ export default function AboutPage() {
 
         <div className="mt-10 p-5 bg-primary-50 border border-primary-100 rounded-2xl">
           <p className="text-sm font-semibold text-accent-800 mb-1">יש שאלה או תיקון?</p>
-          <p className="text-sm text-accent-600 mb-3">נשמח לשמוע — אנחנו עונים תוך יום-יומיים.</p>
+          <p className="text-sm text-accent-600 mb-3">נשמח לשמוע, אנחנו עונים תוך יום-יומיים.</p>
           <Link href="/contact"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary-600
                        hover:bg-primary-700 text-white text-sm font-semibold transition-colors duration-200">

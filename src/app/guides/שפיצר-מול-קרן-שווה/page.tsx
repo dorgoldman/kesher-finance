@@ -211,7 +211,7 @@ export default function ShpitzerMolKerenShavaPage() {
                   ['יתרת חוב אחרי 5 שנים', '₪879,000', '₪800,000'],
                   ['יתרת חוב אחרי 10 שנים', '₪737,000', '₪600,000'],
                   ['סך ריבית כוללת', '₪753,800', '₪627,100'],
-                  ['הפרש ריבית', '—', 'חיסכון ₪126,700'],
+                  ['הפרש ריבית', '-', 'חיסכון ₪126,700'],
                 ].map(([param, shpitzer, keren], idx) => (
                   <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-accent-50/60'}>
                     <td className="px-4 py-3 font-medium text-accent-800 border border-accent-100">{param}</td>
@@ -224,7 +224,7 @@ export default function ShpitzerMolKerenShavaPage() {
           </div>
           <p className={p}>
             קרן שווה חוסכת ₪126,700 לאורך 25 שנה. אבל שימו לב ליתרת החוב אחרי 5 שנים:
-            בקרן שווה היא ₪800,000 — בשפיצר ₪879,000. זה ההבדל המשמעותי אם מוכרים
+            בקרן שווה היא ₪800,000, בשפיצר ₪879,000. זה ההבדל המשמעותי אם מוכרים
             את הדירה או מחזרים את המשכנתא.
           </p>
 
@@ -392,7 +392,7 @@ export default function ShpitzerMolKerenShavaPage() {
           {/* Sources */}
           <div className="mb-6 text-xs text-accent-400 leading-relaxed">
             <span className="font-semibold text-accent-500">מקורות:</span>{' '}
-            <a href="https://www.kolzchut.org.il/he/משכנתה" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">משכנתא — כל-זכות</a>{' '}·{' '}
+            <a href="https://www.kolzchut.org.il/he/משכנתה" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">משכנתא, כל-זכות</a>{' '}·{' '}
             <a href="https://www.boi.org.il/monetary-policy/interest-rate-decisions/" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">ריבית בנק ישראל</a>
           </div>
 

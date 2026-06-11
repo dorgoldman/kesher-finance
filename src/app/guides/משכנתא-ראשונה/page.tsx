@@ -302,7 +302,7 @@ export default function MashkantaRishonePage() {
             הכי הרבה כסף מבלי לשים לב.
           </p>
 
-          {/* Section: worked example — total costs */}
+          {/* Section: worked example, total costs */}
           <h2 id="dugma" className={h2}>דוגמה: כמה צריך להביא ביום חתימת המשכנתא</h2>
           <p className={p}>
             יובל ושירן מבאר שבע רכשו דירה ב-₪1,800,000. הנה הפירוט המלא של מה שהוצאו
@@ -338,7 +338,7 @@ export default function MashkantaRishonePage() {
             </table>
           </div>
           <p className={p}>
-            כלומר, על דירה של ₪1,800,000 צריך בפועל כמעט ₪500,000 ביום החתימה — לא
+            כלומר, על דירה של ₪1,800,000 צריך בפועל כמעט ₪500,000 ביום החתימה, לא
             ₪450,000. יובל ושירן תכננו על ₪450,000 בלבד, וגילו את הפער כשבוע לפני
             החתימה. הם נאלצו לבקש הלוואה קטנה מהורים כדי לגשר.
           </p>
@@ -416,8 +416,8 @@ export default function MashkantaRishonePage() {
           {/* Sources */}
           <div className="mb-6 text-xs text-accent-400 leading-relaxed">
             <span className="font-semibold text-accent-500">מקורות:</span>{' '}
-            <a href="https://www.boi.org.il/financial-markets/" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">בנק ישראל — מגבלות מימון משכנתא</a>{' '}·{' '}
-            <a href="https://www.kolzchut.org.il/he/משכנתה" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">משכנתא והלוואת זכאות — כל-זכות</a>
+            <a href="https://www.boi.org.il/financial-markets/" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">בנק ישראל, מגבלות מימון משכנתא</a>{' '}·{' '}
+            <a href="https://www.kolzchut.org.il/he/משכנתה" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">משכנתא והלוואת זכאות, כל-זכות</a>
           </div>
 
           <div className="border-t border-accent-100 pt-6">

@@ -268,7 +268,7 @@ export default function HalvaahMikrenHashtalmuutPage() {
             </table>
           </div>
           <p className={p}>
-            הנתונים הם הערכה כללית — התנאים המדויקים משתנים לפי יתרה, סוג קרן וגיל החוסך.
+            הנתונים הם הערכה כללית, התנאים המדויקים משתנים לפי יתרה, סוג קרן וגיל החוסך.
             בקש הצעה רשמית מהחברה לפני כל החלטה.
           </p>
 
@@ -327,7 +327,7 @@ export default function HalvaahMikrenHashtalmuutPage() {
           <p className={p}>
             <span className="font-semibold text-accent-800">2. לשכוח מניוד הקרן.</span>{' '}
             הלוואה פעילה נועלת את הקרן לבית ההשקעות הנוכחי. אם תרצה לנייד לחברה עם דמי
-            ניהול נמוכים יותר, תצטרך לפרוע קודם. שווה לבדוק את דמי הניהול לפני שחותמים — לפעמים
+            ניהול נמוכים יותר, תצטרך לפרוע קודם. שווה לבדוק את דמי הניהול לפני שחותמים, לפעמים
             החיסכון בריבית פחות ממה שמפסידים על דמי ניהול גבוהים.
           </p>
           <p className={p}>
@@ -403,7 +403,7 @@ export default function HalvaahMikrenHashtalmuutPage() {
           {/* Sources */}
           <div className="mb-6 text-xs text-accent-400 leading-relaxed">
             <span className="font-semibold text-accent-500">מקורות:</span>{' '}
-            <a href="https://www.kolzchut.org.il/he/קרן_השתלמות" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">קרן השתלמות — כל-זכות</a>{' '}·{' '}
+            <a href="https://www.kolzchut.org.il/he/קרן_השתלמות" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">קרן השתלמות, כל-זכות</a>{' '}·{' '}
             <a href="https://www.boi.org.il/monetary-policy/interest-rate-decisions/" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">ריבית בנק ישראל</a>
           </div>
 

@@ -243,7 +243,7 @@ export default function RibitEfektivitPage() {
           </p>
 
           {/* Section 4b: Worked example */}
-          <h2 id="dugma" className={h2}>דוגמה: ₪80,000 בשתי הצעות — מה ההפרש האמיתי</h2>
+          <h2 id="dugma" className={h2}>דוגמה: ₪80,000 בשתי הצעות, מה ההפרש האמיתי</h2>
           <p className={p}>
             דני מרמת גן קיבל שתי הצעות על הלוואה של ₪80,000 ל-4 שנים.
           </p>
@@ -253,8 +253,8 @@ export default function RibitEfektivitPage() {
               <thead>
                 <tr className="bg-primary-600 text-white">
                   <th className="px-4 py-3 font-semibold text-right">פרמטר</th>
-                  <th className="px-4 py-3 font-semibold text-right">הצעה א׳ — בנק לאומי</th>
-                  <th className="px-4 py-3 font-semibold text-right">הצעה ב׳ — כאל</th>
+                  <th className="px-4 py-3 font-semibold text-right">הצעה א׳, בנק לאומי</th>
+                  <th className="px-4 py-3 font-semibold text-right">הצעה ב׳, כאל</th>
                 </tr>
               </thead>
               <tbody>
@@ -277,13 +277,13 @@ export default function RibitEfektivitPage() {
             </table>
           </div>
           <p className={p}>
-            בנק לאומי הציג ריבית נומינלית נמוכה יותר — 8% מול 9.5%. מי שמסתכל רק על
+            בנק לאומי הציג ריבית נומינלית נמוכה יותר, 8% מול 9.5%. מי שמסתכל רק על
             הנומינלית היה בוחר בלאומי בצורה ברורה. אבל אחרי חישוב הריבית האפקטיבית,
             שכוללת עמלת פתיחה ודמי ניהול חודשיים, ההפרש בין שתי ההצעות הצטמצם לכ-₪56
             לאורך ארבע שנים.
           </p>
           <p className={p}>
-            דני בחר בכאל — לא בגלל שזה זול יותר, אלא כי הייתה לו אפשרות פירעון מוקדם
+            דני בחר בכאל, לא בגלל שזה זול יותר, אלא כי הייתה לו אפשרות פירעון מוקדם
             ללא עמלה, וציפה לסגור מוקדם. בלאומי הייתה עמלת פירעון של 2%.
           </p>
 
@@ -388,7 +388,7 @@ export default function RibitEfektivitPage() {
           <div className="mb-6 text-xs text-accent-400 leading-relaxed">
             <span className="font-semibold text-accent-500">מקורות:</span>{' '}
             <a href="https://www.boi.org.il/monetary-policy/interest-rate-decisions/" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">ריבית בנק ישראל</a>{' '}·{' '}
-            <a href="https://www.gov.il/he/departments/capital_market_insurance_and_savings_authority" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">רשות שוק ההון — חוק אשראי הוגן</a>
+            <a href="https://www.gov.il/he/departments/capital_market_insurance_and_savings_authority" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">רשות שוק ההון, חוק אשראי הוגן</a>
           </div>
 
           <div className="border-t border-accent-100 pt-6">

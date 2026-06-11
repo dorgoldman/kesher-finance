@@ -249,7 +249,7 @@ export default function HomePage() {
         <ScrollReveal delay={80}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
 
-          {/* 1 — הלוואות */}
+          {/* 1, הלוואות */}
           <Link href="/guides/halvaot-madrich" className="card-interactive group flex flex-col">
             <div className="flex items-center justify-between mb-4">
               <div className="w-10 h-10 bg-primary-50 rounded-xl flex items-center justify-center
@@ -275,7 +275,7 @@ export default function HomePage() {
             </div>
           </Link>
 
-          {/* 2 — הלוואה חוץ בנקאית */}
+          {/* 2, הלוואה חוץ בנקאית */}
           <Link href="/guides/halvaah-hutz-bankait" className="card-interactive group flex flex-col">
             <div className="flex items-center justify-between mb-4">
               <div className="w-10 h-10 bg-primary-50 rounded-xl flex items-center justify-center
@@ -301,7 +301,7 @@ export default function HomePage() {
             </div>
           </Link>
 
-          {/* 3 — הלוואה מקרן השתלמות */}
+          {/* 3, הלוואה מקרן השתלמות */}
           <Link href="/guides/הלוואה-מקרן-השתלמות" className="card-interactive group flex flex-col">
             <div className="flex items-center justify-between mb-4">
               <div className="w-10 h-10 bg-primary-50 rounded-xl flex items-center justify-center
@@ -317,7 +317,7 @@ export default function HomePage() {
               הלוואה מקרן השתלמות
             </h3>
             <p className="text-accent-500 text-sm leading-relaxed font-light flex-1">
-              הלוואה בריבית נמוכה שמחכה לך בקרן — רוב האנשים פשוט לא יודעים שזה אפשרי.
+              הלוואה בריבית נמוכה שמחכה לך בקרן, רוב האנשים פשוט לא יודעים שזה אפשרי.
             </p>
             <div className="mt-4 flex items-center gap-1 text-sm font-semibold text-primary-600">
               <span>קרא עוד</span>
@@ -327,7 +327,7 @@ export default function HomePage() {
             </div>
           </Link>
 
-          {/* 4 — משכנתא ראשונה */}
+          {/* 4, משכנתא ראשונה */}
           <Link href="/guides/משכנתא-ראשונה" className="card-interactive group flex flex-col">
             <div className="flex items-center justify-between mb-4">
               <div className="w-10 h-10 bg-primary-50 rounded-xl flex items-center justify-center
@@ -343,7 +343,7 @@ export default function HomePage() {
               משכנתא ראשונה: המדריך לקונה דירה
             </h3>
             <p className="text-accent-500 text-sm leading-relaxed font-light flex-1">
-              מהפגישה הראשונה בבנק עד חתימת החוזה — כל שלב בתהליך מוסבר בפשטות.
+              מהפגישה הראשונה בבנק עד חתימת החוזה, כל שלב בתהליך מוסבר בפשטות.
             </p>
             <div className="mt-4 flex items-center gap-1 text-sm font-semibold text-primary-600">
               <span>קרא עוד</span>
@@ -353,7 +353,7 @@ export default function HomePage() {
             </div>
           </Link>
 
-          {/* 5 — מחזור משכנתא */}
+          {/* 5, מחזור משכנתא */}
           <Link href="/guides/מחזור-משכנתא" className="card-interactive group flex flex-col">
             <div className="flex items-center justify-between mb-4">
               <div className="w-10 h-10 bg-primary-50 rounded-xl flex items-center justify-center
@@ -379,7 +379,7 @@ export default function HomePage() {
             </div>
           </Link>
 
-          {/* 6 — ריבית אפקטיבית */}
+          {/* 6, ריבית אפקטיבית */}
           <Link href="/guides/ריבית-אפקטיבית" className="card-interactive group flex flex-col">
             <div className="flex items-center justify-between mb-4">
               <div className="w-10 h-10 bg-primary-50 rounded-xl flex items-center justify-center
@@ -452,7 +452,7 @@ export default function HomePage() {
 
           <div className="flex flex-col gap-4">
 
-            {/* 1 — משכנתא ראשונה */}
+            {/* 1, משכנתא ראשונה */}
             <Link href="/guides/משכנתא-ראשונה" className="card group hover:border-primary-200 transition-colors duration-200 cursor-pointer">
               <div className="flex flex-col sm:flex-row sm:items-start gap-4">
                 <div className="flex-1 min-w-0">
@@ -476,7 +476,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            {/* 2 — כמה משכנתא לפי משכורת */}
+            {/* 2, כמה משכנתא לפי משכורת */}
             <Link href="/guides/כמה-משכנתא-לפי-משכורת" className="card group hover:border-primary-200 transition-colors duration-200 cursor-pointer">
               <div className="flex flex-col sm:flex-row sm:items-start gap-4">
                 <div className="flex-1 min-w-0">
@@ -488,7 +488,7 @@ export default function HomePage() {
                     כמה משכנתא אפשר לקחת לפי משכורת?
                   </h3>
                   <p className="text-accent-500 text-sm leading-relaxed">
-                    הבנק מאשר לפי ההכנסה שלך. כך מחשבים כמה תקבל — עם טבלאות מספרים אמיתיות לשנת 2026.
+                    הבנק מאשר לפי ההכנסה שלך. כך מחשבים כמה תקבל, עם טבלאות מספרים אמיתיות לשנת 2026.
                   </p>
                 </div>
                 <div className="shrink-0 flex items-center gap-1 text-sm font-semibold text-primary-600 sm:pt-1">
@@ -500,7 +500,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            {/* 3 — הלוואה מקרן השתלמות */}
+            {/* 3, הלוואה מקרן השתלמות */}
             <Link href="/guides/הלוואה-מקרן-השתלמות" className="card group hover:border-primary-200 transition-colors duration-200 cursor-pointer">
               <div className="flex flex-col sm:flex-row sm:items-start gap-4">
                 <div className="flex-1 min-w-0">

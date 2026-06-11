@@ -10,7 +10,7 @@ const CANONICAL = 'https://getmaxit.co.il/guides/כמה-משכנתא-לפי-מש
 export const metadata: Metadata = {
   title: 'כמה משכנתא אפשר לקחת לפי משכורת? חישוב מלא 2026',
   description:
-    'הבנק מאשר משכנתא לפי ההכנסה שלך, לא לפי מה שאתה רוצה. כך מחשבים כמה תקבל — עם טבלאות מספרים אמיתיות לשנת 2026.',
+    'הבנק מאשר משכנתא לפי ההכנסה שלך, לא לפי מה שאתה רוצה. כך מחשבים כמה תקבל, עם טבלאות מספרים אמיתיות לשנת 2026.',
   alternates: { canonical: CANONICAL },
 };
 
@@ -21,7 +21,7 @@ const jsonLd = [
     '@type': 'Article',
     headline: 'כמה משכנתא אפשר לקחת לפי משכורת? חישוב מלא 2026',
     description:
-      'הבנק מאשר משכנתא לפי ההכנסה שלך, לא לפי מה שאתה רוצה. כך מחשבים כמה תקבל — עם טבלאות מספרים אמיתיות לשנת 2026.',
+      'הבנק מאשר משכנתא לפי ההכנסה שלך, לא לפי מה שאתה רוצה. כך מחשבים כמה תקבל, עם טבלאות מספרים אמיתיות לשנת 2026.',
     url: CANONICAL,
     inLanguage: 'he',
     datePublished: '2026-05-18',
@@ -47,7 +47,7 @@ const jsonLd = [
         name: 'כמה משכנתא אפשר לקבל עם שכר של ₪15,000 נטו?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'עם שכר נטו של ₪15,000 ללא הלוואות קיימות, תקרת ההחזר היא כ-₪6,000 בחודש. משכנתא של ₪1,020,000 ל-25 שנה בריבית 5.5% יוצאת לכ-₪6,100 בחודש — זה בערך הגבול. הדירה המקסימלית תהיה בסביבות ₪1,350,000.',
+          text: 'עם שכר נטו של ₪15,000 ללא הלוואות קיימות, תקרת ההחזר היא כ-₪6,000 בחודש. משכנתא של ₪1,020,000 ל-25 שנה בריבית 5.5% יוצאת לכ-₪6,100 בחודש, זה בערך הגבול. הדירה המקסימלית תהיה בסביבות ₪1,350,000.',
         },
       },
       {
@@ -55,7 +55,7 @@ const jsonLd = [
         name: 'האם אפשר לקחת משכנתא גדולה יותר עם הורים כערבים?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'הבנק יכול להתחשב בהכנסה של קרוב משפחה מדרגה ראשונה — עד מחצית מהכנסתם הפנויה. זה מרחיב את הבסיס לחישוב אבל לא מכפיל אותו.',
+          text: 'הבנק יכול להתחשב בהכנסה של קרוב משפחה מדרגה ראשונה, עד מחצית מהכנסתם הפנויה. זה מרחיב את הבסיס לחישוב אבל לא מכפיל אותו.',
         },
       },
       {
@@ -71,7 +71,7 @@ const jsonLd = [
         name: 'מה ההבדל בין 30 שנה ל-20 שנה מבחינת גובה המשכנתא שמקבלים?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'תקופה ארוכה יותר מורידה את ההחזר החודשי, כך שאותה תקרת החזר מאפשרת לקחת משכנתא גבוהה יותר. על ₪6,000 החזר חודשי ל-30 שנה ניתן לקחת כ-₪1,130,000. על אותו החזר ל-20 שנה — כ-₪870,000 בלבד.',
+          text: 'תקופה ארוכה יותר מורידה את ההחזר החודשי, כך שאותה תקרת החזר מאפשרת לקחת משכנתא גבוהה יותר. על ₪6,000 החזר חודשי ל-30 שנה ניתן לקחת כ-₪1,130,000. על אותו החזר ל-20 שנה, כ-₪870,000 בלבד.',
         },
       },
     ],
@@ -111,7 +111,7 @@ export default function KamaMashnektaPage() {
         ]}
       />
 
-      {/* Ad slot — above article */}
+      {/* Ad slot, above article */}
       <AdSlot variant="header" className="mb-10" />
 
       <MobileArticleTOC items={TOC} />
@@ -161,7 +161,7 @@ export default function KamaMashnektaPage() {
             תקרת ההחזר: ₪5,600.
           </p>
 
-          {/* Inline CTA — salary calculator */}
+          {/* Inline CTA, salary calculator */}
           <div className="my-6 p-5 bg-primary-50 border border-primary-100 rounded-2xl flex flex-col sm:flex-row
                           items-start sm:items-center justify-between gap-4">
             <div>
@@ -186,10 +186,10 @@ export default function KamaMashnektaPage() {
           </div>
 
           {/* Section 2 */}
-          <h2 id="tavlah" className={h2}>טבלת משכנתא לפי משכורת — 2026</h2>
+          <h2 id="tavlah" className={h2}>טבלת משכנתא לפי משכורת, 2026</h2>
           <p className={p}>
             המספרים מבוססים על ריבית ממוצעת של 5.5%, תקופה של 25 שנה, תמהיל סטנדרטי.
-            אלה אומדנים — הבנק יחשב לפי הנתונים האישיים שלך.
+            אלה אומדנים, הבנק יחשב לפי הנתונים האישיים שלך.
           </p>
 
           <div className="overflow-x-auto mb-8 rounded-2xl border border-accent-100 shadow-sm">
@@ -229,7 +229,7 @@ export default function KamaMashnektaPage() {
           {/* Section 2b: term comparison table */}
           <h2 id="tkufa-tavlah" className={h2}>איך תקופת ההלוואה משנה את הסכום שתקבל</h2>
           <p className={p}>
-            אותה תקרת החזר, תקופות שונות — משכנתא שונה לגמרי. הטבלה מבוססת על ריבית
+            אותה תקרת החזר, תקופות שונות, משכנתא שונה לגמרי. הטבלה מבוססת על ריבית
             5.5% וגוף יחיד עם שכר נטו ₪20,000.
           </p>
 
@@ -260,20 +260,20 @@ export default function KamaMashnektaPage() {
             </table>
           </div>
           <p className={p}>
-            תקופה ארוכה יותר מאפשרת לקחת ₪315,000 יותר — אבל עולה ₪645,600 נוספים בריבית
+            תקופה ארוכה יותר מאפשרת לקחת ₪315,000 יותר, אבל עולה ₪645,600 נוספים בריבית
             לאורך חיי ההלוואה. זה החליפין שצריך לשקול. לרוב הזוגות, 25 שנה הוא שיווי
-            משקל סביר — לא לחוץ מדי, לא יקר מדי.
+            משקל סביר, לא לחוץ מדי, לא יקר מדי.
           </p>
 
           {/* Section 3 */}
-          <h2 id="mechir-dirah" className={h2}>מהמשכנתא למחיר הדירה — החישוב האמיתי</h2>
+          <h2 id="mechir-dirah" className={h2}>מהמשכנתא למחיר הדירה, החישוב האמיתי</h2>
           <p className={p}>
-            משכנתא היא עד 75% ממחיר הדירה לדירה ראשונה. אז אם הבנק מאשר לך ₪1,020,000
-            — מחיר הדירה המקסימלי הוא בערך ₪1,360,000 (₪1,020,000 חלקי 0.75).
+            משכנתא היא עד 75% ממחיר הדירה לדירה ראשונה. אז אם הבנק מאשר לך ₪1,020,000,
+            מחיר הדירה המקסימלי הוא בערך ₪1,360,000 (₪1,020,000 חלקי 0.75).
           </p>
           <p className={p}>
             וכאן מגיעה ההפתעה שאנשים לא מחשבים: הון עצמי לא מכסה רק את ה-25%. יש הוצאות
-            נלוות שמגיעות ל-3-5% נוספים — שכר עורך דין, מס רכישה, שמאי, הובלה. על דירה
+            נלוות שמגיעות ל-3-5% נוספים, שכר עורך דין, מס רכישה, שמאי, הובלה. על דירה
             של ₪1,360,000 זה עוד ₪40,000-68,000 שצריך מחוץ למשכנתא.
           </p>
           <p className={p}>
@@ -299,14 +299,13 @@ export default function KamaMashnektaPage() {
             <Link href="/guides/משכנתא-ראשונה"
               className="text-primary-600 hover:text-primary-700 underline underline-offset-2 transition-colors duration-150">
               משכנתא ראשונה
-            </Link>
-            {' '}— המדריך המלא.
+            </Link>, המדריך המלא.
           </p>
 
           {/* Section 5 */}
           <h2 id="gvul-40" className={h2}>האם 40% הוא גבול קשיח?</h2>
           <p className={p}>
-            לא תמיד. הבנק יכול לאשר עד 50% במקרים מסוימים — בעיקר כשיש הון עצמי גבוה
+            לא תמיד. הבנק יכול לאשר עד 50% במקרים מסוימים, בעיקר כשיש הון עצמי גבוה
             במיוחד, רמת סיכון נמוכה של הנכס, ונתוני אשראי חזקים. אבל 40% הוא הנורמה
             ו-50% הוא יוצא דופן.
           </p>
@@ -315,21 +314,21 @@ export default function KamaMashnektaPage() {
             פוגעת ביכולת לחסוך, לגדול, ולהתמודד עם הפתעות.
           </p>
 
-          {/* Inline CTA — mortgage calculator */}
+          {/* Inline CTA, mortgage calculator */}
           <CalculatorCTA
             calculatorName="מחשבון המשכנתא"
             calculatorUrl="/tools/mortgage-calculator"
-            teaser="שנה את ההכנסה וסכום ההלוואה — וראה מיד מה ההחזר החודשי שלך."
+            teaser="שנה את ההכנסה וסכום ההלוואה, וראה מיד מה ההחזר החודשי שלך."
           />
 
           {/* Section 6 */}
-          <h2 id="zug-yachid" className={h2}>זוג מול יחיד — ההבדל המשמעותי</h2>
+          <h2 id="zug-yachid" className={h2}>זוג מול יחיד, ההבדל המשמעותי</h2>
           <p className={p}>
             זוג מחשב את ההכנסה המשותפת. שתי משכורות נטו מסתכמות. זה יתרון ענק.
           </p>
           <p className={p}>
             יחיד עם שכר של ₪12,000 נטו יכול לקבל משכנתא של בערך ₪815,000. אותה משפחה
-            עם שתי משכורות של ₪12,000 כל אחת — ₪24,000 נטו יחד — יכולה לקבל ₪1,630,000.
+            עם שתי משכורות של ₪12,000 כל אחת, ₪24,000 נטו יחד, יכולה לקבל ₪1,630,000.
             כמעט פי שתיים.
           </p>
           <p className={p}>
@@ -352,8 +351,7 @@ export default function KamaMashnektaPage() {
             <Link href="/guides/מחזור-משכנתא"
               className="text-primary-600 hover:text-primary-700 underline underline-offset-2 transition-colors duration-150">
               מחזור משכנתא
-            </Link>
-            {' '}— שינוי תנאי ההלוואה כדי להתאים להכנסה הנוכחית.
+            </Link>, שינוי תנאי ההלוואה כדי להתאים להכנסה הנוכחית.
           </p>
 
           {/* Section 8: FAQ */}
@@ -366,7 +364,7 @@ export default function KamaMashnektaPage() {
               </h3>
               <p className="text-sm text-accent-500 leading-relaxed">
                 עם שכר נטו של ₪15,000 ללא הלוואות קיימות, תקרת ההחזר היא כ-₪6,000 בחודש.
-                משכנתא של ₪1,020,000 ל-25 שנה בריבית 5.5% יוצאת לכ-₪6,100 בחודש — זה
+                משכנתא של ₪1,020,000 ל-25 שנה בריבית 5.5% יוצאת לכ-₪6,100 בחודש, זה
                 בערך הגבול. הדירה המקסימלית תהיה בסביבות ₪1,350,000.
               </p>
             </div>
@@ -376,7 +374,7 @@ export default function KamaMashnektaPage() {
                 האם אפשר לקחת משכנתא גדולה יותר עם הורים כערבים?
               </h3>
               <p className="text-sm text-accent-500 leading-relaxed">
-                הבנק יכול להתחשב בהכנסה של קרוב משפחה מדרגה ראשונה — עד מחצית מהכנסתם
+                הבנק יכול להתחשב בהכנסה של קרוב משפחה מדרגה ראשונה, עד מחצית מהכנסתם
                 הפנויה. זה מרחיב את הבסיס לחישוב אבל לא מכפיל אותו.
               </p>
             </div>
@@ -398,7 +396,7 @@ export default function KamaMashnektaPage() {
               <p className="text-sm text-accent-500 leading-relaxed">
                 תקופה ארוכה יותר מורידה את ההחזר החודשי, כך שאותה תקרת החזר מאפשרת לקחת
                 משכנתא גבוהה יותר. על ₪6,000 החזר חודשי ל-30 שנה ניתן לקחת כ-₪1,130,000.
-                על אותו החזר ל-20 שנה — כ-₪870,000 בלבד.
+                על אותו החזר ל-20 שנה, כ-₪870,000 בלבד.
               </p>
             </div>
           </div>
@@ -415,7 +413,7 @@ export default function KamaMashnektaPage() {
                 <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
-                משכנתא ראשונה — המדריך המלא לזוגות ורוכשים
+                משכנתא ראשונה, המדריך המלא לזוגות ורוכשים
               </Link>
               <Link
                 href="/guides/מחזור-משכנתא"
@@ -444,8 +442,8 @@ export default function KamaMashnektaPage() {
           {/* Sources */}
           <div className="mb-6 text-xs text-accent-400 leading-relaxed">
             <span className="font-semibold text-accent-500">מקורות:</span>{' '}
-            <a href="https://www.boi.org.il/financial-markets/" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">בנק ישראל — מגבלות יחס החזר ומימון</a>{' '}·{' '}
-            <a href="https://www.kolzchut.org.il/he/משכנתה" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">משכנתא — כל-זכות</a>
+            <a href="https://www.boi.org.il/financial-markets/" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">בנק ישראל, מגבלות יחס החזר ומימון</a>{' '}·{' '}
+            <a href="https://www.kolzchut.org.il/he/משכנתה" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">משכנתא, כל-זכות</a>
           </div>
 
           <div className="border-t border-accent-100 pt-6">
@@ -513,7 +511,7 @@ export default function KamaMashnektaPage() {
 
       </div>
 
-      {/* Ad slot — below article */}
+      {/* Ad slot, below article */}
       <AdSlot variant="bottom" className="mt-10" />
 
     </div>

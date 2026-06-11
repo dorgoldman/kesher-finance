@@ -184,7 +184,7 @@
 }
 
 /* ════════════════════════════════════════════════════════════════
-   Keyframes — defined outside @layer so they are always available
+   Keyframes, defined outside @layer so they are always available
 ════════════════════════════════════════════════════════════════ */
 
 @keyframes float-blob {

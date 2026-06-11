@@ -248,7 +248,7 @@ export default function HalvaotMadrichPage() {
           </p>
 
           {/* ── Section 3b: lender comparison table ── */}
-          <h2 id="hashvaah" className={h2}>השוואת מסלולי הלוואה — טבלה מהירה</h2>
+          <h2 id="hashvaah" className={h2}>השוואת מסלולי הלוואה, טבלה מהירה</h2>
           <p className={p}>
             לפני שבוחרים לאן לפנות, כדאי להבין את ההבדלים העיקריים בין המסלולים:
           </p>
@@ -286,19 +286,19 @@ export default function HalvaotMadrichPage() {
           {/* ── Section 3c: worked example ── */}
           <h2 id="dugma" className={h2}>דוגמה: אותו סכום, שלושה מחירים שונים לגמרי</h2>
           <p className={p}>
-            ₪60,000 לשלוש שנים. שלושה אנשים, שלושה מסלולים שונים — כמה משלם כל אחד?
+            ₪60,000 לשלוש שנים. שלושה אנשים, שלושה מסלולים שונים, כמה משלם כל אחד?
           </p>
           <p className={p}>
-            <span className={strong}>רינת מחיפה</span> — יש לה קרן השתלמות עם ₪80,000
+            <span className={strong}>רינת מחיפה</span>, יש לה קרן השתלמות עם ₪80,000
             צבירה. לקחה הלוואה כנגד הקרן ב-4.5% (פריים מינוס 1%). החזר חודשי: ₪1,787.
             סך ריבית לאורך 3 שנים: ₪4,332.
           </p>
           <p className={p}>
-            <span className={strong}>מוטי מנתניה</span> — אין לו קרן, דירוג BDI 650.
+            <span className={strong}>מוטי מנתניה</span>, אין לו קרן, דירוג BDI 650.
             פנה לבנק הפועלים וקיבל 9.5% ל-3 שנים. החזר חודשי: ₪1,923. סך ריבית: ₪9,228.
           </p>
           <p className={p}>
-            <span className={strong}>שרה מאשדוד</span> — BDI 530, אין קרן השתלמות.
+            <span className={strong}>שרה מאשדוד</span>, BDI 530, אין קרן השתלמות.
             הבנק סרב. לקחה מכאל ב-16%. החזר חודשי: ₪2,109. סך ריבית: ₪15,924.
           </p>
           <p className={p}>
@@ -432,7 +432,7 @@ export default function HalvaotMadrichPage() {
           <div className="mb-6 text-xs text-accent-400 leading-relaxed">
             <span className="font-semibold text-accent-500">מקורות:</span>{' '}
             <a href="https://www.boi.org.il/financial-markets/credit-data/" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">מאגר נתוני אשראי, בנק ישראל</a>{' '}·{' '}
-            <a href="https://www.gov.il/he/departments/capital_market_insurance_and_savings_authority" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">רשות שוק ההון — נותני אשראי</a>
+            <a href="https://www.gov.il/he/departments/capital_market_insurance_and_savings_authority" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">רשות שוק ההון, נותני אשראי</a>
           </div>
 
           <div className="border-t border-accent-100 pt-6">

@@ -14,7 +14,7 @@ interface AnimatedCounterProps {
 
 /**
  * Counts up from 0 to `target` when it enters the viewport.
- * Respects prefers-reduced-motion — if reduced, renders the final number immediately.
+ * Respects prefers-reduced-motion, if reduced, renders the final number immediately.
  */
 export default function AnimatedCounter({
   target,
