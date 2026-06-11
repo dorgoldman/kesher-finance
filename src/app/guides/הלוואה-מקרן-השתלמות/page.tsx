@@ -84,7 +84,9 @@ const TOC = [
   { id: 'limshoch-ilvot', label: 'למשוך או ללוות?' },
   { id: 'matai-mishiha', label: 'מתי כן כדאי לשקול משיכה?' },
   { id: 'hafrashat',     label: 'מה ההבדל בין החברות?' },
+  { id: 'dugma',         label: 'דוגמה מספרית' },
   { id: 'lifni-hatemah', label: 'מה לבדוק לפני שחותמים?' },
+  { id: 'taut',          label: 'טעויות נפוצות' },
   { id: 'faq',           label: 'שאלות נפוצות' },
 ];
 
@@ -236,6 +238,62 @@ export default function HalvaahMikrenHashtalmuutPage() {
             עם עוד אחד.
           </p>
 
+          <div className="overflow-x-auto my-6">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-primary-600 text-white">
+                  <th className="px-4 py-2 text-right font-semibold">חברה</th>
+                  <th className="px-4 py-2 text-right font-semibold">ריבית טיפוסית</th>
+                  <th className="px-4 py-2 text-right font-semibold">מקסימום ללוות</th>
+                  <th className="px-4 py-2 text-right font-semibold">תקופת החזר</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['כלל', 'פריים מינוס 0.5%', 'עד 80% (נזילה)', 'עד 7 שנים'],
+                  ['מגדל', 'פריים מינוס 0.5%', 'עד 80% (נזילה)', 'עד 7 שנים'],
+                  ['מנורה מבטחים', 'פריים', 'עד 80% (נזילה)', 'עד 7 שנים'],
+                  ['הפניקס', 'פריים מינוס 0.5%', 'עד 80% (נזילה)', 'עד 7 שנים'],
+                  ['מור / אלטשולר', 'פריים עד פריים פלוס', 'עד 70% (נזילה)', 'עד 5 שנים'],
+                ].map(([co, rate, max, term], i) => (
+                  <tr key={co} className={i % 2 === 0 ? '' : 'bg-accent-50/60'}>
+                    <td className="border border-accent-100 px-4 py-2 font-medium text-accent-800">{co}</td>
+                    <td className="border border-accent-100 px-4 py-2 text-primary-700">{rate}</td>
+                    <td className="border border-accent-100 px-4 py-2 text-accent-600">{max}</td>
+                    <td className="border border-accent-100 px-4 py-2 text-accent-600">{term}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className={p}>
+            הנתונים הם הערכה כללית — התנאים המדויקים משתנים לפי יתרה, סוג קרן וגיל החוסך.
+            בקש הצעה רשמית מהחברה לפני כל החלטה.
+          </p>
+
+          {/* Section 5b: worked example */}
+          <h2 id="dugma" className={h2}>דוגמה מספרית: כמה זה עולה בפועל?</h2>
+          <p className={p}>
+            נניח שיש לך קרן השתלמות נזילה עם יתרה של ₪200,000. אתה רוצה ללוות ₪80,000
+            לשיפוץ דירה לתקופה של 4 שנים.
+          </p>
+          <p className={p}>
+            <span className="font-semibold text-accent-800">מקרן השתלמות (פריים מינוס 0.5%):</span>{' '}
+            ריבית אפקטיבית כ-6%. החזר חודשי: כ-₪1,880. סך ריבית: כ-₪10,240.
+          </p>
+          <p className={p}>
+            <span className="font-semibold text-accent-800">הלוואה בנקאית לשיפוץ (פריים פלוס 2-3%):</span>{' '}
+            ריבית אפקטיבית כ-9%. החזר חודשי: כ-₪1,990. סך ריבית: כ-₪15,520.
+          </p>
+          <p className={p}>
+            ההפרש: כ-₪5,280 על אותה הלוואה. כשמוסיפים את זה לעובדה שהקרן ממשיכה להיות
+            מושקעת ולצבור תשואה, היתרון הכולל גדול עוד יותר.
+          </p>
+          <p className={p}>
+            כמובן שאם הקרן הפסידה 10% בשנה שהתחלת ללוות, התמונה מורכבת יותר. שום דבר
+            בשוק ההון לא מובטח.
+          </p>
+
           {/* Section 6 */}
           <h2 id="lifni-hatemah" className={h2}>מה לבדוק לפני שחותמים?</h2>
           <p className={p}>
@@ -257,6 +315,26 @@ export default function HalvaahMikrenHashtalmuutPage() {
             התנאים מראש.
           </p>
 
+          {/* Section 7: common mistakes */}
+          <h2 id="taut" className={h2}>שלוש טעויות נפוצות</h2>
+          <p className={p}>
+            <span className="font-semibold text-accent-800">1. ללוות יותר מדי ביחס ליתרה.</span>{' '}
+            הלוואה של 80% מהיתרה נראית אטרקטיבית, אבל אם השוק יירד 20% בשנה הבאה, ערך
+            הבטוחה יתכווץ ובית ההשקעות עלול לדרוש כיסוי. כלל אצבע: אל תלווה יותר מ-50%
+            מהיתרה אלא אם ההחזר ודאי ומהיר.
+          </p>
+          <p className={p}>
+            <span className="font-semibold text-accent-800">2. לשכוח מניוד הקרן.</span>{' '}
+            הלוואה פעילה נועלת את הקרן לבית ההשקעות הנוכחי. אם תרצה לנייד לחברה עם דמי
+            ניהול נמוכים יותר, תצטרך לפרוע קודם. שווה לבדוק את דמי הניהול לפני שחותמים — לפעמים
+            החיסכון בריבית פחות ממה שמפסידים על דמי ניהול גבוהים.
+          </p>
+          <p className={p}>
+            <span className="font-semibold text-accent-800">3. לקחת הלוואה לפני שהקרן נזילה.</span>{' '}
+            ניתן ללוות גם מקרן לא נזילה (אחרי שנה וחודש), אבל הריבית גבוהה יותר ואחוז
+            ההלוואה המותר נמוך יותר. אם אפשר להמתין עד 6 שנים, התנאים יהיו טובים בהרבה.
+          </p>
+
           {/* Calculator CTA */}
           <CalculatorCTA
             calculatorName="מחשבון ההלוואה"
@@ -264,7 +342,7 @@ export default function HalvaahMikrenHashtalmuutPage() {
             teaser="כמה ייצא החזר חודשי על הסכום שאתה שוקל ללוות מהקרן שלך?"
           />
 
-          {/* Section 7: FAQ */}
+          {/* Section 8: FAQ */}
           <h2 id="faq" className={h2}>שאלות נפוצות</h2>
 
           <div className="space-y-4 mb-10">

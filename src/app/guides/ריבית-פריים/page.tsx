@@ -84,6 +84,8 @@ const TOC = [
   { id: 'minus',       label: 'פריים מינוס - מה המינוס?' },
   { id: 'kamah',       label: 'כמה לשים במסלול פריים?' },
   { id: 'historia',    label: 'מה קרה בשנים האחרונות?' },
+  { id: 'dugma',       label: 'דוגמה מספרית' },
+  { id: 'taut',        label: 'טעויות נפוצות' },
   { id: 'faq',         label: 'שאלות נפוצות' },
 ];
 
@@ -233,6 +235,84 @@ export default function RibitPrimePage() {
           <p className={p}>
             מי שהיה עם משכנתא בפריים ראה את ההחזר החודשי שלו עולה בכמה מאות שקלים תוך
             חודשים בודדים. מי שבנה נכון את התמהיל ספג את הזעזוע בצורה מבוקרת.
+          </p>
+
+          <div className="overflow-x-auto my-6">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-primary-600 text-white">
+                  <th className="px-4 py-2 text-right font-semibold">שנה</th>
+                  <th className="px-4 py-2 text-right font-semibold">ריבית בנק ישראל</th>
+                  <th className="px-4 py-2 text-right font-semibold">ריבית פריים</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['2020', '0.10%', '1.60%'],
+                  ['2021', '0.10%', '1.60%'],
+                  ['סוף 2022', '3.25%', '4.75%'],
+                  ['שיא 2023', '4.75%', '6.25%'],
+                  ['2024', '4.50%', '6.00%'],
+                  ['2026 (כיום)', '5.00%', '6.50%'],
+                ].map(([year, boi, prime], i) => (
+                  <tr key={year} className={i % 2 === 0 ? '' : 'bg-accent-50/60'}>
+                    <td className="border border-accent-100 px-4 py-2 text-accent-700">{year}</td>
+                    <td className="border border-accent-100 px-4 py-2 text-accent-600">{boi}</td>
+                    <td className="border border-accent-100 px-4 py-2 font-medium text-primary-700">{prime}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className={p}>
+            מקור:{' '}
+            <a
+              href="https://www.boi.org.il/monetary-policy/interest-rate-decisions/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary-600 underline underline-offset-2 hover:text-primary-700"
+            >
+              החלטות ועדת המוניטרין, בנק ישראל
+            </a>
+            .
+          </p>
+
+          {/* Section 6: worked example */}
+          <h2 id="dugma" className={h2}>דוגמה מספרית: מה קרה להחזר בפועל?</h2>
+          <p className={p}>
+            בואו נקח משפחה שלקחה ₪600,000 במסלול פריים מינוס 1.5% ל-25 שנה בתחילת 2021.
+          </p>
+          <p className={p}>
+            בינואר 2021, פריים עמד על 1.6%. אחרי המינוס: 0.1% בלבד. ההחזר החודשי: כ-₪1,920.
+          </p>
+          <p className={p}>
+            עד סוף 2022 הפריים עלה ל-4.75%. אחרי המינוס: 3.25%. ההחזר קפץ לכ-₪2,920.
+            בתוך שנה אחת — ₪1,000 יותר כל חודש. מאותה הלוואה בדיוק.
+          </p>
+          <p className={p}>
+            כיום, עם פריים 6.5% ומינוס 1.5%, הריבית עומדת על 5%. ההחזר מתייצב על כ-₪3,500.
+          </p>
+          <p className={p}>
+            מ-₪1,920 ל-₪3,500 — גידול של 82% בהחזר החודשי, ללא שום שינוי בגובה ההלוואה.
+            מי שהגביל את הפריים ל-30% מהתמהיל ספג עלייה של כ-₪300 בחודש — לא נוח, אבל ניהול אפשרי.
+          </p>
+
+          {/* Section 7: common mistakes */}
+          <h2 id="taut" className={h2}>שלוש טעויות נפוצות עם מסלול פריים</h2>
+          <p className={p}>
+            <span className="font-semibold text-accent-800">1. לשים יותר מדי בפריים כי "הריבית נמוכה עכשיו."</span>{' '}
+            פריים זול בטווח הקצר, אבל לא יציב. מי שמשים 60% מהמשכנתא בפריים לוקח סיכון שלא
+            תמיד מחושב. בנק ישראל מגביל את מסלולי המשתנה ל-33% — לא בשביל הכיף.
+          </p>
+          <p className={p}>
+            <span className="font-semibold text-accent-800">2. לא לנהל משא ומתן על המינוס.</span>{' '}
+            הבנקים לא מציעים את המינוס הטוב ביותר מראש. ההפרש בין פריים מינוס 1% לפריים מינוס
+            1.8% נראה קטן. על ₪600,000 ל-25 שנה, זה ₪40,000-₪60,000 לאורך חיי ההלוואה.
+          </p>
+          <p className={p}>
+            <span className="font-semibold text-accent-800">3. לא לשקול מחזור כשהריבית יורדת.</span>{' '}
+            אם הפריים ירד משמעותית, שווה לבדוק מחזור של חלק מהמשכנתא. עלויות המחזור (כ-₪4,000-₪8,000
+            טיפוסי) מוצדקות כשהחיסכון הצפוי עולה עליהן.
           </p>
 
           {/* Calculator CTA */}

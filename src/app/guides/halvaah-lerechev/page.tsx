@@ -102,10 +102,12 @@ const jsonLd = [
 /* -- Table of contents entries -- */
 const TOC = [
   { id: 'shalosh-options',  label: 'שלוש האפשרויות' },
+  { id: 'hashvaah',         label: 'השוואת עלויות' },
   { id: 'balon',            label: 'הבלון: המלכודת הנפוצה' },
   { id: 'chashmal',         label: 'רכב חשמלי: מימון שונה?' },
   { id: 'yad-shniya',       label: 'הלוואה לרכב יד שנייה' },
   { id: 'shabad',           label: 'שעבוד רכב' },
+  { id: 'taut',             label: 'טעויות נפוצות' },
   { id: 'faq',              label: 'שאלות נפוצות' },
 ];
 
@@ -178,6 +180,43 @@ export default function HalvaahLerechevPage() {
           <p className={p}>
             הכלל החשוב ביותר: קבל אישור עקרוני מהבנק לפני שנכנסים לסוכנות. ברגע שיש לך הצעה
             ביד, הסוכנות תתחרה עליך.
+          </p>
+
+          {/* Section 1b: comparison table */}
+          <h2 id="hashvaah" className={h2}>השוואת עלויות: אותו רכב, שלושה מסלולי מימון</h2>
+          <p className={p}>
+            רכב חדש במחיר ₪180,000. הון עצמי ₪30,000. מימון ₪150,000 ל-5 שנים.
+          </p>
+
+          <div className="overflow-x-auto my-6">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-primary-600 text-white">
+                  <th className="px-4 py-2 text-right font-semibold">מסלול מימון</th>
+                  <th className="px-4 py-2 text-right font-semibold">ריבית שנתית</th>
+                  <th className="px-4 py-2 text-right font-semibold">החזר חודשי</th>
+                  <th className="px-4 py-2 text-right font-semibold">סך ריבית</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['מימון יבואן (עם בלון 25%)', '4.5%', '₪1,900', 'כ-₪14,000 + בלון ₪45,000'],
+                  ['הלוואת בנק', '7%', '₪2,970', 'כ-₪28,200'],
+                  ['חברה חוץ בנקאית', '11%', '₪3,260', 'כ-₪45,600'],
+                ].map(([track, rate, monthly, total], i) => (
+                  <tr key={track} className={i % 2 === 0 ? '' : 'bg-accent-50/60'}>
+                    <td className="border border-accent-100 px-4 py-2 font-medium text-accent-800">{track}</td>
+                    <td className="border border-accent-100 px-4 py-2 text-primary-700">{rate}</td>
+                    <td className="border border-accent-100 px-4 py-2 text-accent-700">{monthly}</td>
+                    <td className="border border-accent-100 px-4 py-2 text-accent-600">{total}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className={p}>
+            מימון היבואן נראה הכי זול בחודש — אבל הבלון מסתתר בסוף. הלוואת בנק יקרה יותר בחודש,
+            אבל אתה יודע בדיוק כמה שילמת בסיום. חברה חוץ בנקאית — רק כשאין ברירה.
           </p>
 
           {/* Section 2 */}
@@ -260,6 +299,29 @@ export default function HalvaahLerechevPage() {
             גבוהה יותר מהלוואת רכב ייעודית.
           </p>
 
+          {/* Section 6: common mistakes */}
+          <h2 id="taut" className={h2}>ארבע טעויות שעולות כסף</h2>
+          <p className={p}>
+            <span className={strong}>1. לחתום על מימון בסוכנות לפני שיש הצעת בנק.</span>{' '}
+            ברגע שחתמת בסוכנות, אין לך כוח מיקוח. הגיע עם אישור עקרוני מבנק לאומי, בנק הפועלים
+            או מזרחי טפחות — והסוכנות תתחרה עליך.
+          </p>
+          <p className={p}>
+            <span className={strong}>2. לא לחשב את הבלון לתוך המחיר הכולל.</span>{' '}
+            בלון של ₪45,000 לא "נעלם". הוא צץ בסוף התקופה. אם אין לך תכנית ברורה — מכירת הרכב,
+            חיסכון ייעודי, מימון חוזר — זה יכול לסגור אותך.
+          </p>
+          <p className={p}>
+            <span className={strong}>3. לא לבדוק עמלת פירעון מוקדם.</span>{' '}
+            אם תרצה לשדרג רכב אחרי שנתיים, פירעון מוקדם יכול לעלות 1%-3% מהיתרה. שאל על זה
+            לפני החתימה, לא אחריה.
+          </p>
+          <p className={p}>
+            <span className={strong}>4. לבלבל בין ריבית נומינלית לאפקטיבית.</span>{' '}
+            הסוכנות מציגה לרוב ריבית נומינלית. הריבית האפקטיבית, שמחשבת גם עמלות ותשלומים
+            חד-פעמיים, תמיד גבוהה יותר. בקש את ה-APR (שיעור עלות אפקטיבי) לפני שמשווים.
+          </p>
+
           {/* Calculator CTA */}
           <CalculatorCTA
             calculatorName="מחשבון ההלוואה"
@@ -267,7 +329,7 @@ export default function HalvaahLerechevPage() {
             teaser="השווה מימון יבואן מול הלוואת בנק עם המספרים של הרכב שאתה רוצה לקנות."
           />
 
-          {/* Section 6: FAQ */}
+          {/* Section 7: FAQ */}
           <h2 id="faq" className={h2}>שאלות נפוצות</h2>
 
           <div className="space-y-4 mb-10">
