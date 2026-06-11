@@ -82,6 +82,7 @@ const TOC = [
   { id: 'mah-ze',       label: 'מה זה מחזור משכנתא?' },
   { id: 'matai',        label: 'מתי כדאי לבדוק?' },
   { id: 'mlkudet',      label: 'המלכודת שרוב האנשים לא מכירים' },
+  { id: 'dugma',        label: 'דוגמה מספרית: שווה או לא?' },
   { id: 'pnimi-chitoni', label: 'מחזור פנימי מול חיצוני' },
   { id: 'taaut',        label: 'הטעות הנפוצה ביותר' },
   { id: 'eich-matkhalim', label: 'איך מתחילים?' },
@@ -221,6 +222,55 @@ export default function MachzorMashkantaPage() {
               </svg>
             </Link>
           </div>
+
+          {/* Section 3b: worked example */}
+          <h2 id="dugma" className={h2}>דוגמה מספרית: כמה שווה מחזור ב-2026?</h2>
+          <p className={p}>
+            משכנתא של ₪900,000. נלקחה ב-2023 בריבית קבועה 5.5% ל-25 שנה. יתרה כיום: ₪870,000.
+            23 שנים נותרו.
+          </p>
+          <p className={p}>
+            <span className="font-semibold text-accent-800">תרחיש א׳ — נשאר בתנאים הקיימים:</span>{' '}
+            החזר חודשי: כ-₪5,540. סך ריבית שנותרת: כ-₪658,000.
+          </p>
+          <p className={p}>
+            <span className="font-semibold text-accent-800">תרחיש ב׳ — מחזור לריבית 4.6%:</span>{' '}
+            החזר חודשי: כ-₪4,940. חיסכון חודשי: ₪600. עלות מחזור חיצוני: כ-₪8,000 (שמאי + רישום + תפעולית).
+            נקודת איזון: 13 חודשים. לאחר מכן — כל חודש חוסך ₪600.
+          </p>
+          <p className={p}>
+            לאורך 23 שנה, החיסכון הכולל (בניכוי עלות המחזור): כ-₪157,000.
+          </p>
+
+          <div className="overflow-x-auto my-6">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-primary-600 text-white">
+                  <th className="px-4 py-2 text-right font-semibold">פרמטר</th>
+                  <th className="px-4 py-2 text-right font-semibold">לפני מחזור</th>
+                  <th className="px-4 py-2 text-right font-semibold">אחרי מחזור</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['ריבית', '5.5%', '4.6%'],
+                  ['החזר חודשי', '₪5,540', '₪4,940'],
+                  ['עלות מחזור', '—', '₪8,000'],
+                  ['נקודת איזון', '—', '13 חודש'],
+                  ['חיסכון כולל', '—', 'כ-₪157,000'],
+                ].map(([param, before, after], i) => (
+                  <tr key={param} className={i % 2 === 0 ? '' : 'bg-accent-50/60'}>
+                    <td className="border border-accent-100 px-4 py-2 font-medium text-accent-800">{param}</td>
+                    <td className="border border-accent-100 px-4 py-2 text-accent-600">{before}</td>
+                    <td className="border border-accent-100 px-4 py-2 font-medium text-primary-700">{after}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className={p}>
+            הכלל הפרקטי: אם נקודת האיזון מתחת ל-24 חודשים ויש לך כוונה להישאר בדירה, כדאי לבדוק.
+          </p>
 
           {/* Section 4 */}
           <h2 id="pnimi-chitoni" className={h2}>מחזור פנימי מול חיצוני: מה ההבדל?</h2>

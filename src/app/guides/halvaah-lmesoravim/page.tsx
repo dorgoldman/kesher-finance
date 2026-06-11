@@ -102,10 +102,12 @@ const jsonLd = [
 /* -- Table of contents entries -- */
 const TOC = [
   { id: 'bdi-check',     label: 'בדוק אם ה-BDI שלך נכון' },
+  { id: 'bdi-table',     label: 'טווחי דירוג אשראי' },
   { id: 'chisachon',     label: 'הלוואה מהחיסכון שלך' },
   { id: 'hutz-bankait',  label: 'אפשרויות חוץ בנקאיות' },
   { id: 'lo-laasot',     label: 'מה לא לעשות' },
   { id: 'shippur-bdi',   label: 'איך משפרים BDI' },
+  { id: 'dugma',         label: 'דוגמה: מהסירוב לאישור' },
   { id: 'faq',           label: 'שאלות נפוצות' },
 ];
 
@@ -157,6 +159,51 @@ export default function HalvaahLmesoravimPage() {
           <p className={p}>
             קבלת סירוב אומרת שהאלגוריתם של הבנק לא אהב את הפרופיל שלך ברגע הזה.
             לא בהכרח שאין לך פתרון. ולא בהכרח שהנתונים שהוא ראה בכלל מדויקים.
+          </p>
+
+          {/* Section 0b: BDI score table */}
+          <h2 id="bdi-table" className={h2}>טווחי דירוג אשראי: מה כל ציון אומר בפועל</h2>
+          <p className={p}>
+            בנק ישראל מפרסם דוח אשראי לכל אזרח. הדירוג נע בין 300 ל-850 — הנה מה שכל טווח אומר כשניגשים לבנק:
+          </p>
+
+          <div className="overflow-x-auto my-6">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-primary-600 text-white">
+                  <th className="px-4 py-2 text-right font-semibold">דירוג BDI</th>
+                  <th className="px-4 py-2 text-right font-semibold">סיווג</th>
+                  <th className="px-4 py-2 text-right font-semibold">מה זה אומר מול הבנק</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['750–850', 'מצוין', 'ריבית נמוכה, אישור מהיר, סכומים גבוהים'],
+                  ['680–749', 'טוב', 'אישור ברוב הבנקים, ריבית ממוצעת'],
+                  ['600–679', 'בינוני', 'בנקים מסוימים מאשרים, ריבית גבוהה יותר'],
+                  ['500–599', 'חלש', 'סירוב בבנקים, אפשרי בחוץ בנקאיות'],
+                  ['300–499', 'שלילי', 'סירוב ברוב הגופים — הלוואה מחיסכון או גמ"ח'],
+                ].map(([range, label, meaning], i) => (
+                  <tr key={range} className={i % 2 === 0 ? '' : 'bg-accent-50/60'}>
+                    <td className="border border-accent-100 px-4 py-2 font-medium text-primary-700">{range}</td>
+                    <td className="border border-accent-100 px-4 py-2 font-medium text-accent-800">{label}</td>
+                    <td className="border border-accent-100 px-4 py-2 text-accent-600">{meaning}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className={p}>
+            מקור:{' '}
+            <a
+              href="https://www.boi.org.il/financial-markets/credit-data/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary-600 underline underline-offset-2 hover:text-primary-700"
+            >
+              מערכת נתוני האשראי, בנק ישראל
+            </a>
+            .
           </p>
 
           {/* Section 1 */}
@@ -267,6 +314,24 @@ export default function HalvaahLmesoravimPage() {
           <p className={p}>
             תוצאה ריאלית: שיפור של 50 עד 100 נקודות בדירוג תוך שנה של התנהלות תקינה.
             זה מספיק כדי לעבור מסירוב לאישור בבנקים רבים.
+          </p>
+
+          {/* Section 5b: worked example */}
+          <h2 id="dugma" className={h2}>דוגמה: מהסירוב לאישור תוך 14 חודשים</h2>
+          <p className={p}>
+            ענת, שכירה מחיפה. דירוג BDI 530 בגלל צ&apos;ק שחזר לפני שלוש שנים. הבנק סירב.
+          </p>
+          <p className={p}>
+            שלב ראשון: ביקשה דוח אשראי — גילתה שהצ&apos;ק החוזר עדיין מופיע אבל כובד בסוף,
+            מה שלא עודכן. תיקנה את המידע עם הבנק. הדירוג עלה ל-575.
+          </p>
+          <p className={p}>
+            שלב שני: לקחה הלוואה קטנה מגמ&quot;ח ₪8,000, החזירה אותה בזמן לאורך 12 חודשים.
+            כל תשלום בזמן נרשם ועדכן את הדירוג. אחרי שנה: דירוג 640.
+          </p>
+          <p className={p}>
+            שלב שלישי: חזרה לבנק לאומי עם דירוג 640 ואישור שכר מעודכן. קיבלה ₪40,000
+            בריבית 8.5%. 14 חודשים אחרי הסירוב הראשון.
           </p>
 
           {/* Calculator CTA */}

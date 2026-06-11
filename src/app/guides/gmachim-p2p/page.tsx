@@ -103,9 +103,11 @@ const jsonLd = [
 const TOC = [
   { id: 'gmach-mah-ze',   label: 'גמ"ח הלוואות: מה זה' },
   { id: 'ogen',           label: 'קרן עוגן' },
+  { id: 'hashvaah',       label: 'השוואת מסלולים' },
   { id: 'p2p',            label: 'P2P בישראל ב-2026' },
   { id: 'lemee-matim',    label: 'למי זה מתאים' },
   { id: 'matzo-gmach',    label: 'איך מוצאים גמ"ח' },
+  { id: 'dugma',          label: 'דוגמה מספרית' },
   { id: 'faq',            label: 'שאלות נפוצות' },
 ];
 
@@ -217,6 +219,43 @@ export default function GmachimP2PPage() {
             </Link>
           </div>
 
+          {/* Section 2b: comparison table */}
+          <h2 id="hashvaah" className={h2}>השוואה: גמ&quot;ח, P2P, ובנק — אותה הלוואה</h2>
+          <p className={p}>
+            הלוואה של ₪40,000 ל-3 שנים. ריבית שונה לחלוטין לפי מאיפה תביא אותה.
+          </p>
+
+          <div className="overflow-x-auto my-6">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-primary-600 text-white">
+                  <th className="px-4 py-2 text-right font-semibold">מקור ההלוואה</th>
+                  <th className="px-4 py-2 text-right font-semibold">ריבית שנתית</th>
+                  <th className="px-4 py-2 text-right font-semibold">החזר חודשי</th>
+                  <th className="px-4 py-2 text-right font-semibold">סך ריבית</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['גמ"ח / עוגן', '0%', '₪1,111', '₪0'],
+                  ['P2P (טריא)', '7%', '₪1,235', 'כ-₪4,460'],
+                  ['בנק', '9%', '₪1,272', 'כ-₪5,790'],
+                  ['חברת אשראי', '13%', '₪1,349', 'כ-₪8,560'],
+                ].map(([src, rate, monthly, total], i) => (
+                  <tr key={src} className={i % 2 === 0 ? '' : 'bg-accent-50/60'}>
+                    <td className="border border-accent-100 px-4 py-2 font-medium text-accent-800">{src}</td>
+                    <td className="border border-accent-100 px-4 py-2 text-primary-700">{rate}</td>
+                    <td className="border border-accent-100 px-4 py-2 text-accent-700">{monthly}</td>
+                    <td className="border border-accent-100 px-4 py-2 text-accent-600">{total}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className={p}>
+            הפרש של ₪8,560 על אותה הלוואה. אם יש לך את הזמן לחכות לגמ&quot;ח — זה שווה.
+          </p>
+
           {/* Section 3 */}
           <h2 id="p2p" className={h2}>P2P בישראל: מה המצב ב-2026</h2>
           <p className={p}>
@@ -263,6 +302,24 @@ export default function GmachimP2PPage() {
             חיפוש בגוגל: &quot;גמ&quot;ח הלוואות&quot; ושם העיר שלך. פנייה לרב הקהילה או
             בית הכנסת המקומי. מוקד 118 מפנה לגמ&quot;חים באזורך. עובד סוציאלי ברשות
             המקומית. לעוגן ספציפית: האתר הרשמי ogen.org, או התקשרות ל-3309*.
+          </p>
+
+          {/* Section 5b: worked example */}
+          <h2 id="dugma" className={h2}>דוגמה אמיתית: שיפוץ בית ₪30,000</h2>
+          <p className={p}>
+            עמית, עצמאי מבאר שבע, צריך ₪30,000 לשיפוץ. אין לו קרן השתלמות נזילה ואין נכס לשעבד.
+          </p>
+          <p className={p}>
+            ניגש לבנק — מאשרים ₪20,000 בלבד בריבית 10%. ניגש לחברת אשראי — מאשרים ₪30,000 ב-14%.
+            לשניהם ל-4 שנים.
+          </p>
+          <p className={p}>
+            גילה שיש גמ&quot;ח עירוני בבאר שבע שמלווה עד ₪30,000. תהליך לקח שלושה שבועות.
+            קיבל את הסכום המלא. ריבית: אפס. החזר חודשי: ₪625. לאורך 4 שנים — שילם בדיוק ₪30,000.
+          </p>
+          <p className={p}>
+            אם היה לוקח מחברת האשראי: שילם ₪30,000 קרן ועוד כ-₪9,200 ריבית. שלושה שבועות של
+            המתנה חסכו לו ₪9,200.
           </p>
 
           {/* Calculator CTA */}

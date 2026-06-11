@@ -97,8 +97,10 @@ const jsonLd = [
 const TOC = [
   { id: 'step-1',       label: 'שלב 1: הגשת הבקשה' },
   { id: 'step-2',       label: 'שלב 2: האישור' },
+  { id: 'hashvaah',     label: 'מהירות מול מחיר' },
   { id: 'ikuvim',       label: 'מה יכול לעכב את האישור' },
   { id: 'miyedi-lo-zol',label: '"מיידי" לא תמיד אומר זול' },
+  { id: 'dugma',        label: 'כמה עולה הזמן שחסכת?' },
   { id: 'lehachin',     label: 'מה להכין לפני שמגישים' },
   { id: 'faq',          label: 'שאלות נפוצות' },
 ];
@@ -189,6 +191,41 @@ export default function HalvaahMiyeditPage() {
             ימים בממוצע. תלוי כמה מהר מלווים מממנים את ההלוואה שלך.
           </p>
 
+          {/* ── Section 2b: speed vs cost table ── */}
+          <h2 id="hashvaah" className={h2}>מהירות מול מחיר: ההשוואה הפרקטית</h2>
+          <p className={p}>
+            ככל שהכסף מגיע מהר יותר, הריבית גבוהה יותר. זה לא מקרה — זו מדיניות.
+          </p>
+
+          <div className="overflow-x-auto my-6">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-primary-600 text-white">
+                  <th className="px-4 py-2 text-right font-semibold">גוף מלווה</th>
+                  <th className="px-4 py-2 text-right font-semibold">זמן עד כסף</th>
+                  <th className="px-4 py-2 text-right font-semibold">ריבית שנתית טיפוסית</th>
+                  <th className="px-4 py-2 text-right font-semibold">הערה</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['כאל / מקס / ישראכרט', 'יום עסקים', '10%–15%', 'הכי מהיר'],
+                  ['בנק דיגיטלי', '1–3 ימים', '7%–11%', 'מהיר, תחרותי'],
+                  ['הבנק שלך', '1–7 ימים', '7%–10%', 'תלוי היסטוריה'],
+                  ['P2P (טריא)', '1–3 ימים', '4%–17.5%', 'תלוי פרופיל אשראי'],
+                  ['עוגן / גמ"ח', '2–4 שבועות', '0%', 'הזול ביותר — אם מגיע'],
+                ].map(([lender, time, rate, note], i) => (
+                  <tr key={lender} className={i % 2 === 0 ? '' : 'bg-accent-50/60'}>
+                    <td className="border border-accent-100 px-4 py-2 font-medium text-accent-800">{lender}</td>
+                    <td className="border border-accent-100 px-4 py-2 text-accent-700">{time}</td>
+                    <td className="border border-accent-100 px-4 py-2 text-primary-700">{rate}</td>
+                    <td className="border border-accent-100 px-4 py-2 text-accent-500 text-xs">{note}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
           {/* ── Section 3 ── */}
           <h2 id="ikuvim" className={h2}>מה יכול לעצור או לעכב את האישור</h2>
           <p className={p}>
@@ -253,6 +290,24 @@ export default function HalvaahMiyeditPage() {
             הבעיה מתחילה כשאנשים לוקחים הלוואה מיידית מתוך נוחות, לא מתוך
             צורך. אם אפשר לחכות יומיים-שלושה ולקבל ריבית של 8% במקום 13%,
             ההפרש על ₪50,000 לאורך 5 שנים הוא אלפי שקלים.
+          </p>
+
+          {/* ── Section 4b: cost of speed ── */}
+          <h2 id="dugma" className={h2}>כמה עולה הזמן שחסכת?</h2>
+          <p className={p}>
+            הלוואה של ₪50,000 ל-3 שנים. ניקח שני תרחישים: חברת אשראי (מהירה) מול הבנק שלך (איטי יותר).
+          </p>
+          <p className={p}>
+            <span className="font-semibold text-accent-800">חברת אשראי — 13% ריבית:</span>{' '}
+            החזר חודשי ₪1,686. סך ריבית לאורך 3 שנים: כ-₪10,696.
+          </p>
+          <p className={p}>
+            <span className="font-semibold text-accent-800">הבנק שלך — 8% ריבית:</span>{' '}
+            החזר חודשי ₪1,567. סך ריבית: כ-₪6,412.
+          </p>
+          <p className={p}>
+            ההפרש: כ-₪4,284 על אותה הלוואה. חיכית 5 ימים נוספים — חסכת ₪4,284. לפעמים
+            שווה. לפעמים צריך את הכסף עכשיו ואין ברירה. חשוב לדעת מה ההחלטה עולה.
           </p>
 
           {/* ── Section 5 ── */}
