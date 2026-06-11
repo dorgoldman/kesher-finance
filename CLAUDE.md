@@ -264,8 +264,9 @@ Calculator pages: 3.7–6.4 kB (client components for interactivity).
 Shared JS: ~99.9 kB.
 
 **Known items to watch:**
-- `sitemap.ts` — `/guides/כמה-משכנתא-לפי-משכורת` not yet added (add next update)
 - `apple-touch-icon.png` reference removed; apple icon now uses `favicon.svg` directly
+
+**AdSense E-E-A-T (June 2026):** Articles carry a named author (דור גולדמן) byline linking to `/about`, JSON-LD `author` is `Person` (not Organization), and each has a "מקורות" line citing official authorities (Bank of Israel / Kol-Zchut / Capital Market Authority). `/about` has editorial standards + sources + Person schema. Do not introduce anonymous "צוות מקסיט" authorship again, and never claim licensed-advisor credentials.
 
 ---
 
