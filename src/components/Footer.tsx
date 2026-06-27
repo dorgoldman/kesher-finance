@@ -1,4 +1,8 @@
 import Link from 'next/link';
+import { guidesByCategory } from '@/lib/guides';
+
+const loanGuides = guidesByCategory('הלוואות').slice(0, 5);
+const mortgageGuides = guidesByCategory('משכנתאות');
 
 export default function Footer() {
   return (
@@ -51,60 +55,59 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Guides */}
+          {/* Guides — loans */}
           <div>
-            <h3 className="text-sm font-semibold text-white/70 mb-4 uppercase tracking-[0.08em]">מדריכים</h3>
+            <h3 className="text-sm font-semibold text-white/70 mb-4 uppercase tracking-[0.08em]">מדריכי הלוואות</h3>
             <ul className="space-y-3">
+              {loanGuides.map((guide) => (
+                <li key={guide.href}>
+                  <Link
+                    href={guide.href}
+                    className="text-sm text-white/35 hover:text-white transition-colors duration-200 cursor-pointer"
+                  >
+                    {guide.shortLabel}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Guides — mortgages */}
+          <div>
+            <h3 className="text-sm font-semibold text-white/70 mb-4 uppercase tracking-[0.08em]">מדריכי משכנתא</h3>
+            <ul className="space-y-3">
+              {mortgageGuides.map((guide) => (
+                <li key={guide.href}>
+                  <Link
+                    href={guide.href}
+                    className="text-sm text-white/35 hover:text-white transition-colors duration-200 cursor-pointer"
+                  >
+                    {guide.shortLabel}
+                  </Link>
+                </li>
+              ))}
               <li>
                 <Link
                   href="/guides"
-                  className="text-sm text-white/35 hover:text-white transition-colors duration-200 cursor-pointer"
+                  className="text-sm text-primary-400 hover:text-primary-300 font-semibold transition-colors duration-200 cursor-pointer"
                 >
-                  כל המדריכים
+                  כל המדריכים ←
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Info / Legal */}
-          <div>
-            <h3 className="text-sm font-semibold text-white/70 mb-4 uppercase tracking-[0.08em]">מידע</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link
-                  href="/tools"
-                  className="text-sm text-white/35 hover:text-white transition-colors duration-200 cursor-pointer"
-                >
-                  כל הכלים
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about"
-                  className="text-sm text-white/35 hover:text-white transition-colors duration-200 cursor-pointer"
-                >
-                  אודות
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="text-sm text-white/35 hover:text-white transition-colors duration-200 cursor-pointer"
-                >
-                  צור קשר
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/privacy"
-                  className="text-sm text-white/35 hover:text-white transition-colors duration-200 cursor-pointer"
-                >
-                  מדיניות פרטיות
-                </Link>
-              </li>
-            </ul>
-          </div>
+        </div>
 
+        {/* Secondary row: tools + legal links */}
+        <div className="mt-10 pt-8 border-t border-white/6 flex flex-wrap gap-x-6 gap-y-2">
+          <Link href="/tools" className="text-xs text-white/30 hover:text-white transition-colors duration-200 cursor-pointer">כל הכלים</Link>
+          <Link href="/tools/mortgage-calculator" className="text-xs text-white/30 hover:text-white transition-colors duration-200 cursor-pointer">מחשבון משכנתא</Link>
+          <Link href="/tools/loan-calculator" className="text-xs text-white/30 hover:text-white transition-colors duration-200 cursor-pointer">מחשבון הלוואה</Link>
+          <Link href="/tools/salary-calculator" className="text-xs text-white/30 hover:text-white transition-colors duration-200 cursor-pointer">מחשבון שכר נטו</Link>
+          <Link href="/about" className="text-xs text-white/30 hover:text-white transition-colors duration-200 cursor-pointer">אודות</Link>
+          <Link href="/contact" className="text-xs text-white/30 hover:text-white transition-colors duration-200 cursor-pointer">צור קשר</Link>
+          <Link href="/privacy" className="text-xs text-white/30 hover:text-white transition-colors duration-200 cursor-pointer">מדיניות פרטיות</Link>
         </div>
       </div>
 
