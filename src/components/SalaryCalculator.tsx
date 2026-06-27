@@ -296,9 +296,9 @@ function StatCard({
   color?: string;
 }) {
   return (
-    <div className="card text-center">
-      <p className="text-xs font-medium text-accent-400 mb-1.5 leading-snug">{label}</p>
-      <p className={`text-lg font-bold tabular-nums leading-tight ${color}`}>{value}</p>
+    <div className="card p-4 sm:p-6 flex items-center justify-between gap-3 sm:block sm:text-center">
+      <p className="text-xs font-medium text-accent-400 sm:mb-1.5 leading-snug shrink-0">{label}</p>
+      <p className={`text-base sm:text-lg font-bold tabular-nums leading-tight text-left sm:text-center ${color}`}>{value}</p>
     </div>
   );
 }
@@ -419,8 +419,8 @@ export default function SalaryCalculator() {
       {/* ── Breakdown bar ── */}
       <BreakdownBar gross={gross} result={result} />
 
-      {/* ── 6 stat cards - 3 per row on desktop ── */}
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+      {/* ── 6 stat cards — full-width rows on mobile, 3 per row on desktop ── */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 mb-8">
         <StatCard
           label="מס הכנסה"
           value={fmtCurrency(result.incomeTax)}

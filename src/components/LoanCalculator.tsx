@@ -310,19 +310,21 @@ export default function LoanCalculator() {
         </p>
       </div>
 
-      {/* ── Secondary stats ── */}
-      <div className="grid grid-cols-3 gap-4 mb-8">
-        <div className="card text-center">
-          <p className="text-xs font-medium text-accent-400 mb-1">סה&quot;כ להחזיר</p>
-          <p className="text-lg font-bold text-accent-900 tabular-nums">{formatCurrency(result.totalRepayment)}</p>
+      {/* ── Secondary stats ──
+          Mobile: full-width horizontal rows so long shekel figures never
+          overflow. sm+: centered 3-column cards. */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-8">
+        <div className="card p-4 sm:p-6 flex items-center justify-between gap-3 sm:block sm:text-center">
+          <p className="text-xs font-medium text-accent-400 sm:mb-1 shrink-0">סה&quot;כ להחזיר</p>
+          <p className="text-lg font-bold text-accent-900 tabular-nums text-left sm:text-center">{formatCurrency(result.totalRepayment)}</p>
         </div>
-        <div className="card text-center">
-          <p className="text-xs font-medium text-accent-400 mb-1">סה&quot;כ ריבית</p>
-          <p className="text-lg font-bold text-red-500 tabular-nums">{formatCurrency(result.totalInterest)}</p>
+        <div className="card p-4 sm:p-6 flex items-center justify-between gap-3 sm:block sm:text-center">
+          <p className="text-xs font-medium text-accent-400 sm:mb-1 shrink-0">סה&quot;כ ריבית</p>
+          <p className="text-lg font-bold text-red-500 tabular-nums text-left sm:text-center">{formatCurrency(result.totalInterest)}</p>
         </div>
-        <div className="card text-center">
-          <p className="text-xs font-medium text-accent-400 mb-1">% ריבית מהקרן</p>
-          <p className="text-lg font-bold text-accent-700">{result.interestPct.toFixed(0)}%</p>
+        <div className="card p-4 sm:p-6 flex items-center justify-between gap-3 sm:block sm:text-center">
+          <p className="text-xs font-medium text-accent-400 sm:mb-1 shrink-0">% ריבית מהקרן</p>
+          <p className="text-lg font-bold text-accent-700 tabular-nums text-left sm:text-center">{result.interestPct.toFixed(0)}%</p>
         </div>
       </div>
 

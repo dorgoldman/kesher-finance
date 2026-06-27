@@ -679,19 +679,21 @@ export default function MortgageCalculator() {
         </p>
       </div>
 
-      {/* ── Secondary stats ── */}
-      <div className="grid grid-cols-3 gap-4 mb-8">
-        <div className="card text-center">
-          <p className="text-xs font-medium text-accent-400 mb-1">עלות כוללת</p>
-          <p className="text-xl font-bold text-accent-900">{formatCurrency(totalCost)}</p>
+      {/* ── Secondary stats ──
+          Mobile: full-width horizontal rows (label + value) so 7-digit
+          shekel figures never overflow. sm+: centered 3-column cards. */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-8">
+        <div className="card p-4 sm:p-6 flex items-center justify-between gap-3 sm:block sm:text-center">
+          <p className="text-xs font-medium text-accent-400 sm:mb-1 shrink-0">עלות כוללת</p>
+          <p className="text-lg sm:text-xl font-bold text-accent-900 tabular-nums text-left sm:text-center">{formatCurrency(totalCost)}</p>
         </div>
-        <div className="card text-center">
-          <p className="text-xs font-medium text-accent-400 mb-1">סה&quot;כ ריבית</p>
-          <p className="text-xl font-bold text-red-500">{formatCurrency(totalInterest)}</p>
+        <div className="card p-4 sm:p-6 flex items-center justify-between gap-3 sm:block sm:text-center">
+          <p className="text-xs font-medium text-accent-400 sm:mb-1 shrink-0">סה&quot;כ ריבית</p>
+          <p className="text-lg sm:text-xl font-bold text-red-500 tabular-nums text-left sm:text-center">{formatCurrency(totalInterest)}</p>
         </div>
-        <div className="card text-center">
-          <p className="text-xs font-medium text-accent-400 mb-1">% ריבית מהקרן</p>
-          <p className="text-xl font-bold text-accent-700">
+        <div className="card p-4 sm:p-6 flex items-center justify-between gap-3 sm:block sm:text-center">
+          <p className="text-xs font-medium text-accent-400 sm:mb-1 shrink-0">% ריבית מהקרן</p>
+          <p className="text-lg sm:text-xl font-bold text-accent-700 tabular-nums text-left sm:text-center">
             {totalLoan > 0 ? ((totalInterest / totalLoan) * 100).toFixed(0) : '0'}%
           </p>
         </div>
