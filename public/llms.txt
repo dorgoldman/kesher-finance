@@ -1,0 +1,43 @@
+# Maxit — מקסיט
+
+> מקסיט הוא אתר עברי לתכנון פיננסי אישי בישראל: מחשבונים חינמיים (משכנתא, הלוואה, שכר נטו) ומדריכים מקצועיים על משכנתאות, הלוואות, ריביות וניהול כספים. כל הנתונים מבוססים על מקורות רשמיים (בנק ישראל, רשות שוק ההון, רשות המסים, המוסד לביטוח לאומי) ומעודכנים לשנת 2026.
+
+Maxit (getmaxit.co.il) is a Hebrew-language personal-finance site for the Israeli market. It provides free calculators and editorial guides. Content is written and edited by דור גולדמן (Dor Goldman), founder and editor, and a product of MGH Venture Studio. Maxit is not a licensed financial advisor and does not sell financial products — it is an educational reference. All figures cite official Israeli authorities.
+
+## מחשבונים (Calculators)
+
+- [מחשבון משכנתא](https://getmaxit.co.il/tools/mortgage-calculator): בונה תמהיל רב-מסלולי (קבועה, משתנה, פריים, זכאות), מחשב החזר חודשי כולל ולוח סילוקין מלא.
+- [מחשבון הלוואה](https://getmaxit.co.il/tools/loan-calculator): מחשב החזר חודשי, סך ריבית ולוח סילוקין לפי שיטת שפיצר.
+- [מחשבון שכר נטו](https://getmaxit.co.il/tools/salary-calculator): מחשב שכר נטו אחרי מס הכנסה, ביטוח לאומי, מס בריאות ופנסיה לפי מדרגות המס של 2026.
+
+## מדריכי הלוואות (Loan guides)
+
+- [איך בוחרים הלוואה נכון](https://getmaxit.co.il/guides/halvaot-madrich): מה לבדוק לפני שלוקחים הלוואה ואיך משווים בין הצעות.
+- [הלוואה חוץ בנקאית](https://getmaxit.co.il/guides/halvaah-hutz-bankait): מי נותן, כמה עולה, ומתי כדאי לעומת הלוואה בנקאית.
+- [הלוואה מיידית](https://getmaxit.co.il/guides/halvaah-miyedit): כמה זמן באמת לוקח לקבל את הכסף, מה מעכב אישור, ומה עלות המהירות.
+- [הלוואה לכל מטרה](https://getmaxit.co.il/guides/halvaah-lchol-matara): מתי כדאי, מתי לא, וכמה זה עולה ב-2026.
+- [הלוואה לרכב](https://getmaxit.co.il/guides/halvaah-lerechev): השוואה בין מימון בנק, יבואן וליסינג.
+- [הלוואה למסורבים](https://getmaxit.co.il/guides/halvaah-lmesoravim): אפשרויות מימון עם דירוג אשראי (BDI) שלילי.
+- [הלוואות ללא ריבית: גמ"חים, עוגן ו-P2P](https://getmaxit.co.il/guides/gmachim-p2p): מקורות הלוואה ללא ריבית או בריבית נמוכה בישראל.
+- [הלוואה מקרן השתלמות](https://getmaxit.co.il/guides/הלוואה-מקרן-השתלמות): אחת ההלוואות הזולות בשוק — ריבית, תנאים ומה לבדוק.
+- [ריבית אפקטיבית](https://getmaxit.co.il/guides/ריבית-אפקטיבית): ההבדל בין ריבית נומינלית לאפקטיבית ואיך לחשב את העלות האמיתית.
+- [בקשה להלוואה](https://getmaxit.co.il/guides/בקשה-להלוואה): מה הבנק בודק לפני אישור ואיך להגיש בקשה נכון.
+
+## מדריכי משכנתא (Mortgage guides)
+
+- [כמה משכנתא לפי משכורת](https://getmaxit.co.il/guides/כמה-משכנתא-לפי-משכורת): כיצד הבנק קובע את גובה המשכנתא לפי ההכנסה, עם טבלאות ל-2026.
+- [ריבית פריים](https://getmaxit.co.il/guides/ריבית-פריים): מה זה פריים, פריים מינוס, וכיצד שינויי ריבית משפיעים על המשכנתא.
+- [שפיצר מול קרן שווה](https://getmaxit.co.il/guides/שפיצר-מול-קרן-שווה): ההבדל בין שיטות ההחזר ומתי כל אחת מתאימה, עם מספרים.
+- [משכנתא ראשונה](https://getmaxit.co.il/guides/משכנתא-ראשונה): הון עצמי, תמהיל, זכאות וביטוח — המדריך המלא לרוכש דירה ראשונה.
+- [מחזור משכנתא](https://getmaxit.co.il/guides/מחזור-משכנתא): מתי מחזור חוסך כסף, איך מחשבים נקודת איזון, ומה עמלת הפירעון.
+
+## מידע (About)
+
+- [אודות מקסיט](https://getmaxit.co.il/about): מי עומד מאחורי האתר, שיטת העבודה, והמקורות הרשמיים שעליהם מסתמך התוכן.
+- [צור קשר](https://getmaxit.co.il/contact): פנייה לתיקונים ושאלות.
+
+## הערות (Notes)
+
+- כל המידע באתר הוא לצרכי לימוד בלבד ואינו מהווה ייעוץ פיננסי, השקעות או מס.
+- נתונים מספריים (ריביות, מדרגות מס, יחסי החזר, תקרות מימון) מתעדכנים לפי פרסומי הרגולטור ונושאים תאריך עדכון.
+- מקורות רשמיים: בנק ישראל (boi.org.il), רשות שוק ההון ביטוח וחיסכון, רשות המסים, המוסד לביטוח לאומי (btl.gov.il), כל-זכות (kolzchut.org.il).
