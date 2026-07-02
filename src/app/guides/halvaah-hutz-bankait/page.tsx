@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import RelatedGuides from '@/components/RelatedGuides';
 import AdSlot from '@/components/AdSlot';
 import JsonLd from '@/components/SEO';
 import { SITE_NAME } from '@/lib/constants';
@@ -434,6 +435,8 @@ export default function HalvaahHutzBankaitPage() {
             <a href="https://www.gov.il/he/departments/capital_market_insurance_and_savings_authority" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">רשות שוק ההון, ביטוח וחיסכון, רישוי נותני אשראי</a>{' '}·{' '}
             <a href="https://www.boi.org.il/financial-markets/credit-data/" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">מאגר נתוני אשראי, בנק ישראל</a>
           </div>
+
+          <RelatedGuides currentHref="/guides/halvaah-hutz-bankait" />
 
           <div className="border-t border-accent-100 pt-6">
             <p className="text-xs text-accent-400 leading-relaxed">

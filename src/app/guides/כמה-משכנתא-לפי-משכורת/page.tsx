@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import RelatedGuides from '@/components/RelatedGuides';
 import AdSlot from '@/components/AdSlot';
 import { CalculatorCTA } from '@/templates/article-page';
 import MobileArticleTOC from '@/components/MobileArticleTOC';
@@ -445,6 +446,8 @@ export default function KamaMashnektaPage() {
             <a href="https://www.boi.org.il/financial-markets/" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">בנק ישראל, מגבלות יחס החזר ומימון</a>{' '}·{' '}
             <a href="https://www.kolzchut.org.il/he/משכנתה" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">משכנתא, כל-זכות</a>
           </div>
+
+          <RelatedGuides currentHref="/guides/כמה-משכנתא-לפי-משכורת" />
 
           <div className="border-t border-accent-100 pt-6">
             <p className="text-xs text-accent-400 leading-relaxed">

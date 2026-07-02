@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import RelatedGuides from '@/components/RelatedGuides';
 import AdSlot from '@/components/AdSlot';
 import { CalculatorCTA } from '@/templates/article-page';
 import MobileArticleTOC from '@/components/MobileArticleTOC';
@@ -406,6 +407,8 @@ export default function HalvaahMikrenHashtalmuutPage() {
             <a href="https://www.kolzchut.org.il/he/קרן_השתלמות" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">קרן השתלמות, כל-זכות</a>{' '}·{' '}
             <a href="https://www.boi.org.il/monetary-policy/interest-rate-decisions/" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">ריבית בנק ישראל</a>
           </div>
+
+          <RelatedGuides currentHref="/guides/הלוואה-מקרן-השתלמות" />
 
           <div className="border-t border-accent-100 pt-6">
             <p className="text-xs text-accent-400 leading-relaxed">

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import RelatedGuides from '@/components/RelatedGuides';
 import AdSlot from '@/components/AdSlot';
 import { CalculatorCTA } from '@/templates/article-page';
 import MobileArticleTOC from '@/components/MobileArticleTOC';
@@ -385,6 +386,8 @@ export default function RibitPrimePage() {
           </div>
 
           {/* Disclaimer */}
+          <RelatedGuides currentHref="/guides/ריבית-פריים" />
+
           <div className="border-t border-accent-100 pt-6">
             <p className="text-xs text-accent-400 leading-relaxed">
               <span className="font-semibold">אין באמור ייעוץ פיננסי.</span>{' '}

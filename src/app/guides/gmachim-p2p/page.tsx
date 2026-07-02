@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import RelatedGuides from '@/components/RelatedGuides';
 import AdSlot from '@/components/AdSlot';
 import JsonLd from '@/components/SEO';
 import { SITE_NAME } from '@/lib/constants';
@@ -411,6 +412,8 @@ export default function GmachimP2PPage() {
             <a href="https://www.gov.il/he/departments/capital_market_insurance_and_savings_authority" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">רשות שוק ההון, פלטפורמות P2P</a>{' '}·{' '}
             <a href="https://www.kolzchut.org.il/" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">כל-זכות, זכויות פיננסיות</a>
           </div>
+
+          <RelatedGuides currentHref="/guides/gmachim-p2p" />
 
           <div className="border-t border-accent-100 pt-6">
             <p className="text-xs text-accent-400 leading-relaxed">

@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import RelatedGuides from '@/components/RelatedGuides';
 import AdSlot from '@/components/AdSlot';
 import JsonLd from '@/components/SEO';
 import { SITE_NAME } from '@/lib/constants';
@@ -417,6 +418,8 @@ export default function HalvaahLmesoravimPage() {
           </div>
 
           {/* Disclaimer */}
+          <RelatedGuides currentHref="/guides/halvaah-lmesoravim" />
+
           <div className="border-t border-accent-100 pt-6">
             <p className="text-xs text-accent-400 leading-relaxed">
               <span className="font-semibold">אין באמור ייעוץ פיננסי.</span>{' '}
