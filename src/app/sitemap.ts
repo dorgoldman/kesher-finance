@@ -45,6 +45,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${BASE}/tools/mortgage-refinance-calculator`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
       url: `${BASE}/guides/halvaot-madrich`,
       lastModified: now,
       changeFrequency: 'monthly' as const,

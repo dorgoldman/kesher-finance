@@ -9,6 +9,7 @@ Maxit (getmaxit.co.il) is a Hebrew-language personal-finance site for the Israel
 - [מחשבון משכנתא](https://getmaxit.co.il/tools/mortgage-calculator): בונה תמהיל רב-מסלולי (קבועה, משתנה, פריים, זכאות), מחשב החזר חודשי כולל ולוח סילוקין מלא.
 - [מחשבון הלוואה](https://getmaxit.co.il/tools/loan-calculator): מחשב החזר חודשי, סך ריבית ולוח סילוקין לפי שיטת שפיצר.
 - [מחשבון שכר נטו](https://getmaxit.co.il/tools/salary-calculator): מחשב שכר נטו אחרי מס הכנסה, ביטוח לאומי, מס בריאות ופנסיה לפי מדרגות המס של 2026.
+- [מחשבון מחזור משכנתא](https://getmaxit.co.il/tools/mortgage-refinance-calculator): משווה את המשכנתא הנוכחית להצעת מחזור כולל עמלת פירעון מוקדם - חיסכון חודשי, נקודת איזון וחיסכון כולל.
 
 ## מדריכי הלוואות (Loan guides)
 

@@ -105,6 +105,7 @@ export default function Footer() {
           <Link href="/tools/mortgage-calculator" className="text-xs text-white/30 hover:text-white transition-colors duration-200 cursor-pointer">מחשבון משכנתא</Link>
           <Link href="/tools/loan-calculator" className="text-xs text-white/30 hover:text-white transition-colors duration-200 cursor-pointer">מחשבון הלוואה</Link>
           <Link href="/tools/salary-calculator" className="text-xs text-white/30 hover:text-white transition-colors duration-200 cursor-pointer">מחשבון שכר נטו</Link>
+          <Link href="/tools/mortgage-refinance-calculator" className="text-xs text-white/30 hover:text-white transition-colors duration-200 cursor-pointer">מחשבון מחזור משכנתא</Link>
           <Link href="/about" className="text-xs text-white/30 hover:text-white transition-colors duration-200 cursor-pointer">אודות</Link>
           <Link href="/contact" className="text-xs text-white/30 hover:text-white transition-colors duration-200 cursor-pointer">צור קשר</Link>
           <Link href="/privacy" className="text-xs text-white/30 hover:text-white transition-colors duration-200 cursor-pointer">מדיניות פרטיות</Link>

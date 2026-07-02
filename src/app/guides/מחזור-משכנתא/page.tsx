@@ -351,9 +351,9 @@ export default function MachzorMashkantaPage() {
 
           {/* Calculator CTA */}
           <CalculatorCTA
-            calculatorName="מחשבון המשכנתא"
-            calculatorUrl="/tools/mortgage-calculator"
-            teaser="הכנס ריבית חדשה ותראה כמה זה חוסך בחודש לפני שמחליטים."
+            calculatorName="מחשבון מחזור המשכנתא"
+            calculatorUrl="/tools/mortgage-refinance-calculator"
+            teaser="הזן את המשכנתא הנוכחית וההצעה החדשה - כולל עמלת פירעון מוקדם - ותראה אם המחזור באמת משתלם."
           />
 
           {/* Section 7: FAQ */}
