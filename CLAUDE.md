@@ -23,7 +23,7 @@ Google Search Console verification: `a2oR7FNyG2Bn8wvrR0MxQH24bH0KGd9uNbhU1XGLcbY
 
 | Layer | Tool | Notes |
 |---|---|---|
-| Framework | Next.js 15 (App Router) | `output: 'export'` — fully static, no SSR |
+| Framework | Next.js 15.5.20 (App Router) | `output: 'export'` — fully static, no SSR |
 | Hosting | Cloudflare Pages | Deploy: `npm run pages:build && npm run pages:deploy` |
 | Styling | Tailwind CSS v3 | Custom design tokens (see below) |
 | Font | Heebo (Google Fonts) | Hebrew + Latin subsets |
@@ -160,6 +160,9 @@ Grid of 3 calculator cards + coming-soon cards.
 
 ### `/tools/salary-calculator` — Salary Net Calculator
 `SalaryCalculator` client component. 2026 Israeli tax brackets. Outputs: income tax, NI, health insurance, pension, net salary breakdown. JSON-LD: WebApplication + BreadcrumbList + FAQ.
+
+### `/tools/mortgage-refinance-calculator` — Refinance Calculator
+`RefinanceCalculator` client component. Compares current mortgage vs refinance offer incl. עמלת פירעון מוקדם. Outputs: monthly saving, net total saving, break-even point, verdict strip. Built July 2026 to capture the site's #1 GSC query (מחשבון מחזור משכנתא). JSON-LD: WebApplication + BreadcrumbList + FAQ. Cross-linked with the מחזור-משכנתא guide (its CalculatorCTA points here).
 
 ### `/guides` — Guides Hub
 15-article grid, categorized (הלוואות / משכנתאות). No pagination yet.
