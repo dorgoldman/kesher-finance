@@ -23,7 +23,7 @@ Google Search Console verification: `a2oR7FNyG2Bn8wvrR0MxQH24bH0KGd9uNbhU1XGLcbY
 
 | Layer | Tool | Notes |
 |---|---|---|
-| Framework | Next.js 15.5.2 (App Router, pinned exact) | `output: 'export'` — fully static, no SSR. **Do not upgrade past 15.5.2** — `@cloudflare/next-on-pages` peer range caps at 15.5.2 and CF Pages `npm clean-install` fails the deploy. |
+| Framework | Next.js 15.4.11 (App Router, pinned exact) | `output: 'export'` — fully static, no SSR. **Do NOT upgrade to 15.5.x** — 15.5 breaks client-side navigation on the static export (every Link click lands on the raw RSC `.txt` payload, e.g. `/index.txt`, on Cloudflare Pages; observed live 2026-07-02 and reverted). Also `@cloudflare/next-on-pages` peer range caps at 15.5.2, so 15.5.3+ fails `npm clean-install` on CF. Stay on 15.4.11 until the adapter and the RSC-nav bug are both resolved. |
 | Hosting | Cloudflare Pages | Deploy: `npm run pages:build && npm run pages:deploy` |
 | Styling | Tailwind CSS v3 | Custom design tokens (see below) |
 | Font | Heebo (Google Fonts) | Hebrew + Latin subsets |
