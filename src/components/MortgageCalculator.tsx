@@ -1,6 +1,8 @@
 ﻿'use client';
 
 import { useState, useMemo, useCallback, useEffect, useRef } from 'react';
+import { hebrewLabels, type MortgageLabels } from '@/lib/i18n/mortgage-labels';
+import { DonutChart, TrackBarChart } from './MortgageCharts';
 
 /* ─── Count-up animation hook ────────────────────────────────────────────── */
 function useCountUp(target: number, duration = 400): number {
@@ -83,12 +85,14 @@ interface TrackResult {
 }
 
 /* ─── Track config ───────────────────────────────────────────────────────── */
-const TRACK_TYPES: { value: TrackType; label: string; description: string }[] = [
-  { value: 'fixed',       label: 'ריבית קבועה לא צמודה', description: 'ריבית קבועה לכל התקופה' },
-  { value: 'variable',    label: 'ריבית משתנה כל 5 שנים', description: 'ריבית מתעדכנת כל 5 שנים' },
-  { value: 'prime',       label: 'פריים',                  description: 'צמוד לריבית הפריים' },
-  { value: 'eligibility', label: 'זכאות',                  description: 'הלוואת זכאות מסובסדת' },
-];
+function getTrackTypes(labels: MortgageLabels): { value: TrackType; label: string; description: string }[] {
+  return [
+    { value: 'fixed',       label: labels.trackTypes.fixed.label,       description: labels.trackTypes.fixed.description },
+    { value: 'variable',    label: labels.trackTypes.variable.label,    description: labels.trackTypes.variable.description },
+    { value: 'prime',       label: labels.trackTypes.prime.label,       description: labels.trackTypes.prime.description },
+    { value: 'eligibility', label: labels.trackTypes.eligibility.label, description: labels.trackTypes.eligibility.description },
+  ];
+}
 
 /* Gradient backgrounds - credit card aesthetic per design spec */
 const TRACK_GRADIENT: Record<TrackType, string> = {
@@ -112,6 +116,13 @@ const TRACK_PILL: Record<TrackType, string> = {
   variable:    'bg-amber-500',
   prime:       'bg-violet-500',
   eligibility: 'bg-emerald-500',
+};
+
+const TRACK_HEX: Record<TrackType, string> = {
+  fixed:       '#3b82f6',
+  variable:    '#f59e0b',
+  prime:       '#8b5cf6',
+  eligibility: '#10b981',
 };
 
 /* SVG icons - no emoji, per skill pre-delivery checklist */
@@ -147,9 +158,10 @@ function TrackIcon({ type, className }: { type: TrackType; className?: string })
 /* ─── Helpers ────────────────────────────────────────────────────────────── */
 let trackCounter = 1;
 
-function createTrack(type: TrackType): MortgageTrack {
+function createTrack(type: TrackType, labels: MortgageLabels): MortgageTrack {
   const id = `track-${Date.now()}-${trackCounter++}`;
-  const info = TRACK_TYPES.find((t) => t.value === type)!;
+  const trackTypes = getTrackTypes(labels);
+  const info = trackTypes.find((t) => t.value === type)!;
   const defaults: Record<TrackType, Partial<MortgageTrack>> = {
     fixed:       { rate: 4.5,  years: 20, amount: 400000 },
     variable:    { rate: 3.8,  years: 15, amount: 300000 },
@@ -222,36 +234,32 @@ type FieldErrors = {
   primeSpread?: string;
 };
 
-const validators: Record<string, (v: number) => string | undefined> = {
-  amount:      (v) => v < 100000 ? 'הסכום חייב להיות לפחות ₪100,000' : v > 5000000 ? 'הסכום לא יכול לעלות על ₪5,000,000' : undefined,
-  rate:        (v) => v < 0.1    ? 'הריבית חייבת להיות לפחות 0.1%'   : v > 15     ? 'הריבית לא יכולה לעלות על 15%'        : undefined,
-  years:       (v) => v < 1      ? 'התקופה חייבת להיות שנה אחת לפחות': v > 30     ? 'התקופה לא יכולה לעלות על 30 שנה'    : undefined,
-  primeBase:   (v) => v < 0      ? 'ריבית הפריים לא יכולה להיות שלילית' : v > 15   ? 'ריבית פריים לא סבירה'               : undefined,
-  primeSpread: (v) => v < -3     ? 'המרווח לא יכול להיות פחות מ-3%-' : v > 3      ? 'המרווח לא יכול לעלות על 3%'          : undefined,
-};
-
-/* NerdWallet-style input hints */
-const INPUT_HINTS: Record<TrackType, { amount: string; years: string; rate: string }> = {
-  fixed:       { amount: 'מינ׳ ₪100K',  years: '15–25 שנה מומלץ', rate: 'ריבית קבועה לכל התקופה' },
-  variable:    { amount: 'מינ׳ ₪100K',  years: 'מתעדכן כל 5 שנים', rate: 'נמוכה בהתחלה, עשויה לעלות' },
-  prime:       { amount: 'מינ׳ ₪100K',  years: 'גמיש לפירעון מוקדם', rate: 'פריים ± מרווח הבנק' },
-  eligibility: { amount: 'עד ₪800K',    years: 'עד 28 שנה בד&quot;כ', rate: 'ריבית מסובסדת מהמדינה' },
-};
+function getValidators(labels: MortgageLabels): Record<string, (v: number) => string | undefined> {
+  return {
+    amount:      (v) => v < 100000 ? labels.errors.amountMin : v > 5000000 ? labels.errors.amountMax : undefined,
+    rate:        (v) => v < 0.1    ? labels.errors.rateMin   : v > 15     ? labels.errors.rateMax    : undefined,
+    years:       (v) => v < 1      ? labels.errors.yearsMin  : v > 30     ? labels.errors.yearsMax   : undefined,
+    primeBase:   (v) => v < 0      ? labels.errors.primeBaseNeg : v > 15  ? labels.errors.primeBaseMax : undefined,
+    primeSpread: (v) => v < -3     ? labels.errors.spreadMin : v > 3      ? labels.errors.spreadMax   : undefined,
+  };
+}
 
 /* ═══════════════════════════════════════════════════════════════════════════
    TrackCard - credit card style, hover lift, per-track focus glow
 ═══════════════════════════════════════════════════════════════════════════ */
 function TrackCard({
-  track, result, onUpdate, onRemove, canRemove,
+  track, result, onUpdate, onRemove, canRemove, labels,
 }: {
   track: MortgageTrack;
   result: TrackResult;
   onUpdate: (id: string, updates: Partial<MortgageTrack>) => void;
   onRemove: (id: string) => void;
   canRemove: boolean;
+  labels: MortgageLabels;
 }) {
   const [errors, setErrors] = useState<FieldErrors>({});
   const [primeExpanded, setPrimeExpanded] = useState(false);
+  const validators = getValidators(labels);
 
   const handleBlur   = (field: string, value: number) => {
     const error = validators[field]?.(value);
@@ -263,7 +271,7 @@ function TrackCard({
   };
 
   const effectiveRate = (track.primeBase || 6) + (track.primeSpread || 0);
-  const hints = INPUT_HINTS[track.type];
+  const hints = labels.hints[track.type];
 
   return (
     /*
@@ -289,7 +297,7 @@ function TrackCard({
             className="p-1.5 rounded-lg bg-white/5 hover:bg-red-500/20 text-white/30
                        hover:text-red-300 transition-all duration-150 cursor-pointer
                        press-effect"
-            aria-label="הסר מסלול"
+            aria-label={labels.trackCard.removeTrack}
           >
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -303,7 +311,7 @@ function TrackCard({
 
         {/* 1. Amount */}
         <div>
-          <label className="cc-label">סכום (₪)</label>
+          <label className="cc-label">{labels.inputs.amount}</label>
           <input
             type="number" dir="ltr"
             value={track.amount}
@@ -328,7 +336,7 @@ function TrackCard({
 
         {/* 2. Years */}
         <div>
-          <label className="cc-label">שנים</label>
+          <label className="cc-label">{labels.inputs.years}</label>
           <input
             type="number" dir="ltr"
             value={track.years}
@@ -357,12 +365,12 @@ function TrackCard({
               <div className="bg-white/5 border border-white/10 rounded-xl p-4">
                 <div className="flex items-center justify-between mb-3">
                   <div className="flex items-center gap-2">
-                    <span className="text-xs font-semibold text-violet-300">פרטי ריבית הפריים</span>
+                    <span className="text-xs font-semibold text-violet-300">{labels.inputs.primeDetailsTitle}</span>
                     <span
                       className="inline-flex items-center justify-center w-4 h-4 rounded-full
                                  bg-white/10 text-white/50 cursor-help text-[9px] font-bold select-none"
-                      title="ריבית הפריים נקבעת ע״י בנק ישראל ועומדת על ריבית בנק ישראל + 1.5%. ניתן לפירעון מוקדם ללא קנסות."
-                      aria-label="מידע על ריבית פריים"
+                      title={labels.inputs.primeTooltip}
+                      aria-label={labels.inputs.primeDetailsTitle}
                     >
                       ?
                     </span>
@@ -375,12 +383,12 @@ function TrackCard({
                     <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
                     </svg>
-                    הסתר
+                    {labels.inputs.hidePrimeDetails}
                   </button>
                 </div>
                 <div className="grid grid-cols-2 gap-3">
                   <div>
-                    <label className="cc-label">ריבית פריים (%)</label>
+                    <label className="cc-label">{labels.inputs.primeRate}</label>
                     <input
                       type="number" dir="ltr"
                       value={track.primeBase}
@@ -389,11 +397,11 @@ function TrackCard({
                       min={0} max={15} step={0.25}
                       className={`cc-input${errors.primeBase ? ' border-red-400/60' : ''}`}
                     />
-                    {!errors.primeBase && <p className="text-[10px] text-white/20 mt-1">פריים נוכחי ≈ 6%</p>}
+                    {!errors.primeBase && <p className="text-[10px] text-white/20 mt-1">{labels.hints.prime.rate}</p>}
                     {errors.primeBase && <p className="cc-error">{errors.primeBase}</p>}
                   </div>
                   <div>
-                    <label className="cc-label">מרווח מפריים (%)</label>
+                    <label className="cc-label">{labels.inputs.primeSpread}</label>
                     <input
                       type="number" dir="ltr"
                       value={track.primeSpread}
@@ -412,7 +420,7 @@ function TrackCard({
             ) : (
               <div className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 flex items-center justify-between">
                 <div>
-                  <p className="text-[11px] text-white/35 mb-0.5">ריבית אפקטיבית</p>
+                  <p className="text-[11px] text-white/35 mb-0.5">{labels.inputs.effectiveRate}</p>
                   <p className="text-base font-bold text-violet-300">{formatPercent(effectiveRate)}</p>
                 </div>
                 <button
@@ -423,14 +431,14 @@ function TrackCard({
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
-                  הצג פרטי ריבית פריים
+                  {labels.inputs.showPrimeDetails}
                 </button>
               </div>
             )}
           </div>
         ) : (
           <div>
-            <label className="cc-label">ריבית שנתית (%)</label>
+            <label className="cc-label">{labels.inputs.annualRate}</label>
             <input
               type="number" dir="ltr"
               value={track.rate}
@@ -457,11 +465,11 @@ function TrackCard({
       {/* ── Payment - pinned to card bottom ── */}
       <div className="mt-auto flex items-end justify-between pt-4 border-t border-white/10">
         <div>
-          <p className="text-[11px] text-white/30 mb-1">החזר חודשי</p>
+          <p className="text-[11px] text-white/30 mb-1">{labels.results.monthlyPayment}</p>
           <p className="display-number text-white text-xl">{formatCurrency(result.monthlyPayment)}</p>
         </div>
         <div className="text-left">
-          <p className="text-[11px] text-white/30 mb-1">סה&quot;כ ריבית</p>
+          <p className="text-[11px] text-white/30 mb-1">{labels.results.totalInterest}</p>
           <p className="text-sm font-semibold text-red-400/80">{formatCurrency(result.totalInterest)}</p>
         </div>
       </div>
@@ -472,14 +480,14 @@ function TrackCard({
 /* ═══════════════════════════════════════════════════════════════════════════
    MixBar
 ═══════════════════════════════════════════════════════════════════════════ */
-function MixBar({ tracks, results }: { tracks: MortgageTrack[]; results: TrackResult[] }) {
+function MixBar({ tracks, results, labels }: { tracks: MortgageTrack[]; results: TrackResult[]; labels: MortgageLabels }) {
   const totalAmount = tracks.reduce((s, t) => s + t.amount, 0);
   if (totalAmount === 0) return null;
 
   return (
     <div className="card mb-6">
       <div className="flex items-center justify-between mb-3">
-        <h3 className="text-sm font-semibold text-accent-600">תמהיל המשכנתא</h3>
+        <h3 className="text-sm font-semibold text-accent-600">{labels.mixBar.title}</h3>
         <span className="text-sm font-medium text-accent-500">{formatCurrency(totalAmount)}</span>
       </div>
       <div className="flex h-2.5 rounded-full overflow-hidden bg-accent-100 mb-3">
@@ -508,12 +516,12 @@ function MixBar({ tracks, results }: { tracks: MortgageTrack[]; results: TrackRe
 /* ═══════════════════════════════════════════════════════════════════════════
    AmortizationTable
 ═══════════════════════════════════════════════════════════════════════════ */
-function AmortizationTable({ rows, showMonthly }: { rows: AmortizationRow[]; showMonthly: boolean }) {
+function AmortizationTable({ rows, showMonthly, labels }: { rows: AmortizationRow[]; showMonthly: boolean; labels: MortgageLabels }) {
   return (
     <table className="w-full text-sm">
       <thead>
         <tr className="border-b border-accent-200">
-          {[showMonthly ? 'חודש' : 'שנה', 'תשלום', 'קרן', 'ריבית', 'יתרה'].map((h) => (
+          {[showMonthly ? labels.table.month : labels.table.year, labels.table.payment, labels.table.principal, labels.table.interest, labels.table.balance].map((h) => (
             <th key={h} className="py-3 px-3 text-right font-semibold text-accent-400 text-xs uppercase tracking-wide">
               {h}
             </th>
@@ -538,10 +546,10 @@ function AmortizationTable({ rows, showMonthly }: { rows: AmortizationRow[]; sho
 /* ═══════════════════════════════════════════════════════════════════════════
    Main export
 ═══════════════════════════════════════════════════════════════════════════ */
-export default function MortgageCalculator() {
+export default function MortgageCalculator({ labels = hebrewLabels }: { labels?: MortgageLabels } = {}) {
   const [tracks, setTracks] = useState<MortgageTrack[]>([
-    createTrack('fixed'),
-    createTrack('prime'),
+    createTrack('fixed', labels),
+    createTrack('prime', labels),
   ]);
   const [addMenuOpen,    setAddMenuOpen]    = useState(false);
   const [tableExpanded,  setTableExpanded]  = useState(false);
@@ -557,9 +565,9 @@ export default function MortgageCalculator() {
   }, []);
 
   const addTrack = useCallback((type: TrackType) => {
-    setTracks((prev) => [...prev, createTrack(type)]);
+    setTracks((prev) => [...prev, createTrack(type, labels)]);
     setAddMenuOpen(false);
-  }, []);
+  }, [labels]);
 
   const results = useMemo(() => tracks.map(calculateTrack), [tracks]);
 
@@ -592,7 +600,7 @@ export default function MortgageCalculator() {
 
   return (
     <>
-      <MixBar tracks={tracks} results={results} />
+      <MixBar tracks={tracks} results={results} labels={labels} />
 
       {/* ── Track cards grid ── */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 items-stretch">
@@ -606,6 +614,7 @@ export default function MortgageCalculator() {
               onUpdate={updateTrack}
               onRemove={removeTrack}
               canRemove={tracks.length > 1}
+              labels={labels}
             />
           );
         })}
@@ -621,16 +630,16 @@ export default function MortgageCalculator() {
           <svg className="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v16m8-8H4" />
           </svg>
-          <span className="font-semibold text-sm">הוסיפו מסלול</span>
+          <span className="font-semibold text-sm">{labels.addTrack.button}</span>
         </button>
       </div>
 
       {/* Add track menu */}
       {addMenuOpen && (
         <div className="card mb-6">
-          <h3 className="text-sm font-semibold text-accent-600 mb-3">בחרו סוג מסלול להוסיף</h3>
+          <h3 className="text-sm font-semibold text-accent-600 mb-3">{labels.addTrack.selectTitle}</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-            {TRACK_TYPES.map((tt) => (
+            {getTrackTypes(labels).map((tt) => (
               <button
                 key={tt.value}
                 onClick={() => addTrack(tt.value)}
@@ -651,7 +660,7 @@ export default function MortgageCalculator() {
       {/* ── Results hero - dark, Revolut-style ── */}
       <div className="bg-[#0F1117] rounded-2xl p-8 mb-4 shadow-hero">
         <p className="text-white/30 text-[11px] font-semibold uppercase tracking-[0.18em] mb-4 text-center">
-          החזר חודשי כולל
+          {labels.results.monthlyTotal}
         </p>
 
         {/* Split ₪ symbol - smaller + lighter than the number */}
@@ -675,7 +684,7 @@ export default function MortgageCalculator() {
         </div>
 
         <p className="text-white/25 text-sm text-center">
-          {tracks.length} מסלולים · {formatCurrency(totalLoan)} סה&quot;כ הלוואה
+          {labels.results.tracksAndLoan(tracks.length, formatCurrency(totalLoan))}
         </p>
       </div>
 
@@ -684,31 +693,44 @@ export default function MortgageCalculator() {
           shekel figures never overflow. sm+: centered 3-column cards. */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-8">
         <div className="card p-4 sm:p-6 flex items-center justify-between gap-3 sm:block sm:text-center">
-          <p className="text-xs font-medium text-accent-400 sm:mb-1 shrink-0">עלות כוללת</p>
+          <p className="text-xs font-medium text-accent-400 sm:mb-1 shrink-0">{labels.results.totalCost}</p>
           <p className="text-lg sm:text-xl font-bold text-accent-900 tabular-nums text-left sm:text-center">{formatCurrency(totalCost)}</p>
         </div>
         <div className="card p-4 sm:p-6 flex items-center justify-between gap-3 sm:block sm:text-center">
-          <p className="text-xs font-medium text-accent-400 sm:mb-1 shrink-0">סה&quot;כ ריבית</p>
+          <p className="text-xs font-medium text-accent-400 sm:mb-1 shrink-0">{labels.results.totalInterestLabel}</p>
           <p className="text-lg sm:text-xl font-bold text-red-500 tabular-nums text-left sm:text-center">{formatCurrency(totalInterest)}</p>
         </div>
         <div className="card p-4 sm:p-6 flex items-center justify-between gap-3 sm:block sm:text-center">
-          <p className="text-xs font-medium text-accent-400 sm:mb-1 shrink-0">% ריבית מהקרן</p>
+          <p className="text-xs font-medium text-accent-400 sm:mb-1 shrink-0">{labels.results.interestPercent}</p>
           <p className="text-lg sm:text-xl font-bold text-accent-700 tabular-nums text-left sm:text-center">
             {totalLoan > 0 ? ((totalInterest / totalLoan) * 100).toFixed(0) : '0'}%
           </p>
         </div>
       </div>
 
+      {/* ── Charts ── */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+        <DonutChart principal={totalLoan} interest={totalInterest} locale={labels.locale} />
+        <TrackBarChart
+          tracks={tracks.map((t, i) => ({
+            label: t.label,
+            monthly: results[i].monthlyPayment,
+            color: TRACK_HEX[t.type],
+          }))}
+          locale={labels.locale}
+        />
+      </div>
+
       {/* ── Amortization table ── */}
       <div className="card">
         <div className="flex items-center justify-between mb-5">
-          <h2 className="text-lg font-bold text-accent-900">לוח סילוקין משולב</h2>
+          <h2 className="text-lg font-bold text-accent-900">{labels.table.title}</h2>
           {tableExpanded && (
             <button
               onClick={() => setShowMonthly(!showMonthly)}
               className="text-sm text-accent-500 hover:text-accent-700 font-medium transition-colors duration-150 cursor-pointer"
             >
-              {showMonthly ? 'תצוגה שנתית' : 'פירוט חודשי'}
+              {showMonthly ? labels.table.annual : labels.table.monthly}
             </button>
           )}
         </div>
@@ -721,13 +743,13 @@ export default function MortgageCalculator() {
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M3 6h18M3 14h18M3 18h18" />
           </svg>
-          פתח לוח סילוקין
+          {labels.table.openTable}
         </button>
 
         {/* Desktop: inline table */}
         <div className="hidden sm:block">
           <div className="overflow-x-auto -mx-6 px-6">
-            <AmortizationTable rows={tableExpanded ? tableRows : previewRows} showMonthly={showMonthly} />
+            <AmortizationTable rows={tableExpanded ? tableRows : previewRows} showMonthly={showMonthly} labels={labels} />
           </div>
           {annualRows.length > 2 && (
             <div className="mt-4 pt-3 border-t border-accent-100 flex justify-center">
@@ -738,14 +760,14 @@ export default function MortgageCalculator() {
               >
                 {tableExpanded ? (
                   <>
-                    הצג פחות
+                    {labels.table.showLess}
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
                     </svg>
                   </>
                 ) : (
                   <>
-                    הצג לוח מלא ({annualRows.length} שנים)
+                    {labels.table.showFull(annualRows.length)}
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
@@ -768,20 +790,20 @@ export default function MortgageCalculator() {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="p-4 border-b border-accent-100 flex items-center justify-between shrink-0">
-              <h3 className="font-bold text-accent-900">לוח סילוקין משולב</h3>
+              <h3 className="font-bold text-accent-900">{labels.table.title}</h3>
               <div className="flex items-center gap-3">
                 <button
                   onClick={() => setShowMonthly(!showMonthly)}
                   className="text-xs font-medium text-accent-500 hover:text-accent-700 transition-colors duration-150
                              cursor-pointer px-2 py-1 rounded-lg border border-accent-200 hover:border-accent-300 press-effect"
                 >
-                  {showMonthly ? 'שנתי' : 'חודשי'}
+                  {showMonthly ? labels.table.annual : labels.table.monthly}
                 </button>
                 <button
                   onClick={() => setShowTableModal(false)}
                   className="p-1.5 rounded-lg hover:bg-accent-100 text-accent-400 hover:text-accent-600
                              transition-colors duration-150 cursor-pointer press-effect"
-                  aria-label="סגור"
+                  aria-label={labels.table.close}
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -790,7 +812,7 @@ export default function MortgageCalculator() {
               </div>
             </div>
             <div className="overflow-auto flex-1 px-4 pb-4">
-              <AmortizationTable rows={tableRows} showMonthly={showMonthly} />
+              <AmortizationTable rows={tableRows} showMonthly={showMonthly} labels={labels} />
             </div>
           </div>
         </div>
@@ -800,14 +822,14 @@ export default function MortgageCalculator() {
       <div className="fixed bottom-0 inset-x-0 z-30 sm:hidden bg-[#0F1117]/95 backdrop-blur-sm
                       border-t border-white/10 px-5 py-3 flex items-center justify-between">
         <div>
-          <p className="text-white/30 text-[10px] font-semibold uppercase tracking-[0.12em]">החזר חודשי</p>
+          <p className="text-white/30 text-[10px] font-semibold uppercase tracking-[0.12em]">{labels.mobileBar.monthlyPayment}</p>
           <div className="flex items-end gap-0.5 tabular-nums" style={{ direction: 'ltr' }}>
             <span className="text-white/30 font-light text-xs self-end mb-0.5" aria-hidden="true">₪</span>
             <span className="display-number text-white text-xl leading-tight">{formatNumber(roundedMonthly)}</span>
           </div>
         </div>
         <div className="text-left">
-          <p className="text-white/25 text-[10px]">{tracks.length} מסלולים</p>
+          <p className="text-white/25 text-[10px]">{labels.mobileBar.tracks(tracks.length)}</p>
           <p className="text-white/45 text-xs font-medium">{formatCurrency(totalLoan)}</p>
         </div>
       </div>

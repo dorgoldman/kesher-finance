@@ -13,30 +13,66 @@ export const metadata: Metadata = generateSEOMetadata({
   canonical: '/tools/mortgage-calculator',
 });
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'WebApplication',
-  name: 'מחשבון משכנתא - מקסיט',
-  url: `${SITE_URL}/tools/mortgage-calculator`,
-  description: 'מחשבון משכנתא חינמי בעברית עם תמהיל מסלולים ולוח סילוקין מפורט',
-  applicationCategory: 'FinanceApplication',
-  operatingSystem: 'All',
-  offers: {
-    '@type': 'Offer',
-    price: '0',
-    priceCurrency: 'ILS',
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'מחשבון משכנתא - מקסיט',
+    url: `${SITE_URL}/tools/mortgage-calculator`,
+    description: 'מחשבון משכנתא חינמי בעברית עם תמהיל מסלולים ולוח סילוקין מפורט',
+    applicationCategory: 'FinanceApplication',
+    operatingSystem: 'All',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'ILS' },
+    publisher: { '@type': 'Organization', name: SITE_NAME },
+    inLanguage: 'he',
   },
-  publisher: {
-    '@type': 'Organization',
-    name: SITE_NAME,
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'ראשי', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'מחשבונים', item: `${SITE_URL}/tools` },
+      { '@type': 'ListItem', position: 3, name: 'מחשבון משכנתא' },
+    ],
   },
-  inLanguage: 'he',
-};
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'איך מחשבים החזר חודשי של משכנתא?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'לפי שיטת שפיצר: החזר = קרן × (ריבית חודשית × (1 + ריבית חודשית)^מספר תשלומים) ÷ ((1 + ריבית חודשית)^מספר תשלומים − 1). לדוגמה, משכנתא של ₪1,000,000 ל-25 שנה בריבית 5.5% = החזר חודשי של כ-₪6,141.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'מה ההבדל בין מסלולי המשכנתא?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'ארבעה מסלולים עיקריים: ריבית קבועה לא צמודה (יציבות מלאה), ריבית משתנה כל 5 שנים (נמוכה בהתחלה, עשויה לעלות), פריים (צמוד לריבית בנק ישראל, גמיש לפירעון מוקדם), וזכאות (הלוואה מסובסדת בריבית נמוכה).',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'מהו תמהיל משכנתא חכם?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'תמהיל חכם מפזר סיכון: שליש קבועה (יציבות), שליש פריים (גמישות לפירעון מוקדם), שליש משתנה (חיסכון). ודאו שההחזר לא עולה על 30% מההכנסה נטו.',
+        },
+      },
+    ],
+  },
+];
 
 export default function MortgageCalculatorPage() {
   return (
     <div className="container-page py-10">
-      <JsonLd data={jsonLd} />
+      {jsonLd.map((schema, i) => (
+        <JsonLd key={i} data={schema} />
+      ))}
 
       <Breadcrumbs
         items={[
@@ -134,6 +170,38 @@ export default function MortgageCalculatorPage() {
                   <span>קחו בחשבון עלויות נלוות - שמאי, עורך דין, ביטוח משכנתא</span>
                 </li>
               </ul>
+            </div>
+            <div>
+              <h2 className="text-xl font-bold text-accent-900 mb-4">שאלות נפוצות</h2>
+              <div className="space-y-4">
+
+                <div className="card">
+                  <h3 className="font-bold text-accent-800 mb-2">איך מחשבים החזר חודשי של משכנתא?</h3>
+                  <p className="text-sm text-accent-500 leading-relaxed">
+                    לפי שיטת שפיצר: החזר = קרן × (ריבית חודשית × (1 + ריבית חודשית)^מספר תשלומים)
+                    ÷ ((1 + ריבית חודשית)^מספר תשלומים − 1). לדוגמה, משכנתא של ₪1,000,000 ל-25
+                    שנה בריבית 5.5% = החזר חודשי של כ-₪6,141.
+                  </p>
+                </div>
+
+                <div className="card">
+                  <h3 className="font-bold text-accent-800 mb-2">מה ההבדל בין מסלולי המשכנתא?</h3>
+                  <p className="text-sm text-accent-500 leading-relaxed">
+                    ארבעה מסלולים עיקריים: ריבית קבועה לא צמודה (יציבות מלאה), ריבית משתנה
+                    כל 5 שנים (נמוכה בהתחלה, עשויה לעלות), פריים (צמוד לריבית בנק ישראל,
+                    גמיש לפירעון מוקדם), וזכאות (הלוואה מסובסדת בריבית נמוכה).
+                  </p>
+                </div>
+
+                <div className="card">
+                  <h3 className="font-bold text-accent-800 mb-2">מהו תמהיל משכנתא חכם?</h3>
+                  <p className="text-sm text-accent-500 leading-relaxed">
+                    תמהיל חכם מפזר סיכון: שליש קבועה (יציבות), שליש פריים (גמישות לפירעון
+                    מוקדם), שליש משתנה (חיסכון). ודאו שההחזר לא עולה על 30% מההכנסה נטו.
+                  </p>
+                </div>
+
+              </div>
             </div>
           </section>
 

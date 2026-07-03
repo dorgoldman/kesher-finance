@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Heebo } from 'next/font/google';
+import { Heebo, Cairo } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
 import { SITE_NAME, SITE_DESCRIPTION, SITE_URL } from '@/lib/constants';
@@ -11,6 +11,12 @@ const heebo = Heebo({
   subsets: ['hebrew', 'latin'],
   display: 'swap',
   variable: '--font-heebo',
+});
+
+const cairo = Cairo({
+  subsets: ['arabic', 'latin'],
+  display: 'swap',
+  variable: '--font-cairo',
 });
 
 export const metadata: Metadata = {
@@ -45,7 +51,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="he" dir="rtl" className={heebo.variable}>
+    <html lang="he" dir="rtl" className={`${heebo.variable} ${cairo.variable}`}>
       <body className="font-heebo min-h-screen flex flex-col">
         <script
           type="application/ld+json"

@@ -29,26 +29,27 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-white/70 mb-4 uppercase tracking-[0.08em]">מחשבונים</h3>
             <ul className="space-y-3">
               <li>
-                <Link
-                  href="/tools/mortgage-calculator"
-                  className="text-sm text-white/35 hover:text-white transition-colors duration-200 cursor-pointer"
-                >
+                <Link href="/tools/mortgage-calculator" className="text-sm text-white/35 hover:text-white transition-colors duration-200 cursor-pointer">
                   מחשבון משכנתא
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/tools/loan-calculator"
-                  className="text-sm text-white/35 hover:text-white transition-colors duration-200 cursor-pointer"
-                >
+                <Link href="/tools/mortgage-refinance-calculator" className="text-sm text-white/35 hover:text-white transition-colors duration-200 cursor-pointer">
+                  מחשבון מחזור משכנתא
+                </Link>
+              </li>
+              <li>
+                <Link href="/tools/young-couple-mortgage" className="text-sm text-white/35 hover:text-white transition-colors duration-200 cursor-pointer">
+                  מחשבון לזוג צעיר
+                </Link>
+              </li>
+              <li>
+                <Link href="/tools/loan-calculator" className="text-sm text-white/35 hover:text-white transition-colors duration-200 cursor-pointer">
                   מחשבון הלוואה
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/tools/salary-calculator"
-                  className="text-sm text-white/35 hover:text-white transition-colors duration-200 cursor-pointer"
-                >
+                <Link href="/tools/salary-calculator" className="text-sm text-white/35 hover:text-white transition-colors duration-200 cursor-pointer">
                   מחשבון שכר נטו
                 </Link>
               </li>
@@ -99,13 +100,10 @@ export default function Footer() {
 
         </div>
 
-        {/* Secondary row: tools + legal links */}
+        {/* Secondary row: Arabic calculator + tools hub */}
         <div className="mt-10 pt-8 border-t border-white/6 flex flex-wrap gap-x-6 gap-y-2">
           <Link href="/tools" className="text-xs text-white/30 hover:text-white transition-colors duration-200 cursor-pointer">כל הכלים</Link>
-          <Link href="/tools/mortgage-calculator" className="text-xs text-white/30 hover:text-white transition-colors duration-200 cursor-pointer">מחשבון משכנתא</Link>
-          <Link href="/tools/loan-calculator" className="text-xs text-white/30 hover:text-white transition-colors duration-200 cursor-pointer">מחשבון הלוואה</Link>
-          <Link href="/tools/salary-calculator" className="text-xs text-white/30 hover:text-white transition-colors duration-200 cursor-pointer">מחשבון שכר נטו</Link>
-          <Link href="/tools/mortgage-refinance-calculator" className="text-xs text-white/30 hover:text-white transition-colors duration-200 cursor-pointer">מחשבון מחזור משכנתא</Link>
+          <Link href="/ar/tools/mortgage-calculator" className="text-xs text-white/30 hover:text-white transition-colors duration-200 cursor-pointer">حاسبة القرض العقاري</Link>
           <Link href="/about" className="text-xs text-white/30 hover:text-white transition-colors duration-200 cursor-pointer">אודות</Link>
           <Link href="/contact" className="text-xs text-white/30 hover:text-white transition-colors duration-200 cursor-pointer">צור קשר</Link>
           <Link href="/privacy" className="text-xs text-white/30 hover:text-white transition-colors duration-200 cursor-pointer">מדיניות פרטיות</Link>
