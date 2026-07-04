@@ -107,6 +107,7 @@ export default function Footer() {
           <Link href="/about" className="text-xs text-white/30 hover:text-white transition-colors duration-200 cursor-pointer">אודות</Link>
           <Link href="/contact" className="text-xs text-white/30 hover:text-white transition-colors duration-200 cursor-pointer">צור קשר</Link>
           <Link href="/privacy" className="text-xs text-white/30 hover:text-white transition-colors duration-200 cursor-pointer">מדיניות פרטיות</Link>
+          <Link href="/terms" className="text-xs text-white/30 hover:text-white transition-colors duration-200 cursor-pointer">תנאי שימוש</Link>
         </div>
       </div>
 
@@ -121,6 +122,9 @@ export default function Footer() {
           <div className="flex items-center gap-4">
             <Link href="/privacy" className="hover:text-white/40 transition-colors duration-200 cursor-pointer">
               מדיניות פרטיות
+            </Link>
+            <Link href="/terms" className="hover:text-white/40 transition-colors duration-200 cursor-pointer">
+              תנאי שימוש
             </Link>
             <Link href="/about" className="hover:text-white/40 transition-colors duration-200 cursor-pointer">
               אודות
