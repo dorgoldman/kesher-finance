@@ -7,15 +7,24 @@ interface Props {
   assumptions: string[];
   source: string;
   lastUpdated?: string;
+  locale?: 'he' | 'ar';
 }
+
+const CHROME = {
+  he: { toggle: 'איך חישבנו?', formula: 'נוסחה', assumptions: 'הנחות חישוב', updated: 'עודכן לאחרונה', defaultDate: 'מאי 2026' },
+  ar: { toggle: 'كيف حسبنا؟', formula: 'الصيغة', assumptions: 'افتراضات الحساب', updated: 'آخر تحديث', defaultDate: 'مايو 2026' },
+};
 
 export default function CalcMethodology({
   formula,
   assumptions,
   source,
-  lastUpdated = 'מאי 2026',
+  lastUpdated,
+  locale = 'he',
 }: Props) {
   const [open, setOpen] = useState(false);
+  const t = CHROME[locale];
+  const updatedText = lastUpdated ?? t.defaultDate;
 
   return (
     <div className="mt-8 border border-accent-200 rounded-2xl overflow-hidden">
@@ -25,7 +34,7 @@ export default function CalcMethodology({
                    hover:bg-accent-50 transition-colors duration-150 cursor-pointer text-right"
         aria-expanded={open}
       >
-        <span className="font-semibold text-accent-800 text-sm">איך חישבנו?</span>
+        <span className="font-semibold text-accent-800 text-sm">{t.toggle}</span>
         <svg
           className={`w-4 h-4 text-accent-400 shrink-0 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
           fill="none"
@@ -42,7 +51,7 @@ export default function CalcMethodology({
           {/* Formula */}
           <div>
             <p className="text-xs font-semibold text-accent-500 uppercase tracking-wide mb-1">
-              נוסחה
+              {t.formula}
             </p>
             <p className="text-sm text-accent-700 leading-relaxed">{formula}</p>
           </div>
@@ -50,7 +59,7 @@ export default function CalcMethodology({
           {/* Assumptions */}
           <div>
             <p className="text-xs font-semibold text-accent-500 uppercase tracking-wide mb-1">
-              הנחות חישוב
+              {t.assumptions}
             </p>
             <ul className="space-y-1">
               {assumptions.map((item, i) => (
@@ -65,7 +74,7 @@ export default function CalcMethodology({
           {/* Footer: source + timestamp */}
           <div className="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-accent-100">
             <p className="text-xs text-accent-400">{source}</p>
-            <p className="text-xs text-accent-400">עודכן לאחרונה: {lastUpdated}</p>
+            <p className="text-xs text-accent-400">{t.updated}: {updatedText}</p>
           </div>
 
         </div>

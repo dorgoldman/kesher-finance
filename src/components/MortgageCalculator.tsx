@@ -411,7 +411,7 @@ function TrackCard({
                       className={`cc-input${errors.primeSpread ? ' border-red-400/60' : ''}`}
                     />
                     <p className="text-[11px] text-violet-300/70 mt-1 font-medium">
-                      ריבית אפקטיבית: {formatPercent(effectiveRate)}
+                      {labels.inputs.effectiveRate}: {formatPercent(effectiveRate)}
                     </p>
                     {errors.primeSpread && <p className="cc-error">{errors.primeSpread}</p>}
                   </div>

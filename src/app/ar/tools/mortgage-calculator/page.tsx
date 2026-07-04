@@ -105,6 +105,7 @@ export default function ArabicMortgageCalculatorPage() {
             'بدون احتساب غرامات السداد المبكر',
           ]}
           source="بيانات فائدة البريم: بنك إسرائيل"
+          locale="ar"
         />
 
         <AdSlot variant="post-results-mobile" className="mt-6" />

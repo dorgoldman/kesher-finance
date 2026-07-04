@@ -98,7 +98,7 @@ export default function YoungCoupleCalculator() {
         <h2 className="font-bold text-accent-900 text-lg mb-5">פרטי הרכישה</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
           <div>
-            <label className="cc-label">מחיר הדירה (₪)</label>
+            <label className="block text-sm font-semibold text-accent-700 mb-1.5">מחיר הדירה (₪)</label>
             <input
               type="number"
               className="input-field"
@@ -109,7 +109,7 @@ export default function YoungCoupleCalculator() {
             />
           </div>
           <div>
-            <label className="cc-label">הון עצמי (₪)</label>
+            <label className="block text-sm font-semibold text-accent-700 mb-1.5">הון עצמי (₪)</label>
             <input
               type="number"
               className="input-field"
@@ -125,7 +125,7 @@ export default function YoungCoupleCalculator() {
             )}
           </div>
           <div>
-            <label className="cc-label">הכנסה חודשית נטו (₪)</label>
+            <label className="block text-sm font-semibold text-accent-700 mb-1.5">הכנסה חודשית נטו (₪)</label>
             <input
               type="number"
               className="input-field"
@@ -147,7 +147,7 @@ export default function YoungCoupleCalculator() {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
           <div>
-            <label className="cc-label">סכום זכאות (₪)</label>
+            <label className="block text-sm font-semibold text-accent-700 mb-1.5">סכום זכאות (₪)</label>
             <input
               type="number"
               className="input-field"
@@ -160,7 +160,7 @@ export default function YoungCoupleCalculator() {
             <p className="text-xs text-accent-400 mt-1">עד ₪800,000 לפי דירוג</p>
           </div>
           <div>
-            <label className="cc-label">ריבית זכאות (%)</label>
+            <label className="block text-sm font-semibold text-accent-700 mb-1.5">ריבית זכאות (%)</label>
             <input
               type="number"
               className="input-field"
@@ -173,7 +173,7 @@ export default function YoungCoupleCalculator() {
             <p className="text-xs text-accent-400 mt-1">בד״כ 3%–4.5%</p>
           </div>
           <div>
-            <label className="cc-label">תקופה (שנים)</label>
+            <label className="block text-sm font-semibold text-accent-700 mb-1.5">תקופה (שנים)</label>
             <input
               type="number"
               className="input-field"
@@ -193,7 +193,7 @@ export default function YoungCoupleCalculator() {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           <div>
-            <label className="cc-label">ריבית בנקאית (%)</label>
+            <label className="block text-sm font-semibold text-accent-700 mb-1.5">ריבית בנקאית (%)</label>
             <input
               type="number"
               className="input-field"
@@ -206,7 +206,7 @@ export default function YoungCoupleCalculator() {
             <p className="text-xs text-accent-400 mt-1">ריבית ממוצעת למשכנתא: 4.5%–5.5%</p>
           </div>
           <div>
-            <label className="cc-label">תקופה (שנים)</label>
+            <label className="block text-sm font-semibold text-accent-700 mb-1.5">תקופה (שנים)</label>
             <input
               type="number"
               className="input-field"
