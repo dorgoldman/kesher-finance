@@ -26,7 +26,7 @@ const jsonLd = [
     url: CANONICAL,
     inLanguage: 'he',
     datePublished: '2026-05-17',
-    dateModified: '2026-05-17',
+    dateModified: '2026-07-06',
     author: { '@type': 'Person', name: 'דור גולדמן', url: 'https://getmaxit.co.il/about' },
     publisher: { '@type': 'Organization', name: 'מקסיט. Maxit' },
   },
@@ -48,7 +48,7 @@ const jsonLd = [
         name: 'מה ריבית הפריים היום?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'ריבית הפריים עומדת על 6.5% (נכון לתחילת 2026). היא מורכבת מריבית בנק ישראל (4.75%) ועוד 1.5% קבוע.',
+          text: 'ריבית הפריים עומדת על 5.25% (נכון ליוני 2026, לאחר הורדת ריבית בנק ישראל ב-25.5.2026). היא מורכבת מריבית בנק ישראל (3.75%) ועוד 1.5% קבוע.',
         },
       },
       {
@@ -135,7 +135,7 @@ export default function RibitPrimePage() {
               <span>נכתב ונערך על ידי{' '}
                 <Link href="/about" className="underline underline-offset-2 hover:text-primary-600">דור גולדמן</Link></span>
               <span aria-hidden="true">·</span>
-              <span>עודכן: מאי 2026</span>
+              <span>עודכן: יולי 2026</span>
             </div>
           </header>
 
@@ -155,7 +155,7 @@ export default function RibitPrimePage() {
             ריביות על הלוואות ומשכנתאות בישראל.
           </p>
           <p className={p}>
-            כיום ריבית הפריים עומדת על 6.5% (ריבית בנק ישראל 5.75% פלוס 1.5% קבוע).
+            כיום ריבית הפריים עומדת על 5.25% (ריבית בנק ישראל 3.75% פלוס 1.5% קבוע).
             הבנקים לא ממציאים את הריבית שלהם. הם לוקחים את הפריים ומוסיפים עליו מרווח.
           </p>
           <p className={p}>
@@ -255,7 +255,7 @@ export default function RibitPrimePage() {
                   ['סוף 2022', '3.25%', '4.75%'],
                   ['שיא 2023', '4.75%', '6.25%'],
                   ['2024', '4.50%', '6.00%'],
-                  ['2026 (כיום)', '5.00%', '6.50%'],
+                  ['יוני 2026 (כיום)', '3.75%', '5.25%'],
                 ].map(([year, boi, prime], i) => (
                   <tr key={year} className={i % 2 === 0 ? '' : 'bg-accent-50/60'}>
                     <td className="border border-accent-100 px-4 py-2 text-accent-700">{year}</td>
@@ -276,7 +276,7 @@ export default function RibitPrimePage() {
             >
               החלטות ועדת המוניטרין, בנק ישראל
             </a>
-            .
+            . נבדק לאחרונה: יולי 2026.
           </p>
 
           {/* Section 6: worked example */}
@@ -292,10 +292,10 @@ export default function RibitPrimePage() {
             בתוך שנה אחת, ₪1,000 יותר כל חודש. מאותה הלוואה בדיוק.
           </p>
           <p className={p}>
-            כיום, עם פריים 6.5% ומינוס 1.5%, הריבית עומדת על 5%. ההחזר מתייצב על כ-₪3,500.
+            כיום, עם פריים 5.25% ומינוס 1.5%, הריבית עומדת על 3.75%. ההחזר מתייצב על כ-₪3,090.
           </p>
           <p className={p}>
-            מ-₪1,920 ל-₪3,500, גידול של 82% בהחזר החודשי, ללא שום שינוי בגובה ההלוואה.
+            מ-₪1,920 ל-₪3,090, גידול של כ-61% בהחזר החודשי, ללא שום שינוי בגובה ההלוואה.
             מי שהגביל את הפריים ל-30% מהתמהיל ספג עלייה של כ-₪300 בחודש, לא נוח, אבל ניהול אפשרי.
           </p>
 
@@ -331,8 +331,8 @@ export default function RibitPrimePage() {
             <div className="card">
               <h3 className="font-bold text-accent-800 mb-2">מה ריבית הפריים היום?</h3>
               <p className="text-sm text-accent-500 leading-relaxed">
-                ריבית הפריים עומדת על 6.5% (נכון לתחילת 2026). היא מורכבת מריבית בנק ישראל
-                (4.75%) ועוד 1.5% קבוע.
+                ריבית הפריים עומדת על 5.25% (נכון ליוני 2026). היא מורכבת מריבית בנק ישראל
+                (3.75%) ועוד 1.5% קבוע.
               </p>
             </div>
 
