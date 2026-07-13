@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import RelatedGuides from '@/components/RelatedGuides';
 import AdSlot from '@/components/AdSlot';
@@ -132,7 +131,7 @@ export default function KamaMashnektaPage() {
             </h1>
             <div className="flex flex-wrap items-center gap-1.5 text-sm text-accent-400">
               <span>נכתב ונערך על ידי{' '}
-                <Link href="/about" className="underline underline-offset-2 hover:text-primary-600">דור גולדמן</Link></span>
+                <a href="/about" className="underline underline-offset-2 hover:text-primary-600">דור גולדמן</a></span>
               <span aria-hidden="true">·</span>
               <span>עודכן: מאי 2026</span>
             </div>
@@ -173,7 +172,7 @@ export default function KamaMashnektaPage() {
                 מחשבון שכר נטו של מקסיט מחשב את זה תוך שניות.
               </p>
             </div>
-            <Link
+            <a
               href="/tools/salary-calculator"
               className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl
                          bg-primary-600 hover:bg-primary-700 text-white text-sm font-semibold
@@ -183,7 +182,7 @@ export default function KamaMashnektaPage() {
               <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </Link>
+            </a>
           </div>
 
           {/* Section 2 */}
@@ -297,10 +296,10 @@ export default function KamaMashnektaPage() {
           <p className={p}>
             לכן יועצים רבים ממליצים לסגור הלוואות קיימות לפני שמגישים בקשה למשכנתא, אם
             הדבר אפשרי. קרא עוד על{' '}
-            <Link href="/guides/משכנתא-ראשונה"
+            <a href="/guides/משכנתא-ראשונה"
               className="text-primary-600 hover:text-primary-700 underline underline-offset-2 transition-colors duration-150">
               משכנתא ראשונה
-            </Link>, המדריך המלא.
+            </a>, המדריך המלא.
           </p>
 
           {/* Section 5 */}
@@ -341,18 +340,18 @@ export default function KamaMashnektaPage() {
           <h2 id="ribit-meshane" className={h2}>מה קורה לאחר שהריבית משתנה?</h2>
           <p className={p}>
             אם לקחת משכנתא עם מסלול פריים, ההחזר שלך ישתנה עם שינויי{' '}
-            <Link href="/guides/ריבית-פריים"
+            <a href="/guides/ריבית-פריים"
               className="text-primary-600 hover:text-primary-700 underline underline-offset-2 transition-colors duration-150">
               ריבית הפריים
-            </Link>
+            </a>
             . הבנק לוקח זה בחשבון ובודק שתוכל לעמוד גם אם הריבית תעלה.
           </p>
           <p className={p}>
             ואם כבר יש לך משכנתא ואתה מרגיש שההחזר גבוה מדי ביחס להכנסה, כדאי לבדוק{' '}
-            <Link href="/guides/מחזור-משכנתא"
+            <a href="/guides/מחזור-משכנתא"
               className="text-primary-600 hover:text-primary-700 underline underline-offset-2 transition-colors duration-150">
               מחזור משכנתא
-            </Link>, שינוי תנאי ההלוואה כדי להתאים להכנסה הנוכחית.
+            </a>, שינוי תנאי ההלוואה כדי להתאים להכנסה הנוכחית.
           </p>
 
           {/* Section 8: FAQ */}
@@ -406,7 +405,7 @@ export default function KamaMashnektaPage() {
           <div className="my-8 p-5 bg-accent-50 border border-accent-100 rounded-2xl">
             <p className="text-sm font-semibold text-accent-700 mb-3">קרא גם:</p>
             <div className="flex flex-col sm:flex-row gap-3">
-              <Link
+              <a
                 href="/guides/משכנתא-ראשונה"
                 className="flex items-center gap-2 text-sm text-primary-600 hover:text-primary-700
                            underline underline-offset-2 transition-colors duration-150"
@@ -415,8 +414,8 @@ export default function KamaMashnektaPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
                 משכנתא ראשונה, המדריך המלא לזוגות ורוכשים
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/guides/מחזור-משכנתא"
                 className="flex items-center gap-2 text-sm text-primary-600 hover:text-primary-700
                            underline underline-offset-2 transition-colors duration-150"
@@ -425,8 +424,8 @@ export default function KamaMashnektaPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
                 מחזור משכנתא: מתי זה משתלם ומתי זה מלכודת
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/guides/שפיצר-מול-קרן-שווה"
                 className="flex items-center gap-2 text-sm text-primary-600 hover:text-primary-700
                            underline underline-offset-2 transition-colors duration-150"
@@ -435,7 +434,7 @@ export default function KamaMashnektaPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
                 לוח שפיצר מול קרן שווה: ההשוואה האמיתית
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -496,7 +495,7 @@ export default function KamaMashnektaPage() {
               <p className="text-xs text-accent-500 mb-4 leading-relaxed">
                 הכניסו את ההכנסה שלכם וראו את המשכנתא המקסימלית בזמן אמת.
               </p>
-              <Link
+              <a
                 href="/tools/mortgage-calculator"
                 className="flex items-center justify-center gap-2 w-full px-4 py-2.5
                            bg-primary-600 hover:bg-primary-700 text-white text-sm font-semibold
@@ -506,7 +505,7 @@ export default function KamaMashnektaPage() {
                 <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </Link>
+              </a>
             </div>
 
           </div>

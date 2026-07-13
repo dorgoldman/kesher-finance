@@ -23,7 +23,7 @@ Google Search Console verification: `a2oR7FNyG2Bn8wvrR0MxQH24bH0KGd9uNbhU1XGLcbY
 
 | Layer | Tool | Notes |
 |---|---|---|
-| Framework | Next.js 15.4.11 (App Router, pinned exact) | `output: 'export'` — fully static, no SSR. **Do NOT upgrade to 15.5.x** — 15.5 breaks client-side navigation on the static export (every Link click lands on the raw RSC `.txt` payload, e.g. `/index.txt`, on Cloudflare Pages; observed live 2026-07-02 and reverted). Also `@cloudflare/next-on-pages` peer range caps at 15.5.2, so 15.5.3+ fails `npm clean-install` on CF. Stay on 15.4.11 until the adapter and the RSC-nav bug are both resolved. |
+| Framework | Next.js 15.4.11 (App Router, pinned exact) | `output: 'export'` — fully static, no SSR. **Correction (2026-07-13):** the RSC `.txt`-payload navigation bug is NOT specific to 15.5.x — it reproduced on 15.4.11 too (every `next/link` client-side transition could hard-navigate to the raw RSC `.txt` artifact instead of the route, a known `output:'export'` + non-Vercel-host issue, [vercel/next.js#53813](https://github.com/vercel/next.js/issues/53813)). **Fixed** by replacing all `next/link` `<Link>` usage with plain `<a href>` tags site-wide, which forces full-page navigation and sidesteps the buggy RSC-transition path entirely — never reintroduce `next/link` for internal navigation on this static-export site. Still avoid 15.5.x separately: `@cloudflare/next-on-pages` peer range caps at 15.5.2, so 15.5.3+ fails `npm clean-install` on CF. |
 | Hosting | Cloudflare Pages | Deploy: `npm run pages:build && npm run pages:deploy` |
 | Styling | Tailwind CSS v3 | Custom design tokens (see below) |
 | Font | Heebo (Google Fonts) | Hebrew + Latin subsets |

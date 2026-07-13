@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import JsonLd from '@/components/SEO';
 import { SITE_NAME, SITE_URL } from '@/lib/constants';
@@ -121,9 +120,9 @@ export default function AboutPage() {
           <li>
             <span className={strong}>תיקון טעויות.</span> מצאת אי-דיוק? כתוב לנו
             ונתקן. דף{' '}
-            <Link href="/contact" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">
+            <a href="/contact" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">
               צור קשר
-            </Link>{' '}
+            </a>{' '}
             פתוח לכולם.
           </li>
         </ul>
@@ -176,11 +175,11 @@ export default function AboutPage() {
         <div className="mt-10 p-5 bg-primary-50 border border-primary-100 rounded-2xl">
           <p className="text-sm font-semibold text-accent-800 mb-1">יש שאלה או תיקון?</p>
           <p className="text-sm text-accent-600 mb-3">נשמח לשמוע, אנחנו עונים תוך יום-יומיים.</p>
-          <Link href="/contact"
+          <a href="/contact"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary-600
                        hover:bg-primary-700 text-white text-sm font-semibold transition-colors duration-200">
             צור קשר
-          </Link>
+          </a>
         </div>
 
       </div>

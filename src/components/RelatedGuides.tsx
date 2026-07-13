@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { relatedGuides } from '@/lib/guides';
 
 interface RelatedGuidesProps {
@@ -24,7 +23,7 @@ export default function RelatedGuides({ currentHref, limit = 5 }: RelatedGuidesP
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {items.map((guide) => (
-          <Link
+          <a
             key={guide.href}
             href={guide.href}
             className="group flex items-start gap-3 p-4 rounded-2xl border border-accent-200/70
@@ -44,7 +43,7 @@ export default function RelatedGuides({ currentHref, limit = 5 }: RelatedGuidesP
               </span>
               <span className="block text-xs text-accent-400 mt-0.5">{guide.category}</span>
             </span>
-          </Link>
+          </a>
         ))}
       </div>
     </section>

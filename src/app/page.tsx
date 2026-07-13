@@ -1,5 +1,4 @@
 ﻿import type { Metadata } from 'next';
-import Link from 'next/link';
 import { SITE_NAME, SITE_URL } from '@/lib/constants';
 import JsonLd from '@/components/SEO';
 import HeroCalculator from '@/components/HeroCalculator';
@@ -129,17 +128,17 @@ export default function HomePage() {
               </p>
 
               <div className="flex flex-wrap gap-3">
-                <Link href="/tools/mortgage-calculator" className="btn-primary btn-shimmer press-effect text-base px-7">
+                <a href="/tools/mortgage-calculator" className="btn-primary btn-shimmer press-effect text-base px-7">
                   מחשבון משכנתא מלא
-                </Link>
-                <Link
+                </a>
+                <a
                   href="/guides"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold
                              text-white/60 hover:text-white border border-white/12 hover:border-white/25
                              transition-all duration-200 cursor-pointer min-h-[44px] text-base"
                 >
                   מדריכים
-                </Link>
+                </a>
               </div>
             </div>
 
@@ -212,7 +211,7 @@ export default function HomePage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {/* Live calculator cards */}
           {tools.map((tool) => (
-            <Link key={tool.href} href={tool.href} className="card-interactive group">
+            <a key={tool.href} href={tool.href} className="card-interactive group">
               <div className="w-11 h-11 bg-primary-50 rounded-xl flex items-center justify-center
                               text-primary-600 mb-4 group-hover:bg-primary-100 transition-colors duration-200 tool-icon-glow">
                 {tool.icon}
@@ -227,7 +226,7 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </div>
-            </Link>
+            </a>
           ))}
 
         </div>
@@ -250,7 +249,7 @@ export default function HomePage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
 
           {/* 1, הלוואות */}
-          <Link href="/guides/halvaot-madrich" className="card-interactive group flex flex-col">
+          <a href="/guides/halvaot-madrich" className="card-interactive group flex flex-col">
             <div className="flex items-center justify-between mb-4">
               <div className="w-10 h-10 bg-primary-50 rounded-xl flex items-center justify-center
                               text-primary-600 group-hover:bg-primary-100 transition-colors duration-200">
@@ -273,10 +272,10 @@ export default function HomePage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </div>
-          </Link>
+          </a>
 
           {/* 2, הלוואה חוץ בנקאית */}
-          <Link href="/guides/halvaah-hutz-bankait" className="card-interactive group flex flex-col">
+          <a href="/guides/halvaah-hutz-bankait" className="card-interactive group flex flex-col">
             <div className="flex items-center justify-between mb-4">
               <div className="w-10 h-10 bg-primary-50 rounded-xl flex items-center justify-center
                               text-primary-600 group-hover:bg-primary-100 transition-colors duration-200">
@@ -299,10 +298,10 @@ export default function HomePage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </div>
-          </Link>
+          </a>
 
           {/* 3, הלוואה מקרן השתלמות */}
-          <Link href="/guides/הלוואה-מקרן-השתלמות" className="card-interactive group flex flex-col">
+          <a href="/guides/הלוואה-מקרן-השתלמות" className="card-interactive group flex flex-col">
             <div className="flex items-center justify-between mb-4">
               <div className="w-10 h-10 bg-primary-50 rounded-xl flex items-center justify-center
                               text-primary-600 group-hover:bg-primary-100 transition-colors duration-200">
@@ -325,10 +324,10 @@ export default function HomePage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </div>
-          </Link>
+          </a>
 
           {/* 4, משכנתא ראשונה */}
-          <Link href="/guides/משכנתא-ראשונה" className="card-interactive group flex flex-col">
+          <a href="/guides/משכנתא-ראשונה" className="card-interactive group flex flex-col">
             <div className="flex items-center justify-between mb-4">
               <div className="w-10 h-10 bg-primary-50 rounded-xl flex items-center justify-center
                               text-primary-600 group-hover:bg-primary-100 transition-colors duration-200">
@@ -351,10 +350,10 @@ export default function HomePage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </div>
-          </Link>
+          </a>
 
           {/* 5, מחזור משכנתא */}
-          <Link href="/guides/מחזור-משכנתא" className="card-interactive group flex flex-col">
+          <a href="/guides/מחזור-משכנתא" className="card-interactive group flex flex-col">
             <div className="flex items-center justify-between mb-4">
               <div className="w-10 h-10 bg-primary-50 rounded-xl flex items-center justify-center
                               text-primary-600 group-hover:bg-primary-100 transition-colors duration-200">
@@ -377,10 +376,10 @@ export default function HomePage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </div>
-          </Link>
+          </a>
 
           {/* 6, ריבית אפקטיבית */}
-          <Link href="/guides/ריבית-אפקטיבית" className="card-interactive group flex flex-col">
+          <a href="/guides/ריבית-אפקטיבית" className="card-interactive group flex flex-col">
             <div className="flex items-center justify-between mb-4">
               <div className="w-10 h-10 bg-primary-50 rounded-xl flex items-center justify-center
                               text-primary-600 group-hover:bg-primary-100 transition-colors duration-200">
@@ -403,13 +402,13 @@ export default function HomePage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </div>
-          </Link>
+          </a>
 
         </div>
 
         {/* CTA to all guides */}
         <div className="text-center mt-10">
-          <Link
+          <a
             href="/guides"
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold
                        border border-accent-200 text-accent-700 hover:border-primary-300
@@ -420,7 +419,7 @@ export default function HomePage() {
             <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-          </Link>
+          </a>
         </div>
         </ScrollReveal>
 
@@ -438,7 +437,7 @@ export default function HomePage() {
               <h2 className="section-title mb-1">מדריכים אחרונים</h2>
               <p className="text-accent-500 text-sm">פורסמו לאחרונה באתר</p>
             </div>
-            <Link
+            <a
               href="/guides"
               className="hidden sm:inline-flex items-center gap-1.5 text-sm font-semibold
                          text-primary-600 hover:text-primary-700 transition-colors duration-150 cursor-pointer"
@@ -447,13 +446,13 @@ export default function HomePage() {
               <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </Link>
+            </a>
           </div>
 
           <div className="flex flex-col gap-4">
 
             {/* 1, משכנתא ראשונה */}
-            <Link href="/guides/משכנתא-ראשונה" className="card group hover:border-primary-200 transition-colors duration-200 cursor-pointer">
+            <a href="/guides/משכנתא-ראשונה" className="card group hover:border-primary-200 transition-colors duration-200 cursor-pointer">
               <div className="flex flex-col sm:flex-row sm:items-start gap-4">
                 <div className="flex-1 min-w-0">
                   <div className="flex flex-wrap items-center gap-2 mb-2">
@@ -474,10 +473,10 @@ export default function HomePage() {
                   </svg>
                 </div>
               </div>
-            </Link>
+            </a>
 
             {/* 2, כמה משכנתא לפי משכורת */}
-            <Link href="/guides/כמה-משכנתא-לפי-משכורת" className="card group hover:border-primary-200 transition-colors duration-200 cursor-pointer">
+            <a href="/guides/כמה-משכנתא-לפי-משכורת" className="card group hover:border-primary-200 transition-colors duration-200 cursor-pointer">
               <div className="flex flex-col sm:flex-row sm:items-start gap-4">
                 <div className="flex-1 min-w-0">
                   <div className="flex flex-wrap items-center gap-2 mb-2">
@@ -498,10 +497,10 @@ export default function HomePage() {
                   </svg>
                 </div>
               </div>
-            </Link>
+            </a>
 
             {/* 3, הלוואה מקרן השתלמות */}
-            <Link href="/guides/הלוואה-מקרן-השתלמות" className="card group hover:border-primary-200 transition-colors duration-200 cursor-pointer">
+            <a href="/guides/הלוואה-מקרן-השתלמות" className="card group hover:border-primary-200 transition-colors duration-200 cursor-pointer">
               <div className="flex flex-col sm:flex-row sm:items-start gap-4">
                 <div className="flex-1 min-w-0">
                   <div className="flex flex-wrap items-center gap-2 mb-2">
@@ -522,13 +521,13 @@ export default function HomePage() {
                   </svg>
                 </div>
               </div>
-            </Link>
+            </a>
 
           </div>
 
           {/* Mobile CTA */}
           <div className="sm:hidden text-center mt-8">
-            <Link
+            <a
               href="/guides"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold
                          border border-accent-200 text-accent-700 hover:border-primary-300
@@ -539,7 +538,7 @@ export default function HomePage() {
               <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </Link>
+            </a>
           </div>
           </ScrollReveal>
 

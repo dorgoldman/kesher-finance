@@ -1,4 +1,3 @@
-import Link from 'next/link';
 
 interface LogoProps {
   size?: 'sm' | 'md' | 'lg';
@@ -13,8 +12,8 @@ const sizes = {
 
 export default function Logo({ size = 'md', className = '' }: LogoProps) {
   return (
-    <Link href="/" className={`group inline-flex items-center gap-0 ${className}`}>
+    <a href="/" className={`group inline-flex items-center gap-0 ${className}`}>
       <span className={`font-bold text-accent-900 ${sizes[size]}`}>מקסיט</span><span className={`font-bold text-primary-500 ${sizes[size]}`}>.</span><span className={`font-bold text-accent-400 ${sizes[size]}`}>Maxit</span>
-    </Link>
+    </a>
   );
 }

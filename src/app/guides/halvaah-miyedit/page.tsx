@@ -1,5 +1,4 @@
 ﻿import type { Metadata } from 'next';
-import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import RelatedGuides from '@/components/RelatedGuides';
 import AdSlot from '@/components/AdSlot';
@@ -139,7 +138,7 @@ export default function HalvaahMiyeditPage() {
             </h1>
             <div className="flex flex-wrap items-center gap-1.5 text-sm text-accent-400">
               <span>נכתב ונערך על ידי{' '}
-                <Link href="/about" className="underline underline-offset-2 hover:text-primary-600">דור גולדמן</Link></span>
+                <a href="/about" className="underline underline-offset-2 hover:text-primary-600">דור גולדמן</a></span>
               <span aria-hidden="true">·</span>
               <span>עודכן: מאי 2026</span>
             </div>
@@ -267,7 +266,7 @@ export default function HalvaahMiyeditPage() {
                 מחשבון ההלוואה עוזר לך להגיע עם סכום הגיוני.
               </p>
             </div>
-            <Link
+            <a
               href="/tools/loan-calculator"
               className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl
                          bg-primary-600 hover:bg-primary-700 text-white text-sm font-semibold
@@ -277,7 +276,7 @@ export default function HalvaahMiyeditPage() {
               <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </Link>
+            </a>
           </div>
 
           {/* ── Section 4 ── */}
@@ -402,21 +401,21 @@ export default function HalvaahMiyeditPage() {
               <span className="text-xs font-semibold text-accent-500 uppercase tracking-wide">קראו גם</span>
             </div>
             <div className="flex flex-col sm:flex-row gap-2">
-              <Link
+              <a
                 href="/guides/halvaah-hutz-bankait"
                 className="text-sm font-semibold text-primary-600 hover:text-primary-700
                            underline underline-offset-2 transition-colors duration-150"
               >
                 הלוואה חוץ בנקאית - המדריך המלא
-              </Link>
+              </a>
               <span className="hidden sm:inline text-accent-300">|</span>
-              <Link
+              <a
                 href="/guides/halvaot-madrich"
                 className="text-sm font-semibold text-primary-600 hover:text-primary-700
                            underline underline-offset-2 transition-colors duration-150"
               >
                 הלוואות - איך בוחרים נכון
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -474,7 +473,7 @@ export default function HalvaahMiyeditPage() {
               <p className="text-xs text-accent-500 mb-4 leading-relaxed">
                 חשבו החזר חודשי וסך ריבית לפי סכום, תקופה וריבית שבחרתם.
               </p>
-              <Link
+              <a
                 href="/tools/loan-calculator"
                 className="flex items-center justify-center gap-2 w-full px-4 py-2.5
                            bg-primary-600 hover:bg-primary-700 text-white text-sm font-semibold
@@ -484,7 +483,7 @@ export default function HalvaahMiyeditPage() {
                 <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </Link>
+              </a>
             </div>
 
           </div>

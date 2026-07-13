@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { SITE_URL } from '@/lib/constants';
 import JsonLd from './SEO';
 
@@ -41,9 +40,9 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
                 </svg>
               )}
               {item.href && index < allItems.length - 1 ? (
-                <Link href={item.href} className="hover:text-primary-600 transition-colors">
+                <a href={item.href} className="hover:text-primary-600 transition-colors">
                   {item.label}
-                </Link>
+                </a>
               ) : (
                 <span className="text-accent-600 font-medium">{item.label}</span>
               )}

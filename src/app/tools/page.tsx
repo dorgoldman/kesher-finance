@@ -1,5 +1,4 @@
 ﻿import type { Metadata } from 'next';
-import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AdSlot from '@/components/AdSlot';
 import { generateSEOMetadata } from '@/components/SEO';
@@ -25,7 +24,7 @@ export default function ToolsHub() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
 
         {/* ── Live: מחשבון משכנתא ── */}
-        <Link href="/tools/mortgage-calculator" className="card-interactive group">
+        <a href="/tools/mortgage-calculator" className="card-interactive group">
           <div className="flex items-start justify-between mb-4">
             <div className="w-10 h-10 bg-primary-50 rounded-xl flex items-center justify-center
                             text-primary-600 group-hover:bg-primary-100 transition-colors duration-200">
@@ -42,10 +41,10 @@ export default function ToolsHub() {
           <p className="text-accent-500 text-sm leading-relaxed">
             הרכיבו תמהיל מסלולים, חשבו החזר חודשי כולל ולוח סילוקין מפורט
           </p>
-        </Link>
+        </a>
 
         {/* ── Live: מחשבון מחזור משכנתא ── */}
-        <Link href="/tools/mortgage-refinance-calculator" className="card-interactive group">
+        <a href="/tools/mortgage-refinance-calculator" className="card-interactive group">
           <div className="flex items-start justify-between mb-4">
             <div className="w-10 h-10 bg-primary-50 rounded-xl flex items-center justify-center
                             text-primary-600 group-hover:bg-primary-100 transition-colors duration-200">
@@ -62,10 +61,10 @@ export default function ToolsHub() {
           <p className="text-accent-500 text-sm leading-relaxed">
             השוו את המשכנתא הנוכחית להצעה חדשה - חיסכון חודשי, נקודת איזון והאם זה משתלם
           </p>
-        </Link>
+        </a>
 
         {/* ── Live: מחשבון משכנתא לזוג צעיר ── */}
-        <Link href="/tools/young-couple-mortgage" className="card-interactive group">
+        <a href="/tools/young-couple-mortgage" className="card-interactive group">
           <div className="flex items-start justify-between mb-4">
             <div className="w-10 h-10 bg-primary-50 rounded-xl flex items-center justify-center
                             text-primary-600 group-hover:bg-primary-100 transition-colors duration-200">
@@ -82,10 +81,10 @@ export default function ToolsHub() {
           <p className="text-accent-500 text-sm leading-relaxed">
             בדקו הון עצמי, הלוואת זכאות ויחס החזר להכנסה — כל מה שצריך לדירה ראשונה
           </p>
-        </Link>
+        </a>
 
         {/* ── Live: מחשבון הלוואה ── */}
-        <Link href="/tools/loan-calculator" className="card-interactive group">
+        <a href="/tools/loan-calculator" className="card-interactive group">
           <div className="flex items-start justify-between mb-4">
             <div className="w-10 h-10 bg-primary-50 rounded-xl flex items-center justify-center
                             text-primary-600 group-hover:bg-primary-100 transition-colors duration-200">
@@ -102,10 +101,10 @@ export default function ToolsHub() {
           <p className="text-accent-500 text-sm leading-relaxed">
             חשבו החזר חודשי, סך ריבית ולוח סילוקין לכל סוג הלוואה צרכנית
           </p>
-        </Link>
+        </a>
 
         {/* ── Live: מחשבון שכר נטו ── */}
-        <Link href="/tools/salary-calculator" className="card-interactive group">
+        <a href="/tools/salary-calculator" className="card-interactive group">
           <div className="flex items-start justify-between mb-4">
             <div className="w-10 h-10 bg-primary-50 rounded-xl flex items-center justify-center
                             text-primary-600 group-hover:bg-primary-100 transition-colors duration-200">
@@ -122,7 +121,7 @@ export default function ToolsHub() {
           <p className="text-accent-500 text-sm leading-relaxed">
             חשבו שכר נטו לאחר מס הכנסה, ביטוח לאומי, בריאות ופנסיה - מדרגות 2026
           </p>
-        </Link>
+        </a>
 
       </div>
     </div>

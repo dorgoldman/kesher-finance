@@ -1,7 +1,6 @@
 ﻿'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import Link from 'next/link';
 
 /* ─── Smooth count-up hook ───────────────────────────────────────────────── */
 function useCountUp(target: number, duration = 400): number {
@@ -195,7 +194,7 @@ export default function HeroCalculator() {
       </div>
 
       {/* ── CTA - press-effect (active:scale-[0.97]) per skill micro-interaction rule ── */}
-      <Link
+      <a
         href="/tools/mortgage-calculator"
         className="btn-primary press-effect w-full flex items-center justify-center gap-2 text-sm"
       >
@@ -203,7 +202,7 @@ export default function HeroCalculator() {
         <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>
-      </Link>
+      </a>
     </div>
   );
 }
