@@ -118,12 +118,13 @@ export default function GuidesHub() {
       {guides.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {guides.map((guide) => (
-            <Link key={guide.href} href={guide.href} className="card-interactive group">
-              <span className="badge-primary mb-3 inline-block">{guide.category}</span>
-              <h2 className="text-lg font-bold text-accent-900 mb-2 group-hover:text-primary-600 transition-colors">
+            <Link key={guide.href} href={guide.href} className="card-interactive group" style={{ padding: '28px' }}>
+              <span className="badge-primary mb-4 inline-block">{guide.category}</span>
+              <h2 className="text-lg font-bold text-accent-900 mb-2 leading-snug">
                 {guide.title}
               </h2>
-              <p className="text-accent-500 text-sm leading-relaxed">{guide.description}</p>
+              <p className="text-sm leading-relaxed mb-3.5" style={{ color: '#6B675D' }}>{guide.description}</p>
+              <span className="link-arrow text-sm">קרא עוד ←</span>
             </Link>
           ))}
         </div>

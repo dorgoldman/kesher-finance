@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useState } from 'react';
 import Link from 'next/link';
@@ -8,6 +8,7 @@ import Logo from './Logo';
 const NAV_LINKS = [
   { href: '/tools',  label: 'מחשבונים' },
   { href: '/guides', label: 'מדריכים'  },
+  { href: '/about',  label: 'אודות'    },
 ];
 
 export default function Header() {
@@ -18,50 +19,50 @@ export default function Header() {
     pathname === href || pathname.startsWith(href + '/');
 
   return (
-    <header className="glass sticky top-0 z-40 border-b border-accent-100">
-      <div className="container-wide py-3.5 flex items-center justify-between">
+    <header className="glass sticky top-0 z-40">
+      <div className="container-wide py-4 flex items-center justify-between">
 
-        {/* RTL: first child → RIGHT side (reading start) - Logo + primary CTA */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-10">
           <Logo />
-          <Link
-            href="/tools/mortgage-calculator"
-            className="hidden md:inline-flex items-center gap-1.5 bg-primary-600 text-white
-                       text-sm font-semibold px-4 py-2 rounded-xl
-                       hover:bg-primary-700 active:bg-primary-800
-                       transition-all duration-200 shadow-soft hover:shadow-elevated cursor-pointer"
-          >
-            מחשבון משכנתא
-          </Link>
-        </div>
-
-        {/* RTL: last child → LEFT side - secondary nav or hamburger */}
-        <div className="flex items-center">
-
-          {/* Desktop secondary nav */}
-          <nav className="hidden md:flex items-center gap-0.5" aria-label="ניווט ראשי">
+          <nav className="hidden md:flex items-center gap-7" aria-label="ניווט ראשי">
             {NAV_LINKS.map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
-                className={`relative px-4 py-2 rounded-lg text-sm font-medium
-                            transition-all duration-200 cursor-pointer
+                className={`text-[15px] font-medium transition-colors duration-200 cursor-pointer
                             ${isActive(href)
-                              ? 'text-primary-600 bg-primary-50'
-                              : 'text-accent-600 hover:text-accent-900 hover:bg-accent-100'}`}
+                              ? 'text-primary-500'
+                              : 'text-accent-900 hover:text-primary-500'}`}
               >
                 {label}
-                {isActive(href) && (
-                  <span
-                    className="absolute bottom-0.5 inset-x-3 h-0.5 bg-primary-500 rounded-full"
-                    aria-hidden="true"
-                  />
-                )}
               </Link>
             ))}
           </nav>
+        </div>
 
-          {/* Mobile hamburger - 48px touch target */}
+        <div className="flex items-center">
+          <Link
+            href="/tools/mortgage-calculator"
+            className="hidden md:inline-flex items-center px-6 py-2.5 text-[15px] font-semibold
+                       text-accent-50 transition-all duration-250 cursor-pointer"
+            style={{
+              background: '#0E3D2C',
+              borderRadius: '999px',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = '#149A5B';
+              e.currentTarget.style.transform = 'translateY(-1px)';
+              e.currentTarget.style.boxShadow = '0 8px 20px rgba(20,154,91,.35)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = '#0E3D2C';
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = 'none';
+            }}
+          >
+            מחשבון משכנתא
+          </Link>
+
           <button
             className="md:hidden min-h-[48px] min-w-[48px] flex items-center justify-center
                        rounded-xl hover:bg-accent-100 text-accent-600
@@ -82,11 +83,10 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile slide-down menu */}
       {menuOpen && (
         <div
           id="mobile-nav"
-          className="md:hidden border-t border-accent-100 bg-white shadow-elevated"
+          className="md:hidden border-t border-accent-300 bg-white shadow-elevated"
           role="navigation"
           aria-label="תפריט נייד"
         >
@@ -98,18 +98,18 @@ export default function Header() {
                 className={`min-h-[48px] ps-4 pe-4 flex items-center rounded-xl font-medium
                             transition-colors cursor-pointer
                             ${isActive(href)
-                              ? 'bg-primary-50 text-primary-700'
-                              : 'text-accent-700 hover:bg-accent-50'}`}
+                              ? 'bg-primary-50 text-primary-900'
+                              : 'text-accent-900 hover:bg-accent-50'}`}
                 onClick={() => setMenuOpen(false)}
               >
                 {label}
               </Link>
             ))}
-            <div className="h-px bg-accent-100 my-1" />
+            <div className="h-px bg-accent-200 my-1" />
             <Link
               href="/tools/mortgage-calculator"
               className="min-h-[48px] ps-4 pe-4 flex items-center rounded-xl
-                         bg-primary-50 text-primary-700 font-semibold
+                         bg-primary-50 text-primary-900 font-semibold
                          transition-colors cursor-pointer"
               onClick={() => setMenuOpen(false)}
             >

@@ -31,15 +31,15 @@ interface CalculatorCTAProps {
 
 export function CalculatorCTA({ calculatorName, calculatorUrl, teaser }: CalculatorCTAProps) {
   return (
-    <div className="my-8 rounded-2xl bg-primary-100 border border-primary-200 px-5 py-5">
-      <p className="text-xs font-semibold text-primary-700 uppercase tracking-wide mb-2">
+    <div className="my-8 rounded-card bg-primary-50 border border-primary-100 px-5 py-5">
+      <p className="text-xs font-bold text-primary-900 uppercase tracking-wide mb-2">
         נסה את המחשבון
       </p>
       <p className="text-base font-bold text-accent-900 mb-1">{calculatorName}</p>
-      <p className="text-sm text-accent-600 leading-relaxed mb-4">{teaser}</p>
+      <p className="text-sm leading-relaxed mb-4" style={{ color: '#6B675D' }}>{teaser}</p>
       <Link
         href={calculatorUrl}
-        className="inline-flex items-center gap-2 text-sm font-semibold text-primary-700
+        className="inline-flex items-center gap-2 text-sm font-bold text-primary-500
                    hover:text-primary-900 transition-colors duration-150 cursor-pointer"
       >
         לחישוב
