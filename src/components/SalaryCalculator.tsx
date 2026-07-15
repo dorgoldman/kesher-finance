@@ -6,8 +6,13 @@ import { useState, useMemo, useEffect, useRef } from 'react';
 // 2026 ISRAELI TAX CONSTANTS
 // ─────────────────────────────────────────────────────────────────────────────
 // To update each January, verify from official sources:
-//   Income tax brackets : https://www.gov.il/he/departments/guides/tax_level
+//   Income tax brackets : Israel Tax Authority (רשות המסים), "לוח עזר לחישוב מס הכנסה
+//                          ממשכורת ושכר עבודה לחודש ינואר 2026 ואילך" — www.taxes.gov.il
 //   NI / Health rates   : https://www.btl.gov.il/Mediniyut/Actualia/Pages/contribution_rates.aspx
+// Verified against the official booklet 2026-07-15 (agent session, T21): the 10%/14%/35%
+// thresholds and the 47%-to-surtax threshold below were previously wrong (likely stale
+// pre-2026 figures). The 20%/31% thresholds (Amendment 288, retroactive to 2026-01-01,
+// finalized 2026-03-30) were already correct and independently corroborated.
 // ─────────────────────────────────────────────────────────────────────────────
 
 /** Tax year these constants apply to */
@@ -17,15 +22,19 @@ const TAX_YEAR = 2026;
  * Monthly progressive income tax brackets (מדרגות מס הכנסה חודשיות).
  * upTo  - upper limit of this bracket in ILS/month (Infinity = no cap)
  * rate  - marginal rate for income that falls in this bracket
+ *
+ * The official booklet models the top rate as 47% "on every additional shekel" plus a
+ * separate 3% surtax (סעיף 121ב) on income above ₪60,130/month — mathematically
+ * equivalent to a flat 50% bracket above that threshold, which is how it's modeled here.
  */
 const INCOME_TAX_BRACKETS: ReadonlyArray<{ readonly upTo: number; readonly rate: number }> = [
-  { upTo:  7_270,   rate: 0.10 }, // 10%
-  { upTo: 10_420,   rate: 0.14 }, // 14%
-  { upTo: 19_000,   rate: 0.20 }, // 20% - raised from ₪16,720 per amendment 288 (Jan 2026)
-  { upTo: 25_100,   rate: 0.31 }, // 31% - raised from ₪23,150 per amendment 288 (Jan 2026)
-  { upTo: 48_130,   rate: 0.35 }, // 35%
-  { upTo: 61_990,   rate: 0.47 }, // 47%
-  { upTo: Infinity, rate: 0.50 }, // 50%
+  { upTo:  7_010,   rate: 0.10 }, // 10%
+  { upTo: 10_060,   rate: 0.14 }, // 14%
+  { upTo: 19_000,   rate: 0.20 }, // 20% - raised from ₪16,150 per amendment 288 (Jan 2026)
+  { upTo: 25_100,   rate: 0.31 }, // 31% - raised from ₪22,440 per amendment 288 (Jan 2026)
+  { upTo: 46_690,   rate: 0.35 }, // 35%
+  { upTo: 60_130,   rate: 0.47 }, // 47%
+  { upTo: Infinity, rate: 0.50 }, // 47% + 3% surtax (סעיף 121ב) above ₪60,130/month
 ];
 
 /** Monthly value of one credit point - נקודת זיכוי (ILS/month) */
