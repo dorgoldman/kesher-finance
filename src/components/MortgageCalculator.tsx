@@ -657,33 +657,38 @@ export default function MortgageCalculator({ labels = hebrewLabels }: { labels?:
         </div>
       )}
 
-      {/* ── Results hero - dark, Revolut-style ── */}
-      <div className="bg-[#0F1117] rounded-2xl p-8 mb-4 shadow-hero">
-        <p className="text-white/30 text-[11px] font-semibold uppercase tracking-[0.18em] mb-4 text-center">
+      {/* ── Results hero ── */}
+      <div
+        className="rounded-card p-8 mb-4"
+        style={{
+          background: '#FFFFFF',
+          border: '1px solid #EDEAE0',
+          boxShadow: '0 30px 70px rgba(14,61,44,.14), 0 2px 8px rgba(14,61,44,.06), 0 0 0 1px rgba(201,164,76,.15)',
+        }}
+      >
+        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] mb-4 text-center" style={{ color: '#8A867A' }}>
           {labels.results.monthlyTotal}
         </p>
 
-        {/* Split ₪ symbol - smaller + lighter than the number */}
         <div
           className="flex items-end justify-center gap-1 tabular-nums font-extrabold leading-none tracking-tight mb-3"
           style={{ direction: 'ltr' }}
         >
           <span
-            className="text-white/30 font-light self-start"
-            style={{ fontSize: 'clamp(20px, 2.5vw, 28px)', marginTop: '0.3em' }}
+            className="font-light self-start"
+            style={{ fontSize: 'clamp(20px, 2.5vw, 28px)', marginTop: '0.3em', color: '#149A5B' }}
             aria-hidden="true"
           >
             ₪
           </span>
           <span
-            className="text-white"
-            style={{ fontSize: 'clamp(48px, 7vw, 80px)' }}
+            style={{ fontSize: 'clamp(48px, 7vw, 80px)', color: '#0E3D2C' }}
           >
             {formatNumber(animatedMonthly)}
           </span>
         </div>
 
-        <p className="text-white/25 text-sm text-center">
+        <p className="text-sm text-center" style={{ color: '#8A867A' }}>
           {labels.results.tracksAndLoan(tracks.length, formatCurrency(totalLoan))}
         </p>
       </div>
@@ -819,18 +824,21 @@ export default function MortgageCalculator({ labels = hebrewLabels }: { labels?:
       )}
 
       {/* ── Sticky mobile bottom bar - live monthly payment ── */}
-      <div className="fixed bottom-0 inset-x-0 z-30 sm:hidden bg-[#0F1117]/95 backdrop-blur-sm
-                      border-t border-white/10 px-5 py-3 flex items-center justify-between">
+      <div
+        className="fixed bottom-0 inset-x-0 z-30 sm:hidden backdrop-blur-sm
+                      border-t px-5 py-3 flex items-center justify-between"
+        style={{ background: 'rgba(255,255,255,0.95)', borderColor: '#E5E1D6' }}
+      >
         <div>
-          <p className="text-white/30 text-[10px] font-semibold uppercase tracking-[0.12em]">{labels.mobileBar.monthlyPayment}</p>
+          <p className="text-[10px] font-semibold uppercase tracking-[0.12em]" style={{ color: '#8A867A' }}>{labels.mobileBar.monthlyPayment}</p>
           <div className="flex items-end gap-0.5 tabular-nums" style={{ direction: 'ltr' }}>
-            <span className="text-white/30 font-light text-xs self-end mb-0.5" aria-hidden="true">₪</span>
-            <span className="display-number text-white text-xl leading-tight">{formatNumber(roundedMonthly)}</span>
+            <span className="font-light text-xs self-end mb-0.5" style={{ color: '#149A5B' }} aria-hidden="true">₪</span>
+            <span className="display-number text-xl leading-tight" style={{ color: '#0E3D2C' }}>{formatNumber(roundedMonthly)}</span>
           </div>
         </div>
         <div className="text-left">
-          <p className="text-white/25 text-[10px]">{labels.mobileBar.tracks(tracks.length)}</p>
-          <p className="text-white/45 text-xs font-medium">{formatCurrency(totalLoan)}</p>
+          <p className="text-[10px]" style={{ color: '#8A867A' }}>{labels.mobileBar.tracks(tracks.length)}</p>
+          <p className="text-xs font-medium" style={{ color: '#55534A' }}>{formatCurrency(totalLoan)}</p>
         </div>
       </div>
 

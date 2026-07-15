@@ -20,6 +20,7 @@ export default function Logo({ size = 'md', className = '', variant = 'dark' }: 
     <Link href="/" className={`group inline-flex items-center gap-0 ${className}`}>
       <span className={`font-extrabold ${textColor} ${sizes[size]}`} style={{ letterSpacing: '-0.5px' }}>מקסיט</span>
       <span className={`font-extrabold ${dotColor} ${sizes[size]}`}>.</span>
+      <span className={`font-extrabold ${textColor} ${sizes[size]}`} style={{ letterSpacing: '-0.5px' }}>Maxit</span>
     </Link>
   );
 }

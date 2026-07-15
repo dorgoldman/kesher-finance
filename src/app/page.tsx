@@ -187,20 +187,25 @@ export default function HomePage() {
 
         {/* Trust strip */}
         <div
-          className="flex flex-wrap justify-center gap-4 sm:gap-9 text-sm"
+          className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-9 text-sm"
           style={{
             padding: '18px 24px', color: '#6B675D',
             borderTop: '1px solid #E5E1D6', borderBottom: '1px solid #E5E1D6',
             background: '#FBFAF6',
           }}
         >
-          <span>מחושב ע&quot;י <b style={{ color: '#0E3D2C' }}>+3,490</b> משתמשים החודש</span>
-          <span style={{ color: '#CFC9BB' }}>·</span>
-          <span>ללא הרשמה</span>
+          <span className="whitespace-nowrap">חושב ע&quot;י <b style={{ color: '#0E3D2C' }}>3,490+</b> גולשים החודש</span>
+          <span className="hidden sm:inline" style={{ color: '#CFC9BB' }}>·</span>
+          <span className="hidden sm:inline">ללא הרשמה</span>
           <span className="hidden sm:inline" style={{ color: '#CFC9BB' }}>·</span>
           <span className="hidden sm:inline">חינמי לחלוטין</span>
-          <span style={{ color: '#CFC9BB' }}>·</span>
-          <span>מעודכן ליולי 2026</span>
+          <span className="hidden sm:inline" style={{ color: '#CFC9BB' }}>·</span>
+          <span className="hidden sm:inline">מעודכן ליולי 2026</span>
+          <span className="sm:hidden flex items-center gap-2">
+            <span>ללא הרשמה</span>
+            <span style={{ color: '#CFC9BB' }}>·</span>
+            <span>מעודכן ליולי 2026</span>
+          </span>
         </div>
       </section>
 

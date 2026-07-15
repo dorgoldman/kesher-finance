@@ -279,33 +279,38 @@ export default function LoanCalculator() {
         </div>
       </div>
 
-      {/* ── Results hero - dark #0F1117, Revolut-style ── */}
-      <div className="bg-[#0F1117] rounded-2xl p-8 mb-4 shadow-hero">
-        <p className="text-white/30 text-[11px] font-semibold uppercase tracking-[0.18em] mb-4 text-center">
+      {/* ── Results hero ── */}
+      <div
+        className="rounded-card p-8 mb-4"
+        style={{
+          background: '#FFFFFF',
+          border: '1px solid #EDEAE0',
+          boxShadow: '0 30px 70px rgba(14,61,44,.14), 0 2px 8px rgba(14,61,44,.06), 0 0 0 1px rgba(201,164,76,.15)',
+        }}
+      >
+        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] mb-4 text-center" style={{ color: '#8A867A' }}>
           החזר חודשי
         </p>
 
-        {/* Split ₪ symbol - smaller + lighter than number, LTR direction */}
         <div
           className="flex items-end justify-center gap-1 tabular-nums font-extrabold leading-none tracking-tight mb-3"
           style={{ direction: 'ltr' }}
         >
           <span
-            className="text-white/30 font-light self-start"
-            style={{ fontSize: 'clamp(20px, 2.5vw, 28px)', marginTop: '0.3em' }}
+            className="font-light self-start"
+            style={{ fontSize: 'clamp(20px, 2.5vw, 28px)', marginTop: '0.3em', color: '#149A5B' }}
             aria-hidden="true"
           >
             ₪
           </span>
           <span
-            className="text-white"
-            style={{ fontSize: 'clamp(48px, 7vw, 80px)' }}
+            style={{ fontSize: 'clamp(48px, 7vw, 80px)', color: '#0E3D2C' }}
           >
             {formatNumber(animated)}
           </span>
         </div>
 
-        <p className="text-white/25 text-sm text-center">
+        <p className="text-sm text-center" style={{ color: '#8A867A' }}>
           {years} {years === 1 ? 'שנה' : 'שנים'} · {rate.toFixed(1)}% ריבית שנתית · ₪{formatNumber(amount)} קרן
         </p>
       </div>
@@ -414,19 +419,20 @@ export default function LoanCalculator() {
 
       {/* ── Sticky mobile bottom bar ── */}
       <div
-        className="fixed bottom-0 inset-x-0 z-30 sm:hidden bg-[#0F1117]/95 backdrop-blur-sm
-                   border-t border-white/10 px-5 py-3 flex items-center justify-between"
+        className="fixed bottom-0 inset-x-0 z-30 sm:hidden backdrop-blur-sm
+                   border-t px-5 py-3 flex items-center justify-between"
+        style={{ background: 'rgba(255,255,255,0.95)', borderColor: '#E5E1D6' }}
       >
         <div>
-          <p className="text-white/30 text-[10px] font-semibold uppercase tracking-[0.12em]">החזר חודשי</p>
+          <p className="text-[10px] font-semibold uppercase tracking-[0.12em]" style={{ color: '#8A867A' }}>החזר חודשי</p>
           <div className="flex items-end gap-0.5 tabular-nums" style={{ direction: 'ltr' }}>
-            <span className="text-white/30 font-light text-xs self-end mb-0.5" aria-hidden="true">₪</span>
-            <span className="display-number text-white text-xl leading-tight">{formatNumber(rounded)}</span>
+            <span className="font-light text-xs self-end mb-0.5" style={{ color: '#149A5B' }} aria-hidden="true">₪</span>
+            <span className="display-number text-xl leading-tight" style={{ color: '#0E3D2C' }}>{formatNumber(rounded)}</span>
           </div>
         </div>
         <div className="text-left">
-          <p className="text-white/25 text-[10px]">סה&quot;כ ריבית</p>
-          <p className="text-white/45 text-xs font-medium">{formatCurrency(result.totalInterest)}</p>
+          <p className="text-[10px]" style={{ color: '#8A867A' }}>סה&quot;כ ריבית</p>
+          <p className="text-xs font-medium" style={{ color: '#55534A' }}>{formatCurrency(result.totalInterest)}</p>
         </div>
       </div>
 
