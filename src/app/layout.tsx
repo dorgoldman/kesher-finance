@@ -52,7 +52,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="he" dir="rtl" className={`${heebo.variable} ${cairo.variable}`}>
-      <body className="font-heebo min-h-screen flex flex-col">
+      <body className="font-heebo min-h-screen flex flex-col" style={{background: "#F6F4EF"}}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

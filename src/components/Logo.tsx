@@ -2,6 +2,7 @@
 interface LogoProps {
   size?: 'sm' | 'md' | 'lg';
   className?: string;
+  variant?: 'dark' | 'light';
 }
 
 const sizes = {
@@ -10,10 +11,15 @@ const sizes = {
   lg: 'text-4xl md:text-5xl',
 };
 
-export default function Logo({ size = 'md', className = '' }: LogoProps) {
+export default function Logo({ size = 'md', className = '', variant = 'dark' }: LogoProps) {
+  const textColor = variant === 'light' ? 'text-white' : 'text-accent-900';
+  const dotColor = variant === 'light' ? 'text-footer-accent' : 'text-primary-500';
+
   return (
     <a href="/" className={`group inline-flex items-center gap-0 ${className}`}>
-      <span className={`font-bold text-accent-900 ${sizes[size]}`}>מקסיט</span><span className={`font-bold text-primary-500 ${sizes[size]}`}>.</span><span className={`font-bold text-accent-400 ${sizes[size]}`}>Maxit</span>
+      <span className={`font-extrabold ${textColor} ${sizes[size]}`} style={{ letterSpacing: '-0.5px' }}>מקסיט</span>
+      <span className={`font-extrabold ${dotColor} ${sizes[size]}`}>.</span>
+      <span className={`font-extrabold ${textColor} ${sizes[size]}`} style={{ letterSpacing: '-0.5px' }}>Maxit</span>
     </a>
   );
 }

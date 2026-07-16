@@ -30,21 +30,21 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
   return (
     <>
       <JsonLd data={jsonLd} />
-      <nav aria-label="מיקום בדף" className="text-sm text-accent-400 mb-8">
+      <nav aria-label="מיקום בדף" className="text-sm mb-8" style={{ color: '#8A867A' }}>
         <ol className="flex flex-wrap items-center gap-1">
           {allItems.map((item, index) => (
             <li key={index} className="flex items-center gap-1">
               {index > 0 && (
-                <svg className="w-3.5 h-3.5 text-accent-300 mx-1 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-3.5 h-3.5 mx-1 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ color: '#CFC9BB' }}>
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               )}
               {item.href && index < allItems.length - 1 ? (
-                <a href={item.href} className="hover:text-primary-600 transition-colors">
+                <a href={item.href} className="hover:text-primary-500 transition-colors">
                   {item.label}
                 </a>
               ) : (
-                <span className="text-accent-600 font-medium">{item.label}</span>
+                <span className="text-accent-900 font-medium">{item.label}</span>
               )}
             </li>
           ))}

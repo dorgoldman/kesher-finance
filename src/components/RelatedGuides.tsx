@@ -17,7 +17,7 @@ export default function RelatedGuides({ currentHref, limit = 5 }: RelatedGuidesP
   if (items.length === 0) return null;
 
   return (
-    <section className="mt-12 pt-8 border-t border-accent-100" aria-labelledby="related-guides-heading">
+    <section className="mt-12 pt-8 border-t border-accent-200" aria-labelledby="related-guides-heading">
       <h2 id="related-guides-heading" className="text-lg font-bold text-accent-900 mb-5">
         מדריכים נוספים שכדאי לקרוא
       </h2>
@@ -26,9 +26,8 @@ export default function RelatedGuides({ currentHref, limit = 5 }: RelatedGuidesP
           <a
             key={guide.href}
             href={guide.href}
-            className="group flex items-start gap-3 p-4 rounded-2xl border border-accent-200/70
-                       hover:border-primary-200 hover:bg-primary-50/40
-                       transition-colors duration-200 cursor-pointer"
+            className="group flex items-start gap-3 p-4 rounded-card border border-accent-200
+                       hover:border-gold transition-all duration-300 cursor-pointer"
           >
             <span className="mt-0.5 shrink-0 w-8 h-8 rounded-lg bg-primary-50 text-primary-600
                              flex items-center justify-center group-hover:bg-primary-100 transition-colors duration-200">

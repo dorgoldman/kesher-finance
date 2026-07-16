@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AdSlot from '@/components/AdSlot';
 import { generateSEOMetadata } from '@/components/SEO';
@@ -8,6 +8,44 @@ export const metadata: Metadata = generateSEOMetadata({
   description: 'מחשבונים פיננסיים חינמיים בעברית: משכנתא, הלוואות ושכר נטו. חשבו בדיוק מה תשלמו ומה תקבלו, בלי להירשם.',
   canonical: '/tools',
 });
+
+const calculators = [
+  {
+    title: 'מחשבון משכנתא',
+    description: 'הרכיבו תמהיל מסלולים, חשבו החזר חודשי כולל ולוח סילוקין מפורט.',
+    href: '/tools/mortgage-calculator',
+    glyph: '₪',
+    badge: 'משכנתא',
+  },
+  {
+    title: 'מחשבון מחזור משכנתא',
+    description: 'השוו את המשכנתא הנוכחית להצעה חדשה — חיסכון חודשי, נקודת איזון והאם זה משתלם.',
+    href: '/tools/mortgage-refinance-calculator',
+    glyph: '↻',
+    badge: 'משכנתא',
+  },
+  {
+    title: 'מחשבון משכנתא לזוג צעיר',
+    description: 'בדקו הון עצמי, הלוואת זכאות ויחס החזר להכנסה — כל מה שצריך לדירה ראשונה.',
+    href: '/tools/young-couple-mortgage',
+    glyph: '👫',
+    badge: 'משכנתא',
+  },
+  {
+    title: 'מחשבון הלוואה',
+    description: 'חשבו החזר חודשי, סך ריבית ולוח סילוקין לכל סוג הלוואה צרכנית.',
+    href: '/tools/loan-calculator',
+    glyph: '%',
+    badge: 'הלוואה',
+  },
+  {
+    title: 'מחשבון שכר נטו',
+    description: 'חשבו שכר נטו לאחר מס הכנסה, ביטוח לאומי, בריאות ופנסיה — מדרגות 2026.',
+    href: '/tools/salary-calculator',
+    glyph: 'נ׳',
+    badge: 'שכר נטו',
+  },
+];
 
 export default function ToolsHub() {
   return (
@@ -21,108 +59,27 @@ export default function ToolsHub() {
 
       <AdSlot variant="header" className="mb-10" />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-
-        {/* ── Live: מחשבון משכנתא ── */}
-        <a href="/tools/mortgage-calculator" className="card-interactive group">
-          <div className="flex items-start justify-between mb-4">
-            <div className="w-10 h-10 bg-primary-50 rounded-xl flex items-center justify-center
-                            text-primary-600 group-hover:bg-primary-100 transition-colors duration-200">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-              </svg>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {calculators.map((calc) => (
+          <a
+            key={calc.href}
+            href={calc.href}
+            className="card-interactive group"
+            style={{ padding: '30px' }}
+          >
+            <div className="flex items-start justify-between mb-4">
+              <div className="tool-icon-chip">{calc.glyph}</div>
+              <span className="badge-primary">{calc.badge}</span>
             </div>
-            <span className="badge-primary">משכנתא</span>
-          </div>
-          <h2 className="text-lg font-bold text-accent-900 mb-2 group-hover:text-primary-600 transition-colors duration-200">
-            מחשבון משכנתא
-          </h2>
-          <p className="text-accent-500 text-sm leading-relaxed">
-            הרכיבו תמהיל מסלולים, חשבו החזר חודשי כולל ולוח סילוקין מפורט
-          </p>
-        </a>
-
-        {/* ── Live: מחשבון מחזור משכנתא ── */}
-        <a href="/tools/mortgage-refinance-calculator" className="card-interactive group">
-          <div className="flex items-start justify-between mb-4">
-            <div className="w-10 h-10 bg-primary-50 rounded-xl flex items-center justify-center
-                            text-primary-600 group-hover:bg-primary-100 transition-colors duration-200">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-                  d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-              </svg>
-            </div>
-            <span className="badge-primary">משכנתא</span>
-          </div>
-          <h2 className="text-lg font-bold text-accent-900 mb-2 group-hover:text-primary-600 transition-colors duration-200">
-            מחשבון מחזור משכנתא
-          </h2>
-          <p className="text-accent-500 text-sm leading-relaxed">
-            השוו את המשכנתא הנוכחית להצעה חדשה - חיסכון חודשי, נקודת איזון והאם זה משתלם
-          </p>
-        </a>
-
-        {/* ── Live: מחשבון משכנתא לזוג צעיר ── */}
-        <a href="/tools/young-couple-mortgage" className="card-interactive group">
-          <div className="flex items-start justify-between mb-4">
-            <div className="w-10 h-10 bg-primary-50 rounded-xl flex items-center justify-center
-                            text-primary-600 group-hover:bg-primary-100 transition-colors duration-200">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-            </div>
-            <span className="badge-primary">משכנתא</span>
-          </div>
-          <h2 className="text-lg font-bold text-accent-900 mb-2 group-hover:text-primary-600 transition-colors duration-200">
-            מחשבון משכנתא לזוג צעיר
-          </h2>
-          <p className="text-accent-500 text-sm leading-relaxed">
-            בדקו הון עצמי, הלוואת זכאות ויחס החזר להכנסה — כל מה שצריך לדירה ראשונה
-          </p>
-        </a>
-
-        {/* ── Live: מחשבון הלוואה ── */}
-        <a href="/tools/loan-calculator" className="card-interactive group">
-          <div className="flex items-start justify-between mb-4">
-            <div className="w-10 h-10 bg-primary-50 rounded-xl flex items-center justify-center
-                            text-primary-600 group-hover:bg-primary-100 transition-colors duration-200">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <span className="badge-primary">הלוואה</span>
-          </div>
-          <h2 className="text-lg font-bold text-accent-900 mb-2 group-hover:text-primary-600 transition-colors duration-200">
-            מחשבון הלוואה
-          </h2>
-          <p className="text-accent-500 text-sm leading-relaxed">
-            חשבו החזר חודשי, סך ריבית ולוח סילוקין לכל סוג הלוואה צרכנית
-          </p>
-        </a>
-
-        {/* ── Live: מחשבון שכר נטו ── */}
-        <a href="/tools/salary-calculator" className="card-interactive group">
-          <div className="flex items-start justify-between mb-4">
-            <div className="w-10 h-10 bg-primary-50 rounded-xl flex items-center justify-center
-                            text-primary-600 group-hover:bg-primary-100 transition-colors duration-200">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-                  d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-              </svg>
-            </div>
-            <span className="badge-primary">שכר נטו</span>
-          </div>
-          <h2 className="text-lg font-bold text-accent-900 mb-2 group-hover:text-primary-600 transition-colors duration-200">
-            מחשבון שכר נטו
-          </h2>
-          <p className="text-accent-500 text-sm leading-relaxed">
-            חשבו שכר נטו לאחר מס הכנסה, ביטוח לאומי, בריאות ופנסיה - מדרגות 2026
-          </p>
-        </a>
-
+            <h2 className="text-lg font-bold text-accent-900 mb-2">
+              {calc.title}
+            </h2>
+            <p className="text-sm leading-relaxed mb-4" style={{ color: '#6B675D' }}>
+              {calc.description}
+            </p>
+            <span className="link-arrow">לחישוב ←</span>
+          </a>
+        ))}
       </div>
     </div>
   );

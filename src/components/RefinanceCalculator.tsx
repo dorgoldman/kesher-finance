@@ -244,9 +244,16 @@ export default function RefinanceCalculator() {
         </div>
       </div>
 
-      {/* ── Results hero - dark ── */}
-      <div className="bg-[#0F1117] rounded-2xl p-8 mb-4 shadow-hero">
-        <p className="text-white/30 text-[11px] font-semibold uppercase tracking-[0.18em] mb-4 text-center">
+      {/* ── Results hero ── */}
+      <div
+        className="rounded-card p-8 mb-4"
+        style={{
+          background: '#FFFFFF',
+          border: '1px solid #EDEAE0',
+          boxShadow: '0 30px 70px rgba(14,61,44,.14), 0 2px 8px rgba(14,61,44,.06), 0 0 0 1px rgba(201,164,76,.15)',
+        }}
+      >
+        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] mb-4 text-center" style={{ color: '#8A867A' }}>
           {savingPositive ? 'חיסכון בהחזר החודשי' : 'תוספת להחזר החודשי'}
         </p>
 
@@ -255,21 +262,20 @@ export default function RefinanceCalculator() {
           style={{ direction: 'ltr' }}
         >
           <span
-            className={`${savingPositive ? 'text-white/30' : 'text-red-400/50'} font-light self-start`}
-            style={{ fontSize: 'clamp(20px, 2.5vw, 28px)', marginTop: '0.3em' }}
+            className="font-light self-start"
+            style={{ fontSize: 'clamp(20px, 2.5vw, 28px)', marginTop: '0.3em', color: savingPositive ? '#149A5B' : '#ef4444' }}
             aria-hidden="true"
           >
             ₪
           </span>
           <span
-            className={savingPositive ? 'text-white' : 'text-red-400'}
-            style={{ fontSize: 'clamp(48px, 7vw, 80px)' }}
+            style={{ fontSize: 'clamp(48px, 7vw, 80px)', color: savingPositive ? '#0E3D2C' : '#ef4444' }}
           >
             {formatNumber(animated)}
           </span>
         </div>
 
-        <p className="text-white/25 text-sm text-center">
+        <p className="text-sm text-center" style={{ color: '#8A867A' }}>
           החזר נוכחי {formatCurrency(result.curMonthly)} ← החזר חדש {formatCurrency(result.newMonthly)}
         </p>
       </div>
@@ -330,23 +336,24 @@ export default function RefinanceCalculator() {
 
       {/* ── Sticky mobile bottom bar ── */}
       <div
-        className="fixed bottom-0 inset-x-0 z-30 sm:hidden bg-[#0F1117]/95 backdrop-blur-sm
-                   border-t border-white/10 px-5 py-3 flex items-center justify-between"
+        className="fixed bottom-0 inset-x-0 z-30 sm:hidden backdrop-blur-sm
+                   border-t px-5 py-3 flex items-center justify-between"
+        style={{ background: 'rgba(255,255,255,0.95)', borderColor: '#E5E1D6' }}
       >
         <div>
-          <p className="text-white/30 text-[10px] font-semibold uppercase tracking-[0.12em]">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.12em]" style={{ color: '#8A867A' }}>
             {savingPositive ? 'חיסכון חודשי' : 'תוספת חודשית'}
           </p>
           <div className="flex items-end gap-0.5 tabular-nums" style={{ direction: 'ltr' }}>
-            <span className="text-white/30 font-light text-xs self-end mb-0.5" aria-hidden="true">₪</span>
-            <span className={`display-number text-xl leading-tight ${savingPositive ? 'text-white' : 'text-red-400'}`}>
+            <span className="font-light text-xs self-end mb-0.5" style={{ color: savingPositive ? '#149A5B' : '#ef4444' }} aria-hidden="true">₪</span>
+            <span className={`display-number text-xl leading-tight`} style={{ color: savingPositive ? '#0E3D2C' : '#ef4444' }}>
               {formatNumber(Math.abs(roundedSaving))}
             </span>
           </div>
         </div>
         <div className="text-left">
-          <p className="text-white/25 text-[10px]">חיסכון כולל</p>
-          <p className={`text-xs font-medium ${netPositive ? 'text-white/45' : 'text-red-400/70'}`}>
+          <p className="text-[10px]" style={{ color: '#8A867A' }}>חיסכון כולל</p>
+          <p className="text-xs font-medium" style={{ color: netPositive ? '#55534A' : '#ef4444' }}>
             {formatCurrency(result.netSaving)}
           </p>
         </div>

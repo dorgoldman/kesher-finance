@@ -6,8 +6,13 @@ import { useState, useMemo, useEffect, useRef } from 'react';
 // 2026 ISRAELI TAX CONSTANTS
 // ─────────────────────────────────────────────────────────────────────────────
 // To update each January, verify from official sources:
-//   Income tax brackets : https://www.gov.il/he/departments/guides/tax_level
+//   Income tax brackets : Israel Tax Authority (רשות המסים), "לוח עזר לחישוב מס הכנסה
+//                          ממשכורת ושכר עבודה לחודש ינואר 2026 ואילך" — www.taxes.gov.il
 //   NI / Health rates   : https://www.btl.gov.il/Mediniyut/Actualia/Pages/contribution_rates.aspx
+// Verified against the official booklet 2026-07-15 (agent session, T21): the 10%/14%/35%
+// thresholds and the 47%-to-surtax threshold below were previously wrong (likely stale
+// pre-2026 figures). The 20%/31% thresholds (Amendment 288, retroactive to 2026-01-01,
+// finalized 2026-03-30) were already correct and independently corroborated.
 // ─────────────────────────────────────────────────────────────────────────────
 
 /** Tax year these constants apply to */
@@ -17,15 +22,19 @@ const TAX_YEAR = 2026;
  * Monthly progressive income tax brackets (מדרגות מס הכנסה חודשיות).
  * upTo  - upper limit of this bracket in ILS/month (Infinity = no cap)
  * rate  - marginal rate for income that falls in this bracket
+ *
+ * The official booklet models the top rate as 47% "on every additional shekel" plus a
+ * separate 3% surtax (סעיף 121ב) on income above ₪60,130/month — mathematically
+ * equivalent to a flat 50% bracket above that threshold, which is how it's modeled here.
  */
 const INCOME_TAX_BRACKETS: ReadonlyArray<{ readonly upTo: number; readonly rate: number }> = [
-  { upTo:  7_270,   rate: 0.10 }, // 10%
-  { upTo: 10_420,   rate: 0.14 }, // 14%
-  { upTo: 19_000,   rate: 0.20 }, // 20% - raised from ₪16,720 per amendment 288 (Jan 2026)
-  { upTo: 25_100,   rate: 0.31 }, // 31% - raised from ₪23,150 per amendment 288 (Jan 2026)
-  { upTo: 48_130,   rate: 0.35 }, // 35%
-  { upTo: 61_990,   rate: 0.47 }, // 47%
-  { upTo: Infinity, rate: 0.50 }, // 50%
+  { upTo:  7_010,   rate: 0.10 }, // 10%
+  { upTo: 10_060,   rate: 0.14 }, // 14%
+  { upTo: 19_000,   rate: 0.20 }, // 20% - raised from ₪16,150 per amendment 288 (Jan 2026)
+  { upTo: 25_100,   rate: 0.31 }, // 31% - raised from ₪22,440 per amendment 288 (Jan 2026)
+  { upTo: 46_690,   rate: 0.35 }, // 35%
+  { upTo: 60_130,   rate: 0.47 }, // 47%
+  { upTo: Infinity, rate: 0.50 }, // 47% + 3% surtax (סעיף 121ב) above ₪60,130/month
 ];
 
 /** Monthly value of one credit point - נקודת זיכוי (ILS/month) */
@@ -388,30 +397,36 @@ export default function SalaryCalculator() {
         </div>
       </div>
 
-      {/* ── Results hero - dark #0F1117 ── */}
-      <div className="bg-[#0F1117] rounded-2xl p-8 mb-4 shadow-hero">
-        <p className="text-white/30 text-[11px] font-semibold uppercase tracking-[0.18em] mb-4 text-center">
+      {/* ── Results hero ── */}
+      <div
+        className="rounded-card p-8 mb-4"
+        style={{
+          background: '#FFFFFF',
+          border: '1px solid #EDEAE0',
+          boxShadow: '0 30px 70px rgba(14,61,44,.14), 0 2px 8px rgba(14,61,44,.06), 0 0 0 1px rgba(201,164,76,.15)',
+        }}
+      >
+        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] mb-4 text-center" style={{ color: '#8A867A' }}>
           שכר נטו לחודש
         </p>
 
-        {/* Split ₪ symbol */}
         <div
           className="flex items-end justify-center gap-1 tabular-nums font-extrabold leading-none tracking-tight mb-3"
           style={{ direction: 'ltr' }}
         >
           <span
-            className="text-white/30 font-light self-start"
-            style={{ fontSize: 'clamp(20px, 2.5vw, 28px)', marginTop: '0.3em' }}
+            className="font-light self-start"
+            style={{ fontSize: 'clamp(20px, 2.5vw, 28px)', marginTop: '0.3em', color: '#149A5B' }}
             aria-hidden="true"
           >
             ₪
           </span>
-          <span className="text-white" style={{ fontSize: 'clamp(48px, 7vw, 80px)' }}>
+          <span style={{ fontSize: 'clamp(48px, 7vw, 80px)', color: '#0E3D2C' }}>
             {fmt(animated)}
           </span>
         </div>
 
-        <p className="text-white/25 text-sm text-center">
+        <p className="text-sm text-center" style={{ color: '#8A867A' }}>
           ברוטו {fmtCurrency(gross)} · ניכויים {result.totalDeductionRate.toFixed(0)}%
         </p>
       </div>
@@ -455,19 +470,20 @@ export default function SalaryCalculator() {
 
       {/* ── Sticky mobile bottom bar ── */}
       <div
-        className="fixed bottom-0 inset-x-0 z-30 sm:hidden bg-[#0F1117]/95 backdrop-blur-sm
-                   border-t border-white/10 px-5 py-3 flex items-center justify-between"
+        className="fixed bottom-0 inset-x-0 z-30 sm:hidden backdrop-blur-sm
+                   border-t px-5 py-3 flex items-center justify-between"
+        style={{ background: 'rgba(255,255,255,0.95)', borderColor: '#E5E1D6' }}
       >
         <div>
-          <p className="text-white/30 text-[10px] font-semibold uppercase tracking-[0.12em]">שכר נטו</p>
+          <p className="text-[10px] font-semibold uppercase tracking-[0.12em]" style={{ color: '#8A867A' }}>שכר נטו</p>
           <div className="flex items-end gap-0.5 tabular-nums" style={{ direction: 'ltr' }}>
-            <span className="text-white/30 font-light text-xs self-end mb-0.5" aria-hidden="true">₪</span>
-            <span className="display-number text-white text-xl leading-tight">{fmt(roundedNet)}</span>
+            <span className="font-light text-xs self-end mb-0.5" style={{ color: '#149A5B' }} aria-hidden="true">₪</span>
+            <span className="display-number text-xl leading-tight" style={{ color: '#0E3D2C' }}>{fmt(roundedNet)}</span>
           </div>
         </div>
         <div className="text-left">
-          <p className="text-white/25 text-[10px]">ניכויים</p>
-          <p className="text-white/45 text-xs font-medium">{fmtCurrency(result.totalDeductions)}</p>
+          <p className="text-[10px]" style={{ color: '#8A867A' }}>ניכויים</p>
+          <p className="text-xs font-medium" style={{ color: '#55534A' }}>{fmtCurrency(result.totalDeductions)}</p>
         </div>
       </div>
 
