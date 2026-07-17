@@ -30,8 +30,8 @@ const TAX_YEAR = 2026;
 const INCOME_TAX_BRACKETS: ReadonlyArray<{ readonly upTo: number; readonly rate: number }> = [
   { upTo:  7_010,   rate: 0.10 }, // 10%
   { upTo: 10_060,   rate: 0.14 }, // 14%
-  { upTo: 19_000,   rate: 0.20 }, // 20% - raised from ₪16,150 per amendment 288 (Jan 2026)
-  { upTo: 25_100,   rate: 0.31 }, // 31% - raised from ₪22,440 per amendment 288 (Jan 2026)
+  { upTo: 19_000,   rate: 0.20 }, // 20% - raised from ₪16,720 per amendment 288 (Jan 2026)
+  { upTo: 25_100,   rate: 0.31 }, // 31% - raised from ₪23,150 per amendment 288 (Jan 2026)
   { upTo: 46_690,   rate: 0.35 }, // 35%
   { upTo: 60_130,   rate: 0.47 }, // 47%
   { upTo: Infinity, rate: 0.50 }, // 47% + 3% surtax (סעיף 121ב) above ₪60,130/month
