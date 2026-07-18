@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Logo from './Logo';
 
@@ -26,7 +25,7 @@ export default function Header() {
           <Logo />
           <nav className="hidden md:flex items-center gap-7" aria-label="ניווט ראשי">
             {NAV_LINKS.map(({ href, label }) => (
-              <Link
+              <a
                 key={href}
                 href={href}
                 className={`text-[15px] font-medium transition-colors duration-200 cursor-pointer
@@ -35,13 +34,13 @@ export default function Header() {
                               : 'text-accent-900 hover:text-primary-500'}`}
               >
                 {label}
-              </Link>
+              </a>
             ))}
           </nav>
         </div>
 
         <div className="flex items-center">
-          <Link
+          <a
             href="/tools/mortgage-calculator"
             className="hidden md:inline-flex items-center px-6 py-2.5 text-[15px] font-semibold
                        text-accent-50 transition-all duration-250 cursor-pointer"
@@ -61,7 +60,7 @@ export default function Header() {
             }}
           >
             מחשבון משכנתא
-          </Link>
+          </a>
 
           <button
             className="md:hidden min-h-[48px] min-w-[48px] flex items-center justify-center
@@ -92,7 +91,7 @@ export default function Header() {
         >
           <nav className="container-wide py-3 flex flex-col gap-1">
             {NAV_LINKS.map(({ href, label }) => (
-              <Link
+              <a
                 key={href}
                 href={href}
                 className={`min-h-[48px] ps-4 pe-4 flex items-center rounded-xl font-medium
@@ -103,10 +102,10 @@ export default function Header() {
                 onClick={() => setMenuOpen(false)}
               >
                 {label}
-              </Link>
+              </a>
             ))}
             <div className="h-px bg-accent-200 my-1" />
-            <Link
+            <a
               href="/tools/mortgage-calculator"
               className="min-h-[48px] ps-4 pe-4 flex items-center rounded-xl
                          bg-primary-50 text-primary-900 font-semibold
@@ -114,7 +113,7 @@ export default function Header() {
               onClick={() => setMenuOpen(false)}
             >
               מחשבון משכנתא
-            </Link>
+            </a>
           </nav>
         </div>
       )}

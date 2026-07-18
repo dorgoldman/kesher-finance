@@ -1,4 +1,3 @@
-import Link from 'next/link';
 
 interface LogoProps {
   size?: 'sm' | 'md' | 'lg';
@@ -17,10 +16,10 @@ export default function Logo({ size = 'md', className = '', variant = 'dark' }: 
   const dotColor = variant === 'light' ? 'text-footer-accent' : 'text-primary-500';
 
   return (
-    <Link href="/" className={`group inline-flex items-center gap-0 ${className}`}>
+    <a href="/" className={`group inline-flex items-center gap-0 ${className}`}>
       <span className={`font-extrabold ${textColor} ${sizes[size]}`} style={{ letterSpacing: '-0.5px' }}>מקסיט</span>
       <span className={`font-extrabold ${dotColor} ${sizes[size]}`}>.</span>
       <span className={`font-extrabold ${textColor} ${sizes[size]}`} style={{ letterSpacing: '-0.5px' }}>Maxit</span>
-    </Link>
+    </a>
   );
 }

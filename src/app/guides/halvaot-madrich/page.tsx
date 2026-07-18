@@ -1,5 +1,4 @@
 ﻿import type { Metadata } from 'next';
-import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import RelatedGuides from '@/components/RelatedGuides';
 import AdSlot from '@/components/AdSlot';
@@ -148,7 +147,7 @@ export default function HalvaotMadrichPage() {
             </h1>
             <div className="flex flex-wrap items-center gap-1.5 text-sm text-accent-400">
               <span>נכתב ונערך על ידי{' '}
-                <Link href="/about" className="underline underline-offset-2 hover:text-primary-600">דור גולדמן</Link></span>
+                <a href="/about" className="underline underline-offset-2 hover:text-primary-600">דור גולדמן</a></span>
               <span aria-hidden="true">·</span>
               <span>עודכן: מאי 2026</span>
             </div>
@@ -209,7 +208,7 @@ export default function HalvaotMadrichPage() {
                 מחשבון ההלוואה שלנו עושה את זה תוך שניות.
               </p>
             </div>
-            <Link
+            <a
               href="/tools/loan-calculator"
               className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl
                          bg-primary-600 hover:bg-primary-700 text-white text-sm font-semibold
@@ -219,7 +218,7 @@ export default function HalvaotMadrichPage() {
               <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </Link>
+            </a>
           </div>
 
           {/* ── Section 3 ── */}
@@ -413,30 +412,30 @@ export default function HalvaotMadrichPage() {
           <div className="my-8 p-5 bg-accent-50 border border-accent-100 rounded-2xl">
             <p className="text-sm font-semibold text-accent-700 mb-3">קראו גם:</p>
             <div className="flex flex-col sm:flex-row gap-3">
-              <Link href="/guides/halvaah-hutz-bankait" className="flex items-center gap-2 text-sm text-primary-600 hover:text-primary-700 underline underline-offset-2 transition-colors duration-150">
+              <a href="/guides/halvaah-hutz-bankait" className="flex items-center gap-2 text-sm text-primary-600 hover:text-primary-700 underline underline-offset-2 transition-colors duration-150">
                 <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
                 הלוואה חוץ בנקאית: המדריך המלא
-              </Link>
-              <Link href="/guides/בקשה-להלוואה" className="flex items-center gap-2 text-sm text-primary-600 hover:text-primary-700 underline underline-offset-2 transition-colors duration-150">
+              </a>
+              <a href="/guides/בקשה-להלוואה" className="flex items-center gap-2 text-sm text-primary-600 hover:text-primary-700 underline underline-offset-2 transition-colors duration-150">
                 <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
                 איך מגישים בקשה להלוואה
-              </Link>
-              <Link href="/guides/halvaah-lerechev" className="flex items-center gap-2 text-sm text-primary-600 hover:text-primary-700 underline underline-offset-2 transition-colors duration-150">
+              </a>
+              <a href="/guides/halvaah-lerechev" className="flex items-center gap-2 text-sm text-primary-600 hover:text-primary-700 underline underline-offset-2 transition-colors duration-150">
                 <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
                 הלוואה לרכב: בנק, יבואן, או ליסינג
-              </Link>
-              <Link href="/guides/halvaah-miyedit" className="flex items-center gap-2 text-sm text-primary-600 hover:text-primary-700 underline underline-offset-2 transition-colors duration-150">
+              </a>
+              <a href="/guides/halvaah-miyedit" className="flex items-center gap-2 text-sm text-primary-600 hover:text-primary-700 underline underline-offset-2 transition-colors duration-150">
                 <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
                 הלוואה מיידית: כמה זמן זה באמת לוקח
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -499,7 +498,7 @@ export default function HalvaotMadrichPage() {
               <p className="text-xs text-accent-500 mb-4 leading-relaxed">
                 חשבו החזר חודשי וסך ריבית לפי סכום, תקופה וריבית שבחרתם.
               </p>
-              <Link
+              <a
                 href="/tools/loan-calculator"
                 className="flex items-center justify-center gap-2 w-full px-4 py-2.5
                            bg-primary-600 hover:bg-primary-700 text-white text-sm font-semibold
@@ -509,7 +508,7 @@ export default function HalvaotMadrichPage() {
                 <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </Link>
+              </a>
             </div>
 
           </div>

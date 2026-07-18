@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { guidesByCategory } from '@/lib/guides';
 import Logo from './Logo';
 
@@ -37,7 +36,7 @@ export default function Footer() {
                 { href: '/tools/salary-calculator', label: 'מחשבון שכר נטו' },
               ].map(({ href, label }) => (
                 <li key={href}>
-                  <Link href={href} className="footer-link text-sm cursor-pointer">{label}</Link>
+                  <a href={href} className="footer-link text-sm cursor-pointer">{label}</a>
                 </li>
               ))}
             </ul>
@@ -48,7 +47,7 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {loanGuides.map((guide) => (
                 <li key={guide.href}>
-                  <Link href={guide.href} className="footer-link text-sm cursor-pointer">{guide.shortLabel}</Link>
+                  <a href={guide.href} className="footer-link text-sm cursor-pointer">{guide.shortLabel}</a>
                 </li>
               ))}
             </ul>
@@ -59,7 +58,7 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {mortgageGuides.map((guide) => (
                 <li key={guide.href}>
-                  <Link href={guide.href} className="footer-link text-sm cursor-pointer">{guide.shortLabel}</Link>
+                  <a href={guide.href} className="footer-link text-sm cursor-pointer">{guide.shortLabel}</a>
                 </li>
               ))}
             </ul>
@@ -72,9 +71,9 @@ export default function Footer() {
         >
           <p>&copy; {new Date().getFullYear()} מקסיט. כל הזכויות שמורות.</p>
           <div className="flex items-center gap-5">
-            <Link href="/about" className="footer-bottom-link cursor-pointer">אודות</Link>
-            <Link href="/contact" className="footer-bottom-link cursor-pointer">צור קשר</Link>
-            <Link href="/privacy" className="footer-bottom-link cursor-pointer">מדיניות פרטיות</Link>
+            <a href="/about" className="footer-bottom-link cursor-pointer">אודות</a>
+            <a href="/contact" className="footer-bottom-link cursor-pointer">צור קשר</a>
+            <a href="/privacy" className="footer-bottom-link cursor-pointer">מדיניות פרטיות</a>
           </div>
         </div>
       </div>

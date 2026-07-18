@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import Link from 'next/link';
 
 function useCountUp(target: number, duration = 350): number {
   const [display, setDisplay] = useState(target);
@@ -145,7 +144,7 @@ export default function HeroCalculator() {
         </div>
       </div>
 
-      <Link
+      <a
         href="/tools/mortgage-calculator"
         className="block text-center text-white font-bold transition-all duration-250 cursor-pointer"
         style={{
@@ -168,7 +167,7 @@ export default function HeroCalculator() {
         }}
       >
         לחישוב מלא עם תמהיל מסלולים ←
-      </Link>
+      </a>
     </div>
   );
 }

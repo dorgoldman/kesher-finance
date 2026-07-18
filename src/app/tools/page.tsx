@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AdSlot from '@/components/AdSlot';
 import { generateSEOMetadata } from '@/components/SEO';
@@ -62,7 +61,7 @@ export default function ToolsHub() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {calculators.map((calc) => (
-          <Link
+          <a
             key={calc.href}
             href={calc.href}
             className="card-interactive group"
@@ -79,7 +78,7 @@ export default function ToolsHub() {
               {calc.description}
             </p>
             <span className="link-arrow">לחישוב ←</span>
-          </Link>
+          </a>
         ))}
       </div>
     </div>

@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import JsonLd from '@/components/SEO';
 import { SITE_NAME, SITE_URL } from '@/lib/constants';
@@ -119,9 +118,9 @@ export default function TermsPage() {
 
         <p className={p}>
           ראו גם את{' '}
-          <Link href="/privacy" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">
+          <a href="/privacy" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">
             מדיניות הפרטיות
-          </Link>{' '}
+          </a>{' '}
           שלנו.
         </p>
 

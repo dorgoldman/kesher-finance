@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { SITE_NAME, SITE_URL } from '@/lib/constants';
 import JsonLd from '@/components/SEO';
 import HeroCalculator from '@/components/HeroCalculator';
@@ -159,7 +158,7 @@ export default function HomePage() {
               </p>
 
               <div className="flex flex-wrap gap-3.5">
-                <Link
+                <a
                   href="/tools/mortgage-calculator"
                   className="text-white font-bold cursor-pointer transition-all duration-250"
                   style={{
@@ -168,13 +167,13 @@ export default function HomePage() {
                   }}
                 >
                   מחשבון משכנתא מלא
-                </Link>
-                <Link
+                </a>
+                <a
                   href="/guides"
                   className="btn-secondary"
                 >
                   מדריכים
-                </Link>
+                </a>
               </div>
             </div>
 
@@ -222,7 +221,7 @@ export default function HomePage() {
           <ScrollReveal delay={80}>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {tools.map((tool, i) => (
-                <Link
+                <a
                   key={tool.href}
                   href={tool.href}
                   className="card-interactive group om-card-in"
@@ -236,7 +235,7 @@ export default function HomePage() {
                     {tool.description}
                   </p>
                   <span className="link-arrow">לחישוב ←</span>
-                </Link>
+                </a>
               ))}
             </div>
           </ScrollReveal>
@@ -256,7 +255,7 @@ export default function HomePage() {
           <ScrollReveal delay={80}>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {guides.map((guide) => (
-                <Link
+                <a
                   key={guide.href}
                   href={guide.href}
                   className="card-interactive group"
@@ -270,14 +269,14 @@ export default function HomePage() {
                     {guide.description}
                   </p>
                   <span className="link-arrow text-sm">קרא עוד ←</span>
-                </Link>
+                </a>
               ))}
             </div>
 
             <div className="text-center mt-9">
-              <Link href="/guides" className="btn-secondary">
+              <a href="/guides" className="btn-secondary">
                 כל המדריכים ←
-              </Link>
+              </a>
             </div>
           </ScrollReveal>
         </div>
@@ -294,18 +293,18 @@ export default function HomePage() {
                 </h2>
                 <p className="text-[15px]" style={{ color: '#6B675D' }}>פורסמו לאחרונה באתר</p>
               </div>
-              <Link
+              <a
                 href="/guides"
                 className="hidden sm:inline-flex text-[15px] font-bold cursor-pointer"
                 style={{ color: '#149A5B' }}
               >
                 כל המדריכים ←
-              </Link>
+              </a>
             </div>
 
             <div className="flex flex-col px-5 sm:px-6 lg:px-8">
               {recentArticles.map((article, i) => (
-                <Link
+                <a
                   key={article.href}
                   href={article.href}
                   className="recent-article-row group grid gap-6 items-center transition-all duration-200 cursor-pointer"
@@ -325,14 +324,14 @@ export default function HomePage() {
                     <span className="block text-sm" style={{ color: '#6B675D' }}>{article.description}</span>
                   </span>
                   <span className="link-arrow hidden sm:block">קרא עוד ←</span>
-                </Link>
+                </a>
               ))}
             </div>
 
             <div className="sm:hidden text-center mt-8 px-5">
-              <Link href="/guides" className="btn-secondary text-sm">
+              <a href="/guides" className="btn-secondary text-sm">
                 כל המדריכים ←
-              </Link>
+              </a>
             </div>
           </ScrollReveal>
         </div>

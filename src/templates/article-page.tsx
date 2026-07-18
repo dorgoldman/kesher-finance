@@ -3,7 +3,6 @@
  * Copy to src/app/guides/[slug]/page.tsx when you add real content.
  * Populate generateStaticParams() with your actual slugs.
  */
-import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AdSlot from '@/components/AdSlot';
 
@@ -37,7 +36,7 @@ export function CalculatorCTA({ calculatorName, calculatorUrl, teaser }: Calcula
       </p>
       <p className="text-base font-bold text-accent-900 mb-1">{calculatorName}</p>
       <p className="text-sm leading-relaxed mb-4" style={{ color: '#6B675D' }}>{teaser}</p>
-      <Link
+      <a
         href={calculatorUrl}
         className="inline-flex items-center gap-2 text-sm font-bold text-primary-500
                    hover:text-primary-900 transition-colors duration-150 cursor-pointer"
@@ -52,7 +51,7 @@ export function CalculatorCTA({ calculatorName, calculatorUrl, teaser }: Calcula
         >
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>
-      </Link>
+      </a>
     </div>
   );
 }

@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AdSlot from '@/components/AdSlot';
 import RefinanceCalculator from '@/components/RefinanceCalculator';
@@ -219,7 +218,7 @@ export default function RefinanceCalculatorPage() {
             המדריך המלא למחזור משכנתא מסביר מתי כדאי, מה לבדוק בדוח היתרות,
             ואיך לנהל משא ומתן מול הבנק.
           </p>
-          <Link
+          <a
             href="/guides/מחזור-משכנתא"
             className="inline-flex items-center gap-2 text-sm font-semibold text-primary-600
                        hover:text-primary-700 underline underline-offset-2 transition-colors duration-150"
@@ -228,7 +227,7 @@ export default function RefinanceCalculatorPage() {
             <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-          </Link>
+          </a>
         </div>
 
       </section>
