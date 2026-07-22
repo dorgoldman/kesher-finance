@@ -64,7 +64,7 @@ export default function ToolsHub() {
           <a
             key={calc.href}
             href={calc.href}
-            className="card-interactive group"
+            className="card-interactive group flex flex-col"
             style={{ padding: '30px' }}
           >
             <div className="flex items-start justify-between mb-4">
@@ -74,10 +74,10 @@ export default function ToolsHub() {
             <h2 className="text-lg font-bold text-accent-900 mb-2">
               {calc.title}
             </h2>
-            <p className="text-sm leading-relaxed mb-4" style={{ color: '#6B675D' }}>
+            <p className="text-sm leading-relaxed mb-4 flex-1" style={{ color: '#6B675D' }}>
               {calc.description}
             </p>
-            <span className="link-arrow">לחישוב ←</span>
+            <span className="link-arrow mt-auto">לחישוב ←</span>
           </a>
         ))}
       </div>

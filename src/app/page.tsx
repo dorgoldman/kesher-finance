@@ -258,17 +258,17 @@ export default function HomePage() {
                 <a
                   key={guide.href}
                   href={guide.href}
-                  className="card-interactive group"
+                  className="card-interactive group flex flex-col"
                   style={{ padding: '28px' }}
                 >
-                  <span className="badge-primary mb-4 inline-block">{guide.category}</span>
+                  <span className="badge-primary mb-4 inline-block self-start">{guide.category}</span>
                   <h3 className="text-lg font-bold text-accent-900 mb-2 leading-snug">
                     {guide.title}
                   </h3>
-                  <p className="text-sm leading-relaxed mb-3.5" style={{ color: '#6B675D' }}>
+                  <p className="text-sm leading-relaxed mb-3.5 flex-1" style={{ color: '#6B675D' }}>
                     {guide.description}
                   </p>
-                  <span className="link-arrow text-sm">קרא עוד ←</span>
+                  <span className="link-arrow text-sm mt-auto">קרא עוד ←</span>
                 </a>
               ))}
             </div>
