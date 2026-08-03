@@ -267,7 +267,7 @@ Calculator pages: 3.7–6.4 kB (client components for interactivity).
 Shared JS: ~99.9 kB.
 
 **Known items to watch:**
-- `apple-touch-icon.png` reference removed; apple icon now uses `favicon.svg` directly
+- **Fixed 2026-08-03:** the prior note here said "apple-touch-icon.png reference removed; apple icon now uses favicon.svg directly" — that was the actual bug. iOS ignores SVG favicons entirely, so the site was falling back to a generic letter tile. Also found `apple-touch-icon.png` had gone stale as a **blank green square** (glyph never rendered) and had silently drifted from `favicon.svg` — caused by `font-family: system-ui` not resolving in the server-side rasterizer, so the PNG set came out serif while the SVG was sans-serif. Fixed: `favicon.svg` now leads with `Arial, Helvetica` before the `system-ui` fallback, the full icon set (`apple-touch-icon.png`, `favicon-192.png`, `favicon-512.png`, `favicon-48.png`) is regenerated from that one source via `cockpit-hq/tools/gen-icons.js`, and `layout.tsx` references `apple-touch-icon.png` + `site.webmanifest` again. See the global CLAUDE.md Cross-Project Build Learnings for the general rule.
 
 **AdSense E-E-A-T (June 2026):** Articles carry a named author (דור גולדמן) byline linking to `/about`, JSON-LD `author` is `Person` (not Organization), and each has a "מקורות" line citing official authorities (Bank of Israel / Kol-Zchut / Capital Market Authority). `/about` has editorial standards + sources + Person schema. Do not introduce anonymous "צוות מקסיט" authorship again, and never claim licensed-advisor credentials.
 
