@@ -101,6 +101,7 @@ const jsonLd = [
 
 /* ── Table of contents ── */
 const TOC = [
+  { id: 'mah-hofech',    label: 'אילו הלוואות טובות?' },
   { id: 'ribbit-eff',    label: 'ריבית נומינלית vs אפקטיבית' },
   { id: 'kama-lehahzir', label: 'כמה אתה יכול להחזיר' },
   { id: 'sugei-halvaa',  label: 'סוגי ההלוואות' },
@@ -161,6 +162,15 @@ export default function HalvaotMadrichPage() {
           <p className={p}>
             השאלה הנכונה היא: &quot;כמה אני יכול להחזיר?&quot; ההבדל בין השתיים
             הוא לפעמים כמה שנים של לחץ כלכלי.
+          </p>
+
+          {/* ── Section 0: What makes a good loan ── */}
+          <h2 id="mah-hofech" className={h2}>אילו הלוואות טובות?</h2>
+          <p className={p}>
+            הלוואות טובות הן אלה שהריבית האפקטיבית שלהן נמוכה, התנאים בהן קלים,
+            ואתה יכול להחזיר אותן ללא לחץ פיננסי. הלוואות רעות הן כל אלה
+            בהיפוך - ריבית גבוהה, עמלות נסתרות, וחודשים של מתח. ההבדל בין
+            שתי הקטגוריות קובע אם זה כלי חכם או טעות.
           </p>
 
           {/* ── Section 1 ── */}
