@@ -15,7 +15,7 @@ export interface GuideEntry {
   /** One-line description (used on the guides hub) */
   description: string;
   /** Category bucket */
-  category: 'הלוואות' | 'משכנתאות';
+  category: 'הלוואות' | 'משכנתאות' | 'מיסוי';
 }
 
 export const GUIDES: GuideEntry[] = [
@@ -133,6 +133,15 @@ export const GUIDES: GuideEntry[] = [
     shortLabel: 'מסלולי משכנתא',
     description: 'קבועה, משתנה, פריים או זכאות? כל מסלולי המשכנתא בישראל מוסברים עם דוגמה מספרית לכמה תמהיל נכון שווה.',
     category: 'משכנתאות',
+  },
+
+  // ─── מיסוי ──────────────────────────────────────────────────
+  {
+    href: '/guides/madregot-mas-hachnasa-2026',
+    title: 'מדרגות מס הכנסה 2026: הטבלה המלאה וכל מה שהשתנה',
+    shortLabel: 'מדרגות מס הכנסה 2026',
+    description: 'מדרגות המס השתנו ב-2026 (תיקון 288). הטבלה המלאה, מה בדיוק זז, ודוגמה מספרית לכמה זה שווה למי שמרוויח 18,000 ₪ בחודש.',
+    category: 'מיסוי',
   },
 ];
 
