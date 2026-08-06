@@ -5,6 +5,12 @@ import SalaryCalculator from '@/components/SalaryCalculator';
 import CalcMethodology from '@/components/CalcMethodology';
 import JsonLd, { generateSEOMetadata } from '@/components/SEO';
 import { SITE_URL, SITE_NAME } from '@/lib/constants';
+// Every tax figure on this page derives from the single source of truth.
+// Never hardcode one here — see src/lib/tax-constants.ts.
+import { CREDIT_POINT_VALUE, CREDIT_POINTS_BASE, TAX_YEAR } from '@/lib/tax-constants';
+
+/** Monthly ILS value of a person's base credit points, rounded for display. */
+const baseCreditValue = (points: number) => Math.round(points * CREDIT_POINT_VALUE);
 
 export const metadata: Metadata = generateSEOMetadata({
   title: 'מחשבון שכר נטו',
@@ -72,7 +78,7 @@ const jsonLd = [
         name: 'מה זו נקודת זיכוי ממס?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'נקודת זיכוי ממס היא הנחה קבועה שמנוכה מסכום המס לתשלום. בשנת 2026 שווי נקודת הזיכוי הוא ₪249 לחודש. כל תושב ישראל זכאי לנקודות בסיס: גבר - 2.25 נקודות, אישה - 2.75 נקודות. נוספות נקודות בגין ילדים, לימודים, שירות צבאי ועוד.',
+          text: `נקודת זיכוי ממס היא הנחה קבועה שמנוכה מסכום המס לתשלום. בשנת ${TAX_YEAR} שווי נקודת הזיכוי הוא ₪${CREDIT_POINT_VALUE} לחודש. כל תושב ישראל זכאי לנקודות בסיס: גבר - ${CREDIT_POINTS_BASE.MALE} נקודות, אישה - ${CREDIT_POINTS_BASE.FEMALE} נקודות. נוספות נקודות בגין ילדים, לימודים, שירות צבאי ועוד.`,
         },
       },
       {
@@ -122,7 +128,7 @@ export default function SalaryCalculatorPage() {
         formula="מס הכנסה: חישוב פרוגרסיבי לפי מדרגות על ההכנסה החייבת (ברוטו פחות הפקדות פנסיה). ביטוח לאומי ובריאות: אחוז קבוע מהברוטו לפי שתי מדרגות. פנסיה: אחוז מהברוטו שמנוכה מההכנסה החייבת במס."
         assumptions={[
           'מדרגות מס הכנסה 2026',
-          'נקודת זיכוי = ₪249 לחודש',
+          `נקודת זיכוי = ₪${CREDIT_POINT_VALUE} לחודש`,
           'שיעורי ביטוח לאומי ובריאות 2026',
           'חישוב לעובד שכיר בלבד',
           'ניכוי פנסיה לפי האחוז שהוזן',
@@ -152,9 +158,10 @@ export default function SalaryCalculatorPage() {
             <div className="card">
               <h3 className="font-bold text-accent-800 mb-2">מהי נקודת זיכוי?</h3>
               <p className="text-sm text-accent-500 leading-relaxed">
-                נקודת זיכוי מנוכה ישירות מסכום המס - לא מההכנסה. בשנת 2026 שווי כל נקודה
-                הוא ₪249 לחודש. גבר תושב זכאי ל-2.25 נקודות בסיס (₪560/חודש), אישה
-                תושבת - 2.75 נקודות (₪685/חודש). ילדים, לימודים ושירות צבאי מזכים
+                נקודת זיכוי מנוכה ישירות מסכום המס - לא מההכנסה. בשנת {TAX_YEAR} שווי כל נקודה
+                הוא ₪{CREDIT_POINT_VALUE} לחודש. גבר תושב זכאי ל-{CREDIT_POINTS_BASE.MALE} נקודות בסיס
+                (₪{baseCreditValue(CREDIT_POINTS_BASE.MALE)}/חודש), אישה תושבת - {CREDIT_POINTS_BASE.FEMALE} נקודות
+                (₪{baseCreditValue(CREDIT_POINTS_BASE.FEMALE)}/חודש). ילדים, לימודים ושירות צבאי מזכים
                 בנקודות נוספות.
               </p>
             </div>
