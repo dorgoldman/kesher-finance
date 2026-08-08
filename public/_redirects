@@ -1,0 +1,12 @@
+# Redirect old Hebrew-character guide URLs to ASCII-transliterated equivalents
+# CF Pages processes these before serving static files
+
+/guides/בקשה-להלוואה /guides/bakasha-lehalva 301
+/guides/הלוואה-מקרן-השתלמות /guides/halvaah-mekarhn-hashtalmut 301
+/guides/כמה-משכנתא-לפי-משכורת /guides/kama-mashkanta-lpei-maskuret 301
+/guides/מחזור-משכנתא /guides/mahzor-mashkanta 301
+/guides/משכנתא-ראשונה /guides/mashkanta-rishona 301
+/guides/ריבית-אפקטיבית /guides/rivit-efektivit 301
+/guides/ריבית-פריים /guides/rivit-prime 301
+/guides/שפיצר-מול-קרן-שווה /guides/spitzer-keren-shva 301
+/guides/מסלולי-משכנתא /guides/maslolei-mashkanta 301
