@@ -1,7 +1,7 @@
 ﻿import type { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import JsonLd from '@/components/SEO';
-import { SITE_NAME } from '@/lib/constants';
+import { SITE_NAME, OG_IMAGE } from '@/lib/constants';
 
 const BASE = 'https://getmaxit.co.il';
 const CANONICAL = `${BASE}/privacy`;
@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     'מדיניות הפרטיות של Maxit. מה אנחנו אוספים, למה, ואיך אנחנו מגנים על המידע שלך.',
   alternates: { canonical: CANONICAL },
   openGraph: {
+    images: [OG_IMAGE],
     title: 'מדיניות פרטיות',
     description:
       'מדיניות הפרטיות של Maxit. מה אנחנו אוספים, למה, ואיך אנחנו מגנים על המידע שלך.',

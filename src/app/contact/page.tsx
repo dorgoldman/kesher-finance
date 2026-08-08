@@ -1,7 +1,7 @@
 ﻿import type { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import JsonLd from '@/components/SEO';
-import { SITE_NAME } from '@/lib/constants';
+import { SITE_NAME, OG_IMAGE } from '@/lib/constants';
 
 const BASE = 'https://getmaxit.co.il';
 const CANONICAL = `${BASE}/contact`;
@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: 'שאלות, הערות, או הצעות לשיתוף פעולה. נשמח לשמוע.',
   alternates: { canonical: CANONICAL },
   openGraph: {
+    images: [OG_IMAGE],
     title: 'צור קשר',
     description: 'שאלות, הערות, או הצעות לשיתוף פעולה. נשמח לשמוע.',
     url: CANONICAL,

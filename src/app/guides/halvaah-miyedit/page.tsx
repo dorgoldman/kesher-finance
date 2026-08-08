@@ -3,7 +3,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import RelatedGuides from '@/components/RelatedGuides';
 import AdSlot from '@/components/AdSlot';
 import JsonLd from '@/components/SEO';
-import { SITE_NAME } from '@/lib/constants';
+import { SITE_NAME, OG_IMAGE } from '@/lib/constants';
 import { CalculatorCTA } from '@/templates/article-page';
 
 const BASE = 'https://getmaxit.co.il';
@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     'כמה זמן לוקחת הלוואה מיידית באמת? מה צריך להכין, מה יכול לעצור את האישור, ואיפה כדאי לפנות ב-2026.',
   alternates: { canonical: CANONICAL },
   openGraph: {
+    images: [OG_IMAGE],
     title: 'הלוואה מיידית - מה באמת קורה מרגע הבקשה עד קבלת הכסף',
     description:
       'כמה זמן לוקחת הלוואה מיידית באמת? מה צריך להכין, מה יכול לעצור את האישור, ואיפה כדאי לפנות ב-2026.',

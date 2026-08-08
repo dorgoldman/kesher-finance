@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import JsonLd from '@/components/SEO';
-import { SITE_NAME, SITE_URL } from '@/lib/constants';
+import { SITE_NAME, SITE_URL, OG_IMAGE } from '@/lib/constants';
 
 const CANONICAL = `${SITE_URL}/terms`;
 
@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     'תנאי השימוש באתר מקסיט: מה השירות כולל, מגבלות האחריות, ודיוק המחשבונים.',
   alternates: { canonical: CANONICAL },
   openGraph: {
+    images: [OG_IMAGE],
     title: 'תנאי שימוש',
     description:
       'תנאי השימוש באתר מקסיט: מה השירות כולל, מגבלות האחריות, ודיוק המחשבונים.',

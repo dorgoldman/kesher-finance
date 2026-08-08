@@ -3,7 +3,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import RelatedGuides from '@/components/RelatedGuides';
 import AdSlot from '@/components/AdSlot';
 import JsonLd from '@/components/SEO';
-import { SITE_NAME } from '@/lib/constants';
+import { SITE_NAME, OG_IMAGE } from '@/lib/constants';
 import { CalculatorCTA } from '@/templates/article-page';
 
 /* ── Canonical domain for this article ── */
@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     'כל מה שצריך לדעת על הלוואה חוץ בנקאית: מי נותן, כמה עולה, מתי כדאי ומתי לא. מדריך ישיר בלי שטויות.',
   alternates: { canonical: CANONICAL },
   openGraph: {
+    images: [OG_IMAGE],
     title: 'הלוואה חוץ בנקאית - המדריך המלא לשנת 2026',
     description:
       'כל מה שצריך לדעת על הלוואה חוץ בנקאית: מי נותן, כמה עולה, מתי כדאי ומתי לא. מדריך ישיר בלי שטויות.',

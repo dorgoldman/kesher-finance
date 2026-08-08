@@ -3,7 +3,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import RelatedGuides from '@/components/RelatedGuides';
 import AdSlot from '@/components/AdSlot';
 import JsonLd from '@/components/SEO';
-import { SITE_NAME } from '@/lib/constants';
+import { SITE_NAME, OG_IMAGE } from '@/lib/constants';
 import { CalculatorCTA } from '@/templates/article-page';
 
 /* -- Canonical domain for this article -- */
@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     'לפני שחותמים על מימון הרכב, קראו את זה. ההבדל בין בנק ליבואן יכול לעלות לכם אלפי שקלים על אותו רכב.',
   alternates: { canonical: CANONICAL },
   openGraph: {
+    images: [OG_IMAGE],
     title: 'הלוואה לרכב: בנק, יבואן, או ליסינג? המדריך ב-2026',
     description:
       'לפני שחותמים על מימון הרכב, קראו את זה. ההבדל בין בנק ליבואן יכול לעלות לכם אלפי שקלים על אותו רכב.',

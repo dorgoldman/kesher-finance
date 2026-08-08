@@ -3,7 +3,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import RelatedGuides from '@/components/RelatedGuides';
 import AdSlot from '@/components/AdSlot';
 import JsonLd from '@/components/SEO';
-import { SITE_NAME } from '@/lib/constants';
+import { SITE_NAME, OG_IMAGE } from '@/lib/constants';
 import { CalculatorCTA } from '@/templates/article-page';
 
 /* -- Canonical domain for this article -- */
@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     'הבנק סרב לך? זה לא סוף הדרך. המדריך המלא לאפשרויות מימון עם BDI שלילי, כולל טיפ אחד שרוב האנשים מפספסים.',
   alternates: { canonical: CANONICAL },
   openGraph: {
+    images: [OG_IMAGE],
     title: 'הלוואה למסורבים: מה האפשרויות האמיתיות ב-2026',
     description:
       'הבנק סרב לך? זה לא סוף הדרך. המדריך המלא לאפשרויות מימון עם BDI שלילי, כולל טיפ אחד שרוב האנשים מפספסים.',

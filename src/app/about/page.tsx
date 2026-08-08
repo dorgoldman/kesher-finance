@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import JsonLd from '@/components/SEO';
-import { SITE_NAME, SITE_URL } from '@/lib/constants';
+import { SITE_NAME, SITE_URL, OG_IMAGE } from '@/lib/constants';
 
 const CANONICAL = `${SITE_URL}/about`;
 
@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     'מי עומד מאחורי מקסיט, איך אנחנו כותבים ובודקים את התוכן, ועל אילו מקורות רשמיים אנחנו מסתמכים. שקיפות מלאה על שיטת העבודה שלנו.',
   alternates: { canonical: CANONICAL },
   openGraph: {
+    images: [OG_IMAGE],
     title: 'אודות מקסיט',
     description:
       'מי עומד מאחורי מקסיט, איך אנחנו כותבים ובודקים את התוכן, ועל אילו מקורות רשמיים אנחנו מסתמכים.',

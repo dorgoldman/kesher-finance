@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AdSlot from '@/components/AdSlot';
 import JsonLd from '@/components/SEO';
-import { SITE_NAME } from '@/lib/constants';
+import { SITE_NAME, OG_IMAGE } from '@/lib/constants';
 import { CalculatorCTA } from '@/templates/article-page';
 
 /* -- Canonical domain for this article -- */
@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     'קבועה, משתנה, פריים או זכאות? כל מסלולי המשכנתא בישראל מוסברים עם דוגמה מספרית לכמה תמהיל נכון שווה, ומה החוק מחייב לגבי הרכב המסלולים.',
   alternates: { canonical: CANONICAL },
   openGraph: {
+    images: [OG_IMAGE],
     title: 'מסלולי משכנתא: המדריך המלא לתמהיל הנכון',
     description:
       'קבועה, משתנה, פריים או זכאות? כל מסלולי המשכנתא בישראל מוסברים עם דוגמה מספרית לכמה תמהיל נכון שווה, ומה החוק מחייב לגבי הרכב המסלולים.',
