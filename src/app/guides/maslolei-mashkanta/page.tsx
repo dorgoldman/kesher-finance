@@ -219,7 +219,7 @@ export default function MasloleyMashkantaPage() {
           <CalculatorCTA
             calculatorName="מחשבון המשכנתא"
             calculatorUrl="/tools/mortgage-calculator"
-            description="רוצה לבנות תמהיל ולראות איך כל מסלול משפיע על ההחזר החודשי?"
+            teaser="רוצה לבנות תמהיל ולראות איך כל מסלול משפיע על ההחזר החודשי?"
           />
 
           {/* Section 6 */}
