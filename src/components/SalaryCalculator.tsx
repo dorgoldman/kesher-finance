@@ -3,65 +3,23 @@
 import { useState, useMemo, useEffect, useRef } from 'react';
 
 // ─────────────────────────────────────────────────────────────────────────────
-// 2026 ISRAELI TAX CONSTANTS
+// Tax constants come from src/lib/tax-constants.ts — the single source of truth
+// for every tax figure on this site, in calculators AND in guide prose.
+// Do not re-declare any of these locally; update that file each January.
 // ─────────────────────────────────────────────────────────────────────────────
-// To update each January, verify from official sources:
-//   Income tax brackets : Israel Tax Authority (רשות המסים), "לוח עזר לחישוב מס הכנסה
-//                          ממשכורת ושכר עבודה לחודש ינואר 2026 ואילך" — www.taxes.gov.il
-//   NI / Health rates   : https://www.btl.gov.il/Mediniyut/Actualia/Pages/contribution_rates.aspx
-// Verified against the official booklet 2026-07-15 (agent session, T21): the 10%/14%/35%
-// thresholds and the 47%-to-surtax threshold below were previously wrong (likely stale
-// pre-2026 figures). The 20%/31% thresholds (Amendment 288, retroactive to 2026-01-01,
-// finalized 2026-03-30) were already correct and independently corroborated.
-// ─────────────────────────────────────────────────────────────────────────────
-
-/** Tax year these constants apply to */
-const TAX_YEAR = 2026;
-
-/**
- * Monthly progressive income tax brackets (מדרגות מס הכנסה חודשיות).
- * upTo  - upper limit of this bracket in ILS/month (Infinity = no cap)
- * rate  - marginal rate for income that falls in this bracket
- *
- * The official booklet models the top rate as 47% "on every additional shekel" plus a
- * separate 3% surtax (סעיף 121ב) on income above ₪60,130/month — mathematically
- * equivalent to a flat 50% bracket above that threshold, which is how it's modeled here.
- */
-const INCOME_TAX_BRACKETS: ReadonlyArray<{ readonly upTo: number; readonly rate: number }> = [
-  { upTo:  7_010,   rate: 0.10 }, // 10%
-  { upTo: 10_060,   rate: 0.14 }, // 14%
-  { upTo: 19_000,   rate: 0.20 }, // 20% - raised from ₪16,720 per amendment 288 (Jan 2026)
-  { upTo: 25_100,   rate: 0.31 }, // 31% - raised from ₪23,150 per amendment 288 (Jan 2026)
-  { upTo: 46_690,   rate: 0.35 }, // 35%
-  { upTo: 60_130,   rate: 0.47 }, // 47%
-  { upTo: Infinity, rate: 0.50 }, // 47% + 3% surtax (סעיף 121ב) above ₪60,130/month
-];
-
-/** Monthly value of one credit point - נקודת זיכוי (ILS/month) */
-const CREDIT_POINT_VALUE = 242; // ILS - frozen for 2026 (was ₪249 pre-amendment)
-
-/** Reference average wage used by NII for bracket thresholds (ILS/month) */
-const NI_AVERAGE_WAGE = 13_600; // ILS/month
-
-/** 60% of average wage - threshold between low and high NI/health rates (ILS/month) */
-const NI_LOW_CEILING = Math.round(NI_AVERAGE_WAGE * 0.6); // ≈ 8,160 ILS
-
-/** Maximum monthly income subject to NI contributions - 5× average wage (ILS/month) */
-const NI_MAX_INCOME = NI_AVERAGE_WAGE * 5; // ≈ 68,000 ILS
-
-/** Employee National Insurance rates (ביטוח לאומי עובד) */
-const NI_RATE_LOW  = 0.004; // 0.4% on income up to NI_LOW_CEILING
-const NI_RATE_HIGH = 0.070; // 7.0% on income between NI_LOW_CEILING and NI_MAX_INCOME
-
-/** Health insurance rates (ביטוח בריאות) - collected alongside NI */
-const HEALTH_RATE_LOW  = 0.031; // 3.1% on income up to NI_LOW_CEILING
-const HEALTH_RATE_HIGH = 0.050; // 5.0% on income above NI_LOW_CEILING
-
-/**
- * Maximum monthly salary base for pension contribution tax deduction (ILS/month).
- * Employee pension contributions on salary above this ceiling are not tax-deductible.
- */
-const PENSION_DEDUCTION_CEILING = 36_000; // ILS/month - verify annually
+import {
+  TAX_YEAR,
+  INCOME_TAX_BRACKETS,
+  CREDIT_POINT_VALUE,
+  CREDIT_POINTS_BASE,
+  NI_LOW_CEILING,
+  NI_MAX_INCOME,
+  NI_RATE_LOW,
+  NI_RATE_HIGH,
+  HEALTH_RATE_LOW,
+  HEALTH_RATE_HIGH,
+  PENSION_DEDUCTION_CEILING,
+} from '@/lib/tax-constants';
 
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -366,7 +324,7 @@ export default function SalaryCalculator() {
             step={0.25}
             onChange={setCreditPoints}
             format={(v) => `${v} נקודות`}
-            hint="תושב זכר: 2.25 · תושבת נקבה: 2.75 · כל נקודה = ₪249/חודש"
+            hint={`תושב זכר: ${CREDIT_POINTS_BASE.MALE} · תושבת נקבה: ${CREDIT_POINTS_BASE.FEMALE} · כל נקודה = ₪${CREDIT_POINT_VALUE}/חודש`}
           />
           <Slider
             label="פנסיה עובד"
