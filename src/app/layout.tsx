@@ -31,6 +31,16 @@ export const metadata: Metadata = {
     locale: 'he_IL',
     siteName: SITE_NAME,
   },
+  // Was absent entirely, so the homepage fell back to card type `summary` (a
+  // small text card) and guide pages declared `summary_large_image` with no
+  // image behind it — the worst combination, since it promises a big visual
+  // and delivers nothing. The image itself comes from
+  // src/app/opengraph-image.tsx via the file convention.
+  twitter: {
+    card: 'summary_large_image',
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+  },
   icons: {
     icon: [
       { url: '/favicon-48.png', sizes: '48x48', type: 'image/png' },

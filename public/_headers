@@ -1,0 +1,20 @@
+# Cloudflare Pages edge headers.
+#
+# Next.js's `opengraph-image.tsx` convention emits an EXTENSIONLESS file
+# (/opengraph-image). Cloudflare Pages infers Content-Type from the extension,
+# so with none it falls back to application/octet-stream.
+#
+# Why that matters: the response is 200 OK and the bytes are a valid 1200x630
+# PNG, so Facebook and WhatsApp sniff the body and preview fine, while X and
+# LinkedIn check Content-Type and drop a non-image/*. Previews then fail on
+# some platforms only, with nothing logged anywhere. Same fix as mg-pets.
+#
+# Verify after deploy (a 200 alone proves nothing here):
+#   curl -sI https://getmaxit.co.il/opengraph-image | grep -i content-type
+# It must say image/png.
+
+/opengraph-image
+  Content-Type: image/png
+
+/guides/*/opengraph-image
+  Content-Type: image/png
