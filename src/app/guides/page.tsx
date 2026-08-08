@@ -100,6 +100,12 @@ const guides: { title: string; description: string; href: string; category: stri
     href: '/guides/מחזור-משכנתא',
     category: 'משכנתאות',
   },
+  {
+    title: 'מדרגות מס הכנסה 2026: הטבלה המלאה וכל מה שהשתנה',
+    description: 'מדרגות המס השתנו ב-2026 (תיקון 288). הטבלה המלאה, מה בדיוק זז, ודוגמה מספרית לכמה זה שווה למי שמרוויח 18,000 ₪ בחודש.',
+    href: '/guides/madregot-mas-hachnasa-2026',
+    category: 'מיסוי',
+  },
 ];
 
 export default function GuidesHub() {
