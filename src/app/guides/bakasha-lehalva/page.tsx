@@ -5,7 +5,7 @@ import AdSlot from '@/components/AdSlot';
 import { CalculatorCTA } from '@/templates/article-page';
 import MobileArticleTOC from '@/components/MobileArticleTOC';
 
-const CANONICAL = 'https://getmaxit.co.il/guides/בקשה-להלוואה';
+const CANONICAL = 'https://getmaxit.co.il/guides/bakasha-lehalva';
 
 export const metadata: Metadata = {
   title: 'בקשה להלוואה: מה הבנק בודק',

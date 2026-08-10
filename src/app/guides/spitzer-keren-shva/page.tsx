@@ -5,7 +5,7 @@ import AdSlot from '@/components/AdSlot';
 import { CalculatorCTA } from '@/templates/article-page';
 import MobileArticleTOC from '@/components/MobileArticleTOC';
 
-const CANONICAL = 'https://getmaxit.co.il/guides/שפיצר-מול-קרן-שווה';
+const CANONICAL = 'https://getmaxit.co.il/guides/spitzer-keren-shva';
 
 export const metadata: Metadata = {
   title: 'שפיצר מול קרן שווה',

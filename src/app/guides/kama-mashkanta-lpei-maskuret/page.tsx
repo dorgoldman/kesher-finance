@@ -5,7 +5,7 @@ import AdSlot from '@/components/AdSlot';
 import { CalculatorCTA } from '@/templates/article-page';
 import MobileArticleTOC from '@/components/MobileArticleTOC';
 
-const CANONICAL = 'https://getmaxit.co.il/guides/כמה-משכנתא-לפי-משכורת';
+const CANONICAL = 'https://getmaxit.co.il/guides/kama-mashkanta-lpei-maskuret';
 
 export const metadata: Metadata = {
   title: 'כמה משכנתא אפשר לקחת לפי משכורת? חישוב מלא 2026',

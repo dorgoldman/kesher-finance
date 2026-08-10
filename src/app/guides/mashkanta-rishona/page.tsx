@@ -5,7 +5,7 @@ import AdSlot from '@/components/AdSlot';
 import { CalculatorCTA } from '@/templates/article-page';
 import MobileArticleTOC from '@/components/MobileArticleTOC';
 
-const CANONICAL = 'https://getmaxit.co.il/guides/משכנתא-ראשונה';
+const CANONICAL = 'https://getmaxit.co.il/guides/mashkanta-rishona';
 
 export const metadata: Metadata = {
   title: 'משכנתא ראשונה 2026',

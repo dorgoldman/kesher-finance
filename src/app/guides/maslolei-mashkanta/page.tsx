@@ -7,7 +7,7 @@ import { CalculatorCTA } from '@/templates/article-page';
 
 /* -- Canonical domain for this article -- */
 const BASE = 'https://getmaxit.co.il';
-const CANONICAL = `${BASE}/guides/מסלולי-משכנתא`;
+const CANONICAL = `${BASE}/guides/maslolei-mashkanta`;
 
 export const metadata: Metadata = {
   title: 'מסלולי משכנתא 2026: המדריך המלא לתמהיל',

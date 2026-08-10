@@ -11,6 +11,10 @@ export const metadata: Metadata = generateSEOMetadata({
   description:
     'מחשבון משכנתא חינמי בעברית - הרכיבו תמהיל מסלולים (קבועה, משתנה, פריים, זכאות), חשבו החזר חודשי כולל ולוח סילוקין מפורט.',
   canonical: '/tools/mortgage-calculator',
+  languages: {
+    'he-IL': `${SITE_URL}/tools/mortgage-calculator`,
+    'ar': `${SITE_URL}/ar/tools/mortgage-calculator`,
+  },
 });
 
 const jsonLd = [
@@ -83,7 +87,17 @@ export default function MortgageCalculatorPage() {
 
       <div>
           <div className="mb-8">
-            <h1 className="section-title mb-3">מחשבון משכנתא</h1>
+            <div className="flex items-start justify-between gap-4 mb-3">
+              <h1 className="section-title">מחשבון משכנתא</h1>
+              <a
+                href="/ar/tools/mortgage-calculator"
+                hrefLang="ar"
+                className="shrink-0 text-sm font-semibold text-primary-600 hover:text-primary-700
+                           underline underline-offset-2 transition-colors duration-150 cursor-pointer whitespace-nowrap"
+              >
+                بالعربية ←
+              </a>
+            </div>
             <p className="text-accent-500 leading-relaxed">
               הרכיבו את תמהיל המשכנתא שלכם ממספר מסלולים - ריבית קבועה, משתנה,
               פריים וזכאות. המחשבון מחשב את ההחזר החודשי הכולל ומציג לוח סילוקין

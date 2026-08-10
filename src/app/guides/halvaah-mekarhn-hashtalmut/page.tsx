@@ -5,7 +5,7 @@ import AdSlot from '@/components/AdSlot';
 import { CalculatorCTA } from '@/templates/article-page';
 import MobileArticleTOC from '@/components/MobileArticleTOC';
 
-const CANONICAL = 'https://getmaxit.co.il/guides/הלוואה-מקרן-השתלמות';
+const CANONICAL = 'https://getmaxit.co.il/guides/halvaah-mekarhn-hashtalmut';
 
 export const metadata: Metadata = {
   title: 'הלוואה מקרן השתלמות',

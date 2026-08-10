@@ -34,6 +34,7 @@ export default function Footer() {
                 { href: '/tools/young-couple-mortgage', label: 'מחשבון לזוג צעיר' },
                 { href: '/tools/loan-calculator', label: 'מחשבון הלוואה' },
                 { href: '/tools/salary-calculator', label: 'מחשבון שכר נטו' },
+                { href: '/ar/tools/mortgage-calculator', label: 'حاسبة القرض العقاري' },
               ].map(({ href, label }) => (
                 <li key={href}>
                   <a href={href} className="footer-link text-sm cursor-pointer">{label}</a>

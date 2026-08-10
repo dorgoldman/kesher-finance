@@ -6,14 +6,16 @@ interface SEOProps {
   canonical?: string;
   ogImage?: string;
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  languages?: Record<string, string>;
 }
 
-export function generateSEOMetadata({ title, description, canonical, ogImage }: Omit<SEOProps, 'jsonLd'>) {
+export function generateSEOMetadata({ title, description, canonical, ogImage, languages }: Omit<SEOProps, 'jsonLd'>) {
   return {
     title,
     description,
     alternates: {
       canonical: canonical || undefined,
+      ...(languages ? { languages } : {}),
     },
     openGraph: {
       title,

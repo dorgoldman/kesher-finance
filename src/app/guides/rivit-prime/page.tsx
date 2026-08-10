@@ -5,7 +5,7 @@ import AdSlot from '@/components/AdSlot';
 import { CalculatorCTA } from '@/templates/article-page';
 import MobileArticleTOC from '@/components/MobileArticleTOC';
 
-const CANONICAL = 'https://getmaxit.co.il/guides/ריבית-פריים';
+const CANONICAL = 'https://getmaxit.co.il/guides/rivit-prime';
 
 export const metadata: Metadata = {
   title: 'ריבית פריים 2026',

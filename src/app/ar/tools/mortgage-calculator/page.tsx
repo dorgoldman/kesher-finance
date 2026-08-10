@@ -11,6 +11,10 @@ export const metadata: Metadata = generateSEOMetadata({
   description:
     'حاسبة قرض عقاري مجانية للسوق الإسرائيلي - اختاروا مسارات التمويل (ثابتة، متغيرة، بريم، استحقاق)، احسبوا القسط الشهري وجدول السداد الكامل.',
   canonical: '/ar/tools/mortgage-calculator',
+  languages: {
+    'ar': `${SITE_URL}/ar/tools/mortgage-calculator`,
+    'he-IL': `${SITE_URL}/tools/mortgage-calculator`,
+  },
 });
 
 const jsonLd = [
@@ -30,8 +34,8 @@ const jsonLd = [
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'الرئيسية', item: `${SITE_URL}/ar` },
-      { '@type': 'ListItem', position: 2, name: 'الأدوات', item: `${SITE_URL}/ar/tools` },
+      { '@type': 'ListItem', position: 1, name: 'الرئيسية', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'الأدوات', item: `${SITE_URL}/tools` },
       { '@type': 'ListItem', position: 3, name: 'حاسبة القرض العقاري' },
     ],
   },
@@ -76,14 +80,24 @@ export default function ArabicMortgageCalculatorPage() {
 
       <Breadcrumbs
         items={[
-          { label: 'الأدوات', href: '/ar/tools' },
+          { label: 'الأدوات', href: '/tools' },
           { label: 'حاسبة القرض العقاري' },
         ]}
       />
 
       <div>
         <div className="mb-8">
-          <h1 className="section-title mb-3">حاسبة القرض العقاري</h1>
+          <div className="flex items-start justify-between gap-4 mb-3">
+            <h1 className="section-title">حاسبة القرض العقاري</h1>
+            <a
+              href="/tools/mortgage-calculator"
+              hrefLang="he-IL"
+              className="shrink-0 text-sm font-semibold text-primary-600 hover:text-primary-700
+                         underline underline-offset-2 transition-colors duration-150 cursor-pointer whitespace-nowrap"
+            >
+              → בעברית
+            </a>
+          </div>
           <p className="text-accent-500 leading-relaxed">
             ركّبوا تركيبة القرض العقاري من عدة مسارات - فائدة ثابتة، متغيرة،
             بريم واستحقاق. الحاسبة تحسب القسط الشهري الإجمالي وتعرض جدول
