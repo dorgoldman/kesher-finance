@@ -101,6 +101,12 @@ const guides: { title: string; description: string; href: string; category: stri
     category: 'משכנתאות',
   },
   {
+    title: 'מס רכישה דירה 2026: חישוב ודוגמה מעשית',
+    description: 'מס רכישה דירה 2026: כמה תשלם על קניית דירה ראשונה. חישוב מדרגות, דוגמה עם מספרים אמיתיים, תשובות לשאלות נפוצות.',
+    href: '/guides/mas-richisha-dira',
+    category: 'מיסוי',
+  },
+  {
     title: 'מדרגות מס הכנסה 2026: הטבלה המלאה וכל מה שהשתנה',
     description: 'מדרגות המס השתנו ב-2026 (תיקון 288). הטבלה המלאה, מה בדיוק זז, ודוגמה מספרית לכמה זה שווה למי שמרוויח 18,000 ₪ בחודש.',
     href: '/guides/madregot-mas-hachnasa-2026',
