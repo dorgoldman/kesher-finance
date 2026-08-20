@@ -13,13 +13,13 @@ const CANONICAL = `${BASE}/guides/halvaah-hutz-bankait`;
 export const metadata: Metadata = {
   title: 'הלוואה חוץ בנקאית',
   description:
-    'כל מה שצריך לדעת על הלוואה חוץ בנקאית: מי נותן, כמה עולה, מתי כדאי ומתי לא. מדריך ישיר בלי שטויות.',
+    'הלוואה חוץ בנקאית לכל מטרה: מי נותן, כמה עולה, איך עובדת בדיקת זכאות ומתי כדאי. מדריך ישיר בלי שטויות.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     images: [OG_IMAGE],
     title: 'הלוואה חוץ בנקאית - המדריך המלא לשנת 2026',
     description:
-      'כל מה שצריך לדעת על הלוואה חוץ בנקאית: מי נותן, כמה עולה, מתי כדאי ומתי לא. מדריך ישיר בלי שטויות.',
+      'הלוואה חוץ בנקאית לכל מטרה: מי נותן, כמה עולה, איך עובדת בדיקת זכאות ומתי כדאי. מדריך ישיר בלי שטויות.',
     url: CANONICAL,
     siteName: SITE_NAME,
     locale: 'he_IL',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'הלוואה חוץ בנקאית - המדריך המלא לשנת 2026',
     description:
-      'כל מה שצריך לדעת על הלוואה חוץ בנקאית: מי נותן, כמה עולה, מתי כדאי ומתי לא.',
+      'הלוואה חוץ בנקאית לכל מטרה: מי נותן, כמה עולה, איך עובדת בדיקת זכאות ומתי כדאי.',
   },
 };
 
@@ -41,11 +41,11 @@ const jsonLd = [
     '@type': 'Article',
     headline: 'הלוואה חוץ בנקאית - המדריך המלא לשנת 2026',
     description:
-      'כל מה שצריך לדעת על הלוואה חוץ בנקאית: מי נותן, כמה עולה, מתי כדאי ומתי לא.',
+      'הלוואה חוץ בנקאית לכל מטרה: מי נותן, כמה עולה, איך עובדת בדיקת זכאות ומתי כדאי.',
     url: CANONICAL,
     inLanguage: 'he',
     datePublished: '2026-01-01',
-    dateModified: '2026-05-16',
+    dateModified: '2026-08-20',
     author: { '@type': 'Person', name: 'דור גולדמן', url: 'https://getmaxit.co.il/about' },
     publisher: { '@type': 'Organization', name: SITE_NAME },
   },
@@ -94,6 +94,30 @@ const jsonLd = [
         acceptedAnswer: {
           '@type': 'Answer',
           text: 'שלושה דברים: רישיון ממשרד האוצר, נוכחות ותיקה ברשת עם ביקורות אמיתיות, ושקיפות מלאה בתנאים לפני חתימה. אם הם לוחצים עליך לחתום מהר, זה סימן רע.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'האם אפשר לקחת הלוואה חוץ בנקאית לכל מטרה?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'כן. הלוואה חוץ בנקאית לכל מטרה היא הסוג הנפוץ ביותר בשוק: אין הגבלה על השימוש בכסף, בניגוד להלוואה ייעודית כמו משכנתא או הלוואת רכב. אפשר להשתמש בה לשיפוץ, לחתונה, לאיחוד חובות, או לכל צורך אחר, כל עוד עומדים בתנאי ההחזר.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'איך עושים בדיקת זכאות להלוואה חוץ בנקאית?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'רוב הגופים מריצים בדיקת זכאות מקוונת תוך דקות: ממלאים טופס עם סכום מבוקש, הכנסה חודשית, וגיל. הבדיקה בודקת מול מאגר נתוני האשראי, לרוב בלי לפגוע בציון. אישור עקרוני מתקבל לרוב באותו יום, לפני שממשיכים לחתימה על ההסכם הסופי.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'כמה זמן לוקח מהגשת בקשה עד קבלת הכסף?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'אחרי בדיקת הזכאות, מגישים בקשה מלאה עם תלושי שכר ואישור ניהול חשבון. אצל כאל ומקס אישור סופי מגיע לרוב תוך יום עסקים אחד, אצל ישראכרט זה עשוי לקחת יום-יומיים, והכסף מועבר לחשבון מיד אחרי החתימה הדיגיטלית. גופי מימון פרטיים קטנים יותר עשויים לקחת 2-4 ימים.',
         },
       },
     ],
@@ -151,7 +175,7 @@ export default function HalvaahHutzBankaitPage() {
               <span>נכתב ונערך על ידי{' '}
                 <a href="/about" className="underline underline-offset-2 hover:text-primary-600">דור גולדמן</a></span>
               <span aria-hidden="true">·</span>
-              <span>עודכן: מאי 2026</span>
+              <span>עודכן: אוגוסט 2026</span>
             </div>
           </header>
 
@@ -255,12 +279,12 @@ export default function HalvaahHutzBankaitPage() {
               </thead>
               <tbody>
                 {[
-                  ['כאל (CAL)', '11%–17%', '₪150,000', 'יום עסקים'],
-                  ['מקס (Max)', '10%–16%', '₪150,000', 'יום עסקים'],
-                  ['ישראכרט', '11%–18%', '₪120,000', 'יום–יומיים'],
-                  ['ורד מימון', '12%–20%', '₪200,000', '2–3 ימים'],
-                  ['פנינסולה', '10%–18%', '₪300,000', '2–4 ימים'],
-                  ['גמ"ח / עוגן', '0%', '₪20,000–60,000', '1–4 שבועות'],
+                  ['כאל (CAL)', '11%-17%', '₪150,000', 'יום עסקים'],
+                  ['מקס (Max)', '10%-16%', '₪150,000', 'יום עסקים'],
+                  ['ישראכרט', '11%-18%', '₪120,000', 'יום-יומיים'],
+                  ['ורד מימון', '12%-20%', '₪200,000', '2-3 ימים'],
+                  ['פנינסולה', '10%-18%', '₪300,000', '2-4 ימים'],
+                  ['גמ"ח / עוגן', '0%', '₪20,000-60,000', '1-4 שבועות'],
                 ].map(([guf, rate, max, speed], idx) => (
                   <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-accent-50/60'}>
                     <td className="px-4 py-3 font-medium text-accent-800 border border-accent-100">{guf}</td>
@@ -407,6 +431,44 @@ export default function HalvaahHutzBankaitPage() {
                 לחתום מהר, זה סימן רע.
               </p>
             </div>
+
+            <div className="card">
+              <h3 className="font-bold text-accent-800 mb-2">
+                האם אפשר לקחת הלוואה חוץ בנקאית לכל מטרה?
+              </h3>
+              <p className="text-sm text-accent-500 leading-relaxed">
+                כן. הלוואה חוץ בנקאית לכל מטרה היא הסוג הנפוץ ביותר בשוק: אין
+                הגבלה על השימוש בכסף, בניגוד להלוואה ייעודית כמו משכנתא או
+                הלוואת רכב. אפשר להשתמש בה לשיפוץ, לחתונה, לאיחוד חובות, או
+                לכל צורך אחר, כל עוד עומדים בתנאי ההחזר.
+              </p>
+            </div>
+
+            <div className="card">
+              <h3 className="font-bold text-accent-800 mb-2">
+                איך עושים בדיקת זכאות להלוואה חוץ בנקאית?
+              </h3>
+              <p className="text-sm text-accent-500 leading-relaxed">
+                רוב הגופים מריצים בדיקת זכאות מקוונת תוך דקות: ממלאים טופס עם
+                סכום מבוקש, הכנסה חודשית, וגיל. הבדיקה בודקת מול מאגר נתוני
+                האשראי, לרוב בלי לפגוע בציון. אישור עקרוני מתקבל לרוב באותו
+                יום, לפני שממשיכים לחתימה על ההסכם הסופי.
+              </p>
+            </div>
+
+            <div className="card">
+              <h3 className="font-bold text-accent-800 mb-2">
+                כמה זמן לוקח מהגשת בקשה עד קבלת הכסף?
+              </h3>
+              <p className="text-sm text-accent-500 leading-relaxed">
+                אחרי בדיקת הזכאות,{' '}
+                <a href="/guides/bakasha-lehalva" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">מגישים בקשה</a>{' '}
+                מלאה עם תלושי שכר ואישור ניהול חשבון. אצל כאל ומקס אישור סופי
+                מגיע לרוב תוך יום עסקים אחד, אצל ישראכרט זה עשוי לקחת
+                יום-יומיים, והכסף מועבר לחשבון מיד אחרי החתימה הדיגיטלית.
+                גופי מימון פרטיים קטנים יותר עשויים לקחת 2-4 ימים.
+              </p>
+            </div>
           </div>
 
           {/* ── Cross-links ── */}
@@ -424,6 +486,12 @@ export default function HalvaahHutzBankaitPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
                 ריבית אפקטיבית: המספר שהבנק מעדיף שלא תסתכל עליו
+              </a>
+              <a href="/guides/bakasha-lehalva" className="flex items-center gap-2 text-sm text-primary-600 hover:text-primary-700 underline underline-offset-2 transition-colors duration-150">
+                <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                איך מגישים בקשה להלוואה ומה הבנק בודק
               </a>
             </div>
           </div>
