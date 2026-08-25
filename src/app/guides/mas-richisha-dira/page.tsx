@@ -205,7 +205,7 @@ export default function MasRichishaDiraPage() {
             </div>
 
             <p className="text-accent-600 mb-6">
-              <span className="font-semibold text-accent-900">המדרגות הללו קפואות עד 1 בינואר 2028.</span> הממשלה קיפאה אותן ללא הצמדה למדד. זה חוק, וזו ההשלכה: כשמחיר הדירות עלה, המס שלך עלה גם.
+              <span className="font-semibold text-accent-900">המדרגות הללו קפואות עד 1 בינואר 2028.</span> הממשלה הקפיאה אותן ללא הצמדה למדד. זה חוק, וזו ההשלכה: כשמחיר הדירות עלה, המס שלך עלה גם.
             </p>
 
             <h2 id="dugma" className={h2}>דוגמה של חישוב אמיתי</h2>
@@ -237,7 +237,7 @@ export default function MasRichishaDiraPage() {
             <CalculatorCTA
               calculatorName="מחשבון המשכנתא"
               calculatorUrl="/tools/mortgage-calculator"
-              teaser="עבור משכנתא של ₪2,500,000, ל-20 שנה בריבית 5%, החזר חודשי: ₪14,900. עכשיו אתה יכול לתכנן את כל הוצאות הקניה ביחד."
+              teaser="עבור משכנתא של ₪2,500,000, ל-20 שנה בריבית 5%, החזר חודשי: ₪16,499. עכשיו אתה יכול לתכנן את כל הוצאות הקניה ביחד."
             />
 
             <h2 id="lo-meshalmim" className={h2}>מה לא משלמים מס עליו?</h2>
@@ -247,7 +247,7 @@ export default function MasRichishaDiraPage() {
                 <span className="font-semibold">דירה ראשונה עד ₪1,978,745</span> משלמת 0% מס.
               </li>
               <li className={li}>
-                <span className="font-semibold">ריהוט ותחזוקה אם הם חלק מהסכום:</span> אפשר לחלק את המחיר בהסכם בין קרקע/בנייה ותוכן הדירה. זה יהקטין את הבסיס לחישוב המס. בכל מקרה, רוב הקניות הן על מחיר קטגוריה אחת (הקרקע עם הבנייה הקיימת), כך שהחלוקה לא תמיד משנה בפועל.
+                <span className="font-semibold">ריהוט ותחזוקה אם הם חלק מהסכום:</span> אפשר לחלק את המחיר בהסכם בין קרקע/בנייה ותוכן הדירה. זה יקטין את הבסיס לחישוב המס. בכל מקרה, רוב הקניות הן על מחיר קטגוריה אחת (הקרקע עם הבנייה הקיימת), כך שהחלוקה לא תמיד משנה בפועל.
               </li>
             </ul>
 
