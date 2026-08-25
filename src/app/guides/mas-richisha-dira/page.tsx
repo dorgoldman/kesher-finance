@@ -141,9 +141,9 @@ export default function MasRichishaDiraPage() {
             <div className="bg-primary-50 border border-primary-200 rounded-2xl p-6 mb-8">
               <h2 className="text-xl font-bold mb-3 text-accent-900">בקצרה:</h2>
               <ul className="list-disc list-inside space-y-2 text-accent-600">
-                <li>דירה ראשונה עד ₪1,978,745 – 0% מס</li>
-                <li>₪1,978,745–₪3,234,000 – 3.5% מס</li>
-                <li>מעל ₪5,000,000 – 8%–10% מס לפי שוויון</li>
+                <li>דירה ראשונה עד ₪1,978,745 - 0% מס</li>
+                <li>₪1,978,745-₪3,234,000 - 3.5% מס</li>
+                <li>מעל ₪5,000,000 - 8%-10% מס לפי שוויון</li>
                 <li>מדרגות קפואות עד ינואר 2028, ללא הצמדה</li>
                 <li>דירה שנייה: לא זכאית להטבה של 0%, המס מתחיל מ-5%</li>
               </ul>
