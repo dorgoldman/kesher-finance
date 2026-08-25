@@ -147,6 +147,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${BASE}/guides/mashkanta-lzug-tzair`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
       url: `${BASE}/guides/madregot-mas-hachnasa-2026`,
       lastModified: now,
       changeFrequency: 'monthly' as const,
