@@ -159,6 +159,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${BASE}/guides/mas-richisha-dira`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
       url: `${BASE}/tools/young-couple-mortgage`,
       lastModified: now,
       changeFrequency: 'monthly' as const,
