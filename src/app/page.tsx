@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { SITE_NAME, SITE_URL } from '@/lib/constants';
+import { latestGuides, formatHebrewMonthYear } from '@/lib/guides';
 import JsonLd from '@/components/SEO';
 import HeroCalculator from '@/components/HeroCalculator';
 import ScrollReveal from '@/components/ScrollReveal';
@@ -79,29 +80,13 @@ const guides = [
   },
 ];
 
-const recentArticles = [
-  {
-    title: 'משכנתא ראשונה: המדריך המלא לזוגות ורוכשים',
-    description: 'לוקחים משכנתא לראשונה? הון עצמי, תמהיל, זכאות, ביטוח ואיך לא להיות טרף קל לבנק.',
-    href: '/guides/משכנתא-ראשונה',
-    category: 'משכנתאות',
-    date: 'מאי 2026',
-  },
-  {
-    title: 'כמה משכנתא אפשר לקחת לפי משכורת?',
-    description: 'הבנק מאשר לפי ההכנסה שלך. כך מחשבים כמה תקבלו, עם טבלאות מספרים אמיתיות לשנת 2026.',
-    href: '/guides/כמה-משכנתא-לפי-משכורת',
-    category: 'משכנתאות',
-    date: 'מאי 2026',
-  },
-  {
-    title: 'הלוואה מקרן השתלמות: הריבית הזולה שרוב האנשים שוכחים',
-    description: 'אחת ההלוואות הזולות בשוק מחכה לך בקרן. יש כמה דברים שחייבים להבין לפני שלוחצים אישור.',
-    href: '/guides/הלוואה-מקרן-השתלמות',
-    category: 'הלוואות',
-    date: 'מאי 2026',
-  },
-];
+const recentArticles = latestGuides(3).map((guide) => ({
+  title: guide.title,
+  description: guide.description,
+  href: guide.href,
+  category: guide.category,
+  date: formatHebrewMonthYear(guide.dateModified),
+}));
 
 export default function HomePage() {
   return (
