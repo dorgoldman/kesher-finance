@@ -20,17 +20,24 @@ Maxit (getmaxit.co.il) is a Hebrew-language personal-finance site for the Israel
 - [הלוואה לרכב](https://getmaxit.co.il/guides/halvaah-lerechev): השוואה בין מימון בנק, יבואן וליסינג.
 - [הלוואה למסורבים](https://getmaxit.co.il/guides/halvaah-lmesoravim): אפשרויות מימון עם דירוג אשראי (BDI) שלילי.
 - [הלוואות ללא ריבית: גמ"חים, עוגן ו-P2P](https://getmaxit.co.il/guides/gmachim-p2p): מקורות הלוואה ללא ריבית או בריבית נמוכה בישראל.
-- [הלוואה מקרן השתלמות](https://getmaxit.co.il/guides/הלוואה-מקרן-השתלמות): אחת ההלוואות הזולות בשוק — ריבית, תנאים ומה לבדוק.
-- [ריבית אפקטיבית](https://getmaxit.co.il/guides/ריבית-אפקטיבית): ההבדל בין ריבית נומינלית לאפקטיבית ואיך לחשב את העלות האמיתית.
-- [בקשה להלוואה](https://getmaxit.co.il/guides/בקשה-להלוואה): מה הבנק בודק לפני אישור ואיך להגיש בקשה נכון.
+- [הלוואה מקרן השתלמות](https://getmaxit.co.il/guides/halvaah-mekarhn-hashtalmut): אחת ההלוואות הזולות בשוק — ריבית, תנאים ומה לבדוק.
+- [ריבית אפקטיבית](https://getmaxit.co.il/guides/rivit-efektivit): ההבדל בין ריבית נומינלית לאפקטיבית ואיך לחשב את העלות האמיתית.
+- [בקשה להלוואה](https://getmaxit.co.il/guides/bakasha-lehalva): מה הבנק בודק לפני אישור ואיך להגיש בקשה נכון.
 
 ## מדריכי משכנתא (Mortgage guides)
 
-- [כמה משכנתא לפי משכורת](https://getmaxit.co.il/guides/כמה-משכנתא-לפי-משכורת): כיצד הבנק קובע את גובה המשכנתא לפי ההכנסה, עם טבלאות ל-2026.
-- [ריבית פריים](https://getmaxit.co.il/guides/ריבית-פריים): מה זה פריים, פריים מינוס, וכיצד שינויי ריבית משפיעים על המשכנתא.
-- [שפיצר מול קרן שווה](https://getmaxit.co.il/guides/שפיצר-מול-קרן-שווה): ההבדל בין שיטות ההחזר ומתי כל אחת מתאימה, עם מספרים.
-- [משכנתא ראשונה](https://getmaxit.co.il/guides/משכנתא-ראשונה): הון עצמי, תמהיל, זכאות וביטוח — המדריך המלא לרוכש דירה ראשונה.
-- [מחזור משכנתא](https://getmaxit.co.il/guides/מחזור-משכנתא): מתי מחזור חוסך כסף, איך מחשבים נקודת איזון, ומה עמלת הפירעון.
+- [כמה משכנתא לפי משכורת](https://getmaxit.co.il/guides/kama-mashkanta-lpei-maskuret): כיצד הבנק קובע את גובה המשכנתא לפי ההכנסה, עם טבלאות ל-2026.
+- [ריבית פריים](https://getmaxit.co.il/guides/rivit-prime): מה זה פריים, פריים מינוס, וכיצד שינויי ריבית משפיעים על המשכנתא.
+- [שפיצר מול קרן שווה](https://getmaxit.co.il/guides/spitzer-keren-shva): ההבדל בין שיטות ההחזר ומתי כל אחת מתאימה, עם מספרים.
+- [משכנתא ראשונה](https://getmaxit.co.il/guides/mashkanta-rishona): הון עצמי, תמהיל, זכאות וביטוח — המדריך המלא לרוכש דירה ראשונה.
+- [מחזור משכנתא](https://getmaxit.co.il/guides/mahzor-mashkanta): מתי מחזור חוסך כסף, איך מחשבים נקודת איזון, ומה עמלת הפירעון.
+- [מסלולי משכנתא](https://getmaxit.co.il/guides/maslolei-mashkanta): קבועה, משתנה, פריים או זכאות — כל המסלולים מוסברים עם דוגמה מספרית לתמהיל נכון.
+- [משכנתא לזוג צעיר](https://getmaxit.co.il/guides/mashkanta-lzug-tzair): הלוואת זכאות ממשרד הבינוי — תנאי זכאות, מסלולים, ודוגמה מעשית מול משכנתא רגילה.
+
+## מדריכי מיסוי (Tax guides)
+
+- [מדרגות מס הכנסה 2026](https://getmaxit.co.il/guides/madregot-mas-hachnasa-2026): הטבלה המלאה אחרי תיקון 288, מה בדיוק השתנה, ודוגמה מספרית.
+- [מס רכישה דירה 2026](https://getmaxit.co.il/guides/mas-richisha-dira): כמה תשלם על קניית דירה ראשונה, חישוב מדרגות ודוגמה עם מספרים אמיתיים.
 
 ## מידע (About)
 
