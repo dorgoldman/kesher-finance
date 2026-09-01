@@ -105,7 +105,13 @@ export default function Page() {
           </div>
 
           <h1 className="text-4xl font-bold leading-tight mb-4">משכנתא לזוג צעיר</h1>
-          <p className="text-accent-500 mb-8">הלוואת זכאות ודיור פחות יקר</p>
+          <p className="text-accent-500 mb-4">הלוואת זכאות ודיור פחות יקר</p>
+          <div className="flex flex-wrap items-center gap-1.5 text-sm text-accent-400 mb-8">
+            <span>נכתב ונערך על ידי{' '}
+              <a href="/about" className="underline underline-offset-2 hover:text-primary-600">דור גולדמן</a></span>
+            <span aria-hidden="true">·</span>
+            <span>עודכן לאחרונה: 2026-08-15</span>
+          </div>
 
           <p className="text-lg leading-relaxed mb-6">
             הפגישה בבנק נגמרה, ויש בידך שני מסלולים: משכנתא רגילה או משכנתא לזוג צעיר עם "תעודת זכאות" ממשרד הבינוי. המסלול השני מגיע בריבית מסובסדת (זולה יותר). אבל הוא לא מתאים לכולם, והוא לא תמיד המסלול הכי משתלם. הנה הפרטים.
