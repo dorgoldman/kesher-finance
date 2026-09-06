@@ -1,5 +1,5 @@
 /**
- * Central registry of all guide articles — single source of truth.
+ * Central registry of all guide articles - single source of truth.
  * Used by the guides hub, the footer link columns, and the RelatedGuides
  * component so internal links stay consistent and every article is reachable
  * from many places (helps crawling / indexing).
