@@ -44,7 +44,7 @@ const jsonLd = [
     url: CANONICAL,
     inLanguage: 'he',
     datePublished: '2026-07-11',
-    dateModified: '2026-07-11',
+    dateModified: '2026-09-03',
     author: { '@type': 'Person', name: 'דור גולדמן', url: 'https://getmaxit.co.il/about' },
     publisher: { '@type': 'Organization', name: SITE_NAME },
   },
@@ -159,7 +159,7 @@ export default function MasloleyMashkantaPage() {
               <span>נכתב ונערך על ידי{' '}
                 <a href="/about" className="underline underline-offset-2 hover:text-primary-600">דור גולדמן</a></span>
               <span aria-hidden="true">·</span>
-              <span>עודכן: 11 ביולי 2026</span>
+              <span>עודכן: 3 בספטמבר 2026</span>
             </div>
           </header>
 
@@ -201,7 +201,7 @@ export default function MasloleyMashkantaPage() {
           {/* Section 4 */}
           <h2 id="praim" className={h2}>פריים</h2>
           <p className={p}>
-            מסלול פריים צמוד לריבית הפריים, שנקבעת על ידי בנק ישראל ומתעדכנת בכל שינוי ריבית שהוועדה המוניטרית מכריזה עליו. נכון ליולי 2026 ריבית בנק ישראל עומדת על 3.5% וריבית הפריים על 5% (ריבית בנק ישראל ועוד 1.5% קבוע).
+            מסלול פריים צמוד לריבית הפריים, שנקבעת על ידי בנק ישראל ומתעדכנת בכל שינוי ריבית שהוועדה המוניטרית מכריזה עליו. נכון לספטמבר 2026, אחרי הורדת הריבית מ-1.9.2026, ריבית בנק ישראל עומדת על 3.25% וריבית הפריים על 4.75% (ריבית בנק ישראל ועוד 1.5% קבוע).
           </p>
           <p className={p}>
             זה בדרך כלל המסלול הזול ביותר בטווח הקצר, וגם היחיד שאפשר לפרוע מוקדם בלי קנס משמעותי. המחיר הוא חשיפה מלאה לכל שינוי ריבית. מי שהיה עם משכנתא בפריים בין 2021 ל-2023 ראה את ההחזר שלו קופץ בעשרות אחוזים תוך שנה וחצי, בלי שום שינוי בגובה ההלוואה. הפירוט המלא של התקופה הזו, כולל דוגמה מספרית, נמצא במדריך על <a href="/guides/ריבית-פריים" className="text-primary-600 hover:text-primary-700 underline underline-offset-2">ריבית פריים</a>.
@@ -243,7 +243,7 @@ export default function MasloleyMashkantaPage() {
               <span className={strong}>מסלול קבועה לא צמודה בלבד</span>, בריבית 4.9%: החזר חודשי של כ-<span className="font-mono">₪5,790</span>.
             </p>
             <p className="text-accent-700">
-              <span className={strong}>מסלול פריים בלבד</span>, פריים מינוס 0.5% (כלומר 4.5% נכון להיום): החזר חודשי של כ-<span className="font-mono">₪5,560</span>. המסלול הזה לבדו גם לא חוקי מעל שני שלישים מהמשכנתא, וגם מסוכן.
+              <span className={strong}>מסלול פריים בלבד</span>, פריים מינוס 0.5% (כלומר 4.25% נכון להיום): החזר חודשי של כ-<span className="font-mono">₪5,420</span>. המסלול הזה לבדו גם לא חוקי מעל שני שלישים מהמשכנתא, וגם מסוכן.
             </p>
             <p className="text-accent-700">
               <span className={strong}>תמהיל של שליש קבועה, שליש פריים ושליש משתנה כל 5 שנים</span> בריבית פתיחה 3.9%: החזר חודשי של כ-<span className="font-mono">₪5,524</span>.

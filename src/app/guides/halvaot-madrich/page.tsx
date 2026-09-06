@@ -45,7 +45,7 @@ const jsonLd = [
     url: CANONICAL,
     inLanguage: 'he',
     datePublished: '2026-01-01',
-    dateModified: '2026-05-16',
+    dateModified: '2026-09-03',
     author: { '@type': 'Person', name: 'דור גולדמן', url: 'https://getmaxit.co.il/about' },
     publisher: { '@type': 'Organization', name: SITE_NAME },
   },
@@ -151,7 +151,7 @@ export default function HalvaotMadrichPage() {
               <span>נכתב ונערך על ידי{' '}
                 <a href="/about" className="underline underline-offset-2 hover:text-primary-600">דור גולדמן</a></span>
               <span aria-hidden="true">·</span>
-              <span>עודכן: מאי 2026</span>
+              <span>עודכן: 3 בספטמבר 2026</span>
             </div>
           </header>
 
@@ -341,8 +341,8 @@ export default function HalvaotMadrichPage() {
           <p className={p}>
             <span className={strong}>הגבול החוקי לריבית.</span>{' '}
             בישראל קיים חוק אשראי הוגן. הריבית המקסימלית המותרת היא 15% בתוספת
-            ריבית בנק ישראל. כרגע זה כ-19%. אם מישהו מציע לך יותר - הוא עובר
-            על החוק.
+            ריבית בנק ישראל (3.25% נכון לספטמבר 2026, אחרי הורדת הריבית מ-1.9.2026).
+            כרגע זה כ-18.25%. אם מישהו מציע לך יותר - הוא עובר על החוק.
           </p>
 
           {/* ── Section 5 ── */}
