@@ -6,13 +6,16 @@ interface Props {
   formula: string;
   assumptions: string[];
   source: string;
-  lastUpdated?: string;
+  /** When these assumptions/figures were last verified — required so a page can never
+   *  silently inherit a stale placeholder date (found 2026-09-08: all 6 callers were
+   *  omitting this and showing a hardcoded "May 2026" on every calculator on the site). */
+  lastUpdated: string;
   locale?: 'he' | 'ar';
 }
 
 const CHROME = {
-  he: { toggle: 'איך חישבנו?', formula: 'נוסחה', assumptions: 'הנחות חישוב', updated: 'עודכן לאחרונה', defaultDate: 'מאי 2026' },
-  ar: { toggle: 'كيف حسبنا؟', formula: 'الصيغة', assumptions: 'افتراضات الحساب', updated: 'آخر تحديث', defaultDate: 'مايو 2026' },
+  he: { toggle: 'איך חישבנו?', formula: 'נוסחה', assumptions: 'הנחות חישוב', updated: 'עודכן לאחרונה' },
+  ar: { toggle: 'كيف حسبنا؟', formula: 'الصيغة', assumptions: 'افتراضات الحساب', updated: 'آخر تحديث' },
 };
 
 export default function CalcMethodology({
@@ -24,7 +27,7 @@ export default function CalcMethodology({
 }: Props) {
   const [open, setOpen] = useState(false);
   const t = CHROME[locale];
-  const updatedText = lastUpdated ?? t.defaultDate;
+  const updatedText = lastUpdated;
 
   return (
     <div className="mt-8 border border-accent-200 rounded-2xl overflow-hidden">

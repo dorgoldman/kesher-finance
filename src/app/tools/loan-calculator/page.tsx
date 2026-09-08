@@ -126,6 +126,7 @@ export default function LoanCalculatorPage() {
           'ללא עמלות פתיחת תיק',
         ]}
         source="נוסחת שפיצר: תקן בנקאי מקובל בישראל"
+        lastUpdated="16 במאי 2026"
       />
 
       <AdSlot variant="post-results-mobile" className="mt-6" />

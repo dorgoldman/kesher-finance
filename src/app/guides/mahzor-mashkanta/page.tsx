@@ -25,7 +25,7 @@ const jsonLd = [
     url: CANONICAL,
     inLanguage: 'he',
     datePublished: '2026-05-17',
-    dateModified: '2026-05-17',
+    dateModified: '2026-09-08',
     author: { '@type': 'Person', name: 'דור גולדמן', url: 'https://getmaxit.co.il/about' },
     publisher: { '@type': 'Organization', name: 'מקסיט. Maxit' },
   },
@@ -134,7 +134,7 @@ export default function MachzorMashkantaPage() {
               <span>נכתב ונערך על ידי{' '}
                 <a href="/about" className="underline underline-offset-2 hover:text-primary-600">דור גולדמן</a></span>
               <span aria-hidden="true">·</span>
-              <span>עודכן: מאי 2026</span>
+              <span>עודכן: 8 בספטמבר 2026</span>
             </div>
           </header>
 
@@ -193,8 +193,8 @@ export default function MachzorMashkantaPage() {
           </p>
           <p className={p}>
             כשאתה מוחזר משכנתא, אתה בעצם פורע את הישנה לפני הזמן. הבנק מאבד ריבית
-            עתידית ומפצה את עצמו בעמלה. בחלק מהמסלולים, העמלה יכולה להגיע לעשרות אלפי
-            שקלים.
+            עתידית ומפצה את עצמו בעמלה. לפי הוראות בנק ישראל, בחלק מהמסלולים העמלה
+            יכולה להגיע לעשרות אלפי שקלים.
           </p>
           <p className={p}>
             הכלל הפרקטי שיועצים משתמשים בו: אם החיסכון החודשי קטן מ-₪500, כנראה שהמחזור

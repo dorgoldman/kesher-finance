@@ -128,6 +128,7 @@ export default function RefinanceCalculatorPage() {
           'ללא הצמדה למדד - במסלולים צמודים החיסכון בפועל עשוי להשתנות',
         ]}
         source="נוסחת שפיצר: תקן בנקאי מקובל בישראל · עמלת פירעון מוקדם: הוראות בנק ישראל"
+        lastUpdated="2 ביולי 2026"
       />
 
       <AdSlot variant="post-results-mobile" className="mt-6" />
