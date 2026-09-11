@@ -134,6 +134,7 @@ export default function SalaryCalculatorPage() {
           'ניכוי פנסיה לפי האחוז שהוזן',
         ]}
         source="מדרגות מס: רשות המסים | שיעורי ביטוח לאומי: המוסד לביטוח לאומי"
+        lastUpdated="6 באוגוסט 2026"
       />
 
       <AdSlot variant="post-results-mobile" className="mt-6" />

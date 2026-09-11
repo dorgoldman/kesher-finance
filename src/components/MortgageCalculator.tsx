@@ -165,7 +165,7 @@ function createTrack(type: TrackType, labels: MortgageLabels): MortgageTrack {
   const defaults: Record<TrackType, Partial<MortgageTrack>> = {
     fixed:       { rate: 4.5,  years: 20, amount: 400000 },
     variable:    { rate: 3.8,  years: 15, amount: 300000 },
-    prime:       { rate: 0,    years: 25, amount: 200000, primeBase: 6.0, primeSpread: -0.5 },
+    prime:       { rate: 0,    years: 25, amount: 200000, primeBase: 4.75, primeSpread: -0.5 },
     eligibility: { rate: 3.0,  years: 20, amount: 100000 },
   };
   return { id, type, label: info.label, ...defaults[type] } as MortgageTrack;
@@ -190,7 +190,7 @@ function formatPercent(value: number): string {
 function calculateTrack(track: MortgageTrack): TrackResult {
   const effectiveRate =
     track.type === 'prime'
-      ? (track.primeBase || 6.0) + (track.primeSpread || 0)
+      ? (track.primeBase || 4.75) + (track.primeSpread || 0)
       : track.rate;
 
   const monthlyRate = effectiveRate / 100 / 12;
@@ -270,7 +270,7 @@ function TrackCard({
     onUpdate(track.id, updates);
   };
 
-  const effectiveRate = (track.primeBase || 6) + (track.primeSpread || 0);
+  const effectiveRate = (track.primeBase || 4.75) + (track.primeSpread || 0);
   const hints = labels.hints[track.type];
 
   return (

@@ -101,6 +101,7 @@ export default function YoungCoupleMortgagePage() {
             'ריבית הזכאות בנפרד מריבית המשכנתא הבנקאית',
           ]}
           source="הנחיות: בנק ישראל, משרד הבינוי והשיכון"
+          lastUpdated="3 ביולי 2026"
         />
 
         <AdSlot variant="post-results-mobile" className="mt-6" />

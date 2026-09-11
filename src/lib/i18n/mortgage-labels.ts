@@ -99,7 +99,7 @@ export const hebrewLabels: MortgageLabels = {
   hints: {
     fixed:       { amount: 'מינ׳ ₪100K',  years: '15–25 שנה מומלץ', rate: 'ריבית קבועה לכל התקופה' },
     variable:    { amount: 'מינ׳ ₪100K',  years: 'מתעדכן כל 5 שנים', rate: 'נמוכה בהתחלה, עשויה לעלות' },
-    prime:       { amount: 'מינ׳ ₪100K',  years: 'גמיש לפירעון מוקדם', rate: 'פריים נוכחי ≈ 6%' },
+    prime:       { amount: 'מינ׳ ₪100K',  years: 'גמיש לפירעון מוקדם', rate: 'פריים נוכחי ≈ 4.75%' },
     eligibility: { amount: 'עד ₪800K',    years: 'עד 28 שנה בד"כ', rate: 'ריבית מסובסדת מהמדינה' },
   },
   errors: {
@@ -170,7 +170,7 @@ export const arabicLabels: MortgageLabels = {
   hints: {
     fixed:       { amount: 'الحد الأدنى ₪100K',  years: '15–25 سنة موصى', rate: 'فائدة ثابتة طوال المدة' },
     variable:    { amount: 'الحد الأدنى ₪100K',  years: 'تُحدَّث كل 5 سنوات', rate: 'منخفضة بالبداية، قد ترتفع' },
-    prime:       { amount: 'الحد الأدنى ₪100K',  years: 'مرن للسداد المبكر', rate: 'البريم الحالي ≈ 6%' },
+    prime:       { amount: 'الحد الأدنى ₪100K',  years: 'مرن للسداد المبكر', rate: 'البريم الحالي ≈ 4.75%' },
     eligibility: { amount: 'حتى ₪800K',          years: 'حتى 28 سنة عادةً', rate: 'فائدة مدعومة من الدولة' },
   },
   errors: {
