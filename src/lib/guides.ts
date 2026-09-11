@@ -16,7 +16,7 @@ export interface GuideEntry {
   description: string;
   /** Category bucket */
   category: 'הלוואות' | 'משכנתאות' | 'מיסוי';
-  /** Last-modified date (ISO, YYYY-MM-DD) — keep in sync with the page's own dateModified/"עודכן לאחרונה" */
+  /** Last-modified date (ISO, YYYY-MM-DD) - keep in sync with the page's own dateModified/"עודכן לאחרונה" */
   dateModified: string;
 }
 
@@ -191,7 +191,7 @@ export function formatHebrewMonthYear(isoDate: string): string {
   return `${HEBREW_MONTHS[month - 1]} ${year}`;
 }
 
-/** The `limit` most recently modified guides, newest first — drives the homepage "מדריכים אחרונים" section. */
+/** The `limit` most recently modified guides, newest first - drives the homepage "מדריכים אחרונים" section. */
 export function latestGuides(limit = 3): GuideEntry[] {
   return [...GUIDES]
     .sort((a, b) => b.dateModified.localeCompare(a.dateModified))
