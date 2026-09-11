@@ -35,10 +35,25 @@ function listTargetFiles() {
   return out.split('\n').filter(Boolean);
 }
 
+// guides.ts mixes displayed copy (title/shortLabel/description) with JSDoc/type
+// comments meant for developers, not readers. This gate exists to catch dashes and
+// filler phrases in site copy, not in code comments, so guides.ts is narrowed to
+// just the metadata field values before checking.
+function checkableContent(file, rawContent) {
+  if (!file.endsWith('guides.ts')) return rawContent;
+  const fieldPattern = /\b(?:title|shortLabel|description):\s*'((?:[^'\\]|\\.)*)'/g;
+  const values = [];
+  let m;
+  while ((m = fieldPattern.exec(rawContent))) {
+    values.push(m[1]);
+  }
+  return values.join('\n');
+}
+
 let failed = false;
 
 for (const file of listTargetFiles()) {
-  const content = readFileSync(file, 'utf8');
+  const content = checkableContent(file, readFileSync(file, 'utf8'));
 
   const dashMatches = content.match(LONG_DASHES);
   if (dashMatches) {
