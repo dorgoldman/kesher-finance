@@ -99,7 +99,7 @@ export default function Page() {
       <AdSlot variant="header" />
 
       <div className="container-page py-8 grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8">
-        <article className="prose prose-invert prose-rtl max-w-none">
+        <article className="max-w-none">
           <div className="mb-6">
             <span className="badge-primary">משכנתאות</span>
           </div>
