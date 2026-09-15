@@ -407,7 +407,7 @@ export default function HalvaahMikrenHashtalmuutPage() {
             <a href="https://www.boi.org.il/monetary-policy/interest-rate-decisions/" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">ריבית בנק ישראל</a>
           </div>
 
-          <RelatedGuides currentHref="/guides/הלוואה-מקרן-השתלמות" />
+          <RelatedGuides currentHref="/guides/halvaah-mekarhn-hashtalmut" />
 
           <div className="border-t border-accent-100 pt-6">
             <p className="text-xs text-accent-400 leading-relaxed">

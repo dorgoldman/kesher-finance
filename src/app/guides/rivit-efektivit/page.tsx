@@ -391,7 +391,7 @@ export default function RibitEfektivitPage() {
             <a href="https://www.gov.il/he/departments/capital_market_insurance_and_savings_authority" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">רשות שוק ההון, חוק אשראי הוגן</a>
           </div>
 
-          <RelatedGuides currentHref="/guides/ריבית-אפקטיבית" />
+          <RelatedGuides currentHref="/guides/rivit-efektivit" />
 
           <div className="border-t border-accent-100 pt-6">
             <p className="text-xs text-accent-400 leading-relaxed">

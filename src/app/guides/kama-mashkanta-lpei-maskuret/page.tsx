@@ -446,7 +446,7 @@ export default function KamaMashnektaPage() {
             <a href="https://www.kolzchut.org.il/he/משכנתה" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">משכנתא, כל-זכות</a>
           </div>
 
-          <RelatedGuides currentHref="/guides/כמה-משכנתא-לפי-משכורת" />
+          <RelatedGuides currentHref="/guides/kama-mashkanta-lpei-maskuret" />
 
           <div className="border-t border-accent-100 pt-6">
             <p className="text-xs text-accent-400 leading-relaxed">
