@@ -396,7 +396,7 @@ export default function ShpitzerMolKerenShavaPage() {
             <a href="https://www.boi.org.il/monetary-policy/interest-rate-decisions/" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">ריבית בנק ישראל</a>
           </div>
 
-          <RelatedGuides currentHref="/guides/שפיצר-מול-קרן-שווה" />
+          <RelatedGuides currentHref="/guides/spitzer-keren-shva" />
 
           <div className="border-t border-accent-100 pt-6">
             <p className="text-xs text-accent-400 leading-relaxed">

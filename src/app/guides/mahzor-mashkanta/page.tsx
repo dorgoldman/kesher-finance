@@ -421,7 +421,7 @@ export default function MachzorMashkantaPage() {
             <a href="https://www.kolzchut.org.il/he/משכנתה" target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-2 hover:text-primary-700">משכנתא, כל-זכות</a>
           </div>
 
-          <RelatedGuides currentHref="/guides/מחזור-משכנתא" />
+          <RelatedGuides currentHref="/guides/mahzor-mashkanta" />
 
           <div className="border-t border-accent-100 pt-6">
             <p className="text-xs text-accent-400 leading-relaxed">
