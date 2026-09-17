@@ -4,6 +4,8 @@
 
 Maxit (getmaxit.co.il) is a Hebrew-language personal-finance site for the Israeli market. It provides free calculators and editorial guides. Content is written and edited by דור גולדמן (Dor Goldman), founder and editor, and a product of MGH Venture Studio. Maxit is not a licensed financial advisor and does not sell financial products — it is an educational reference. All figures cite official Israeli authorities.
 
+A plain-markdown version of every guide below is available at the same URL with a `.md` extension (e.g. https://getmaxit.co.il/guides/rivit-prime.md) — for AI models/agents that prefer markdown over HTML.
+
 ## מחשבונים (Calculators)
 
 - [מחשבון משכנתא](https://getmaxit.co.il/tools/mortgage-calculator): בונה תמהיל רב-מסלולי (קבועה, משתנה, פריים, זכאות), מחשב החזר חודשי כולל ולוח סילוקין מלא.

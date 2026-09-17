@@ -18,3 +18,9 @@
 
 /guides/*/opengraph-image
   Content-Type: image/png
+
+# Markdown twins (T49, shared/ai-visibility.md's site-launch checklist) —
+# .md isn't a Cloudflare-recognized extension either, same failure mode as
+# opengraph-image above: 200 OK, correct bytes, wrong (or missing) header.
+/guides/*.md
+  Content-Type: text/markdown; charset=utf-8
