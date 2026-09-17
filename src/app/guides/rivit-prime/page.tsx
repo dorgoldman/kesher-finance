@@ -406,7 +406,7 @@ export default function RibitPrimePage() {
           </div>
 
           {/* Disclaimer */}
-          <RelatedGuides currentHref="/guides/ריבית-פריים" />
+          <RelatedGuides currentHref="/guides/rivit-prime" />
 
           <div className="border-t border-accent-100 pt-6">
             <p className="text-xs text-accent-400 leading-relaxed">
